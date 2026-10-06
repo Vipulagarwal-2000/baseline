@@ -1,0 +1,87 @@
+{
+  "schema_version": "12.3.1",
+  "country_id": "india",
+  "country_name": "India",
+  "historical_period": "1950-1955 campaign baseline",
+  "profile_type": "simulation_calibration",
+  "source_basis": [
+    "existing country-level geography terrain fields",
+    "existing Step 12.1 strategic-location keys",
+    "broad regional physical-character calibration"
+  ],
+  "provenance_note": "These are bounded MVP simulation profiles, not historical cadastral measurements. Province nodes inherit their parent regional profile until a later explicit province override is introduced.",
+  "profiles": [
+    {
+      "region_id": "india_north",
+      "terrain": {
+        "mountains": 0.48,
+        "plateaus": 0.4,
+        "deserts": 0.08,
+        "plains": 0.6,
+        "coastal_lowlands": 0.08,
+        "major_rivers": 0.82,
+        "coastal_access": false
+      }
+    },
+    {
+      "region_id": "india_west",
+      "terrain": {
+        "mountains": 0.22,
+        "plateaus": 0.3,
+        "deserts": 0.22,
+        "plains": 0.42,
+        "coastal_lowlands": 0.28,
+        "major_rivers": 0.45,
+        "coastal_access": true
+      }
+    },
+    {
+      "region_id": "india_central",
+      "terrain": {
+        "mountains": 0.25,
+        "plateaus": 0.48,
+        "deserts": 0.04,
+        "plains": 0.45,
+        "coastal_lowlands": 0.05,
+        "major_rivers": 0.5,
+        "coastal_access": false
+      }
+    },
+    {
+      "region_id": "india_east",
+      "terrain": {
+        "mountains": 0.18,
+        "plateaus": 0.18,
+        "deserts": 0.03,
+        "plains": 0.7,
+        "coastal_lowlands": 0.45,
+        "major_rivers": 0.9,
+        "coastal_access": true
+      }
+    },
+    {
+      "region_id": "india_south",
+      "terrain": {
+        "mountains": 0.22,
+        "plateaus": 0.45,
+        "deserts": 0.06,
+        "plains": 0.52,
+        "coastal_lowlands": 0.5,
+        "major_rivers": 0.72,
+        "coastal_access": true
+      }
+    },
+    {
+      "region_id": "india_northeast",
+      "terrain": {
+        "mountains": 0.58,
+        "plateaus": 0.42,
+        "deserts": 0.06,
+        "plains": 0.38,
+        "coastal_lowlands": 0.2,
+        "major_rivers": 0.78,
+        "coastal_access": false
+      }
+    }
+  ]
+}

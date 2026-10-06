@@ -1,0 +1,63 @@
+{
+  "schema_version": "12.3.1",
+  "country_id": "usa",
+  "country_name": "United States",
+  "historical_period": "1950-1955 campaign baseline",
+  "profile_type": "simulation_calibration",
+  "source_basis": [
+    "existing country-level geography terrain fields",
+    "existing Step 12.1 strategic-location keys",
+    "broad regional physical-character calibration"
+  ],
+  "provenance_note": "These are bounded MVP simulation profiles, not historical cadastral measurements. Province nodes inherit their parent regional profile until a later explicit province override is introduced.",
+  "profiles": [
+    {
+      "region_id": "usa_northeast",
+      "terrain": {
+        "mountains": 0.32,
+        "plateaus": 0.12,
+        "deserts": 0.02,
+        "plains": 0.62,
+        "coastal_lowlands": 0.38,
+        "major_rivers": 0.9,
+        "coastal_access": true
+      }
+    },
+    {
+      "region_id": "usa_north_central",
+      "terrain": {
+        "mountains": 0.28,
+        "plateaus": 0.2,
+        "deserts": 0.02,
+        "plains": 0.66,
+        "coastal_lowlands": 0.18,
+        "major_rivers": 0.9,
+        "coastal_access": false
+      }
+    },
+    {
+      "region_id": "usa_south",
+      "terrain": {
+        "mountains": 0.16,
+        "plateaus": 0.16,
+        "deserts": 0.12,
+        "plains": 0.62,
+        "coastal_lowlands": 0.42,
+        "major_rivers": 0.92,
+        "coastal_access": true
+      }
+    },
+    {
+      "region_id": "usa_west",
+      "terrain": {
+        "mountains": 0.55,
+        "plateaus": 0.35,
+        "deserts": 0.2,
+        "plains": 0.35,
+        "coastal_lowlands": 0.28,
+        "major_rivers": 0.72,
+        "coastal_access": true
+      }
+    }
+  ]
+}

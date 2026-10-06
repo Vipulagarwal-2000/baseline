@@ -1,0 +1,262 @@
+{
+	"id": "usa",
+	"name": "United States",
+	"country_code": "USA",
+	"entity_type": "country",
+	"population": {
+		"population": 152000000,
+		"growth_rate": 1.38,
+		"birth_rate": 24.1,
+		"death_rate": 9.6,
+		"urbanization": 64.2,
+		"immigration": 100000,
+		"emigration": 20000,
+		"migration_capacity": 250000,
+		"migration_policy": 1.5
+	},"government": {
+	"government_type": "federal_presidential_republic",
+	"stability": 0.82,
+	"approval": 0.66,
+	"political_pressure": 0.30,
+	"institutional_strength": 0.90,
+	"policy_capacity": 0.72,
+	"legitimacy": 0.84,
+	"corruption": 0.20,
+	"centralization": 0.42,
+	"political_freedom": 0.88,
+	"executive_strength": 0.68,
+	"legislative_constraint": 0.82,
+	"electoral_competition": 0.86,
+	"party_control": 0.58,
+	"bureaucratic_capacity": 0.86,
+	"military_civilian_control": 0.90,
+	"reform_flexibility": 0.66,
+	"mobilization_capacity": 0.72,
+	"political_pluralism": 0.88,
+	"regional_autonomy": 0.82
+},
+	"economy": {
+		"gdp": 1453272000000.0,
+		"growth_rate": 3.0,
+		"inflation": 2.0,
+		"unemployment": 5.3,
+		   "currency_id": "USD",
+	"currency_name": "US Dollar",
+	"currency_symbol": "$"
+	},
+	"research": {
+		"research_capacity": 100.0,
+		"research_funding": 85.0,
+		"researchers": 75.0,
+		"research_institutions": 45.0,
+		"research_efficiency": 0.92,
+		"technology_level": 38.0,
+		"technologies": {
+			"electricity": 1.0,
+			"radio": 1.0,
+			"telecommunications": 1.0,
+			"industrial_machinery": 1.0,
+			"nuclear_physics": 1.0
+		}
+	},
+	"resources": {
+		"production": {
+			"food": 240.0,
+			"coal": 160.0,
+			"iron": 100.0,
+			"oil": 120.0
+		},
+		"consumption": {
+			"food": 210.0,
+			"coal": 130.0,
+			"iron": 85.0,
+			"oil": 105.0
+		},
+		"reserves": {
+			"coal": 30000.0,
+			"iron": 18000.0,
+			"oil": 15000.0
+		},
+		"stockpile": {
+			"food": 160.0,
+			"coal": 400.0,
+			"iron": 180.0,
+			"oil": 250.0
+		},
+		"imports": {
+			"iron": 5.0,
+			"oil": 8.0
+		},
+		"exports": {
+			"food": 25.0,
+			"coal": 15.0,
+			"oil": 10.0
+		}
+	},
+	"relationships": {
+		"india": 60.0,
+		"china": 30.0
+	},
+	"geography": {
+	"region": "North America",
+	"subregion": "North America",
+	"latitude": 39.83,
+	"longitude": -98.58,
+	"land_area": 9372610.0,
+
+	"terrain": {
+		"mountains": 0.25,
+		"plateaus": 0.20,
+		"deserts": 0.08,
+		"plains": 0.55,
+		"coastal_lowlands": 0.30,
+		"major_rivers": 0.80
+	},
+
+	"coastline": 19924.0,
+	"maritime_access": true,
+
+	"major_ports": {
+		"new_york": 0.95,
+		"norfolk": 0.85,
+		"new_orleans": 0.85,
+		"san_francisco": 0.90,
+		"los_angeles": 0.85,
+		"seattle": 0.75
+	},
+
+	"neighbors": {
+		"canada": 100.0,
+		"mexico": 85.0
+	},
+
+	"strategic_locations": {
+		"atlantic_coast": 0.90,
+		"pacific_coast": 0.95,
+		"great_lakes": 0.80,
+		"mississippi_basin": 0.95,
+		"industrial_northeast": 0.95,
+		"gulf_coast": 0.85,
+		"alaska": 0.80,
+		"hawaii": 0.75
+	},
+
+	"strategic_importance": 95.0,
+	"trade_routes": {},
+	"shipping_access": 95.0,
+	"resource_locations": {},
+
+	"military_access": 92.0,
+	"military_projection": 95.0
+}, 	"military": {
+		"military_power": 0.78,
+		"readiness": 0.72,
+		"manpower": 0.62,
+		"logistics_capacity": 0.82,
+
+		"army_strength": 0.62,
+		"naval_strength": 0.88,
+		"air_strength": 0.86,
+
+		"industrial_support": 0.92,
+		"military_technology": 0.82,
+		"command_capacity": 0.84,
+
+		"resource_security": 0.88,
+
+		"defensive_capability": 0.82,
+		"power_projection": 0.92,
+		"mobilization_capacity": 0.68,
+
+		"military_spending": 0.58,
+		"military_pressure": 0.30
+	},"industry": {
+	"processes": {
+		"food_agriculture": {
+			"active": true,
+			"capacity": 140.0,
+			"efficiency": 0.92
+		},
+		"coal_mining": {
+			"active": true,
+			"capacity": 75.0,
+			"efficiency": 0.90
+		},
+		"oil_extraction": {
+			"active": true,
+			"capacity": 100.0,
+			"efficiency": 0.92
+		},
+		"natural_gas_extraction": {
+			"active": true,
+			"capacity": 70.0,
+			"efficiency": 0.88
+		},
+		"iron_ore_mining": {
+			"active": true,
+			"capacity": 80.0,
+			"efficiency": 0.90
+		},
+		"steel_basic": {
+			"active": true,
+			"capacity": 100.0,
+			"efficiency": 0.90
+		},
+		"petroleum_refining": {
+			"active": true,
+			"capacity": 100.0,
+			"efficiency": 0.92
+		},
+		"electric_power_generation": {
+			"active": true,
+			"capacity": 120.0,
+			"efficiency": 0.90
+		},
+		"automobile_manufacturing": {
+			"active": true,
+			"capacity": 80.0,
+			"efficiency": 0.92
+		},
+		"machinery_manufacturing": {
+			"active": true,
+			"capacity": 75.0,
+			"efficiency": 0.90
+		},
+		"aircraft_manufacturing": {
+			"active": true,
+			"capacity": 25.0,
+			"efficiency": 0.88
+		},
+		"chemical_production": {
+			"active": true,
+			"capacity": 70.0,
+			"efficiency": 0.88
+		},
+		"cement_production": {
+			"active": true,
+			"capacity": 50.0,
+			"efficiency": 0.88
+		},
+		"cotton_textile": {
+			"active": true,
+			"capacity": 45.0,
+			"efficiency": 0.85
+		},
+		"paper_production": {
+			"active": true,
+			"capacity": 60.0,
+			"efficiency": 0.88
+		}
+	}
+},
+"infrastructure": {
+	"transport": 0.88,
+	"railways": 0.82,
+	"roads": 0.90,
+	"ports": 0.86,
+	"power": 0.88,
+	"industrial": 0.92,
+	"storage": 0.85,
+	"total_capacity": 0.88
+}
+}

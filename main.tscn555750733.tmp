@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ckcea6pc2k72q"]
+
+[ext_resource type="Script" uid="uid://5s3xh87h14mb" path="res://scripts/main.gd" id="1_ig7tw"]
+
+[node name="WorldSimulator" type="Node" unique_id=944755858]
+script = ExtResource("1_ig7tw")

@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "country_id": "india",
+  "country_name": "India",
+  "profile_type": "simulation_calibration",
+  "provenance_note": "MVP population localization profiles. Population shares are simulation calibration weights used to distribute the authoritative country PopulationComponent population across the broad Step 12.1 parent regions. They are not claims of province-level historical census precision. Regional urbanization values are calibrated so their population-weighted average reconciles exactly to the current country baseline loaded from the country JSON at runtime; they are not an independent historical country dataset. Child province/state nodes do not receive an independent population authority in Step 12.4.",
+  "population_localization_level": "parent_region",
+  "province_population": {
+	"enabled": false,
+	"reason": "Province-level population allocation is deferred to a later refinement stage."
+  },
+  "profiles": [
+	{
+	  "region_id": "india_north",
+	  "population_share": 0.24,
+	  "urbanization": 15.3
+	},
+	{
+	  "region_id": "india_west",
+	  "population_share": 0.2,
+	  "urbanization": 19.3
+	},
+	{
+	  "region_id": "india_central",
+	  "population_share": 0.14,
+	  "urbanization": 13.3
+	},
+	{
+	  "region_id": "india_east",
+	  "population_share": 0.18,
+	  "urbanization": 12.3
+	},
+	{
+	  "region_id": "india_south",
+	  "population_share": 0.2,
+	  "urbanization": 26.4
+	},
+	{
+	  "region_id": "india_northeast",
+	  "population_share": 0.04,
+	  "urbanization": 10.3
+	}
+  ]
+}

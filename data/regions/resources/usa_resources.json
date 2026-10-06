@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "country_id": "usa",
+  "country_name": "United States",
+  "profile_type": "simulation_calibration",
+  "provenance_note": "MVP regional resource localization profiles. Production and reserve shares are broad-region simulation calibration weights used to distribute the current authoritative country resource state. Stockpile shares use the parent-region allocation share as a conservative neutral baseline. Resource accessibility and local import-dependency values are regional calibration signals, not province-level historical resource surveys or independent country resource totals. Province/state nodes do not receive independent resource authority in Step 12.5.",
+  "resource_localization_level": "parent_region",
+  "province_resources": {
+    "enabled": false,
+    "reason": "Province-level resource allocation is deferred to a later refinement stage."
+  },
+  "profiles": [
+    {
+      "region_id": "usa_northeast",
+      "stockpile_share": 0.24,
+      "production_share": {
+        "food": 0.25,
+        "coal": 0.18,
+        "iron": 0.15,
+        "oil": 0.02
+      },
+      "reserve_share": {
+        "coal": 0.1,
+        "iron": 0.12,
+        "oil": 0.01
+      },
+      "resource_accessibility": {
+        "food": 0.98,
+        "coal": 0.96,
+        "iron": 0.96,
+        "oil": 0.88
+      },
+      "local_import_dependency": {
+        "food": 0.0,
+        "coal": 0.0,
+        "iron": 0.02,
+        "oil": 0.06
+      }
+    },
+    {
+      "region_id": "usa_north_central",
+      "stockpile_share": 0.27,
+      "production_share": {
+        "food": 0.3,
+        "coal": 0.4,
+        "iron": 0.4,
+        "oil": 0.08
+      },
+      "reserve_share": {
+        "coal": 0.45,
+        "iron": 0.42,
+        "oil": 0.04
+      },
+      "resource_accessibility": {
+        "food": 0.94,
+        "coal": 0.9,
+        "iron": 0.91,
+        "oil": 0.84
+      },
+      "local_import_dependency": {
+        "food": 0.0,
+        "coal": 0.0,
+        "iron": 0.01,
+        "oil": 0.1
+      }
+    },
+    {
+      "region_id": "usa_south",
+      "stockpile_share": 0.3,
+      "production_share": {
+        "food": 0.25,
+        "coal": 0.3,
+        "iron": 0.25,
+        "oil": 0.6
+      },
+      "reserve_share": {
+        "coal": 0.35,
+        "iron": 0.24,
+        "oil": 0.65
+      },
+      "resource_accessibility": {
+        "food": 0.93,
+        "coal": 0.88,
+        "iron": 0.89,
+        "oil": 0.94
+      },
+      "local_import_dependency": {
+        "food": 0.0,
+        "coal": 0.0,
+        "iron": 0.0,
+        "oil": 0.16
+      }
+    },
+    {
+      "region_id": "usa_west",
+      "stockpile_share": 0.19,
+      "production_share": {
+        "food": 0.2,
+        "coal": 0.12,
+        "iron": 0.2,
+        "oil": 0.3
+      },
+      "reserve_share": {
+        "coal": 0.1,
+        "iron": 0.22,
+        "oil": 0.3
+      },
+      "resource_accessibility": {
+        "food": 0.83,
+        "coal": 0.76,
+        "iron": 0.8,
+        "oil": 0.82
+      },
+      "local_import_dependency": {
+        "food": 0.0,
+        "coal": 0.0,
+        "iron": 0.02,
+        "oil": 0.12
+      }
+    }
+  ]
+}

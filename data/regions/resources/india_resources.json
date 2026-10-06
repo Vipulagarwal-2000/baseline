@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "country_id": "india",
+  "country_name": "India",
+  "profile_type": "simulation_calibration",
+  "provenance_note": "MVP regional resource localization profiles. Production and reserve shares are broad-region simulation calibration weights used to distribute the current authoritative country resource state. Stockpile shares use the parent-region allocation share as a conservative neutral baseline. Resource accessibility and local import-dependency values are regional calibration signals, not province-level historical resource surveys or independent country resource totals. Province/state nodes do not receive independent resource authority in Step 12.5.",
+  "resource_localization_level": "parent_region",
+  "province_resources": {
+    "enabled": false,
+    "reason": "Province-level resource allocation is deferred to a later refinement stage."
+  },
+  "profiles": [
+    {
+      "region_id": "india_north",
+      "stockpile_share": 0.24,
+      "production_share": {
+        "food": 0.24,
+        "coal": 0.12,
+        "iron": 0.05,
+        "oil": 0.05
+      },
+      "reserve_share": {
+        "coal": 0.12,
+        "iron": 0.04,
+        "oil": 0.03
+      },
+      "resource_accessibility": {
+        "food": 0.86,
+        "coal": 0.8,
+        "iron": 0.78,
+        "oil": 0.74
+      },
+      "local_import_dependency": {
+        "food": 0.0,
+        "coal": 0.0,
+        "iron": 0.0,
+        "oil": 0.06
+      }
+    },
+    {
+      "region_id": "india_west",
+      "stockpile_share": 0.2,
+      "production_share": {
+        "food": 0.2,
+        "coal": 0.08,
+        "iron": 0.2,
+        "oil": 0.55
+      },
+      "reserve_share": {
+        "coal": 0.1,
+        "iron": 0.22,
+        "oil": 0.6
+      },
+      "resource_accessibility": {
+        "food": 0.94,
+        "coal": 0.88,
+        "iron": 0.92,
+        "oil": 0.96
+      },
+      "local_import_dependency": {
+        "food": 0.0,
+        "coal": 0.0,
+        "iron": 0.0,
+        "oil": 0.28
+      }
+    },
+    {
+      "region_id": "india_central",
+      "stockpile_share": 0.14,
+      "production_share": {
+        "food": 0.12,
+        "coal": 0.55,
+        "iron": 0.25,
+        "oil": 0.15
+      },
+      "reserve_share": {
+        "coal": 0.52,
+        "iron": 0.25,
+        "oil": 0.12
+      },
+      "resource_accessibility": {
+        "food": 0.7,
+        "coal": 0.68,
+        "iron": 0.7,
+        "oil": 0.62
+      },
+      "local_import_dependency": {
+        "food": 0.0,
+        "coal": 0.0,
+        "iron": 0.0,
+        "oil": 0.08
+      }
+    },
+    {
+      "region_id": "india_east",
+      "stockpile_share": 0.18,
+      "production_share": {
+        "food": 0.18,
+        "coal": 0.18,
+        "iron": 0.12,
+        "oil": 0.1
+      },
+      "reserve_share": {
+        "coal": 0.18,
+        "iron": 0.14,
+        "oil": 0.08
+      },
+      "resource_accessibility": {
+        "food": 0.82,
+        "coal": 0.76,
+        "iron": 0.8,
+        "oil": 0.72
+      },
+      "local_import_dependency": {
+        "food": 0.0,
+        "coal": 0.0,
+        "iron": 0.0,
+        "oil": 0.1
+      }
+    },
+    {
+      "region_id": "india_south",
+      "stockpile_share": 0.2,
+      "production_share": {
+        "food": 0.2,
+        "coal": 0.05,
+        "iron": 0.3,
+        "oil": 0.1
+      },
+      "reserve_share": {
+        "coal": 0.05,
+        "iron": 0.25,
+        "oil": 0.14
+      },
+      "resource_accessibility": {
+        "food": 0.96,
+        "coal": 0.84,
+        "iron": 0.92,
+        "oil": 0.9
+      },
+      "local_import_dependency": {
+        "food": 0.0,
+        "coal": 0.0,
+        "iron": 0.0,
+        "oil": 0.12
+      }
+    },
+    {
+      "region_id": "india_northeast",
+      "stockpile_share": 0.04,
+      "production_share": {
+        "food": 0.06,
+        "coal": 0.02,
+        "iron": 0.08,
+        "oil": 0.05
+      },
+      "reserve_share": {
+        "coal": 0.03,
+        "iron": 0.1,
+        "oil": 0.03
+      },
+      "resource_accessibility": {
+        "food": 0.58,
+        "coal": 0.52,
+        "iron": 0.55,
+        "oil": 0.48
+      },
+      "local_import_dependency": {
+        "food": 0.0,
+        "coal": 0.0,
+        "iron": 0.0,
+        "oil": 0.05
+      }
+    }
+  ]
+}

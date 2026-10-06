@@ -1,0 +1,494 @@
+{
+  "schema_version": 2,
+  "country_id": "usa",
+  "country_name": "United States",
+  "historical_profile": "1950_census_geography_and_pre_statehood_territories",
+  "historical_period": {
+	"simulation_start": "1950-01-01",
+	"simulation_end": "1955-12-31",
+	"baseline": "1950-04-01"
+  },
+  "region_model": "us_census_regions_1942_1955_mvp_v2",
+  "description": "Four historical U.S. Census regions are used because the Census Bureau introduced the four-region system in the 1940s. In 1950 the central region was officially the North Central Region, not Midwest; Alaska and Hawaii were territories, not states. Puerto Rico and other insular possessions are excluded from this core-country geography.",
+  "source_basis": [
+	"U.S. Census Bureau 1950 Census: Regions and Geographic Divisions of the United States.",
+	"U.S. Census Bureau historical geography: four census regions introduced in the 1940s.",
+    "1950 Census: Alaska and Hawaii were territories."
+  ],
+  "historical_transition_events": [
+	{
+	  "date": "1950-04-01",
+	  "event": "census_baseline",
+	  "details": "48 conterminous states plus Alaska Territory, Hawaii Territory and District of Columbia are represented; Alaska/Hawaii are not states."
+	},
+	{
+	  "date": "1950-1955",
+	  "event": "no_top_level_statehood_change",
+	  "details": "No statehood admission occurred during the simulation window; Alaska and Hawaii remained territories until 1959."
+	}
+  ],
+  "excluded_territories": [
+	"Puerto Rico",
+	"American Samoa",
+	"Guam",
+	"U.S. Virgin Islands",
+	"Canal Zone",
+    "other U.S. island possessions"
+  ],
+  "regions": [
+	{
+	  "id": "usa_northeast",
+	  "name": "Northeast Region",
+	  "strategic_location_key": "industrial_northeast",
+	  "metadata": {
+		"region_type": "census_region_1942",
+		"historical_name": "Northeast"
+	  },
+	  "provinces": [
+		{
+		  "id": "usa_maine",
+		  "name": "Maine",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		},
+		{
+		  "id": "usa_new_hampshire",
+		  "name": "New Hampshire",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		},
+		{
+		  "id": "usa_vermont",
+		  "name": "Vermont",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		},
+		{
+		  "id": "usa_massachusetts",
+		  "name": "Massachusetts",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		},
+		{
+		  "id": "usa_rhode_island",
+		  "name": "Rhode Island",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		},
+		{
+		  "id": "usa_connecticut",
+		  "name": "Connecticut",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		},
+		{
+		  "id": "usa_new_york",
+		  "name": "New York",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		},
+		{
+		  "id": "usa_new_jersey",
+		  "name": "New Jersey",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		},
+		{
+		  "id": "usa_pennsylvania",
+		  "name": "Pennsylvania",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		}
+	  ]
+	},
+	{
+	  "id": "usa_north_central",
+	  "name": "North Central Region",
+	  "strategic_location_key": "great_lakes",
+	  "metadata": {
+		"region_type": "census_region_1942",
+		"historical_name": "North Central (renamed Midwest in 1984)"
+	  },
+	  "provinces": [
+		{
+		  "id": "usa_ohio",
+		  "name": "Ohio",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		},
+		{
+		  "id": "usa_indiana",
+		  "name": "Indiana",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		},
+		{
+		  "id": "usa_illinois",
+		  "name": "Illinois",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		},
+		{
+		  "id": "usa_michigan",
+		  "name": "Michigan",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		},
+		{
+		  "id": "usa_wisconsin",
+		  "name": "Wisconsin",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		},
+		{
+		  "id": "usa_minnesota",
+		  "name": "Minnesota",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		},
+		{
+		  "id": "usa_iowa",
+		  "name": "Iowa",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		},
+		{
+		  "id": "usa_missouri",
+		  "name": "Missouri",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		},
+		{
+		  "id": "usa_north_dakota",
+		  "name": "North Dakota",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		},
+		{
+		  "id": "usa_south_dakota",
+		  "name": "South Dakota",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		},
+		{
+		  "id": "usa_nebraska",
+		  "name": "Nebraska",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		},
+		{
+		  "id": "usa_kansas",
+		  "name": "Kansas",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		}
+	  ]
+	},
+	{
+	  "id": "usa_south",
+	  "name": "South Region",
+	  "strategic_location_key": "gulf_coast",
+	  "metadata": {
+		"region_type": "census_region_1942",
+		"historical_name": "South"
+	  },
+	  "provinces": [
+		{
+		  "id": "usa_delaware",
+		  "name": "Delaware",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		},
+		{
+		  "id": "usa_maryland",
+		  "name": "Maryland",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		},
+		{
+		  "id": "usa_district_of_columbia",
+		  "name": "District of Columbia",
+		  "metadata": {
+			"historical_unit_type": "federal_district",
+			"valid_1950_1955": true
+		  }
+		},
+		{
+		  "id": "usa_virginia",
+		  "name": "Virginia",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		},
+		{
+		  "id": "usa_west_virginia",
+		  "name": "West Virginia",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		},
+		{
+		  "id": "usa_north_carolina",
+		  "name": "North Carolina",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		},
+		{
+		  "id": "usa_south_carolina",
+		  "name": "South Carolina",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		},
+		{
+		  "id": "usa_georgia",
+		  "name": "Georgia",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		},
+		{
+		  "id": "usa_florida",
+		  "name": "Florida",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		},
+		{
+		  "id": "usa_kentucky",
+		  "name": "Kentucky",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		},
+		{
+		  "id": "usa_tennessee",
+		  "name": "Tennessee",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		},
+		{
+		  "id": "usa_alabama",
+		  "name": "Alabama",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		},
+		{
+		  "id": "usa_mississippi",
+		  "name": "Mississippi",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		},
+		{
+		  "id": "usa_arkansas",
+		  "name": "Arkansas",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		},
+		{
+		  "id": "usa_louisiana",
+		  "name": "Louisiana",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		},
+		{
+		  "id": "usa_oklahoma",
+		  "name": "Oklahoma",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		},
+		{
+		  "id": "usa_texas",
+		  "name": "Texas",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		}
+	  ]
+	},
+	{
+	  "id": "usa_west",
+	  "name": "West Region",
+	  "strategic_location_key": "pacific_coast",
+	  "metadata": {
+		"region_type": "census_region_1942",
+		"historical_name": "West"
+	  },
+	  "provinces": [
+		{
+		  "id": "usa_montana",
+		  "name": "Montana",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		},
+		{
+		  "id": "usa_idaho",
+		  "name": "Idaho",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		},
+		{
+		  "id": "usa_wyoming",
+		  "name": "Wyoming",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		},
+		{
+		  "id": "usa_colorado",
+		  "name": "Colorado",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		},
+		{
+		  "id": "usa_new_mexico",
+		  "name": "New Mexico",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		},
+		{
+		  "id": "usa_arizona",
+		  "name": "Arizona",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		},
+		{
+		  "id": "usa_utah",
+		  "name": "Utah",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		},
+		{
+		  "id": "usa_nevada",
+		  "name": "Nevada",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		},
+		{
+		  "id": "usa_washington",
+		  "name": "Washington",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		},
+		{
+		  "id": "usa_oregon",
+		  "name": "Oregon",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		},
+		{
+		  "id": "usa_california",
+		  "name": "California",
+		  "metadata": {
+			"historical_unit_type": "state",
+			"valid_1950_1955": true
+		  }
+		},
+		{
+		  "id": "usa_alaska_territory",
+		  "name": "Alaska Territory",
+		  "metadata": {
+			"historical_unit_type": "territory",
+			"valid_1950_1955": true,
+			"statehood_date": "1959"
+		  }
+		},
+		{
+		  "id": "usa_hawaii_territory",
+		  "name": "Hawaii Territory",
+		  "metadata": {
+			"historical_unit_type": "territory",
+			"valid_1950_1955": true,
+			"statehood_date": "1959"
+		  }
+		}
+	  ]
+	}
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "country_id": "usa",
+  "country_name": "United States",
+  "profile_type": "simulation_calibration",
+  "provenance_note": "MVP population localization profiles. Population shares are simulation calibration weights used to distribute the authoritative country PopulationComponent population across the broad Step 12.1 parent regions. They are not claims of province-level historical census precision. Regional urbanization values are calibrated so their population-weighted average reconciles exactly to the current country baseline loaded from the country JSON at runtime; they are not an independent historical country dataset. Child province/state nodes do not receive an independent population authority in Step 12.4.",
+  "population_localization_level": "parent_region",
+  "province_population": {
+	"enabled": false,
+	"reason": "Province-level population allocation is deferred to a later refinement stage."
+  },
+  "profiles": [
+	{
+	  "region_id": "usa_northeast",
+	  "population_share": 0.24,
+	  "urbanization": 71.2
+	},
+	{
+	  "region_id": "usa_north_central",
+	  "population_share": 0.27,
+	  "urbanization": 66.2
+	},
+	{
+	  "region_id": "usa_south",
+	  "population_share": 0.3,
+	  "urbanization": 55.2
+	},
+	{
+	  "region_id": "usa_west",
+	  "population_share": 0.19,
+	  "urbanization": 66.726315789474
+	}
+  ]
+}

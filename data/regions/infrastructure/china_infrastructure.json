@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "country_id": "china",
+  "country_name": "China",
+  "profile_type": "simulation_calibration",
+  "provenance_note": "Broad parent-region simulation calibration profiles. Values are normalized regional infrastructure indices calibrated so the weighted regional average reconstructs the current authoritative country InfrastructureComponent baseline. They are not province-level historical infrastructure surveys.",
+  "infrastructure_localization_level": "parent_region",
+  "province_infrastructure": {
+    "enabled": false,
+    "reason": "Province-level infrastructure allocation is deferred to a later refinement stage."
+  },
+  "profiles": [
+    {
+      "region_id": "china_north_china",
+      "aggregation_weight": 0.17,
+      "infrastructure": {
+        "transport": 0.39741,
+        "railways": 0.505618,
+        "roads": 0.258493,
+        "ports": 0.487535,
+        "power": 0.224282,
+        "industrial": 0.298437,
+        "storage": 0.276446,
+        "total_capacity": 0.349746
+      }
+    },
+    {
+      "region_id": "china_northeast",
+      "aggregation_weight": 0.12,
+      "infrastructure": {
+        "transport": 0.378486,
+        "railways": 0.505618,
+        "roads": 0.246184,
+        "ports": 0.398892,
+        "power": 0.234476,
+        "industrial": 0.284225,
+        "storage": 0.276446,
+        "total_capacity": 0.332047
+      }
+    },
+    {
+      "region_id": "china_northwest",
+      "aggregation_weight": 0.07,
+      "infrastructure": {
+        "transport": 0.283865,
+        "railways": 0.321757,
+        "roads": 0.172329,
+        "ports": 0.177285,
+        "power": 0.142725,
+        "industrial": 0.198958,
+        "storage": 0.184297,
+        "total_capacity": 0.211602
+      }
+    },
+    {
+      "region_id": "china_east_china",
+      "aggregation_weight": 0.3,
+      "infrastructure": {
+        "transport": 0.435259,
+        "railways": 0.482635,
+        "roads": 0.295421,
+        "ports": 0.66482,
+        "power": 0.26506,
+        "industrial": 0.383704,
+        "storage": 0.342266,
+        "total_capacity": 0.409881
+      }
+    },
+    {
+      "region_id": "china_central_south",
+      "aggregation_weight": 0.24,
+      "infrastructure": {
+        "transport": 0.359562,
+        "railways": 0.413687,
+        "roads": 0.233875,
+        "ports": 0.443213,
+        "power": 0.203892,
+        "industrial": 0.270014,
+        "storage": 0.263282,
+        "total_capacity": 0.312504
+      }
+    },
+    {
+      "region_id": "china_southwest",
+      "aggregation_weight": 0.1,
+      "infrastructure": {
+        "transport": 0.302789,
+        "railways": 0.367722,
+        "roads": 0.196947,
+        "ports": 0.310249,
+        "power": 0.152919,
+        "industrial": 0.213169,
+        "storage": 0.210625,
+        "total_capacity": 0.250631
+      }
+    }
+  ]
+}

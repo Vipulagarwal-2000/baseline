@@ -1,0 +1,322 @@
+{
+  "schema_version": 2,
+  "country_id": "india",
+  "country_name": "India",
+  "historical_profile": "union_constitutional_baseline_1950_with_1950_1955_transitions",
+  "historical_period": {
+	"simulation_start": "1950-01-01",
+	"simulation_end": "1955-12-31",
+	"baseline": "1950-01-26"
+  },
+  "region_model": "historical_geographic_groupings_1950_mvp_v2",
+  "description": "The children are the Indian constitutional states/territory of the early Republic around 26 January 1950, not modern Indian states. Parent regions are simulation groupings only, not formal constitutional tiers. The baseline excludes Cooch-Behar as a separate unit because it had already merged into West Bengal on 1 January 1950.",
+  "source_basis": [
+	"Constitution of India 1950, First Schedule, Parts A-D.",
+	"Constitution (Amendment of the First and Fourth Schedules) Order, 1950: Uttar Pradesh name change; Cooch-Behar removed; Vindhya Pradesh placed in Part C.",
+	"First Finance Commission statement based on 1951 Census.",
+    "Andhra State Act, 1953; Himachal Pradesh Government history for the 1954 Bilaspur merger."
+  ],
+  "historical_transition_events": [
+	{
+	  "date": "1950-01-26",
+	  "event": "constitutional_baseline",
+	  "details": "Republic begins with Part A, Part B, Part C and Part D units; Uttar Pradesh is the constitutional name for the former United Provinces; Vindhya Pradesh is in Part C; Cooch-Behar is already part of West Bengal."
+	},
+	{
+	  "date": "1953-10-01",
+	  "event": "state_creation",
+	  "details": "Andhra State created from designated Telugu-speaking territories separated from Madras State."
+	},
+	{
+	  "date": "1954-07-01",
+	  "event": "state_merger",
+	  "details": "Bilaspur State merged into Himachal Pradesh."
+	}
+  ],
+  "regions": [
+	{
+	  "id": "india_north",
+	  "name": "North India",
+	  "strategic_location_key": "himalayan_frontier",
+	  "metadata": {
+		"region_type": "simulation_geographic_grouping",
+		"strategic_location_keys": [
+		  "himalayan_frontier",
+		  "indus_frontier",
+          "gangetic_plain"
+		]
+	  },
+	  "provinces": [
+		{
+		  "id": "india_punjab",
+		  "name": "Punjab State",
+		  "metadata": {
+			"historical_unit_type": "part_a_state"
+		  }
+		},
+		{
+		  "id": "india_jammu_kashmir",
+		  "name": "Jammu and Kashmir State",
+		  "metadata": {
+			"historical_unit_type": "part_b_state"
+		  }
+		},
+		{
+		  "id": "india_pepsu",
+		  "name": "Patiala and East Punjab States Union",
+		  "metadata": {
+			"historical_unit_type": "part_b_state"
+		  }
+		},
+		{
+		  "id": "india_rajasthan",
+		  "name": "Rajasthan State",
+		  "metadata": {
+			"historical_unit_type": "part_b_state"
+		  }
+		},
+		{
+		  "id": "india_ajmer",
+		  "name": "Ajmer State",
+		  "metadata": {
+			"historical_unit_type": "part_c_state"
+		  }
+		},
+		{
+		  "id": "india_delhi",
+		  "name": "Delhi State",
+		  "metadata": {
+			"historical_unit_type": "part_c_state"
+		  }
+		},
+		{
+		  "id": "india_himachal",
+		  "name": "Himachal Pradesh State",
+		  "metadata": {
+			"historical_unit_type": "part_c_state"
+		  }
+		},
+		{
+		  "id": "india_bilaspur",
+		  "name": "Bilaspur State",
+		  "metadata": {
+			"historical_unit_type": "part_c_state",
+			"valid_until": "1954-06-30"
+		  }
+		},
+		{
+		  "id": "india_uttar_pradesh",
+		  "name": "Uttar Pradesh State",
+		  "metadata": {
+			"historical_unit_type": "part_a_state",
+			"name_before_1950_order": "United Provinces"
+		  }
+		}
+	  ]
+	},
+	{
+	  "id": "india_west",
+	  "name": "West India",
+	  "strategic_location_key": "bombay_region",
+	  "metadata": {
+		"region_type": "simulation_geographic_grouping",
+		"strategic_location_keys": [
+		  "bombay_region",
+          "indus_frontier"
+		]
+	  },
+	  "provinces": [
+		{
+		  "id": "india_bombay",
+		  "name": "Bombay State",
+		  "metadata": {
+			"historical_unit_type": "part_a_state"
+		  }
+		},
+		{
+		  "id": "india_saurashtra",
+		  "name": "Saurashtra State",
+		  "metadata": {
+			"historical_unit_type": "part_b_state"
+		  }
+		},
+		{
+		  "id": "india_kutch",
+		  "name": "Kutch State",
+		  "metadata": {
+			"historical_unit_type": "part_c_state"
+		  }
+		}
+	  ]
+	},
+	{
+	  "id": "india_central",
+	  "name": "Central India",
+	  "strategic_location_key": "deccan_plateau",
+	  "metadata": {
+		"region_type": "simulation_geographic_grouping",
+		"strategic_location_keys": [
+		  "deccan_plateau",
+          "gangetic_plain"
+		]
+	  },
+	  "provinces": [
+		{
+		  "id": "india_madhya_pradesh",
+		  "name": "Madhya Pradesh State",
+		  "metadata": {
+			"historical_unit_type": "part_a_state"
+		  }
+		},
+		{
+		  "id": "india_madhya_bharat",
+		  "name": "Madhya Bharat State",
+		  "metadata": {
+			"historical_unit_type": "part_b_state"
+		  }
+		},
+		{
+		  "id": "india_vindhya_pradesh",
+		  "name": "Vindhya Pradesh State",
+		  "metadata": {
+			"historical_unit_type": "part_c_state"
+		  }
+		},
+		{
+		  "id": "india_bhopal",
+		  "name": "Bhopal State",
+		  "metadata": {
+			"historical_unit_type": "part_c_state"
+		  }
+		}
+	  ]
+	},
+	{
+	  "id": "india_east",
+	  "name": "East India",
+	  "strategic_location_key": "bengal_region",
+	  "metadata": {
+		"region_type": "simulation_geographic_grouping",
+		"strategic_location_keys": [
+		  "bengal_region",
+          "gangetic_plain"
+		]
+	  },
+	  "provinces": [
+		{
+		  "id": "india_bihar",
+		  "name": "Bihar State",
+		  "metadata": {
+			"historical_unit_type": "part_a_state"
+		  }
+		},
+		{
+		  "id": "india_orissa",
+		  "name": "Orissa State",
+		  "metadata": {
+			"historical_unit_type": "part_a_state"
+		  }
+		},
+		{
+		  "id": "india_west_bengal",
+		  "name": "West Bengal State",
+		  "metadata": {
+			"historical_unit_type": "part_a_state",
+			"includes_cooch_behar_from_1950": true
+		  }
+		}
+	  ]
+	},
+	{
+	  "id": "india_south",
+	  "name": "South India",
+	  "strategic_location_key": "deccan_plateau",
+	  "metadata": {
+		"region_type": "simulation_geographic_grouping",
+		"strategic_location_keys": [
+		  "deccan_plateau",
+          "bombay_region"
+		]
+	  },
+	  "provinces": [
+		{
+		  "id": "india_madras",
+		  "name": "Madras State",
+		  "metadata": {
+			"historical_unit_type": "part_a_state",
+			"andhra_split_1953": true
+		  }
+		},
+		{
+		  "id": "india_hyderabad",
+		  "name": "Hyderabad State",
+		  "metadata": {
+			"historical_unit_type": "part_b_state"
+		  }
+		},
+		{
+		  "id": "india_mysore",
+		  "name": "Mysore State",
+		  "metadata": {
+			"historical_unit_type": "part_b_state"
+		  }
+		},
+		{
+		  "id": "india_travancore_cochin",
+		  "name": "Travancore-Cochin State",
+		  "metadata": {
+			"historical_unit_type": "part_b_state"
+		  }
+		},
+		{
+		  "id": "india_coorg",
+		  "name": "Coorg State",
+		  "metadata": {
+			"historical_unit_type": "part_c_state"
+		  }
+		},
+		{
+		  "id": "india_andaman_nicobar",
+		  "name": "Andaman and Nicobar Islands",
+		  "metadata": {
+			"historical_unit_type": "part_d_territory"
+		  }
+		}
+	  ]
+	},
+	{
+	  "id": "india_northeast",
+	  "name": "Northeast India",
+	  "strategic_location_key": "himalayan_frontier",
+	  "metadata": {
+		"region_type": "simulation_geographic_grouping",
+		"strategic_location_keys": [
+          "himalayan_frontier"
+		]
+	  },
+	  "provinces": [
+		{
+		  "id": "india_assam",
+		  "name": "Assam State",
+		  "metadata": {
+			"historical_unit_type": "part_a_state"
+		  }
+		},
+		{
+		  "id": "india_manipur",
+		  "name": "Manipur State",
+		  "metadata": {
+			"historical_unit_type": "part_c_state"
+		  }
+		},
+		{
+		  "id": "india_tripura",
+		  "name": "Tripura State",
+		  "metadata": {
+			"historical_unit_type": "part_c_state"
+		  }
+		}
+	  ]
+	}
+  ]
+}

@@ -1,0 +1,253 @@
+{
+	"id": "india",
+	"name": "India",
+	"country_code": "IND",
+	"entity_type": "country",
+	"population": {
+		"population": 359000000,
+		"growth_rate": 1.25,
+		"birth_rate": 42.0,
+		"death_rate": 29.0,
+		"urbanization": 17.3,
+		"immigration": 50000,
+		"emigration": 30000,
+		"migration_capacity": 100000,
+		"migration_policy": 1.0
+	},
+	"economy": {
+		"gdp": 354333000000.0,
+		"growth_rate": 3.5,
+		"inflation": 3.0,
+		"unemployment": 5.0,
+		  "currency_id": "INR",
+	"currency_name": "Indian Rupee",
+	"currency_symbol": "₹"
+	},"government": {
+	"government_type": "parliamentary_dominion_transition_to_republic",
+	"stability": 0.66,
+	"approval": 0.72,
+	"political_pressure": 0.38,
+	"institutional_strength": 0.58,
+	"policy_capacity": 0.54,
+	"legitimacy": 0.78,
+	"corruption": 0.34,
+	"centralization": 0.58,
+	"political_freedom": 0.72,
+	"executive_strength": 0.52,
+	"legislative_constraint": 0.68,
+	"electoral_competition": 0.72,
+	"party_control": 0.62,
+	"bureaucratic_capacity": 0.62,
+	"military_civilian_control": 0.78,
+	"reform_flexibility": 0.74,
+	"mobilization_capacity": 0.58,
+	"political_pluralism": 0.78,
+	"regional_autonomy": 0.62
+},
+	"research": {
+		"research_capacity": 20.0,
+		"research_funding": 15.0,
+		"researchers": 10.0,
+		"research_institutions": 8.0,
+		"research_efficiency": 0.8,
+		"technology_level": 18.576,
+		"technologies": {
+			"electricity": 1.0,
+			"radio": 1.0,
+			"telecommunications": 1.0,
+			"industrial_machinery": 1.0
+		}
+	},
+	"resources": {
+		"production": {
+			"food": 100.0,
+			"coal": 20.0,
+			"iron": 15.0,
+			"oil": 2.0
+		},
+		"consumption": {
+			"food": 95.0,
+			"coal": 18.0,
+			"iron": 12.0,
+			"oil": 4.0
+		},
+		"reserves": {
+			"coal": 5000.0,
+			"iron": 3000.0,
+			"oil": 500.0
+		},
+		"stockpile": {
+			"food": 50.0,
+			"coal": 100.0,
+			"iron": 50.0,
+			"oil": 10.0
+		},
+		"imports": {
+			"oil": 2.0
+		},
+		"exports": {
+			"food": 5.0
+		}
+	},
+	"relationships": {
+		"china": 20.0,
+		"usa": 60.0
+	},"geography": {
+	"region": "South Asia",
+	"subregion": "Indian Subcontinent",
+	"latitude": 22.59,
+	"longitude": 78.96,
+	"land_area": 3287263.0,
+
+	"terrain": {
+		"mountains": 0.30,
+		"plateaus": 0.35,
+		"deserts": 0.10,
+		"plains": 0.55,
+		"coastal_lowlands": 0.30,
+		"major_rivers": 0.75
+	},
+
+	"coastline": 7516.0,
+	"maritime_access": true,
+
+	"major_ports": {
+		"bombay": 0.90,
+		"calcutta": 0.90,
+		"madras": 0.80,
+		"visakhapatnam": 0.65,
+		"cochin": 0.65
+	},
+
+	"neighbors": {
+		"pakistan": 95.0,
+		"china": 65.0,
+		"nepal": 75.0,
+		"bhutan": 55.0,
+		"burma": 65.0
+	},
+
+	"strategic_locations": {
+		"himalayan_frontier": 0.95,
+		"indus_frontier": 0.90,
+		"gangetic_plain": 0.95,
+		"deccan_plateau": 0.75,
+		"bombay_region": 0.85,
+		"bengal_region": 0.90,
+		"indian_ocean": 0.95
+	},
+
+	"strategic_importance": 88.0,
+	"trade_routes": {},
+	"shipping_access": 82.0,
+	"resource_locations": {},
+
+	"military_access": 70.0,
+	"military_projection": 48.0
+}, 	"military": {
+		"military_power": 0.50,
+		"readiness": 0.55,
+		"manpower": 0.58,
+		"logistics_capacity": 0.43,
+
+		"army_strength": 0.65,
+		"naval_strength": 0.18,
+		"air_strength": 0.16,
+
+		"industrial_support": 0.32,
+		"military_technology": 0.24,
+		"command_capacity": 0.50,
+
+		"resource_security": 0.52,
+
+		"defensive_capability": 0.68,
+		"power_projection": 0.34,
+		"mobilization_capacity": 0.60,
+
+		"military_spending": 0.42,
+		"military_pressure": 0.35
+	}, 
+	
+"industry": {
+	"processes": {
+		"food_agriculture": {
+			"active": true,
+			"capacity": 100.0,
+			"efficiency": 0.72
+		},
+		"coal_mining": {
+			"active": true,
+			"capacity": 20.0,
+			"efficiency": 0.70
+		},
+		"iron_ore_mining": {
+			"active": true,
+			"capacity": 15.0,
+			"efficiency": 0.68
+		},
+		"oil_extraction": {
+			"active": true,
+			"capacity": 2.0,
+			"efficiency": 0.55
+		},
+		"steel_basic": {
+			"active": true,
+			"capacity": 1.5,
+			"efficiency": 0.65
+		},
+		"cotton_textile": {
+			"active": true,
+			"capacity": 8.0,
+			"efficiency": 0.78
+		},
+		"jute_textile": {
+			"active": true,
+			"capacity": 4.0,
+			"efficiency": 0.76
+		},
+		"sugar_processing": {
+			"active": true,
+			"capacity": 5.0,
+			"efficiency": 0.70
+		},
+		"cement_production": {
+			"active": true,
+			"capacity": 4.0,
+			"efficiency": 0.68
+		},
+		"fertilizer_production": {
+			"active": true,
+			"capacity": 1.0,
+			"efficiency": 0.45
+		},
+		"petroleum_refining": {
+			"active": true,
+			"capacity": 1.0,
+			"efficiency": 0.50
+		},
+		"machine_tools": {
+			"active": true,
+			"capacity": 0.8,
+			"efficiency": 0.45
+		},
+		"locomotive_manufacturing": {
+			"active": true,
+			"capacity": 0.5,
+			"efficiency": 0.40
+		}
+	}
+},
+"infrastructure": {
+	"transport": 0.48,
+	"railways": 0.62,
+	"roads": 0.28,
+	"ports": 0.52,
+	"power": 0.24,
+	"industrial": 0.28,
+	"storage": 0.30,
+	"total_capacity": 0.38
+}
+
+
+
+}

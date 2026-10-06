@@ -1,0 +1,255 @@
+{
+	"id": "china",
+	"name": "China",
+	"country_code": "CHN",
+	"entity_type": "country",
+	"population": {
+		"population": 546815000,
+		"growth_rate": 1.9,
+		"birth_rate": 37.0,
+		"death_rate": 17.5,
+		"urbanization": 11.8,
+		"immigration": 20000,
+		"emigration": 40000,
+		"migration_capacity": 120000,
+		"migration_policy": 0.8
+	},
+	"economy": {
+		"gdp": 413938955000.0,
+		"growth_rate": 4.0,
+		"inflation": 2.0,
+		"unemployment": 6.0,
+		 "currency_id": "CNY",
+	"currency_name": "Chinese Yuan",
+	"currency_symbol": "¥"
+	},
+	
+	"government": {
+	"government_type": "ccp_led_people_democratic_state",
+	"stability": 0.72,
+	"approval": 0.68,
+	"political_pressure": 0.28,
+	"institutional_strength": 0.62,
+	"policy_capacity": 0.78,
+	"legitimacy": 0.64,
+	"corruption": 0.38,
+	"centralization": 0.88,
+	"political_freedom": 0.18,
+	"executive_strength": 0.86,
+	"legislative_constraint": 0.25,
+	"electoral_competition": 0.12,
+	"party_control": 0.92,
+	"bureaucratic_capacity": 0.52,
+	"military_civilian_control": 0.72,
+	"reform_flexibility": 0.62,
+	"mobilization_capacity": 0.88,
+	"political_pluralism": 0.30,
+	"regional_autonomy": 0.25
+},
+	"research": {
+		"research_capacity": 45.0,
+		"research_funding": 32.0,
+		"researchers": 24.0,
+		"research_institutions": 18.0,
+		"research_efficiency": 0.68,
+		"technology_level": 16.0,
+		"technologies": {
+			"electricity": 1.0,
+			"radio": 1.0,
+			"telecommunications": 1.0,
+			"industrial_machinery": 1.0
+		}
+	},
+	"resources": {
+		"production": {
+			"food": 180.0,
+			"coal": 70.0,
+			"iron": 35.0,
+			"oil": 5.0
+		},
+		"consumption": {
+			"food": 175.0,
+			"coal": 62.0,
+			"iron": 30.0,
+			"oil": 8.0
+		},
+		"reserves": {
+			"coal": 12000.0,
+			"iron": 7000.0,
+			"oil": 800.0
+		},
+		"stockpile": {
+			"food": 80.0,
+			"coal": 180.0,
+			"iron": 90.0,
+			"oil": 15.0
+		},
+		"imports": {
+			"oil": 3.0,
+			"iron": 2.0
+		},
+		"exports": {
+			"food": 8.0,
+			"coal": 4.0
+		}
+	},
+	"relationships": {
+		"india": 20.0,
+		"usa": 30.0
+	},"geography": {
+	"region": "East Asia",
+	"subregion": "East and Central Asia",
+	"latitude": 35.86,
+	"longitude": 104.20,
+	"land_area": 9596960.0,
+
+	"terrain": {
+		"mountains": 0.65,
+		"plateaus": 0.55,
+		"deserts": 0.30,
+		"plains": 0.45,
+		"coastal_lowlands": 0.35,
+		"major_rivers": 0.70
+	},
+
+	"coastline": 14500.0,
+	"maritime_access": true,
+
+	"major_ports": {
+		"shanghai": 0.90,
+		"guangzhou": 0.75,
+		"tianjin": 0.75,
+		"qingdao": 0.70
+	},
+
+	"neighbors": {
+		"ussr": 90.0,
+		"mongolia": 85.0,
+		"north_korea": 70.0,
+		"afghanistan": 35.0,
+		"india": 65.0,
+		"nepal": 40.0,
+		"bhutan": 25.0,
+		"burma": 50.0,
+		"laos": 35.0,
+		"vietnam": 55.0
+	},
+
+	"strategic_locations": {
+		"manchuria": 0.85,
+		"xinjiang": 0.75,
+		"tibet": 0.90,
+		"yangtze_corridor": 0.95,
+		"north_china_plain": 0.95,
+		"south_china_coast": 0.85
+	},
+
+	"strategic_importance": 92.0,
+	"trade_routes": {},
+	"shipping_access": 72.0,
+	"resource_locations": {},
+
+	"military_access": 78.0,
+	"military_projection": 55.0
+}, 	"military": {
+		"military_power": 0.62,
+		"readiness": 0.60,
+		"manpower": 0.72,
+		"logistics_capacity": 0.38,
+
+		"army_strength": 0.78,
+		"naval_strength": 0.08,
+		"air_strength": 0.08,
+
+		"industrial_support": 0.28,
+		"military_technology": 0.18,
+		"command_capacity": 0.45,
+
+		"resource_security": 0.48,
+
+		"defensive_capability": 0.64,
+		"power_projection": 0.28,
+		"mobilization_capacity": 0.76,
+
+		"military_spending": 0.65,
+		"military_pressure": 0.48
+	},"industry": {
+	"processes": {
+		"food_agriculture": {
+			"active": true,
+			"capacity": 105.0,
+			"efficiency": 0.72
+		},
+		"coal_mining": {
+			"active": true,
+			"capacity": 35.0,
+			"efficiency": 0.60
+		},
+		"iron_ore_mining": {
+			"active": true,
+			"capacity": 12.0,
+			"efficiency": 0.55
+		},
+		"steel_basic": {
+			"active": true,
+			"capacity": 0.9,
+			"efficiency": 0.55
+		},
+		"crude_oil_extraction": {
+			"active": true,
+			"capacity": 0.4,
+			"efficiency": 0.45
+		},
+		"electric_power_generation": {
+			"active": true,
+			"capacity": 8.0,
+			"efficiency": 0.55
+		},
+		"cotton_textile": {
+			"active": true,
+			"capacity": 12.0,
+			"efficiency": 0.70
+		},
+		"cement_production": {
+			"active": true,
+			"capacity": 3.0,
+			"efficiency": 0.55
+		},
+		"fertilizer_production": {
+			"active": true,
+			"capacity": 1.0,
+			"efficiency": 0.40
+		},
+		"paper_production": {
+			"active": true,
+			"capacity": 1.5,
+			"efficiency": 0.55
+		},
+		"glass_production": {
+			"active": true,
+			"capacity": 1.5,
+			"efficiency": 0.55
+		},
+		"rubber_goods": {
+			"active": true,
+			"capacity": 0.8,
+			"efficiency": 0.40
+		},
+		"basic_machinery": {
+			"active": true,
+			"capacity": 1.5,
+			"efficiency": 0.40
+		}
+	}
+},
+"infrastructure": {
+	"transport": 0.38,
+	"railways": 0.45,
+	"roads": 0.25,
+	"ports": 0.48,
+	"power": 0.22,
+	"industrial": 0.30,
+	"storage": 0.28,
+	"total_capacity": 0.32
+}
+}

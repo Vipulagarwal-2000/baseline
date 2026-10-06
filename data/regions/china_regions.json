@@ -1,0 +1,530 @@
+{
+  "schema_version": 2,
+  "country_id": "china",
+  "country_name": "China",
+  "historical_profile": "prc_administrative_baseline_1950_with_1950_1955_transitions",
+  "historical_period": {
+	"simulation_start": "1950-01-01",
+	"simulation_end": "1955-12-31",
+	"baseline": "1950-01-01"
+  },
+  "region_model": "historical_superregions_1950_mvp_v2",
+  "description": "Historical 1950 PRC provincial-level structure grouped under the six Greater Administrative Areas used in the early PRC. The Greater Administrative Area layer was abolished in 1954, so these parent regions are retained only as stable simulation geography; the historical transition timeline records the 1952-1955 administrative changes.",
+  "source_basis": [
+	"1950 PRC administrative-division chronology (29 provinces, 1 autonomous region, 13 municipalities, 8 administrative-office regions, plus separate Tibet/Qamdo/Taiwan status).",
+	"Library of Congress/CIA map: China, communist administrative divisions, December 1954.",
+    "1952 Resolution on adjustment of provincial and regional establishments; 1954 abolition of Greater Administrative Areas and provincial mergers; 1955 Rehe/Xikang/Xinjiang changes."
+  ],
+  "historical_transition_events": [
+	{
+	  "date": "1952-11-15",
+	  "event": "provincial_reorganization",
+	  "details": "Pingyuan and Chahar abolished into surrounding provinces; Jiangsu, Anhui and Sichuan restored as provinces; Nanjing loses central-municipality status and becomes part of Jiangsu."
+	},
+	{
+	  "date": "1953-02-01",
+	  "event": "municipality_change",
+	  "details": "Changchun and Harbin elevated to provincial-level municipalities."
+	},
+	{
+	  "date": "1954-06-19",
+	  "event": "regional_reorganization",
+	  "details": "Six Greater Administrative Areas abolished; Liaodong and Liaoxi merged into Liaoning; Songjiang merged into Heilongjiang; Suiyuan merged into Inner Mongolia; Ningxia merged into Gansu; most provincial-level municipalities absorbed, leaving Beijing, Shanghai and Tianjin as direct municipalities."
+	},
+	{
+	  "date": "1955-07-30",
+	  "event": "provincial_reorganization",
+	  "details": "Rehe abolished and divided among Hebei, Liaoning and Inner Mongolia; Xikang incorporated mainly into Sichuan."
+	},
+	{
+	  "date": "1955-10-01",
+	  "event": "autonomy_change",
+	  "details": "Xinjiang Province became Xinjiang Uyghur Autonomous Region."
+	}
+  ],
+  "excluded_or_separate_historical_units": [
+	{
+	  "id": "china_tibet_area",
+	  "name": "Tibet Area",
+	  "status": "separate_historical_authority",
+	  "reason": "Not modeled as an ordinary PRC province in the 1950 baseline."
+	},
+	{
+	  "id": "china_qamdo_area",
+	  "name": "Qamdo Area",
+	  "status": "separate_historical_unit",
+	  "reason": "Handled separately in the early-1950s administrative/ownership history."
+	},
+	{
+	  "id": "china_taiwan_province",
+	  "name": "Taiwan Province",
+	  "status": "not_under_prc_administration",
+	  "reason": "PRC did not exercise effective administration over Taiwan during 1950-1955."
+	}
+  ],
+  "regions": [
+	{
+	  "id": "china_north_china",
+	  "name": "North China",
+	  "strategic_location_key": "north_china_plain",
+	  "metadata": {
+		"region_type": "greater_administrative_area",
+		"valid_approx": "1950-1954",
+		"strategic_location_keys": [
+          "north_china_plain"
+		]
+	  },
+	  "provinces": [
+		{
+		  "id": "china_beijing_municipality",
+		  "name": "Beijing Municipality",
+		  "metadata": {
+			"historical_unit_type": "municipality"
+		  }
+		},
+		{
+		  "id": "china_tianjin_municipality",
+		  "name": "Tianjin Municipality",
+		  "metadata": {
+			"historical_unit_type": "municipality"
+		  }
+		},
+		{
+		  "id": "china_hebei",
+		  "name": "Hebei Province",
+		  "metadata": {
+			"historical_unit_type": "province"
+		  }
+		},
+		{
+		  "id": "china_shanxi",
+		  "name": "Shanxi Province",
+		  "metadata": {
+			"historical_unit_type": "province"
+		  }
+		},
+		{
+		  "id": "china_pingyuan",
+		  "name": "Pingyuan Province",
+		  "metadata": {
+			"historical_unit_type": "province",
+			"abolished_1952": true
+		  }
+		},
+		{
+		  "id": "china_chahar",
+		  "name": "Chahar Province",
+		  "metadata": {
+			"historical_unit_type": "province",
+			"abolished_1952": true
+		  }
+		},
+		{
+		  "id": "china_suiyuan",
+		  "name": "Suiyuan Province",
+		  "metadata": {
+			"historical_unit_type": "province",
+			"abolished_1954": true
+		  }
+		},
+		{
+		  "id": "china_inner_mongolia",
+		  "name": "Inner Mongolia Autonomous Region",
+		  "metadata": {
+			"historical_unit_type": "autonomous_region"
+		  }
+		}
+	  ]
+	},
+	{
+	  "id": "china_northeast",
+	  "name": "Northeast China",
+	  "strategic_location_key": "manchuria",
+	  "metadata": {
+		"region_type": "greater_administrative_area",
+		"valid_approx": "1950-1954",
+		"strategic_location_keys": [
+          "manchuria"
+		]
+	  },
+	  "provinces": [
+		{
+		  "id": "china_shenyang_municipality",
+		  "name": "Shenyang Municipality",
+		  "metadata": {
+			"historical_unit_type": "municipality",
+			"abolished_1954": true
+		  }
+		},
+		{
+		  "id": "china_luda_municipality",
+		  "name": "Lüshun-Dalian Municipality",
+		  "metadata": {
+			"historical_unit_type": "municipality",
+			"abolished_1954": true
+		  }
+		},
+		{
+		  "id": "china_anshan_municipality",
+		  "name": "Anshan Municipality",
+		  "metadata": {
+			"historical_unit_type": "municipality",
+			"abolished_1954": true
+		  }
+		},
+		{
+		  "id": "china_fushun_municipality",
+		  "name": "Fushun Municipality",
+		  "metadata": {
+			"historical_unit_type": "municipality",
+			"abolished_1954": true
+		  }
+		},
+		{
+		  "id": "china_benxi_municipality",
+		  "name": "Benxi Municipality",
+		  "metadata": {
+			"historical_unit_type": "municipality",
+			"abolished_1954": true
+		  }
+		},
+		{
+		  "id": "china_liaodong",
+		  "name": "Liaodong Province",
+		  "metadata": {
+			"historical_unit_type": "province",
+			"abolished_1954": true
+		  }
+		},
+		{
+		  "id": "china_liaoxi",
+		  "name": "Liaoxi Province",
+		  "metadata": {
+			"historical_unit_type": "province",
+			"abolished_1954": true
+		  }
+		},
+		{
+		  "id": "china_jilin",
+		  "name": "Jilin Province",
+		  "metadata": {
+			"historical_unit_type": "province"
+		  }
+		},
+		{
+		  "id": "china_songjiang",
+		  "name": "Songjiang Province",
+		  "metadata": {
+			"historical_unit_type": "province",
+			"abolished_1954": true
+		  }
+		},
+		{
+		  "id": "china_heilongjiang",
+		  "name": "Heilongjiang Province",
+		  "metadata": {
+			"historical_unit_type": "province"
+		  }
+		},
+		{
+		  "id": "china_rehe",
+		  "name": "Rehe Province",
+		  "metadata": {
+			"historical_unit_type": "province",
+			"abolished_1955": true
+		  }
+		}
+	  ]
+	},
+	{
+	  "id": "china_northwest",
+	  "name": "Northwest China",
+	  "strategic_location_key": "xinjiang",
+	  "metadata": {
+		"region_type": "greater_administrative_area",
+		"valid_approx": "1950-1954",
+		"strategic_location_keys": [
+          "xinjiang"
+		]
+	  },
+	  "provinces": [
+		{
+		  "id": "china_xian_municipality",
+		  "name": "Xi'an Municipality",
+		  "metadata": {
+			"historical_unit_type": "municipality",
+			"abolished_1954": true
+		  }
+		},
+		{
+		  "id": "china_shaanxi",
+		  "name": "Shaanxi Province",
+		  "metadata": {
+			"historical_unit_type": "province"
+		  }
+		},
+		{
+		  "id": "china_gansu",
+		  "name": "Gansu Province",
+		  "metadata": {
+			"historical_unit_type": "province"
+		  }
+		},
+		{
+		  "id": "china_ningxia",
+		  "name": "Ningxia Province",
+		  "metadata": {
+			"historical_unit_type": "province",
+			"abolished_1954": true
+		  }
+		},
+		{
+		  "id": "china_qinghai",
+		  "name": "Qinghai Province",
+		  "metadata": {
+			"historical_unit_type": "province"
+		  }
+		},
+		{
+		  "id": "china_xinjiang",
+		  "name": "Xinjiang Province",
+		  "metadata": {
+			"historical_unit_type": "province",
+			"became_autonomous_region_1955": true
+		  }
+		}
+	  ]
+	},
+	{
+	  "id": "china_east_china",
+	  "name": "East China",
+	  "strategic_location_key": "yangtze_corridor",
+	  "metadata": {
+		"region_type": "greater_administrative_area",
+		"valid_approx": "1950-1954",
+		"strategic_location_keys": [
+		  "yangtze_corridor",
+          "south_china_coast"
+		]
+	  },
+	  "provinces": [
+		{
+		  "id": "china_shanghai_municipality",
+		  "name": "Shanghai Municipality",
+		  "metadata": {
+			"historical_unit_type": "municipality"
+		  }
+		},
+		{
+		  "id": "china_nanjing_municipality",
+		  "name": "Nanjing Municipality",
+		  "metadata": {
+			"historical_unit_type": "municipality",
+			"status_change_1952": "became provincial capital/city within Jiangsu"
+		  }
+		},
+		{
+		  "id": "china_shandong",
+		  "name": "Shandong Province",
+		  "metadata": {
+			"historical_unit_type": "province"
+		  }
+		},
+		{
+		  "id": "china_subei",
+		  "name": "Subei Administrative Region",
+		  "metadata": {
+			"historical_unit_type": "administrative_region",
+			"abolished_1952": true
+		  }
+		},
+		{
+		  "id": "china_sunan",
+		  "name": "Sunan Administrative Region",
+		  "metadata": {
+			"historical_unit_type": "administrative_region",
+			"abolished_1952": true
+		  }
+		},
+		{
+		  "id": "china_wanbei",
+		  "name": "Wanbei Administrative Region",
+		  "metadata": {
+			"historical_unit_type": "administrative_region",
+			"abolished_1952": true
+		  }
+		},
+		{
+		  "id": "china_wannan",
+		  "name": "Wannan Administrative Region",
+		  "metadata": {
+			"historical_unit_type": "administrative_region",
+			"abolished_1952": true
+		  }
+		},
+		{
+		  "id": "china_zhejiang",
+		  "name": "Zhejiang Province",
+		  "metadata": {
+			"historical_unit_type": "province"
+		  }
+		},
+		{
+		  "id": "china_fujian",
+		  "name": "Fujian Province",
+		  "metadata": {
+			"historical_unit_type": "province"
+		  }
+		}
+	  ]
+	},
+	{
+	  "id": "china_central_south",
+	  "name": "Central-South China",
+	  "strategic_location_key": "south_china_coast",
+	  "metadata": {
+		"region_type": "greater_administrative_area",
+		"valid_approx": "1950-1954",
+		"strategic_location_keys": [
+          "south_china_coast"
+		]
+	  },
+	  "provinces": [
+		{
+		  "id": "china_wuhan_municipality",
+		  "name": "Wuhan Municipality",
+		  "metadata": {
+			"historical_unit_type": "municipality",
+			"abolished_1954": true
+		  }
+		},
+		{
+		  "id": "china_guangzhou_municipality",
+		  "name": "Guangzhou Municipality",
+		  "metadata": {
+			"historical_unit_type": "municipality",
+			"abolished_1954": true
+		  }
+		},
+		{
+		  "id": "china_henan",
+		  "name": "Henan Province",
+		  "metadata": {
+			"historical_unit_type": "province"
+		  }
+		},
+		{
+		  "id": "china_hubei",
+		  "name": "Hubei Province",
+		  "metadata": {
+			"historical_unit_type": "province"
+		  }
+		},
+		{
+		  "id": "china_hunan",
+		  "name": "Hunan Province",
+		  "metadata": {
+			"historical_unit_type": "province"
+		  }
+		},
+		{
+		  "id": "china_jiangxi",
+		  "name": "Jiangxi Province",
+		  "metadata": {
+			"historical_unit_type": "province"
+		  }
+		},
+		{
+		  "id": "china_guangdong",
+		  "name": "Guangdong Province",
+		  "metadata": {
+			"historical_unit_type": "province"
+		  }
+		},
+		{
+		  "id": "china_guangxi",
+		  "name": "Guangxi Province",
+		  "metadata": {
+			"historical_unit_type": "province"
+		  }
+		}
+	  ]
+	},
+	{
+	  "id": "china_southwest",
+	  "name": "Southwest China",
+	  "strategic_location_key": "tibet",
+	  "metadata": {
+		"region_type": "greater_administrative_area",
+		"valid_approx": "1950-1954",
+		"strategic_location_keys": [
+          "tibet"
+		]
+	  },
+	  "provinces": [
+		{
+		  "id": "china_chongqing_municipality",
+		  "name": "Chongqing Municipality",
+		  "metadata": {
+			"historical_unit_type": "municipality",
+			"abolished_1954": true
+		  }
+		},
+		{
+		  "id": "china_chuandong",
+		  "name": "Chuandong Administrative Region",
+		  "metadata": {
+			"historical_unit_type": "administrative_region",
+			"abolished_1952": true
+		  }
+		},
+		{
+		  "id": "china_chuannan",
+		  "name": "Chuannan Administrative Region",
+		  "metadata": {
+			"historical_unit_type": "administrative_region",
+			"abolished_1952": true
+		  }
+		},
+		{
+		  "id": "china_chuanxi",
+		  "name": "Chuanxi Administrative Region",
+		  "metadata": {
+			"historical_unit_type": "administrative_region",
+			"abolished_1952": true
+		  }
+		},
+		{
+		  "id": "china_chuanbei",
+		  "name": "Chuanbei Administrative Region",
+		  "metadata": {
+			"historical_unit_type": "administrative_region",
+			"abolished_1952": true
+		  }
+		},
+		{
+		  "id": "china_guizhou",
+		  "name": "Guizhou Province",
+		  "metadata": {
+			"historical_unit_type": "province"
+		  }
+		},
+		{
+		  "id": "china_yunnan",
+		  "name": "Yunnan Province",
+		  "metadata": {
+			"historical_unit_type": "province"
+		  }
+		},
+		{
+		  "id": "china_xikang",
+		  "name": "Xikang Province",
+		  "metadata": {
+			"historical_unit_type": "province",
+			"abolished_1955": true
+		  }
+		}
+	  ]
+	}
+  ]
+}

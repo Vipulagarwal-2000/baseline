@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "country_id": "india",
+  "country_name": "India",
+  "profile_type": "simulation_calibration",
+  "provenance_note": "Broad parent-region simulation calibration profiles. Process capacity shares localize the authoritative country IndustryComponent into the Step 12.1 parent regions. Extractive process shares reuse the existing Step 12.5 resource-production localization anchors; non-extractive manufacturing shares are calibrated from population share \u00d7 regional industrial-infrastructure index from Step 12.6. These are localization parameters, not province-level historical industry surveys.",
+  "industry_localization_level": "parent_region",
+  "province_industry": {
+	"enabled": false,
+	"reason": "Province-level industry allocation is deferred to a later refinement stage."
+  },
+  "process_defaults": {
+	"efficiency_source": "country_process_definition",
+	"adoption_source": "country_industry_component",
+	"resource_demand_source": "production_process_catalog",
+	"labor_need_source": "production_process_catalog"
+  },
+  "profiles": [
+	{
+	  "region_id": "india_north",
+	  "localization_weight": 0.24,
+	  "capacity_share_by_process": {
+		"food_agriculture": 0.24,
+		"coal_mining": 0.12,
+		"iron_ore_mining": 0.05,
+		"oil_extraction": 0.05,
+		"steel_basic": 0.2264151105121271,
+		"cotton_textile": 0.2264151105121271,
+		"jute_textile": 0.2264151105121271,
+		"sugar_processing": 0.2264151105121271,
+		"cement_production": 0.2264151105121271,
+		"fertilizer_production": 0.2264151105121271,
+		"petroleum_refining": 0.2264151105121271,
+		"machine_tools": 0.2264151105121271,
+		"locomotive_manufacturing": 0.2264151105121271
+	  }
+	},
+	{
+	  "region_id": "india_west",
+	  "localization_weight": 0.2,
+	  "capacity_share_by_process": {
+		"food_agriculture": 0.2,
+		"coal_mining": 0.08,
+		"iron_ore_mining": 0.2,
+		"oil_extraction": 0.55,
+		"steel_basic": 0.23833139452408653,
+		"cotton_textile": 0.23833139452408653,
+		"jute_textile": 0.23833139452408653,
+		"sugar_processing": 0.23833139452408653,
+		"cement_production": 0.23833139452408653,
+		"fertilizer_production": 0.23833139452408653,
+		"petroleum_refining": 0.23833139452408653,
+		"machine_tools": 0.23833139452408653,
+		"locomotive_manufacturing": 0.23833139452408653
+	  }
+	},
+	{
+	  "region_id": "india_central",
+	  "localization_weight": 0.14,
+	  "capacity_share_by_process": {
+		"food_agriculture": 0.14,
+		"coal_mining": 0.55,
+		"iron_ore_mining": 0.25,
+		"oil_extraction": 0.15,
+		"steel_basic": 0.11122148411121656,
+		"cotton_textile": 0.11122148411121656,
+		"jute_textile": 0.11122148411121656,
+		"sugar_processing": 0.11122148411121656,
+		"cement_production": 0.11122148411121656,
+		"fertilizer_production": 0.11122148411121656,
+		"petroleum_refining": 0.11122148411121656,
+		"machine_tools": 0.11122148411121656,
+		"locomotive_manufacturing": 0.11122148411121656
+	  }
+	},
+	{
+	  "region_id": "india_east",
+	  "localization_weight": 0.18,
+	  "capacity_share_by_process": {
+		"food_agriculture": 0.18,
+		"coal_mining": 0.18,
+		"iron_ore_mining": 0.12,
+		"oil_extraction": 0.1,
+		"steel_basic": 0.1698113328840953,
+		"cotton_textile": 0.1698113328840953,
+		"jute_textile": 0.1698113328840953,
+		"sugar_processing": 0.1698113328840953,
+		"cement_production": 0.1698113328840953,
+		"fertilizer_production": 0.1698113328840953,
+		"petroleum_refining": 0.1698113328840953,
+		"machine_tools": 0.1698113328840953,
+		"locomotive_manufacturing": 0.1698113328840953
+	  }
+	},
+	{
+	  "region_id": "india_south",
+	  "localization_weight": 0.2,
+	  "capacity_share_by_process": {
+		"food_agriculture": 0.2,
+		"coal_mining": 0.05,
+		"iron_ore_mining": 0.3,
+		"oil_extraction": 0.1,
+		"steel_basic": 0.22840139594265774,
+		"cotton_textile": 0.22840139594265774,
+		"jute_textile": 0.22840139594265774,
+		"sugar_processing": 0.22840139594265774,
+		"cement_production": 0.22840139594265774,
+		"fertilizer_production": 0.22840139594265774,
+		"petroleum_refining": 0.22840139594265774,
+		"machine_tools": 0.22840139594265774,
+		"locomotive_manufacturing": 0.22840139594265774
+	  }
+	},
+	{
+	  "region_id": "india_northeast",
+	  "localization_weight": 0.04,
+	  "capacity_share_by_process": {
+		"food_agriculture": 0.04,
+		"coal_mining": 0.02,
+		"iron_ore_mining": 0.08,
+		"oil_extraction": 0.05,
+		"steel_basic": 0.025819282025816855,
+		"cotton_textile": 0.025819282025816855,
+		"jute_textile": 0.025819282025816855,
+		"sugar_processing": 0.025819282025816855,
+		"cement_production": 0.025819282025816855,
+		"fertilizer_production": 0.025819282025816855,
+		"petroleum_refining": 0.025819282025816855,
+		"machine_tools": 0.025819282025816855,
+		"locomotive_manufacturing": 0.025819282025816855
+	  }
+	}
+  ]
+}

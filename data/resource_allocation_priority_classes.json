@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "priority_order": [
+	"essential_consumption",
+	"critical_production",
+	"government",
+	"military",
+	"exports",
+    "discretionary_use"
+  ],
+  "category_to_priority_class": {
+	"population": "essential_consumption",
+	"industry": "critical_production",
+	"government": "government",
+	"military": "military",
+	"exports": "exports"
+  },
+  "unmapped_category_fallback": "discretionary_use"
+}

@@ -1,0 +1,9 @@
+{
+	"base_currency": "USD",
+	"rate_basis": "units_of_currency_per_one_base_currency",
+	"rates_to_base": {
+		"USD": 1.0,
+		"INR": 10.0,
+		"CNY": 2.5
+	}
+}

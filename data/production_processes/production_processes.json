@@ -1,0 +1,197 @@
+{
+  "steel_basic": {
+	"name": "Basic Steel Production",
+	"category": "metallurgy",
+	"production_stage": 20,
+	"available_from": 1950,
+	"available_until": null,
+	"technology_requirements": {},
+	"capability_requirements": {},
+	"infrastructure_requirements": {},
+	"infrastructure_usage": {},
+	"inputs": {
+	  "iron": 2.0,
+	  "coal": 1.0
+	},
+	"outputs": {
+	  "steel": 1.0
+	},
+	"byproducts": {},
+	"labor_requirement": 1.0,
+	"labor_skill_requirement": {},
+	"capital_requirement": 1.0,
+	"equipment_requirement": {},
+	"energy_requirement": {
+	  "coal": 1.0
+	},
+	"land_requirement": 0.2,
+	"maintenance_requirement": {},
+	"operating_cost": 1.0,
+	"transition_cost": 0.5,
+	"efficiency": 1.0,
+	"duration": 1.0,
+	"reliability": 0.9,
+	"seasonality": {},
+	"waste": {},
+	"displacement": {},
+	"obsolescence": 0.0,
+	"power_requirement": 0.0
+  },
+  "coal_mining": {
+	"name": "Coal Mining",
+	"category": "extraction",
+	"production_stage": 10,
+	"available_from": 1950,
+	"available_until": null,
+	"technology_requirements": {},
+	"capability_requirements": {},
+	"infrastructure_requirements": {},
+	"infrastructure_usage": {},
+	"inputs": {},
+	"outputs": {
+	  "coal": 1.0
+	},
+	"byproducts": {},
+	"labor_requirement": 1.0,
+	"labor_skill_requirement": {},
+	"capital_requirement": 0.8,
+	"equipment_requirement": {},
+	"energy_requirement": {},
+	"land_requirement": 0.5,
+	"maintenance_requirement": {},
+	"operating_cost": 0.8,
+	"transition_cost": 0.3,
+	"efficiency": 1.0,
+	"duration": 1.0,
+	"reliability": 0.85,
+	"seasonality": {},
+	"waste": {},
+	"displacement": {},
+	"obsolescence": 0.0,
+	"power_requirement": 0.0
+  },
+  "iron_ore_mining": {
+	"name": "Iron Ore Mining",
+	"category": "extraction",
+	"production_stage": 10,
+	"available_from": 1950,
+	"available_until": null,
+	"technology_requirements": {},
+	"capability_requirements": {},
+	"infrastructure_requirements": {},
+	"infrastructure_usage": {},
+	"inputs": {},
+	"outputs": {
+	  "iron": 1.0
+	},
+	"byproducts": {},
+	"labor_requirement": 1.0,
+	"labor_skill_requirement": {},
+	"capital_requirement": 0.8,
+	"equipment_requirement": {},
+	"energy_requirement": {},
+	"land_requirement": 0.5,
+	"maintenance_requirement": {},
+	"operating_cost": 0.8,
+	"transition_cost": 0.3,
+	"efficiency": 1.0,
+	"duration": 1.0,
+	"reliability": 0.85,
+	"seasonality": {},
+	"waste": {},
+	"displacement": {},
+	"obsolescence": 0.0,
+	"power_requirement": 0.0
+  },
+  "advanced_steel_production": {
+	"name": "Advanced Steel Production",
+	"category": "metallurgy",
+	"production_stage": 20,
+	"available_from": 1955,
+	"available_until": null,
+	"technology_requirements": {
+	  "advanced_steelmaking": 1
+	},
+	"capability_requirements": {
+	  "advanced_metallurgy": 0.5
+	},
+	"infrastructure_requirements": {
+	  "modern_steelworks": 0.5
+	},
+	"infrastructure_usage": {
+	  "modern_steelworks": 1.0
+	},
+	"inputs": {
+	  "iron": 1.8,
+	  "coal": 0.8
+	},
+	"outputs": {
+	  "steel": 1.0
+	},
+	"byproducts": {},
+	"labor_requirement": 0.8,
+	"labor_skill_requirement": {
+	  "metallurgy": 0.5
+	},
+	"capital_requirement": 1.5,
+	"equipment_requirement": {
+	  "advanced_steel_equipment": 1
+	},
+	"energy_requirement": {
+	  "coal": 0.8
+	},
+	"land_requirement": 0.2,
+	"maintenance_requirement": {
+	  "machinery": 0.1
+	},
+	"operating_cost": 1.2,
+	"transition_cost": 1.5,
+	"efficiency": 1.1,
+	"duration": 1.0,
+	"reliability": 0.92,
+	"seasonality": {},
+	"waste": {},
+	"displacement": {
+	  "steel_basic": 1
+	},
+	"obsolescence": 0.0,
+	"power_requirement": 0.0
+  },
+  "machinery_basic": {
+	"name": "Basic Machinery Production",
+	"category": "manufacturing",
+	"production_stage": 30,
+	"available_from": 1950,
+	"available_until": null,
+	"technology_requirements": {},
+	"capability_requirements": {},
+	"infrastructure_requirements": {},
+	"infrastructure_usage": {},
+	"inputs": {
+	  "steel": 2.0
+	},
+	"outputs": {
+	  "machinery": 1.0
+	},
+	"byproducts": {},
+	"labor_requirement": 1.5,
+	"labor_skill_requirement": {},
+	"capital_requirement": 1.5,
+	"equipment_requirement": {},
+	"energy_requirement": {
+	  "coal": 0.5
+	},
+	"land_requirement": 0.3,
+	"maintenance_requirement": {},
+	"operating_cost": 1.5,
+	"transition_cost": 0.8,
+	"efficiency": 1.0,
+	"duration": 1.0,
+	"reliability": 0.88,
+	"seasonality": {},
+	"waste": {},
+	"displacement": {},
+	"obsolescence": 0.0,
+	"power_requirement": 0.0
+  }
+}

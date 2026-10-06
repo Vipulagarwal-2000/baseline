@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "country_id": "usa",
+  "country_name": "United States",
+  "profile_type": "simulation_calibration",
+  "provenance_note": "Parent-region domestic transport-network calibration. Base capacities are normalized network units seeded from the Step 12.4 regional population weights; transport cost is a deterministic relative cost signal, not a historical route survey.",
+  "transport_localization_level": "parent_region_network",
+  "province_transport": {
+    "enabled": false,
+    "reason": "Province-level transport nodes and routes are deferred to a later geographic refinement stage."
+  },
+  "nodes": [
+    {
+      "region_id": "usa_northeast",
+      "base_capacity": 240,
+      "transport_cost": 1.02,
+      "condition": 1.0,
+      "blocked": false
+    },
+    {
+      "region_id": "usa_north_central",
+      "base_capacity": 270,
+      "transport_cost": 1.0,
+      "condition": 1.0,
+      "blocked": false
+    },
+    {
+      "region_id": "usa_south",
+      "base_capacity": 300,
+      "transport_cost": 1.04,
+      "condition": 1.0,
+      "blocked": false
+    },
+    {
+      "region_id": "usa_west",
+      "base_capacity": 190,
+      "transport_cost": 1.2,
+      "condition": 1.0,
+      "blocked": false
+    }
+  ],
+  "routes": [
+    {
+      "route_id": "usa_route_01",
+      "from_region_id": "usa_northeast",
+      "to_region_id": "usa_north_central",
+      "base_capacity": 165,
+      "transport_cost": 1.02,
+      "condition": 1.0,
+      "blocked": false,
+      "route_type": "domestic"
+    },
+    {
+      "route_id": "usa_route_02",
+      "from_region_id": "usa_north_central",
+      "to_region_id": "usa_south",
+      "base_capacity": 190,
+      "transport_cost": 1.04,
+      "condition": 1.0,
+      "blocked": false,
+      "route_type": "domestic"
+    },
+    {
+      "route_id": "usa_route_03",
+      "from_region_id": "usa_south",
+      "to_region_id": "usa_west",
+      "base_capacity": 150,
+      "transport_cost": 1.16,
+      "condition": 1.0,
+      "blocked": false,
+      "route_type": "domestic"
+    }
+  ]
+}

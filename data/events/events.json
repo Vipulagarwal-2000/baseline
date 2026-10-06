@@ -1,0 +1,22 @@
+{
+  "events": [
+	{
+	  "id": "test_stability_event",
+	  "name": "Test Stability Event",
+	  "description": "Synthetic event used to test the event framework.",
+	  "category": "political",
+	  "scope": "country",
+	  "metadata": {}
+	},
+	{
+	  "id": "test_resource_event",
+	  "name": "Test Resource Event",
+	  "description": "Synthetic resource event.",
+	  "category": "resource",
+	  "scope": "country",
+	  "metadata": {
+		"test": true
+	  }
+	}
+  ]
+}

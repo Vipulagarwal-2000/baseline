@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "country_id": "china",
+  "country_name": "China",
+  "profile_type": "simulation_calibration",
+  "provenance_note": "Broad parent-region simulation calibration profiles. Process capacity shares localize the authoritative country IndustryComponent into the Step 12.1 parent regions. Extractive process shares reuse the existing Step 12.5 resource-production localization anchors; non-extractive manufacturing shares are calibrated from population share \u00d7 regional industrial-infrastructure index from Step 12.6. These are localization parameters, not province-level historical industry surveys.",
+  "industry_localization_level": "parent_region",
+  "province_industry": {
+	"enabled": false,
+	"reason": "Province-level industry allocation is deferred to a later refinement stage."
+  },
+  "process_defaults": {
+	"efficiency_source": "country_process_definition",
+	"adoption_source": "country_industry_component",
+	"resource_demand_source": "production_process_catalog",
+	"labor_need_source": "production_process_catalog"
+  },
+  "profiles": [
+	{
+	  "region_id": "china_north_china",
+	  "localization_weight": 0.17,
+	  "capacity_share_by_process": {
+		"food_agriculture": 0.17,
+		"coal_mining": 0.2,
+		"iron_ore_mining": 0.1,
+		"steel_basic": 0.1691144071057912,
+		"crude_oil_extraction": 0.08,
+		"electric_power_generation": 0.17330898361312075,
+		"cotton_textile": 0.1691144071057912,
+		"cement_production": 0.1691144071057912,
+		"fertilizer_production": 0.1691144071057912,
+		"paper_production": 0.1691144071057912,
+		"glass_production": 0.1691144071057912,
+		"rubber_goods": 0.1691144071057912,
+		"basic_machinery": 0.1691144071057912
+	  }
+	},
+	{
+	  "region_id": "china_northeast",
+	  "localization_weight": 0.12,
+	  "capacity_share_by_process": {
+		"food_agriculture": 0.12,
+		"coal_mining": 0.22,
+		"iron_ore_mining": 0.2,
+		"steel_basic": 0.11369007200371227,
+		"crude_oil_extraction": 0.07,
+		"electric_power_generation": 0.127896122082662,
+		"cotton_textile": 0.11369007200371227,
+		"cement_production": 0.11369007200371227,
+		"fertilizer_production": 0.11369007200371227,
+		"paper_production": 0.11369007200371227,
+		"glass_production": 0.11369007200371227,
+		"rubber_goods": 0.11369007200371227,
+		"basic_machinery": 0.11369007200371227
+	  }
+	},
+	{
+	  "region_id": "china_northwest",
+	  "localization_weight": 0.07,
+	  "capacity_share_by_process": {
+		"food_agriculture": 0.07,
+		"coal_mining": 0.12,
+		"iron_ore_mining": 0.18,
+		"steel_basic": 0.046423562734923075,
+		"crude_oil_extraction": 0.5,
+		"electric_power_generation": 0.04541254334833683,
+		"cotton_textile": 0.046423562734923075,
+		"cement_production": 0.046423562734923075,
+		"fertilizer_production": 0.046423562734923075,
+		"paper_production": 0.046423562734923075,
+		"glass_production": 0.046423562734923075,
+		"rubber_goods": 0.046423562734923075,
+		"basic_machinery": 0.046423562734923075
+	  }
+	},
+	{
+	  "region_id": "china_east_china",
+	  "localization_weight": 0.3,
+	  "capacity_share_by_process": {
+		"food_agriculture": 0.3,
+		"coal_mining": 0.12,
+		"iron_ore_mining": 0.14,
+		"steel_basic": 0.38370424301268724,
+		"crude_oil_extraction": 0.15,
+		"electric_power_generation": 0.3614457995618996,
+		"cotton_textile": 0.38370424301268724,
+		"cement_production": 0.38370424301268724,
+		"fertilizer_production": 0.38370424301268724,
+		"paper_production": 0.38370424301268724,
+		"glass_production": 0.38370424301268724,
+		"rubber_goods": 0.38370424301268724,
+		"basic_machinery": 0.38370424301268724
+	  }
+	},
+	{
+	  "region_id": "china_central_south",
+	  "localization_weight": 0.24,
+	  "capacity_share_by_process": {
+		"food_agriculture": 0.24,
+		"coal_mining": 0.2,
+		"iron_ore_mining": 0.25,
+		"steel_basic": 0.21601133680717996,
+		"crude_oil_extraction": 0.1,
+		"electric_power_generation": 0.22242784868112828,
+		"cotton_textile": 0.21601133680717996,
+		"cement_production": 0.21601133680717996,
+		"fertilizer_production": 0.21601133680717996,
+		"paper_production": 0.21601133680717996,
+		"glass_production": 0.21601133680717996,
+		"rubber_goods": 0.21601133680717996,
+		"basic_machinery": 0.21601133680717996
+	  }
+	},
+	{
+	  "region_id": "china_southwest",
+	  "localization_weight": 0.1,
+	  "capacity_share_by_process": {
+		"food_agriculture": 0.1,
+		"coal_mining": 0.14,
+		"iron_ore_mining": 0.13,
+		"steel_basic": 0.07105637833570629,
+		"crude_oil_extraction": 0.1,
+		"electric_power_generation": 0.06950870271285259,
+		"cotton_textile": 0.07105637833570629,
+		"cement_production": 0.07105637833570629,
+		"fertilizer_production": 0.07105637833570629,
+		"paper_production": 0.07105637833570629,
+		"glass_production": 0.07105637833570629,
+		"rubber_goods": 0.07105637833570629,
+		"basic_machinery": 0.07105637833570629
+	  }
+	}
+  ]
+}

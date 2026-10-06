@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "country_id": "usa",
+  "country_name": "United States",
+  "profile_type": "simulation_calibration",
+  "provenance_note": "Broad parent-region simulation calibration profiles. Values are normalized regional infrastructure indices calibrated so the weighted regional average reconstructs the current authoritative country InfrastructureComponent baseline. They are not province-level historical infrastructure surveys.",
+  "infrastructure_localization_level": "parent_region",
+  "province_infrastructure": {
+    "enabled": false,
+    "reason": "Province-level infrastructure allocation is deferred to a later refinement stage."
+  },
+  "profiles": [
+    {
+      "region_id": "usa_northeast",
+      "aggregation_weight": 0.24,
+      "infrastructure": {
+        "transport": 0.915849,
+        "railways": 0.847396,
+        "roads": 0.919103,
+        "ports": 0.896958,
+        "power": 0.913585,
+        "industrial": 0.939057,
+        "storage": 0.845435,
+        "total_capacity": 0.896769
+      }
+    },
+    {
+      "region_id": "usa_north_central",
+      "aggregation_weight": 0.27,
+      "infrastructure": {
+        "transport": 0.898404,
+        "railways": 0.863851,
+        "roads": 0.901081,
+        "ports": 0.788991,
+        "power": 0.887483,
+        "industrial": 0.966677,
+        "storage": 0.862343,
+        "total_capacity": 0.881261
+      }
+    },
+    {
+      "region_id": "usa_south",
+      "aggregation_weight": 0.3,
+      "infrastructure": {
+        "transport": 0.828625,
+        "railways": 0.756898,
+        "roads": 0.88306,
+        "ports": 0.955094,
+        "power": 0.852679,
+        "industrial": 0.920644,
+        "storage": 0.845435,
+        "total_capacity": 0.863205
+      }
+    },
+    {
+      "region_id": "usa_west",
+      "aggregation_weight": 0.19,
+      "infrastructure": {
+        "transport": 0.889682,
+        "railways": 0.822715,
+        "roads": 0.901081,
+        "ports": 0.764075,
+        "power": 0.870081,
+        "industrial": 0.82858,
+        "storage": 0.845435,
+        "total_capacity": 0.84595
+      }
+    }
+  ]
+}

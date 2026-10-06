@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "country_id": "china",
+  "country_name": "China",
+  "profile_type": "simulation_calibration",
+  "provenance_note": "Parent-region domestic transport-network calibration. Base capacities are normalized network units seeded from the Step 12.4 regional population weights; transport cost is a deterministic relative cost signal, not a historical route survey.",
+  "transport_localization_level": "parent_region_network",
+  "province_transport": {
+    "enabled": false,
+    "reason": "Province-level transport nodes and routes are deferred to a later geographic refinement stage."
+  },
+  "nodes": [
+    {
+      "region_id": "china_north_china",
+      "base_capacity": 170,
+      "transport_cost": 1.15,
+      "condition": 1.0,
+      "blocked": false
+    },
+    {
+      "region_id": "china_northeast",
+      "base_capacity": 120,
+      "transport_cost": 1.12,
+      "condition": 1.0,
+      "blocked": false
+    },
+    {
+      "region_id": "china_northwest",
+      "base_capacity": 70,
+      "transport_cost": 1.6,
+      "condition": 1.0,
+      "blocked": false
+    },
+    {
+      "region_id": "china_east_china",
+      "base_capacity": 300,
+      "transport_cost": 1.05,
+      "condition": 1.0,
+      "blocked": false
+    },
+    {
+      "region_id": "china_central_south",
+      "base_capacity": 240,
+      "transport_cost": 1.12,
+      "condition": 1.0,
+      "blocked": false
+    },
+    {
+      "region_id": "china_southwest",
+      "base_capacity": 100,
+      "transport_cost": 1.45,
+      "condition": 1.0,
+      "blocked": false
+    }
+  ],
+  "routes": [
+    {
+      "route_id": "china_route_01",
+      "from_region_id": "china_north_china",
+      "to_region_id": "china_northeast",
+      "base_capacity": 85,
+      "transport_cost": 1.18,
+      "condition": 1.0,
+      "blocked": false,
+      "route_type": "domestic"
+    },
+    {
+      "route_id": "china_route_02",
+      "from_region_id": "china_north_china",
+      "to_region_id": "china_northwest",
+      "base_capacity": 55,
+      "transport_cost": 1.55,
+      "condition": 1.0,
+      "blocked": false,
+      "route_type": "domestic"
+    },
+    {
+      "route_id": "china_route_03",
+      "from_region_id": "china_north_china",
+      "to_region_id": "china_east_china",
+      "base_capacity": 125,
+      "transport_cost": 1.08,
+      "condition": 1.0,
+      "blocked": false,
+      "route_type": "domestic"
+    },
+    {
+      "route_id": "china_route_04",
+      "from_region_id": "china_north_china",
+      "to_region_id": "china_central_south",
+      "base_capacity": 110,
+      "transport_cost": 1.16,
+      "condition": 1.0,
+      "blocked": false,
+      "route_type": "domestic"
+    },
+    {
+      "route_id": "china_route_05",
+      "from_region_id": "china_central_south",
+      "to_region_id": "china_southwest",
+      "base_capacity": 72,
+      "transport_cost": 1.42,
+      "condition": 1.0,
+      "blocked": false,
+      "route_type": "domestic"
+    }
+  ]
+}

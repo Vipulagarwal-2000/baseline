@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "country_id": "china",
+  "country_name": "China",
+  "profile_type": "simulation_calibration",
+  "provenance_note": "MVP population localization profiles. Population shares are simulation calibration weights used to distribute the authoritative country PopulationComponent population across the broad Step 12.1 parent regions. They are not claims of province-level historical census precision. Regional urbanization values are calibrated so their population-weighted average reconciles exactly to the current country baseline loaded from the country JSON at runtime; they are not an independent historical country dataset. Child province/state nodes do not receive an independent population authority in Step 12.4.",
+  "population_localization_level": "parent_region",
+  "province_population": {
+	"enabled": false,
+	"reason": "Province-level population allocation is deferred to a later refinement stage."
+  },
+  "profiles": [
+	{
+	  "region_id": "china_north_china",
+	  "population_share": 0.17,
+	  "urbanization": 13.917647058824
+	},
+	{
+	  "region_id": "china_northeast",
+	  "population_share": 0.12,
+	  "urbanization": 14.8
+	},
+	{
+	  "region_id": "china_northwest",
+	  "population_share": 0.07,
+	  "urbanization": 6.8
+	},
+	{
+	  "region_id": "china_east_china",
+	  "population_share": 0.3,
+	  "urbanization": 14.3
+	},
+	{
+	  "region_id": "china_central_south",
+	  "population_share": 0.24,
+	  "urbanization": 8.8
+	},
+	{
+	  "region_id": "china_southwest",
+	  "population_share": 0.1,
+	  "urbanization": 7.8
+	}
+  ]
+}

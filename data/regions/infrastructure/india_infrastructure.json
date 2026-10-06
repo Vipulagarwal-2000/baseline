@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "country_id": "india",
+  "country_name": "India",
+  "profile_type": "simulation_calibration",
+  "provenance_note": "Broad parent-region simulation calibration profiles. Values are normalized regional infrastructure indices calibrated so the weighted regional average reconstructs the current authoritative country InfrastructureComponent baseline. They are not province-level historical infrastructure surveys.",
+  "infrastructure_localization_level": "parent_region",
+  "province_infrastructure": {
+    "enabled": false,
+    "reason": "Province-level infrastructure allocation is deferred to a later refinement stage."
+  },
+  "profiles": [
+    {
+      "region_id": "india_north",
+      "aggregation_weight": 0.24,
+      "infrastructure": {
+        "transport": 0.47619,
+        "railways": 0.610236,
+        "roads": 0.28169,
+        "ports": 0.416834,
+        "power": 0.221766,
+        "industrial": 0.264151,
+        "storage": 0.286145,
+        "total_capacity": 0.365287
+      }
+    },
+    {
+      "region_id": "india_west",
+      "aggregation_weight": 0.2,
+      "infrastructure": {
+        "transport": 0.547619,
+        "railways": 0.732283,
+        "roads": 0.323944,
+        "ports": 0.729459,
+        "power": 0.295688,
+        "industrial": 0.333664,
+        "storage": 0.346386,
+        "total_capacity": 0.47272
+      }
+    },
+    {
+      "region_id": "india_central",
+      "aggregation_weight": 0.14,
+      "infrastructure": {
+        "transport": 0.404762,
+        "railways": 0.488189,
+        "roads": 0.225352,
+        "ports": 0.312625,
+        "power": 0.197125,
+        "industrial": 0.222443,
+        "storage": 0.256024,
+        "total_capacity": 0.300931
+      }
+    },
+    {
+      "region_id": "india_east",
+      "aggregation_weight": 0.18,
+      "infrastructure": {
+        "transport": 0.452381,
+        "railways": 0.610236,
+        "roads": 0.253521,
+        "ports": 0.468938,
+        "power": 0.221766,
+        "industrial": 0.264151,
+        "storage": 0.286145,
+        "total_capacity": 0.365305
+      }
+    },
+    {
+      "region_id": "india_south",
+      "aggregation_weight": 0.2,
+      "infrastructure": {
+        "transport": 0.52381,
+        "railways": 0.67126,
+        "roads": 0.309859,
+        "ports": 0.677355,
+        "power": 0.271047,
+        "industrial": 0.319762,
+        "storage": 0.331325,
+        "total_capacity": 0.443488
+      }
+    },
+    {
+      "region_id": "india_northeast",
+      "aggregation_weight": 0.04,
+      "infrastructure": {
+        "transport": 0.333333,
+        "railways": 0.366142,
+        "roads": 0.211268,
+        "ports": 0.260521,
+        "power": 0.147844,
+        "industrial": 0.180735,
+        "storage": 0.210843,
+        "total_capacity": 0.244384
+      }
+    }
+  ]
+}

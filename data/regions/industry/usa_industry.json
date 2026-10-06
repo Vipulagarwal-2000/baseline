@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "country_id": "usa",
+  "country_name": "United States",
+  "profile_type": "simulation_calibration",
+  "provenance_note": "Broad parent-region simulation calibration profiles. Process capacity shares localize the authoritative country IndustryComponent into the Step 12.1 parent regions. Extractive process shares reuse the existing Step 12.5 resource-production localization anchors; non-extractive manufacturing shares are calibrated from population share \u00d7 regional industrial-infrastructure index from Step 12.6. These are localization parameters, not province-level historical industry surveys.",
+  "industry_localization_level": "parent_region",
+  "province_industry": {
+    "enabled": false,
+    "reason": "Province-level industry allocation is deferred to a later refinement stage."
+  },
+  "process_defaults": {
+    "efficiency_source": "country_process_definition",
+    "adoption_source": "country_industry_component",
+    "resource_demand_source": "production_process_catalog",
+    "labor_need_source": "production_process_catalog"
+  },
+  "profiles": [
+    {
+      "region_id": "usa_northeast",
+      "localization_weight": 0.24,
+      "capacity_share_by_process": {
+        "food_agriculture": 0.24,
+        "coal_mining": 0.18,
+        "oil_extraction": 0.02,
+        "natural_gas_extraction": 0.24,
+        "iron_ore_mining": 0.15,
+        "steel_basic": 0.2449714259198754,
+        "petroleum_refining": 0.2449714259198754,
+        "electric_power_generation": 0.24915957376813336,
+        "automobile_manufacturing": 0.2449714259198754,
+        "machinery_manufacturing": 0.2449714259198754,
+        "aircraft_manufacturing": 0.2449714259198754,
+        "chemical_production": 0.2449714259198754,
+        "cement_production": 0.2449714259198754,
+        "cotton_textile": 0.2449714259198754,
+        "paper_production": 0.2449714259198754
+      }
+    },
+    {
+      "region_id": "usa_north_central",
+      "localization_weight": 0.27,
+      "capacity_share_by_process": {
+        "food_agriculture": 0.27,
+        "coal_mining": 0.4,
+        "oil_extraction": 0.08,
+        "natural_gas_extraction": 0.27,
+        "iron_ore_mining": 0.4,
+        "steel_basic": 0.28369872487047204,
+        "petroleum_refining": 0.28369872487047204,
+        "electric_power_generation": 0.2722959513972672,
+        "automobile_manufacturing": 0.28369872487047204,
+        "machinery_manufacturing": 0.28369872487047204,
+        "aircraft_manufacturing": 0.28369872487047204,
+        "chemical_production": 0.28369872487047204,
+        "cement_production": 0.28369872487047204,
+        "cotton_textile": 0.28369872487047204,
+        "paper_production": 0.28369872487047204
+      }
+    },
+    {
+      "region_id": "usa_south",
+      "localization_weight": 0.3,
+      "capacity_share_by_process": {
+        "food_agriculture": 0.3,
+        "coal_mining": 0.3,
+        "oil_extraction": 0.6,
+        "natural_gas_extraction": 0.3,
+        "iron_ore_mining": 0.25,
+        "steel_basic": 0.3002100424209842,
+        "petroleum_refining": 0.3002100424209842,
+        "electric_power_generation": 0.290686055759779,
+        "automobile_manufacturing": 0.3002100424209842,
+        "machinery_manufacturing": 0.3002100424209842,
+        "aircraft_manufacturing": 0.3002100424209842,
+        "chemical_production": 0.3002100424209842,
+        "cement_production": 0.3002100424209842,
+        "cotton_textile": 0.3002100424209842,
+        "paper_production": 0.3002100424209842
+      }
+    },
+    {
+      "region_id": "usa_west",
+      "localization_weight": 0.19,
+      "capacity_share_by_process": {
+        "food_agriculture": 0.19,
+        "coal_mining": 0.12,
+        "oil_extraction": 0.3,
+        "natural_gas_extraction": 0.19,
+        "iron_ore_mining": 0.2,
+        "steel_basic": 0.17111980678866834,
+        "petroleum_refining": 0.17111980678866834,
+        "electric_power_generation": 0.18785841907482034,
+        "automobile_manufacturing": 0.17111980678866834,
+        "machinery_manufacturing": 0.17111980678866834,
+        "aircraft_manufacturing": 0.17111980678866834,
+        "chemical_production": 0.17111980678866834,
+        "cement_production": 0.17111980678866834,
+        "cotton_textile": 0.17111980678866834,
+        "paper_production": 0.17111980678866834
+      }
+    }
+  ]
+}
