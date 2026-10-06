@@ -2,8 +2,12 @@ class_name ResourceSystem
 extends SimulationSystem
 
 
+var catalog: ResourceCatalog
+
+
 func _init():
 	super("resource_system")
+	catalog = ResourceCatalog.new()
 
 
 func process_month(world: WorldState) -> void:
@@ -1303,3 +1307,9 @@ func _collect_resource_names(
 	for resource_name in resource_data.keys():
 
 		resource_names[resource_name] = true
+
+		if catalog != null and not catalog.has_resource(str(resource_name)):
+			push_warning(
+				"ResourceSystem: Resource id is not defined in canonical resource catalog: "
+				+ str(resource_name)
+			)

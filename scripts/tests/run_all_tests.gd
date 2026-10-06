@@ -111,6 +111,41 @@ static func run(
 	# STEP 15.1 — ACTION CONTRACT
 	# ============================================================
 
+	# ============================================================
+	# STEP 3.1 — CANONICAL RESOURCE DATA CONTRACT
+	# ============================================================
+
+	TestLogger.section(
+		"[DATA] CANONICAL RESOURCE CATALOG"
+	)
+
+	var resource_catalog_schema_test_passed := (
+		ResourceCatalogSchemaTest.run()
+	)
+
+	TestLogger.write_line(
+		"Step 3.1 Resource Catalog Schema test: "
+		+ (
+			"PASS"
+			if resource_catalog_schema_test_passed
+			else "FAIL"
+		)
+	)
+
+	var resource_catalog_integrity_test_passed := (
+		ResourceCatalogReferentialIntegrityTest.run()
+	)
+
+	TestLogger.write_line(
+		"Step 3.1 Resource Catalog Referential Integrity test: "
+		+ (
+			"PASS"
+			if resource_catalog_integrity_test_passed
+			else "FAIL"
+		)
+	)
+
+
 	TestLogger.section(
 		"[2.4] ACTION CONTRACT"
 	)
