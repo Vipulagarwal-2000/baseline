@@ -308,6 +308,110 @@ static func run(
 	)
 
 
+	# ============================================================
+	# STEP 3.6 — PROVENANCE
+	# ============================================================
+
+	TestLogger.section(
+		"[DATA] PROVENANCE"
+	)
+
+	var provenance_registry_test_passed := (
+		ProvenanceRegistryTest.run()
+	)
+
+	TestLogger.write_line(
+		"Step 3.6 Provenance Registry test: "
+		+ (
+			"PASS"
+			if provenance_registry_test_passed
+			else "FAIL"
+		)
+	)
+
+	var provenance_referential_integrity_test_passed := (
+		ProvenanceReferentialIntegrityTest.run()
+	)
+
+	TestLogger.write_line(
+		"Step 3.6 Provenance Referential Integrity test: "
+		+ (
+			"PASS"
+			if provenance_referential_integrity_test_passed
+			else "FAIL"
+		)
+	)
+
+
+	# ============================================================
+	# STEP 3.7 — VERSIONING
+	# ============================================================
+
+	TestLogger.section(
+		"[DATA] VERSIONING"
+	)
+
+	var versioning_registry_test_passed := (
+		VersioningRegistryTest.run()
+	)
+
+	TestLogger.write_line(
+		"Step 3.7 Versioning Registry test: "
+		+ (
+			"PASS"
+			if versioning_registry_test_passed
+			else "FAIL"
+		)
+	)
+
+	var versioning_referential_integrity_test_passed := (
+		VersioningReferentialIntegrityTest.run()
+	)
+
+	TestLogger.write_line(
+		"Step 3.7 Versioning Referential Integrity test: "
+		+ (
+			"PASS"
+			if versioning_referential_integrity_test_passed
+			else "FAIL"
+		)
+	)
+
+
+	# ============================================================
+	# STEP 3.8 — CATALOG / LOADER OWNERSHIP
+	# ============================================================
+
+	TestLogger.section(
+		"[DATA] CATALOG / LOADER OWNERSHIP"
+	)
+
+	var catalog_loader_ownership_registry_test_passed := (
+		CatalogLoaderOwnershipRegistryTest.run()
+	)
+
+	TestLogger.write_line(
+		"Step 3.8 Catalog/Loader Ownership Registry test: "
+		+ (
+			"PASS"
+			if catalog_loader_ownership_registry_test_passed
+			else "FAIL"
+		)
+	)
+
+	var catalog_loader_ownership_referential_integrity_test_passed := (
+		CatalogLoaderOwnershipReferentialIntegrityTest.run()
+	)
+
+	TestLogger.write_line(
+		"Step 3.8 Catalog/Loader Ownership Referential Integrity test: "
+		+ (
+			"PASS"
+			if catalog_loader_ownership_referential_integrity_test_passed
+			else "FAIL"
+		)
+	)
+
 	TestLogger.section(
 		"[2.4] ACTION CONTRACT"
 	)
