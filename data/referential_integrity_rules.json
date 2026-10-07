@@ -1,0 +1,655 @@
+{
+  "version": 1,
+  "registry_id": "world_simulator_referential_integrity_rules",
+  "description": "Declarative cross-domain reference rules for Phase 3.5. Rules audit existing data; they do not create runtime state or new domain content.",
+  "policy": {
+	"target_must_exist_in_canonical_registry": true,
+	"empty_reference_is_invalid": true,
+	"reserved_unmodeled_target_must_not_be_fabricated": true,
+	"runtime_state_is_not_created_by_audit": true,
+	"duplicate_reference_use_is_allowed": true,
+	"source_paths_are_explicit": true
+  },
+  "allowed_modes": [
+	"value",
+	"map_keys",
+	"root_map_keys",
+	"array_item_field",
+	"array_map_keys",
+	"nested_root_map_keys",
+    "array_item_field_nested"
+  ],
+  "rules": [
+	{
+	  "rule_id": "country_identity",
+	  "source_domain": "country",
+	  "source_paths": [
+		"res://data/countries/china.json",
+		"res://data/countries/india.json",
+        "res://data/countries/usa.json"
+	  ],
+	  "selector": "id",
+	  "mode": "value",
+	  "target_domain": "country",
+	  "description": "Country baseline identity resolves to the country canonical domain."
+	},
+	{
+	  "rule_id": "country_currency",
+	  "source_domain": "country",
+	  "source_paths": [
+		"res://data/countries/china.json",
+		"res://data/countries/india.json",
+        "res://data/countries/usa.json"
+	  ],
+	  "selector": "economy.currency_id",
+	  "mode": "value",
+	  "target_domain": "currency",
+	  "description": "Country economy currency references resolve to canonical currencies."
+	},
+	{
+	  "rule_id": "country_resource_production",
+	  "source_domain": "country",
+	  "source_paths": [
+		"res://data/countries/china.json",
+		"res://data/countries/india.json",
+        "res://data/countries/usa.json"
+	  ],
+	  "selector": "resources.production",
+	  "mode": "map_keys",
+	  "target_domain": "resource",
+	  "description": "Country resource section 'production' uses canonical resource IDs."
+	},
+	{
+	  "rule_id": "country_resource_consumption",
+	  "source_domain": "country",
+	  "source_paths": [
+		"res://data/countries/china.json",
+		"res://data/countries/india.json",
+        "res://data/countries/usa.json"
+	  ],
+	  "selector": "resources.consumption",
+	  "mode": "map_keys",
+	  "target_domain": "resource",
+	  "description": "Country resource section 'consumption' uses canonical resource IDs."
+	},
+	{
+	  "rule_id": "country_resource_reserves",
+	  "source_domain": "country",
+	  "source_paths": [
+		"res://data/countries/china.json",
+		"res://data/countries/india.json",
+        "res://data/countries/usa.json"
+	  ],
+	  "selector": "resources.reserves",
+	  "mode": "map_keys",
+	  "target_domain": "resource",
+	  "description": "Country resource section 'reserves' uses canonical resource IDs."
+	},
+	{
+	  "rule_id": "country_resource_stockpile",
+	  "source_domain": "country",
+	  "source_paths": [
+		"res://data/countries/china.json",
+		"res://data/countries/india.json",
+        "res://data/countries/usa.json"
+	  ],
+	  "selector": "resources.stockpile",
+	  "mode": "map_keys",
+	  "target_domain": "resource",
+	  "description": "Country resource section 'stockpile' uses canonical resource IDs."
+	},
+	{
+	  "rule_id": "country_resource_imports",
+	  "source_domain": "country",
+	  "source_paths": [
+		"res://data/countries/china.json",
+		"res://data/countries/india.json",
+        "res://data/countries/usa.json"
+	  ],
+	  "selector": "resources.imports",
+	  "mode": "map_keys",
+	  "target_domain": "resource",
+	  "description": "Country resource section 'imports' uses canonical resource IDs."
+	},
+	{
+	  "rule_id": "country_resource_exports",
+	  "source_domain": "country",
+	  "source_paths": [
+		"res://data/countries/china.json",
+		"res://data/countries/india.json",
+        "res://data/countries/usa.json"
+	  ],
+	  "selector": "resources.exports",
+	  "mode": "map_keys",
+	  "target_domain": "resource",
+	  "description": "Country resource section 'exports' uses canonical resource IDs."
+	},
+	{
+	  "rule_id": "country_technology",
+	  "source_domain": "country",
+	  "source_paths": [
+		"res://data/countries/china.json",
+		"res://data/countries/india.json",
+        "res://data/countries/usa.json"
+	  ],
+	  "selector": "research.technologies",
+	  "mode": "map_keys",
+	  "target_domain": "technology",
+	  "description": "Country technology adoption uses canonical technology IDs."
+	},
+	{
+	  "rule_id": "country_relationships",
+	  "source_domain": "country",
+	  "source_paths": [
+		"res://data/countries/china.json",
+		"res://data/countries/india.json",
+        "res://data/countries/usa.json"
+	  ],
+	  "selector": "relationships",
+	  "mode": "map_keys",
+	  "target_domain": "country",
+	  "description": "Country relationship keys resolve to canonical country IDs."
+	},
+	{
+	  "rule_id": "country_processes",
+	  "source_domain": "country",
+	  "source_paths": [
+		"res://data/countries/china.json",
+		"res://data/countries/india.json",
+        "res://data/countries/usa.json"
+	  ],
+	  "selector": "industry.processes",
+	  "mode": "map_keys",
+	  "target_domain": "process",
+	  "description": "Country industry process keys resolve to canonical process IDs."
+	},
+	{
+	  "rule_id": "region_country",
+	  "source_domain": "region",
+	  "source_paths": [
+		"res://data/regions/china_regions.json",
+		"res://data/regions/india_regions.json",
+        "res://data/regions/usa_regions.json"
+	  ],
+	  "selector": "country_id",
+	  "mode": "value",
+	  "target_domain": "country",
+	  "description": "Regional catalog owner country resolves to canonical country."
+	},
+	{
+	  "rule_id": "region_root_ids",
+	  "source_domain": "region",
+	  "source_paths": [
+		"res://data/regions/china_regions.json",
+		"res://data/regions/india_regions.json",
+        "res://data/regions/usa_regions.json"
+	  ],
+	  "selector": "regions[].id",
+	  "mode": "array_item_field",
+	  "target_domain": "region",
+	  "description": "Top-level region IDs resolve to canonical region IDs."
+	},
+	{
+	  "rule_id": "region_province_ids",
+	  "source_domain": "region",
+	  "source_paths": [
+		"res://data/regions/china_regions.json",
+		"res://data/regions/india_regions.json",
+        "res://data/regions/usa_regions.json"
+	  ],
+	  "selector": "regions[].provinces",
+	  "mode": "array_item_field_nested",
+	  "target_domain": "region",
+	  "description": "Province/state IDs resolve to the canonical region domain."
+	},
+	{
+	  "rule_id": "industry_country",
+	  "source_domain": "regional_industry",
+	  "source_paths": [
+		"res://data/regions/industry/china_industry.json",
+		"res://data/regions/industry/india_industry.json",
+        "res://data/regions/industry/usa_industry.json"
+	  ],
+	  "selector": "country_id",
+	  "mode": "value",
+	  "target_domain": "country",
+	  "description": "Regional industry dataset owner country resolves to canonical country."
+	},
+	{
+	  "rule_id": "industry_profiles_region",
+	  "source_domain": "regional_industry",
+	  "source_paths": [
+		"res://data/regions/industry/china_industry.json",
+		"res://data/regions/industry/india_industry.json",
+        "res://data/regions/industry/usa_industry.json"
+	  ],
+	  "selector": "profiles[].region_id",
+	  "mode": "array_item_field",
+	  "target_domain": "region",
+	  "description": "Regional industry profile region IDs resolve to canonical region IDs."
+	},
+	{
+	  "rule_id": "infrastructure_country",
+	  "source_domain": "regional_infrastructure",
+	  "source_paths": [
+		"res://data/regions/infrastructure/china_infrastructure.json",
+		"res://data/regions/infrastructure/india_infrastructure.json",
+        "res://data/regions/infrastructure/usa_infrastructure.json"
+	  ],
+	  "selector": "country_id",
+	  "mode": "value",
+	  "target_domain": "country",
+	  "description": "Regional infrastructure dataset owner country resolves to canonical country."
+	},
+	{
+	  "rule_id": "infrastructure_profiles_region",
+	  "source_domain": "regional_infrastructure",
+	  "source_paths": [
+		"res://data/regions/infrastructure/china_infrastructure.json",
+		"res://data/regions/infrastructure/india_infrastructure.json",
+        "res://data/regions/infrastructure/usa_infrastructure.json"
+	  ],
+	  "selector": "profiles[].region_id",
+	  "mode": "array_item_field",
+	  "target_domain": "region",
+	  "description": "Regional infrastructure profile region IDs resolve to canonical region IDs."
+	},
+	{
+	  "rule_id": "population_country",
+	  "source_domain": "regional_population",
+	  "source_paths": [
+		"res://data/regions/population/china_population.json",
+		"res://data/regions/population/india_population.json",
+        "res://data/regions/population/usa_population.json"
+	  ],
+	  "selector": "country_id",
+	  "mode": "value",
+	  "target_domain": "country",
+	  "description": "Regional population dataset owner country resolves to canonical country."
+	},
+	{
+	  "rule_id": "population_profiles_region",
+	  "source_domain": "regional_population",
+	  "source_paths": [
+		"res://data/regions/population/china_population.json",
+		"res://data/regions/population/india_population.json",
+        "res://data/regions/population/usa_population.json"
+	  ],
+	  "selector": "profiles[].region_id",
+	  "mode": "array_item_field",
+	  "target_domain": "region",
+	  "description": "Regional population profile region IDs resolve to canonical region IDs."
+	},
+	{
+	  "rule_id": "resources_country",
+	  "source_domain": "regional_resources",
+	  "source_paths": [
+		"res://data/regions/resources/china_resources.json",
+		"res://data/regions/resources/india_resources.json",
+        "res://data/regions/resources/usa_resources.json"
+	  ],
+	  "selector": "country_id",
+	  "mode": "value",
+	  "target_domain": "country",
+	  "description": "Regional resources dataset owner country resolves to canonical country."
+	},
+	{
+	  "rule_id": "resources_profiles_region",
+	  "source_domain": "regional_resources",
+	  "source_paths": [
+		"res://data/regions/resources/china_resources.json",
+		"res://data/regions/resources/india_resources.json",
+        "res://data/regions/resources/usa_resources.json"
+	  ],
+	  "selector": "profiles[].region_id",
+	  "mode": "array_item_field",
+	  "target_domain": "region",
+	  "description": "Regional resources profile region IDs resolve to canonical region IDs."
+	},
+	{
+	  "rule_id": "transport_country",
+	  "source_domain": "regional_transport",
+	  "source_paths": [
+		"res://data/regions/transport/china_transport.json",
+		"res://data/regions/transport/india_transport.json",
+        "res://data/regions/transport/usa_transport.json"
+	  ],
+	  "selector": "country_id",
+	  "mode": "value",
+	  "target_domain": "country",
+	  "description": "Regional transport dataset owner country resolves to canonical country."
+	},
+	{
+	  "rule_id": "transport_profiles_region",
+	  "source_domain": "regional_transport",
+	  "source_paths": [
+		"res://data/regions/transport/china_transport.json",
+		"res://data/regions/transport/india_transport.json",
+        "res://data/regions/transport/usa_transport.json"
+	  ],
+	  "selector": "profiles[].region_id",
+	  "mode": "array_item_field",
+	  "target_domain": "region",
+	  "description": "Regional transport profile region IDs resolve to canonical region IDs."
+	},
+	{
+	  "rule_id": "terrain_country",
+	  "source_domain": "regional_terrain",
+	  "source_paths": [
+		"res://data/regions/terrain/china_terrain.json",
+		"res://data/regions/terrain/india_terrain.json",
+        "res://data/regions/terrain/usa_terrain.json"
+	  ],
+	  "selector": "country_id",
+	  "mode": "value",
+	  "target_domain": "country",
+	  "description": "Regional terrain dataset owner country resolves to canonical country."
+	},
+	{
+	  "rule_id": "terrain_profiles_region",
+	  "source_domain": "regional_terrain",
+	  "source_paths": [
+		"res://data/regions/terrain/china_terrain.json",
+		"res://data/regions/terrain/india_terrain.json",
+        "res://data/regions/terrain/usa_terrain.json"
+	  ],
+	  "selector": "profiles[].region_id",
+	  "mode": "array_item_field",
+	  "target_domain": "region",
+	  "description": "Regional terrain profile region IDs resolve to canonical region IDs."
+	},
+	{
+	  "rule_id": "industry_processes",
+	  "source_domain": "regional_industry",
+	  "source_paths": [
+		"res://data/regions/industry/china_industry.json",
+		"res://data/regions/industry/india_industry.json",
+        "res://data/regions/industry/usa_industry.json"
+	  ],
+	  "selector": "profiles[].capacity_share_by_process",
+	  "mode": "array_map_keys",
+	  "target_domain": "process",
+	  "description": "Regional industry process allocations resolve to canonical process IDs."
+	},
+	{
+	  "rule_id": "regional_resource_production_share",
+	  "source_domain": "regional_resources",
+	  "source_paths": [
+		"res://data/regions/resources/china_resources.json",
+		"res://data/regions/resources/india_resources.json",
+        "res://data/regions/resources/usa_resources.json"
+	  ],
+	  "selector": "profiles[].production_share",
+	  "mode": "array_map_keys",
+	  "target_domain": "resource",
+	  "description": "Regional resource map 'production_share' uses canonical resource IDs."
+	},
+	{
+	  "rule_id": "regional_resource_reserve_share",
+	  "source_domain": "regional_resources",
+	  "source_paths": [
+		"res://data/regions/resources/china_resources.json",
+		"res://data/regions/resources/india_resources.json",
+        "res://data/regions/resources/usa_resources.json"
+	  ],
+	  "selector": "profiles[].reserve_share",
+	  "mode": "array_map_keys",
+	  "target_domain": "resource",
+	  "description": "Regional resource map 'reserve_share' uses canonical resource IDs."
+	},
+	{
+	  "rule_id": "regional_resource_resource_accessibility",
+	  "source_domain": "regional_resources",
+	  "source_paths": [
+		"res://data/regions/resources/china_resources.json",
+		"res://data/regions/resources/india_resources.json",
+        "res://data/regions/resources/usa_resources.json"
+	  ],
+	  "selector": "profiles[].resource_accessibility",
+	  "mode": "array_map_keys",
+	  "target_domain": "resource",
+	  "description": "Regional resource map 'resource_accessibility' uses canonical resource IDs."
+	},
+	{
+	  "rule_id": "regional_resource_local_import_dependency",
+	  "source_domain": "regional_resources",
+	  "source_paths": [
+		"res://data/regions/resources/china_resources.json",
+		"res://data/regions/resources/india_resources.json",
+        "res://data/regions/resources/usa_resources.json"
+	  ],
+	  "selector": "profiles[].local_import_dependency",
+	  "mode": "array_map_keys",
+	  "target_domain": "resource",
+	  "description": "Regional resource map 'local_import_dependency' uses canonical resource IDs."
+	},
+	{
+	  "rule_id": "transport_route_ids",
+	  "source_domain": "regional_transport",
+	  "source_paths": [
+		"res://data/regions/transport/china_transport.json",
+		"res://data/regions/transport/india_transport.json",
+        "res://data/regions/transport/usa_transport.json"
+	  ],
+	  "selector": "routes[].route_id",
+	  "mode": "array_item_field",
+	  "target_domain": "route",
+	  "description": "Transport route IDs resolve to canonical route IDs."
+	},
+	{
+	  "rule_id": "transport_route_from_region",
+	  "source_domain": "regional_transport",
+	  "source_paths": [
+		"res://data/regions/transport/china_transport.json",
+		"res://data/regions/transport/india_transport.json",
+        "res://data/regions/transport/usa_transport.json"
+	  ],
+	  "selector": "routes[].from_region_id",
+	  "mode": "array_item_field",
+	  "target_domain": "region",
+	  "description": "Transport route origin regions resolve to canonical region IDs."
+	},
+	{
+	  "rule_id": "transport_route_to_region",
+	  "source_domain": "regional_transport",
+	  "source_paths": [
+		"res://data/regions/transport/china_transport.json",
+		"res://data/regions/transport/india_transport.json",
+        "res://data/regions/transport/usa_transport.json"
+	  ],
+	  "selector": "routes[].to_region_id",
+	  "mode": "array_item_field",
+	  "target_domain": "region",
+	  "description": "Transport route destination regions resolve to canonical region IDs."
+	},
+	{
+	  "rule_id": "transport_node_region",
+	  "source_domain": "regional_transport",
+	  "source_paths": [
+		"res://data/regions/transport/china_transport.json",
+		"res://data/regions/transport/india_transport.json",
+        "res://data/regions/transport/usa_transport.json"
+	  ],
+	  "selector": "nodes[].region_id",
+	  "mode": "array_item_field",
+	  "target_domain": "region",
+	  "description": "Transport nodes resolve to canonical region IDs."
+	},
+	{
+	  "rule_id": "process_identity",
+	  "source_domain": "production",
+	  "source_paths": [
+        "res://data/production_processes/production_processes.json"
+	  ],
+	  "selector": "",
+	  "mode": "root_map_keys",
+	  "target_domain": "process",
+	  "description": "Production catalog root keys are canonical process IDs."
+	},
+	{
+	  "rule_id": "process_technology_requirements",
+	  "source_domain": "production",
+	  "source_paths": [
+        "res://data/production_processes/production_processes.json"
+	  ],
+	  "selector": "*.technology_requirements",
+	  "mode": "nested_root_map_keys",
+	  "target_domain": "technology",
+	  "description": "Production process field 'technology_requirements' contains references to canonical technology IDs."
+	},
+	{
+	  "rule_id": "process_capability_requirements",
+	  "source_domain": "production",
+	  "source_paths": [
+        "res://data/production_processes/production_processes.json"
+	  ],
+	  "selector": "*.capability_requirements",
+	  "mode": "nested_root_map_keys",
+	  "target_domain": "capability",
+	  "description": "Production process field 'capability_requirements' contains references to canonical capability IDs."
+	},
+	{
+	  "rule_id": "process_infrastructure_requirements",
+	  "source_domain": "production",
+	  "source_paths": [
+        "res://data/production_processes/production_processes.json"
+	  ],
+	  "selector": "*.infrastructure_requirements",
+	  "mode": "nested_root_map_keys",
+	  "target_domain": "infrastructure",
+	  "description": "Production process field 'infrastructure_requirements' contains references to canonical infrastructure IDs."
+	},
+	{
+	  "rule_id": "process_infrastructure_usage",
+	  "source_domain": "production",
+	  "source_paths": [
+        "res://data/production_processes/production_processes.json"
+	  ],
+	  "selector": "*.infrastructure_usage",
+	  "mode": "nested_root_map_keys",
+	  "target_domain": "infrastructure",
+	  "description": "Production process field 'infrastructure_usage' contains references to canonical infrastructure IDs."
+	},
+	{
+	  "rule_id": "process_equipment_requirement",
+	  "source_domain": "production",
+	  "source_paths": [
+        "res://data/production_processes/production_processes.json"
+	  ],
+	  "selector": "*.equipment_requirement",
+	  "mode": "nested_root_map_keys",
+	  "target_domain": "equipment",
+	  "description": "Production process field 'equipment_requirement' contains references to canonical equipment IDs."
+	},
+	{
+	  "rule_id": "process_inputs",
+	  "source_domain": "production",
+	  "source_paths": [
+        "res://data/production_processes/production_processes.json"
+	  ],
+	  "selector": "*.inputs",
+	  "mode": "nested_root_map_keys",
+	  "target_domain": "resource",
+	  "description": "Production process field 'inputs' contains references to canonical resource IDs."
+	},
+	{
+	  "rule_id": "process_outputs",
+	  "source_domain": "production",
+	  "source_paths": [
+        "res://data/production_processes/production_processes.json"
+	  ],
+	  "selector": "*.outputs",
+	  "mode": "nested_root_map_keys",
+	  "target_domain": "resource",
+	  "description": "Production process field 'outputs' contains references to canonical resource IDs."
+	},
+	{
+	  "rule_id": "process_byproducts",
+	  "source_domain": "production",
+	  "source_paths": [
+        "res://data/production_processes/production_processes.json"
+	  ],
+	  "selector": "*.byproducts",
+	  "mode": "nested_root_map_keys",
+	  "target_domain": "resource",
+	  "description": "Production process field 'byproducts' contains references to canonical resource IDs."
+	},
+	{
+	  "rule_id": "process_energy_requirement",
+	  "source_domain": "production",
+	  "source_paths": [
+        "res://data/production_processes/production_processes.json"
+	  ],
+	  "selector": "*.energy_requirement",
+	  "mode": "nested_root_map_keys",
+	  "target_domain": "resource",
+	  "description": "Production process field 'energy_requirement' contains references to canonical resource IDs."
+	},
+	{
+	  "rule_id": "process_maintenance_requirement",
+	  "source_domain": "production",
+	  "source_paths": [
+        "res://data/production_processes/production_processes.json"
+	  ],
+	  "selector": "*.maintenance_requirement",
+	  "mode": "nested_root_map_keys",
+	  "target_domain": "resource",
+	  "description": "Production process field 'maintenance_requirement' contains references to canonical resource IDs."
+	},
+	{
+	  "rule_id": "process_waste",
+	  "source_domain": "production",
+	  "source_paths": [
+        "res://data/production_processes/production_processes.json"
+	  ],
+	  "selector": "*.waste",
+	  "mode": "nested_root_map_keys",
+	  "target_domain": "resource",
+	  "description": "Production process field 'waste' contains references to canonical resource IDs."
+	},
+	{
+	  "rule_id": "process_displacement",
+	  "source_domain": "production",
+	  "source_paths": [
+        "res://data/production_processes/production_processes.json"
+	  ],
+	  "selector": "*.displacement",
+	  "mode": "nested_root_map_keys",
+	  "target_domain": "process",
+	  "description": "Production process field 'displacement' contains references to canonical process IDs."
+	},
+	{
+	  "rule_id": "event_identity",
+	  "source_domain": "event",
+	  "source_paths": [
+        "res://data/events/events.json"
+	  ],
+	  "selector": "events[].id",
+	  "mode": "array_item_field",
+	  "target_domain": "event",
+	  "description": "Event catalog entries resolve to canonical event IDs."
+	},
+	{
+	  "rule_id": "currency_base",
+	  "source_domain": "currency",
+	  "source_paths": [
+        "res://data/currency_exchange_rates.json"
+	  ],
+	  "selector": "base_currency",
+	  "mode": "value",
+	  "target_domain": "currency",
+	  "description": "Currency configuration base currency resolves to canonical currency."
+	},
+	{
+	  "rule_id": "currency_rates",
+	  "source_domain": "currency",
+	  "source_paths": [
+        "res://data/currency_exchange_rates.json"
+	  ],
+	  "selector": "rates_to_base",
+	  "mode": "map_keys",
+	  "target_domain": "currency",
+	  "description": "Currency rate map keys resolve to canonical currency IDs."
+	}
+  ]
+}

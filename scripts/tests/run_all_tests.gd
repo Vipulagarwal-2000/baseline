@@ -146,6 +146,168 @@ static func run(
 	)
 
 
+	# ============================================================
+	# PHASE 3.1 — COMPLETE DATA INVENTORY
+	# ============================================================
+
+	TestLogger.section(
+		"[DATA] COMPLETE DATA INVENTORY"
+	)
+
+	var data_inventory_test_passed := (
+		DataInventoryTest.run()
+	)
+
+	TestLogger.write_line(
+		"Phase 3.1 Data Inventory test: "
+		+ (
+			"PASS"
+			if data_inventory_test_passed
+			else "FAIL"
+		)
+	)
+
+
+	# ============================================================
+	# STEP 3.2 — CANONICAL ID REGISTRY
+	# ============================================================
+
+	TestLogger.section(
+		"[DATA] CANONICAL ID REGISTRY"
+	)
+
+	var canonical_id_registry_test_passed := (
+		CanonicalIdRegistryTest.run()
+	)
+
+	TestLogger.write_line(
+		"Step 3.2 Canonical ID Registry schema test: "
+		+ (
+			"PASS"
+			if canonical_id_registry_test_passed
+			else "FAIL"
+		)
+	)
+
+	var canonical_id_integrity_test_passed := (
+		CanonicalIdReferentialIntegrityTest.run()
+	)
+
+	TestLogger.write_line(
+		"Step 3.2 Canonical ID Referential Integrity test: "
+		+ (
+			"PASS"
+			if canonical_id_integrity_test_passed
+			else "FAIL"
+		)
+	)
+
+
+	# ============================================================
+	# STEP 3.3 — DOMAIN OWNERSHIP
+	# ============================================================
+
+	TestLogger.section(
+		"[DATA] DOMAIN OWNERSHIP"
+	)
+
+	var domain_ownership_registry_test_passed := (
+		DomainOwnershipRegistryTest.run()
+	)
+
+	TestLogger.write_line(
+		"Step 3.3 Domain Ownership Registry test: "
+		+ (
+			"PASS"
+			if domain_ownership_registry_test_passed
+			else "FAIL"
+		)
+	)
+
+	var domain_ownership_integrity_test_passed := (
+		DomainOwnershipReferentialIntegrityTest.run()
+	)
+
+	TestLogger.write_line(
+		"Step 3.3 Domain Ownership Referential Integrity test: "
+		+ (
+			"PASS"
+			if domain_ownership_integrity_test_passed
+			else "FAIL"
+		)
+	)
+
+
+	# ============================================================
+	# STEP 3.4 — CANONICAL SCHEMAS
+	# ============================================================
+
+	TestLogger.section(
+		"[DATA] CANONICAL SCHEMAS"
+	)
+
+	var canonical_schema_registry_test_passed := (
+		CanonicalSchemaRegistryTest.run()
+	)
+
+	TestLogger.write_line(
+		"Step 3.4 Canonical Schema Registry test: "
+		+ (
+			"PASS"
+			if canonical_schema_registry_test_passed
+			else "FAIL"
+		)
+	)
+
+	var canonical_schema_integrity_test_passed := (
+		CanonicalSchemaReferentialIntegrityTest.run()
+	)
+
+	TestLogger.write_line(
+		"Step 3.4 Canonical Schema Referential Integrity test: "
+		+ (
+			"PASS"
+			if canonical_schema_integrity_test_passed
+			else "FAIL"
+		)
+	)
+
+
+	# ============================================================
+	# STEP 3.5 — REFERENTIAL INTEGRITY
+	# ============================================================
+
+	TestLogger.section(
+		"[DATA] REFERENTIAL INTEGRITY"
+	)
+
+	var referential_integrity_rules_registry_test_passed := (
+		ReferentialIntegrityRulesRegistryTest.run()
+	)
+
+	TestLogger.write_line(
+		"Step 3.5 Referential Integrity Rules Registry test: "
+		+ (
+			"PASS"
+			if referential_integrity_rules_registry_test_passed
+			else "FAIL"
+		)
+	)
+
+	var referential_integrity_audit_test_passed := (
+		ReferentialIntegrityAuditTest.run()
+	)
+
+	TestLogger.write_line(
+		"Step 3.5 Referential Integrity Audit test: "
+		+ (
+			"PASS"
+			if referential_integrity_audit_test_passed
+			else "FAIL"
+		)
+	)
+
+
 	TestLogger.section(
 		"[2.4] ACTION CONTRACT"
 	)

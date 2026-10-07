@@ -1,76 +1,76 @@
 {
   "version": 1,
   "unit_policy": {
-    "default_unit": "unspecified_simulation_quantity",
-    "default_unit_status": "unresolved",
-    "note": "The current baseline data does not provide authoritative physical units. Do not infer tonnes, barrels, GWh, currency amounts, or other physical units from existing magnitudes."
+	"default_unit": "unspecified_simulation_quantity",
+	"default_unit_status": "unresolved",
+	"note": "The current baseline data does not provide authoritative physical units. Do not infer tonnes, barrels, GWh, currency amounts, or other physical units from existing magnitudes."
   },
   "resources": {
-    "food": {
-      "name": "Food",
-      "semantic_class": "consumable_commodity",
-      "unit": "unspecified_simulation_quantity",
-      "unit_status": "unresolved",
-      "roles": ["consumption", "production", "stockpile", "trade"],
-      "can_be_produced": true,
-      "can_be_consumed": true,
-      "can_be_stockpiled": true,
-      "can_have_reserves": false
-    },
-    "coal": {
-      "name": "Coal",
-      "semantic_class": "energy_raw_material",
-      "unit": "unspecified_simulation_quantity",
-      "unit_status": "unresolved",
-      "roles": ["production_input", "energy_input", "stockpile", "reserve", "trade"],
-      "can_be_produced": true,
-      "can_be_consumed": true,
-      "can_be_stockpiled": true,
-      "can_have_reserves": true
-    },
-    "iron": {
-      "name": "Iron Ore",
-      "semantic_class": "industrial_raw_material",
-      "unit": "unspecified_simulation_quantity",
-      "unit_status": "unresolved",
-      "roles": ["production_input", "production", "stockpile", "reserve", "trade"],
-      "can_be_produced": true,
-      "can_be_consumed": true,
-      "can_be_stockpiled": true,
-      "can_have_reserves": true
-    },
-    "oil": {
-      "name": "Crude Oil",
-      "semantic_class": "energy_raw_material",
-      "unit": "unspecified_simulation_quantity",
-      "unit_status": "unresolved",
-      "roles": ["production_input", "energy_input", "stockpile", "reserve", "trade"],
-      "can_be_produced": true,
-      "can_be_consumed": true,
-      "can_be_stockpiled": true,
-      "can_have_reserves": true
-    },
-    "steel": {
-      "name": "Steel",
-      "semantic_class": "manufactured_material",
-      "unit": "unspecified_simulation_quantity",
-      "unit_status": "unresolved",
-      "roles": ["production_output", "production_input", "stockpile", "trade"],
-      "can_be_produced": true,
-      "can_be_consumed": true,
-      "can_be_stockpiled": true,
-      "can_have_reserves": false
-    },
-    "machinery": {
-      "name": "Machinery",
-      "semantic_class": "manufactured_capital_good",
-      "unit": "unspecified_simulation_quantity",
-      "unit_status": "unresolved",
-      "roles": ["production_output", "production_input", "maintenance_input", "stockpile", "trade"],
-      "can_be_produced": true,
-      "can_be_consumed": true,
-      "can_be_stockpiled": true,
-      "can_have_reserves": false
-    }
+	"food": {
+	  "name": "Food",
+	  "semantic_class": "consumable_commodity",
+	  "unit": "unspecified_simulation_quantity",
+	  "unit_status": "unresolved",
+	  "roles": ["consumption", "production", "stockpile", "trade"],
+	  "can_be_produced": true,
+	  "can_be_consumed": true,
+	  "can_be_stockpiled": true,
+	  "can_have_reserves": false
+	},
+	"coal": {
+	  "name": "Coal",
+	  "semantic_class": "energy_raw_material",
+	  "unit": "unspecified_simulation_quantity",
+	  "unit_status": "unresolved",
+	  "roles": ["production_input", "energy_input", "stockpile", "reserve", "trade"],
+	  "can_be_produced": true,
+	  "can_be_consumed": true,
+	  "can_be_stockpiled": true,
+	  "can_have_reserves": true
+	},
+	"iron": {
+	  "name": "Iron Ore",
+	  "semantic_class": "industrial_raw_material",
+	  "unit": "unspecified_simulation_quantity",
+	  "unit_status": "unresolved",
+	  "roles": ["production_input", "production", "stockpile", "reserve", "trade"],
+	  "can_be_produced": true,
+	  "can_be_consumed": true,
+	  "can_be_stockpiled": true,
+	  "can_have_reserves": true
+	},
+	"oil": {
+	  "name": "Crude Oil",
+	  "semantic_class": "energy_raw_material",
+	  "unit": "unspecified_simulation_quantity",
+	  "unit_status": "unresolved",
+	  "roles": ["production_input", "energy_input", "stockpile", "reserve", "trade"],
+	  "can_be_produced": true,
+	  "can_be_consumed": true,
+	  "can_be_stockpiled": true,
+	  "can_have_reserves": true
+	},
+	"steel": {
+	  "name": "Steel",
+	  "semantic_class": "manufactured_material",
+	  "unit": "unspecified_simulation_quantity",
+	  "unit_status": "unresolved",
+	  "roles": ["production_output", "production_input", "stockpile", "trade"],
+	  "can_be_produced": true,
+	  "can_be_consumed": true,
+	  "can_be_stockpiled": true,
+	  "can_have_reserves": false
+	},
+	"machinery": {
+	  "name": "Machinery",
+	  "semantic_class": "manufactured_capital_good",
+	  "unit": "unspecified_simulation_quantity",
+	  "unit_status": "unresolved",
+	  "roles": ["production_output", "production_input", "maintenance_input", "stockpile", "trade"],
+	  "can_be_produced": true,
+	  "can_be_consumed": true,
+	  "can_be_stockpiled": true,
+	  "can_have_reserves": false
+	}
   }
 }

@@ -1,6 +1,6 @@
 extends Node
 
-const RUN_VALIDATION_SUITE_ON_BOOT := false
+const RUN_VALIDATION_SUITE_ON_BOOT := true
 
 const WorldLoaderScript = preload(
     "res://scripts/core/world_loader.gd"

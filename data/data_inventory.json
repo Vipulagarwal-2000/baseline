@@ -1,0 +1,449 @@
+{
+  "version": 1,
+  "inventory_id": "world_simulator_data_inventory",
+  "inventory_scope": {
+	"root": "res://data",
+	"included": [
+	  "domain data JSON files",
+	  "domain configuration JSON files",
+      "data-directory validation/support scripts"
+	],
+	"excluded": [
+	  "Godot UID metadata files",
+	  "temporary files",
+	  "scene files outside res://data",
+      "runtime code outside res://data"
+	]
+  },
+  "coverage": {
+	"status": "baseline_inventory",
+	"entry_count": 34,
+	"expected_family_count": 23,
+	"note": "This inventory records what exists in the data directory. Canonical domain IDs are defined by res://data/canonical_ids.json; domain ownership, canonical schemas, referential integrity, provenance, versioning, and loader ownership remain Phase 3 architecture gates."
+  },
+  "entries": [
+	{
+	  "path": "data/canonical_schemas.json",
+	  "format": "json",
+	  "asset_type": "canonical_schema_registry",
+	  "domain": "data_architecture",
+	  "scope": "global",
+	  "source_role": "schema_contract",
+	  "status": "implemented"
+	},
+	{
+	  "path": "data/countries/china.json",
+	  "format": "json",
+	  "asset_type": "country_baseline",
+	  "domain": "country",
+	  "scope": "china",
+	  "source_role": "baseline",
+	  "status": "existing_baseline"
+	},
+	{
+	  "path": "data/countries/india.json",
+	  "format": "json",
+	  "asset_type": "country_baseline",
+	  "domain": "country",
+	  "scope": "india",
+	  "source_role": "baseline",
+	  "status": "existing_baseline"
+	},
+	{
+	  "path": "data/countries/usa.json",
+	  "format": "json",
+	  "asset_type": "country_baseline",
+	  "domain": "country",
+	  "scope": "usa",
+	  "source_role": "baseline",
+	  "status": "existing_baseline"
+	},
+	{
+	  "path": "data/country_data_validator.gd",
+	  "format": "gd",
+	  "asset_type": "validation_support_script",
+	  "domain": "validation",
+	  "scope": "country",
+	  "source_role": "validation_support",
+	  "status": "existing_baseline"
+	},
+	{
+	  "path": "data/currency_exchange_rates.json",
+	  "format": "json",
+	  "asset_type": "currency_exchange_config",
+	  "domain": "economy",
+	  "scope": "multi_country",
+	  "source_role": "configuration",
+	  "status": "existing_baseline"
+	},
+	{
+	  "path": "data/domain_ownership.json",
+	  "format": "json",
+	  "asset_type": "domain_ownership_registry",
+	  "domain": "data_architecture",
+	  "scope": "global",
+	  "source_role": "architecture_registry",
+	  "status": "implemented"
+	},
+	{
+	  "path": "data/referential_integrity_rules.json",
+	  "format": "json",
+	  "asset_type": "referential_integrity_rules_registry",
+	  "domain": "data_architecture",
+	  "scope": "global",
+	  "source_role": "architecture_registry",
+	  "status": "implemented"
+	},
+	{
+	  "path": "data/events/events.json",
+	  "format": "json",
+	  "asset_type": "event_catalog",
+	  "domain": "events",
+	  "scope": "global",
+	  "source_role": "catalog",
+	  "status": "existing_baseline"
+	},
+	{
+	  "path": "data/production_processes/production_processes.json",
+	  "format": "json",
+	  "asset_type": "production_process_catalog",
+	  "domain": "production",
+	  "scope": "global",
+	  "source_role": "catalog",
+	  "status": "existing_baseline"
+	},
+	{
+	  "path": "data/regions/china_regions.json",
+	  "format": "json",
+	  "asset_type": "region_catalog",
+	  "domain": "region",
+	  "scope": "china",
+	  "source_role": "baseline",
+	  "status": "existing_baseline"
+	},
+	{
+	  "path": "data/regions/india_regions.json",
+	  "format": "json",
+	  "asset_type": "region_catalog",
+	  "domain": "region",
+	  "scope": "india",
+	  "source_role": "baseline",
+	  "status": "existing_baseline"
+	},
+	{
+	  "path": "data/regions/industry/china_industry.json",
+	  "format": "json",
+	  "asset_type": "regional_industry_data",
+	  "domain": "industry",
+	  "scope": "china",
+	  "source_role": "baseline",
+	  "status": "existing_baseline"
+	},
+	{
+	  "path": "data/regions/industry/india_industry.json",
+	  "format": "json",
+	  "asset_type": "regional_industry_data",
+	  "domain": "industry",
+	  "scope": "india",
+	  "source_role": "baseline",
+	  "status": "existing_baseline"
+	},
+	{
+	  "path": "data/regions/industry/usa_industry.json",
+	  "format": "json",
+	  "asset_type": "regional_industry_data",
+	  "domain": "industry",
+	  "scope": "usa",
+	  "source_role": "baseline",
+	  "status": "existing_baseline"
+	},
+	{
+	  "path": "data/regions/infrastructure/china_infrastructure.json",
+	  "format": "json",
+	  "asset_type": "regional_infrastructure_data",
+	  "domain": "infrastructure",
+	  "scope": "china",
+	  "source_role": "baseline",
+	  "status": "existing_baseline"
+	},
+	{
+	  "path": "data/regions/infrastructure/india_infrastructure.json",
+	  "format": "json",
+	  "asset_type": "regional_infrastructure_data",
+	  "domain": "infrastructure",
+	  "scope": "india",
+	  "source_role": "baseline",
+	  "status": "existing_baseline"
+	},
+	{
+	  "path": "data/regions/infrastructure/usa_infrastructure.json",
+	  "format": "json",
+	  "asset_type": "regional_infrastructure_data",
+	  "domain": "infrastructure",
+	  "scope": "usa",
+	  "source_role": "baseline",
+	  "status": "existing_baseline"
+	},
+	{
+	  "path": "data/regions/population/china_population.json",
+	  "format": "json",
+	  "asset_type": "regional_population_data",
+	  "domain": "population",
+	  "scope": "china",
+	  "source_role": "baseline",
+	  "status": "existing_baseline"
+	},
+	{
+	  "path": "data/regions/population/india_population.json",
+	  "format": "json",
+	  "asset_type": "regional_population_data",
+	  "domain": "population",
+	  "scope": "india",
+	  "source_role": "baseline",
+	  "status": "existing_baseline"
+	},
+	{
+	  "path": "data/regions/population/usa_population.json",
+	  "format": "json",
+	  "asset_type": "regional_population_data",
+	  "domain": "population",
+	  "scope": "usa",
+	  "source_role": "baseline",
+	  "status": "existing_baseline"
+	},
+	{
+	  "path": "data/regions/resources/china_resources.json",
+	  "format": "json",
+	  "asset_type": "regional_resource_data",
+	  "domain": "resources",
+	  "scope": "china",
+	  "source_role": "baseline",
+	  "status": "existing_baseline"
+	},
+	{
+	  "path": "data/regions/resources/india_resources.json",
+	  "format": "json",
+	  "asset_type": "regional_resource_data",
+	  "domain": "resources",
+	  "scope": "india",
+	  "source_role": "baseline",
+	  "status": "existing_baseline"
+	},
+	{
+	  "path": "data/regions/resources/usa_resources.json",
+	  "format": "json",
+	  "asset_type": "regional_resource_data",
+	  "domain": "resources",
+	  "scope": "usa",
+	  "source_role": "baseline",
+	  "status": "existing_baseline"
+	},
+	{
+	  "path": "data/regions/terrain/china_terrain.json",
+	  "format": "json",
+	  "asset_type": "regional_terrain_data",
+	  "domain": "terrain",
+	  "scope": "china",
+	  "source_role": "baseline",
+	  "status": "existing_baseline"
+	},
+	{
+	  "path": "data/regions/terrain/india_terrain.json",
+	  "format": "json",
+	  "asset_type": "regional_terrain_data",
+	  "domain": "terrain",
+	  "scope": "india",
+	  "source_role": "baseline",
+	  "status": "existing_baseline"
+	},
+	{
+	  "path": "data/regions/terrain/usa_terrain.json",
+	  "format": "json",
+	  "asset_type": "regional_terrain_data",
+	  "domain": "terrain",
+	  "scope": "usa",
+	  "source_role": "baseline",
+	  "status": "existing_baseline"
+	},
+	{
+	  "path": "data/regions/transport/china_transport.json",
+	  "format": "json",
+	  "asset_type": "regional_transport_data",
+	  "domain": "transport",
+	  "scope": "china",
+	  "source_role": "baseline",
+	  "status": "existing_baseline"
+	},
+	{
+	  "path": "data/regions/transport/india_transport.json",
+	  "format": "json",
+	  "asset_type": "regional_transport_data",
+	  "domain": "transport",
+	  "scope": "india",
+	  "source_role": "baseline",
+	  "status": "existing_baseline"
+	},
+	{
+	  "path": "data/regions/transport/usa_transport.json",
+	  "format": "json",
+	  "asset_type": "regional_transport_data",
+	  "domain": "transport",
+	  "scope": "usa",
+	  "source_role": "baseline",
+	  "status": "existing_baseline"
+	},
+	{
+	  "path": "data/regions/usa_regions.json",
+	  "format": "json",
+	  "asset_type": "region_catalog",
+	  "domain": "region",
+	  "scope": "usa",
+	  "source_role": "baseline",
+	  "status": "existing_baseline"
+	},
+	{
+	  "path": "data/resource_allocation_priority_classes.json",
+	  "format": "json",
+	  "asset_type": "resource_allocation_config",
+	  "domain": "resources",
+	  "scope": "global",
+	  "source_role": "configuration",
+	  "status": "existing_baseline"
+	},
+	{
+	  "path": "data/resources/resource_catalog.json",
+	  "format": "json",
+	  "asset_type": "resource_catalog",
+	  "domain": "resources",
+	  "scope": "global",
+	  "source_role": "catalog",
+	  "status": "existing_baseline"
+	},
+	{
+	  "path": "res://data/canonical_ids.json",
+	  "format": "json",
+	  "asset_type": "registry",
+	  "domain": "data_architecture",
+	  "scope": "global",
+	  "source_role": "canonical_identifier_registry",
+	  "status": "implemented"
+	}
+  ],
+  "expected_families": [
+	{
+	  "family": "action_dedicated_data_asset",
+	  "status": "not_located_in_data_directory",
+	  "location": "res://data"
+	},
+	{
+	  "family": "canonical_id_registry",
+	  "status": "present",
+	  "location": "res://data"
+	},
+	{
+	  "family": "canonical_schema_registry",
+	  "status": "present",
+	  "location": "res://data/canonical_schemas.json"
+	},
+	{
+	  "family": "country_baseline",
+	  "status": "present",
+	  "location": "res://data/countries"
+	},
+	{
+	  "family": "currency_exchange_config",
+	  "status": "present",
+	  "location": "res://data/currency_exchange_rates.json"
+	},
+	{
+	  "family": "diplomacy_dedicated_data_asset",
+	  "status": "not_located_in_data_directory",
+	  "location": "res://data"
+	},
+	{
+	  "family": "domain_ownership_registry",
+	  "status": "present",
+	  "location": "res://data/domain_ownership.json"
+	},
+	{
+	  "family": "event_catalog",
+	  "status": "present",
+	  "location": "res://data/events/events.json"
+	},
+	{
+	  "family": "policy_dedicated_data_asset",
+	  "status": "not_located_in_data_directory",
+	  "location": "res://data"
+	},
+	{
+	  "family": "production_process_catalog",
+	  "status": "present",
+	  "location": "res://data/production_processes/production_processes.json"
+	},
+	{
+	  "family": "region_baseline",
+	  "status": "present",
+	  "location": "res://data/regions"
+	},
+	{
+	  "family": "regional_industry",
+	  "status": "present",
+	  "location": "res://data/regions/industry"
+	},
+	{
+	  "family": "regional_infrastructure",
+	  "status": "present",
+	  "location": "res://data/regions/infrastructure"
+	},
+	{
+	  "family": "regional_population",
+	  "status": "present",
+	  "location": "res://data/regions/population"
+	},
+	{
+	  "family": "regional_resources",
+	  "status": "present",
+	  "location": "res://data/regions/resources"
+	},
+	{
+	  "family": "regional_terrain",
+	  "status": "present",
+	  "location": "res://data/regions/terrain"
+	},
+	{
+	  "family": "regional_transport",
+	  "status": "present",
+	  "location": "res://data/regions/transport"
+	},
+	{
+	  "family": "referential_integrity_rules_registry",
+	  "status": "present",
+	  "location": "res://data/referential_integrity_rules.json"
+	},
+	{
+	  "family": "research_program_dedicated_data_asset",
+	  "status": "not_located_in_data_directory",
+	  "location": "res://data"
+	},
+	{
+	  "family": "resource_allocation_config",
+	  "status": "present",
+	  "location": "res://data/resource_allocation_priority_classes.json"
+	},
+	{
+	  "family": "resource_catalog",
+	  "status": "present",
+	  "location": "res://data/resources/resource_catalog.json"
+	},
+	{
+	  "family": "technology_dedicated_data_asset",
+	  "status": "not_located_in_data_directory",
+	  "location": "res://data"
+	},
+	{
+	  "family": "trade_dedicated_data_asset",
+	  "status": "not_located_in_data_directory",
+	  "location": "res://data"
+	}
+  ]
+}

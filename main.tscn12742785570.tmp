@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://ckcea6pc2k72q"]
+
+[ext_resource type="Script" uid="uid://5s3xh87h14mb" path="res://scripts/main.gd" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://b8322g3n7sinu" path="res://scripts/ui/gameplay_ui.gd" id="2_0xm2m"]
+
+[node name="WorldSimulator" type="Node" unique_id=944755858]
+script = ExtResource("1_ig7tw")
+
+[node name="GameplayCanvas" type="CanvasLayer" parent="." unique_id=10637535]
+
+[node name="GameplayUI" type="Control" parent="GameplayCanvas" unique_id=18763145]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_0xm2m")
