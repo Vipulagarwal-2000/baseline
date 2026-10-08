@@ -5,5 +5,20 @@
 		"USD": 1.0,
 		"INR": 10.0,
 		"CNY": 2.5
+	},
+	"semantic_contract": {
+		"configuration_status": "fixed_mvp_configuration",
+		"historical_status": "not_a_historical_exchange_rate_claim",
+		"base_currency_semantics": "comparison_and_conversion_anchor",
+		"rate_direction": "units_of_currency_per_one_base_currency",
+		"conversion_formula": "target_amount = source_amount * target_rate_to_base / source_rate_to_base",
+		"rate_scope": "cross_country_mvp_valuation_and_payment_support",
+		"valuation_usage": [
+			"cross_currency_comparison",
+			"trade_payment_conversion",
+            "monetary_reconciliation"
+		],
+		"runtime_balance_authority": "country_economy_component",
+		"rate_configuration_authority": "currency_exchange_rates.json"
 	}
 }

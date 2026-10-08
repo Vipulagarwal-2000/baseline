@@ -1,0 +1,21 @@
+WORLD SIMULATOR RUNNER SUMMARY
+================================
+Runner: Physical Economy Test Runner
+Runner ID: physical_economy
+Status: FAIL
+================================
+
+Tests Run: 42
+Tests Passed: 41
+Tests Failed: 1
+Tests Errored: 0
+Diagnostics: 1
+Duration (ms): 203
+
+FAILURE DIAGNOSTICS
+--------------------------------
+1. FAIL | TEST_FAILED | Physical Economy Test Runner | Resource ↔ Production Semantic Readiness | res://scripts/tests/ResourceCatalogProductionSemanticsTest.gd
+   Message: Resource ↔ Production semantic readiness validation returned FAIL.
+   Action: Inspect ResourceCatalogProductionSemanticsTest.gd for unresolved resource references, incompatible roles/capabilities, or unsupported flow connections.
+
+RESULT: FAIL

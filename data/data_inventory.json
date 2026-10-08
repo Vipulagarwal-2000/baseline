@@ -19,7 +19,7 @@
 	"status": "baseline_inventory",
 	"entry_count": 37,
 	"expected_family_count": 26,
-	"note": "This inventory records what exists in the data directory. Canonical domain IDs are defined by res://data/canonical_ids.json; domain ownership, canonical schemas, referential integrity, provenance, versioning, catalog/loader ownership, and later Phase 3 gates remain architecture gates."
+	"note": "This inventory records what exists in the data directory. Canonical domain IDs are defined by res://data/canonical_ids.json; domain ownership, canonical schemas, referential integrity, provenance, versioning, catalog/loader ownership, and later Phase 4 semantic/content gates remain architecture gates."
   },
   "entries": [
 	{
@@ -334,8 +334,8 @@
 	  "asset_type": "resource_catalog",
 	  "domain": "resources",
 	  "scope": "global",
-	  "source_role": "catalog",
-	  "status": "existing_baseline"
+	  "source_role": "canonical_semantic_catalog",
+	  "status": "phase_4_1b_level_1_expanded_catalog"
 	},
 	{
 	  "path": "data/versioning_registry.json",

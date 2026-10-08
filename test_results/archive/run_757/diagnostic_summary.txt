@@ -1,0 +1,33 @@
+WORLD SIMULATOR DIAGNOSTIC SUMMARY
+=====================================
+Test Run: 757
+OVERALL: FAIL
+=====================================
+
+VALIDATION SCOPE: full_suite
+RUNNER MIGRATION COMPLETE: YES
+
+RUNNER STATUS
+-------------------------------------
+Data Test Runner: FAIL
+
+FAILURE DIAGNOSTICS
+-------------------------------------
+1. FAIL | TEST_FAILED
+Runner: Data Test Runner
+Test: Step 3.7 Versioning Registry
+Source: res://scripts/tests/versioning_registry_test.gd
+Diagnostic: Versioning registry validation returned FAIL.
+Action: Inspect version metadata, record counts, and controlled-version declarations.
+
+2. FAIL | TEST_FAILED
+Runner: Data Test Runner
+Test: Step 3.7 Versioning Referential Integrity
+Source: res://scripts/tests/versioning_referential_integrity_test.gd
+Diagnostic: Versioning referential integrity validation returned FAIL.
+Action: Inspect versioning records against the data inventory.
+
+FAILED RUNNERS: 1
+FAILED TESTS / ERRORS: 2
+
+DIAGNOSTIC: ACTIVE VALIDATION FAILED

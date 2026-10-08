@@ -1,0 +1,82 @@
+{
+	"diagnostics": [
+		{
+			"action": "Inspect ProductionProcessCatalogRuntimeIntegrationTest.gd and the reported source/runtime catalog mismatch before changing any production data.",
+			"code": "TEST_FAILED",
+			"message": "Production Process Catalog ↔ Runtime Integration validation returned FAIL. production_stage type invalid for advanced_steel_production actual_type=3 | available_from type invalid for advanced_steel_production actual_type=3 | production_stage type invalid for coal_mining actual_type=3 | available_from type invalid for coal_mining actual_type=3 | production_stage type invalid for iron_ore_mining actual_type=3 | available_from type invalid for iron_ore_mining actual_type=3 | production_stage type invalid for machinery_basic actual_type=3 | available_from type invalid for machinery_basic actual_type=3 | production_stage type invalid for steel_basic actual_type=3 | available_from type invalid for steel_basic actual_type=3",
+			"metadata": {},
+			"runner_id": "physical_economy",
+			"runner_name": "Physical Economy Test Runner",
+			"severity": "FAIL",
+			"source_file": "res://scripts/tests/ProductionProcessCatalogRuntimeIntegrationTest.gd",
+			"test_name": "Production Process Catalog ↔ Runtime Integration"
+		}
+	],
+	"failed_runner_count": 1,
+	"message": "Validation failed in the current reported scope.",
+	"migration_complete": true,
+	"passed": false,
+	"run_id": 769,
+	"runner_summaries": [
+		{
+			"display_name": "Data Test Runner",
+			"runner_id": "data",
+			"status": "PASS",
+			"tests_errored": 0,
+			"tests_failed": 0,
+			"tests_run": 17
+		},
+		{
+			"display_name": "Interaction Test Runner",
+			"runner_id": "interaction",
+			"status": "PASS",
+			"tests_errored": 0,
+			"tests_failed": 0,
+			"tests_run": 22
+		},
+		{
+			"display_name": "Physical Economy Test Runner",
+			"runner_id": "physical_economy",
+			"status": "FAIL",
+			"tests_errored": 0,
+			"tests_failed": 1,
+			"tests_run": 45
+		},
+		{
+			"display_name": "Domain Test Runner",
+			"runner_id": "domain",
+			"status": "PASS",
+			"tests_errored": 0,
+			"tests_failed": 0,
+			"tests_run": 94
+		},
+		{
+			"display_name": "Feedback Test Runner",
+			"runner_id": "feedback",
+			"status": "PASS",
+			"tests_errored": 0,
+			"tests_failed": 0,
+			"tests_run": 8
+		},
+		{
+			"display_name": "Campaign Test Runner",
+			"runner_id": "campaign",
+			"status": "PASS",
+			"tests_errored": 0,
+			"tests_failed": 0,
+			"tests_run": 4
+		},
+		{
+			"display_name": "Causal Test Runner",
+			"runner_id": "causal",
+			"status": "PASS",
+			"tests_errored": 0,
+			"tests_failed": 0,
+			"tests_run": 10
+		}
+	],
+	"status": "FAIL",
+	"total_tests_failed": 1,
+	"total_tests_run": 200,
+	"validation_scope": "full_suite"
+}

@@ -554,11 +554,11 @@
 	  "origin_description": "Phase 3.1 canonical resource catalog",
 	  "source_reference": "",
 	  "source_version": "phase_3_1",
-	  "as_of_date": "2026-10-07",
-	  "transformation": "Authored/maintained as an internal project artifact; no external source transformation is claimed.",
+	  "as_of_date": "2026-10-08",
+	  "transformation": "Phase 4.1A semantic metadata was retained. Phase 4.1B adds a narrow Level 1 resource set (natural gas, electric power, fertilizer, cement, and chemicals) as internal catalog definitions. No existing country/resource magnitude was reinterpreted, and no unsupported physical units were assigned.",
 	  "attribution": "World Simulator project",
 	  "license": "Project-local internal artifact.",
-	  "notes": "Provenance metadata is control-plane information and is not simulation runtime state."
+	  "notes": "The Phase 3.1 baseline remains the provenance reference. Level 1 expansion is an internal content enrichment; physical unit resolution remains unresolved where authoritative evidence is absent."
 	},
 	{
 	  "path": "data/versioning_registry.json",

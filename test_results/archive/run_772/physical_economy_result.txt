@@ -1,0 +1,24 @@
+WORLD SIMULATOR RUNNER SUMMARY
+================================
+Runner: Physical Economy Test Runner
+Runner ID: physical_economy
+Status: FAIL
+================================
+
+Tests Run: 45
+Tests Passed: 43
+Tests Failed: 2
+Tests Errored: 0
+Diagnostics: 2
+Duration (ms): 214
+
+FAILURE DIAGNOSTICS
+--------------------------------
+1. FAIL | TEST_FAILED | Physical Economy Test Runner | Integrated Physical Economy — Production → Economic Output | res://scripts/tests/IntegratedPhysicalEconomyProductionEconomicOutputTest.gd
+   Message: Integrated Physical Economy — Production → Economic Output validation returned FAIL.
+   Action: Inspect IntegratedPhysicalEconomyProductionEconomicOutputTest.gd and the authoritative domain path exercised by the test.
+2. FAIL | TEST_FAILED | Physical Economy Test Runner | Production Process Catalog | res://scripts/tests/ProductionProcessCatalogTest.gd
+   Message: Production Process Catalog validation returned FAIL.
+   Action: Inspect ProductionProcessCatalogTest.gd and the authoritative domain path exercised by the test.
+
+RESULT: FAIL

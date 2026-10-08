@@ -1,0 +1,26 @@
+WORLD SIMULATOR TEST REPORT
+================================
+Test Run: 762
+Overall: FAIL
+Validation Scope: full_suite
+Runner Migration Complete: YES
+================================
+
+Diagnostic Summary: diagnostic_summary.txt
+Runner Count: 7
+Failed Runners: 1
+Total Tests: 197
+Total Failures/Errors: 1
+Duration (ms): 5816
+
+RUNNER RESULTS
+--------------------------------
+Data Test Runner: PASS | tests=17 | passed=17 | failed=0 | errors=0
+Interaction Test Runner: PASS | tests=22 | passed=22 | failed=0 | errors=0
+Physical Economy Test Runner: FAIL | tests=42 | passed=41 | failed=1 | errors=0
+Domain Test Runner: PASS | tests=94 | passed=94 | failed=0 | errors=0
+Feedback Test Runner: PASS | tests=8 | passed=8 | failed=0 | errors=0
+Campaign Test Runner: PASS | tests=4 | passed=4 | failed=0 | errors=0
+Causal Test Runner: PASS | tests=10 | passed=10 | failed=0 | errors=0
+
+OVERALL: FAIL | runners=7 | failed_runners=1 | tests=197 | failures=1

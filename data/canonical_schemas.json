@@ -710,8 +710,14 @@
 			  "type": "object",
 			  "semantic_type": "currency_rate_map",
 			  "required": true
+			},
+			"semantic_contract": {
+			  "type": "object",
+			  "semantic_type": "currency_semantic_contract",
+			  "required": true
 			}
-		  }
+		  },
+		  "notes": "Exchange-rate configuration is definition data; semantic_contract defines quote direction, conversion formula, valuation scope, and authority boundaries; treasury balances remain runtime state."
 		}
 	  }
 	},

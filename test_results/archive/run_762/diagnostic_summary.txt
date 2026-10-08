@@ -1,0 +1,26 @@
+WORLD SIMULATOR DIAGNOSTIC SUMMARY
+=====================================
+Test Run: 762
+OVERALL: FAIL
+=====================================
+
+VALIDATION SCOPE: full_suite
+RUNNER MIGRATION COMPLETE: YES
+
+RUNNER STATUS
+-------------------------------------
+Physical Economy Test Runner: FAIL
+
+FAILURE DIAGNOSTICS
+-------------------------------------
+1. FAIL | TEST_FAILED
+Runner: Physical Economy Test Runner
+Test: Resource ↔ Production Semantic Readiness
+Source: res://scripts/tests/ResourceCatalogProductionSemanticsTest.gd
+Diagnostic: Resource ↔ Production semantic readiness validation returned FAIL.
+Action: Inspect ResourceCatalogProductionSemanticsTest.gd for unresolved resource references, incompatible roles/capabilities, or unsupported flow connections.
+
+FAILED RUNNERS: 1
+FAILED TESTS / ERRORS: 1
+
+DIAGNOSTIC: ACTIVE VALIDATION FAILED

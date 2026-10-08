@@ -986,6 +986,36 @@
 			"res://data/countries/india.json",
             "res://data/countries/usa.json"
 		  ]
+		},
+		"natural_gas": {
+		  "status": "canonical_existing",
+		  "source_paths": [
+            "res://data/resources/resource_catalog.json"
+		  ]
+		},
+		"fertilizer": {
+		  "status": "canonical_existing",
+		  "source_paths": [
+            "res://data/resources/resource_catalog.json"
+		  ]
+		},
+		"cement": {
+		  "status": "canonical_existing",
+		  "source_paths": [
+            "res://data/resources/resource_catalog.json"
+		  ]
+		},
+		"chemicals": {
+		  "status": "canonical_existing",
+		  "source_paths": [
+            "res://data/resources/resource_catalog.json"
+		  ]
+		},
+		"electric_power": {
+		  "status": "canonical_existing",
+		  "source_paths": [
+            "res://data/resources/resource_catalog.json"
+		  ]
 		}
 	  }
 	},

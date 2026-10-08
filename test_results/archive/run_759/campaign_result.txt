@@ -1,0 +1,16 @@
+WORLD SIMULATOR RUNNER SUMMARY
+================================
+Runner: Campaign Test Runner
+Runner ID: campaign
+Status: PASS
+================================
+
+Tests Run: 4
+Tests Passed: 4
+Tests Failed: 0
+Tests Errored: 0
+Diagnostics: 0
+Duration (ms): 3922
+
+RESULT: PASS
+No failure diagnostics recorded.

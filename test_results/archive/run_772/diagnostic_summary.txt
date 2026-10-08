@@ -1,0 +1,33 @@
+WORLD SIMULATOR DIAGNOSTIC SUMMARY
+=====================================
+Test Run: 772
+OVERALL: FAIL
+=====================================
+
+VALIDATION SCOPE: full_suite
+RUNNER MIGRATION COMPLETE: YES
+
+RUNNER STATUS
+-------------------------------------
+Physical Economy Test Runner: FAIL
+
+FAILURE DIAGNOSTICS
+-------------------------------------
+1. FAIL | TEST_FAILED
+Runner: Physical Economy Test Runner
+Test: Integrated Physical Economy — Production → Economic Output
+Source: res://scripts/tests/IntegratedPhysicalEconomyProductionEconomicOutputTest.gd
+Diagnostic: Integrated Physical Economy — Production → Economic Output validation returned FAIL.
+Action: Inspect IntegratedPhysicalEconomyProductionEconomicOutputTest.gd and the authoritative domain path exercised by the test.
+
+2. FAIL | TEST_FAILED
+Runner: Physical Economy Test Runner
+Test: Production Process Catalog
+Source: res://scripts/tests/ProductionProcessCatalogTest.gd
+Diagnostic: Production Process Catalog validation returned FAIL.
+Action: Inspect ProductionProcessCatalogTest.gd and the authoritative domain path exercised by the test.
+
+FAILED RUNNERS: 1
+FAILED TESTS / ERRORS: 2
+
+DIAGNOSTIC: ACTIVE VALIDATION FAILED

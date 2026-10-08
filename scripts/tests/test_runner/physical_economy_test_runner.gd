@@ -16,16 +16,18 @@ extends RefCounted
 #   Infrastructure                         4
 #   Integrated physical economy            7
 #   Resource system                        1
+#   Resource semantic readiness            1
+#   Currency valuation semantics           1
 #   Production / industry / catalogs     14
 #   Trade                                  9
 #   Economy                                6
 #   -----------------------------------------
-#   Total                                 41
+#   Total                                 43
 #
 # Not included here:
 #   industry-process transition/adoption tests whose legacy master runner
 #   does not currently capture a boolean result;
-#   currency / monetary invariant tests;
+#   currency / monetary invariant runtime settlement tests;
 #   government / population / regional tests;
 #   military / infrastructure-damage tests;
 #   feedback / campaign / causal tests.
@@ -36,7 +38,7 @@ extends RefCounted
 
 const RUNNER_ID := "physical_economy"
 const DISPLAY_NAME := "Physical Economy Test Runner"
-const EXPECTED_TEST_COUNT := 41
+const EXPECTED_TEST_COUNT := 45
 
 
 static func run(
@@ -175,11 +177,38 @@ static func run(
 
 	_record(
 		result,
+		"Currency / Valuation Semantic Foundation",
+		CurrencyValuationSemanticsTest.run(),
+		"res://scripts/tests/CurrencyValuationSemanticsTest.gd",
+		"Currency / valuation semantic foundation validation returned FAIL.",
+		"Inspect CurrencyValuationSemanticsTest.gd and the currency configuration / country identity authority."
+	)
+
+	_record(
+		result,
+		"Currency Runtime ↔ Semantic Integration",
+		CurrencyRuntimeIntegrationSemanticsTest.run(world, simulation),
+		"res://scripts/tests/CurrencyRuntimeIntegrationSemanticsTest.gd",
+		"Currency runtime ↔ semantic integration validation returned FAIL.",
+		"Inspect CurrencyRuntimeIntegrationSemanticsTest.gd and CurrencyConversionSystem.gd for semantic-authority/runtime integration."
+	)
+
+	_record(
+		result,
 		"Resource System",
 		ResourceSystemTest.run(world, simulation),
 		"res://scripts/tests/ResourceSystemTest.gd",
 		"Resource System validation returned FAIL.",
         "Inspect ResourceSystemTest.gd and the authoritative domain path exercised by the test."
+	)
+
+	_record(
+		result,
+		"Resource ↔ Production Semantic Readiness",
+		ResourceCatalogProductionSemanticsTest.run(),
+		"res://scripts/tests/ResourceCatalogProductionSemanticsTest.gd",
+		"Resource ↔ Production semantic readiness validation returned FAIL.",
+        "Inspect ResourceCatalogProductionSemanticsTest.gd for unresolved resource references, incompatible roles/capabilities, or unsupported flow connections."
 	)
 
 	TestLogger.section(
@@ -310,6 +339,31 @@ static func run(
 		"res://scripts/tests/ProductionProcessMaintenanceIntegrationTest.gd",
 		"Production Process Maintenance Integration validation returned FAIL.",
         "Inspect ProductionProcessMaintenanceIntegrationTest.gd and the authoritative domain path exercised by the test."
+	)
+
+	var production_catalog_runtime_integration_passed: bool = (
+		ProductionProcessCatalogRuntimeIntegrationTest.run(
+			world,
+			simulation
+		)
+	)
+
+	var production_catalog_runtime_integration_diagnostic: String = (
+		ProductionProcessCatalogRuntimeIntegrationTest.get_failure_reason()
+	)
+
+	_record(
+		result,
+		"Production Process Catalog ↔ Runtime Integration",
+		production_catalog_runtime_integration_passed,
+		"res://scripts/tests/ProductionProcessCatalogRuntimeIntegrationTest.gd",
+		(
+			"Production Process Catalog ↔ Runtime Integration validation returned FAIL. "
+			+ production_catalog_runtime_integration_diagnostic
+			if not production_catalog_runtime_integration_passed
+			else "Production Process Catalog ↔ Runtime Integration validation returned FAIL."
+		),
+        "Inspect ProductionProcessCatalogRuntimeIntegrationTest.gd and the reported source/runtime catalog mismatch before changing any production data."
 	)
 
 	TestLogger.section(

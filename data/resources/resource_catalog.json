@@ -3,7 +3,14 @@
   "unit_policy": {
 	"default_unit": "unspecified_simulation_quantity",
 	"default_unit_status": "unresolved",
-	"note": "The current baseline data does not provide authoritative physical units. Do not infer tonnes, barrels, GWh, currency amounts, or other physical units from existing magnitudes."
+	"allowed_unit_statuses": [
+	  "resolved",
+	  "unresolved",
+      "provisional"
+	],
+	"quantity_type": "scalar_quantity",
+	"unresolved_unit_scale": true,
+	"note": "The current baseline data does not provide authoritative physical units. Do not infer tonnes, barrels, GWh, currency amounts, or other physical units from existing magnitudes. A resource may declare a semantic quantity type while its physical unit remains unresolved."
   },
   "resources": {
 	"food": {
@@ -11,66 +18,408 @@
 	  "semantic_class": "consumable_commodity",
 	  "unit": "unspecified_simulation_quantity",
 	  "unit_status": "unresolved",
-	  "roles": ["consumption", "production", "stockpile", "trade"],
+	  "roles": [
+		"consumption",
+		"production",
+		"stockpile",
+        "trade"
+	  ],
 	  "can_be_produced": true,
 	  "can_be_consumed": true,
 	  "can_be_stockpiled": true,
-	  "can_have_reserves": false
+	  "can_have_reserves": false,
+	  "quantity_type": "scalar_quantity",
+	  "canonical_unit": "unspecified_simulation_quantity",
+	  "unit_scale": null,
+	  "flow_unit": "unspecified_simulation_quantity",
+	  "price_unit": "currency_per_canonical_unit",
+	  "stockpile_semantics": "quantity_balance",
+	  "reserve_semantics": "not_applicable",
+	  "allowed_roles": [
+		"consumption",
+		"production",
+		"stockpile",
+        "trade"
+	  ],
+	  "provenance": {
+		"status": "internal_catalog_definition",
+		"source_reference": "",
+		"confidence": "structural_definition_confidence"
+	  },
+	  "definition_version": 1
 	},
 	"coal": {
 	  "name": "Coal",
 	  "semantic_class": "energy_raw_material",
 	  "unit": "unspecified_simulation_quantity",
 	  "unit_status": "unresolved",
-	  "roles": ["production_input", "energy_input", "stockpile", "reserve", "trade"],
+	  "roles": [
+		"production_input",
+		"energy_input",
+		"stockpile",
+		"reserve",
+        "trade"
+	  ],
 	  "can_be_produced": true,
 	  "can_be_consumed": true,
 	  "can_be_stockpiled": true,
-	  "can_have_reserves": true
+	  "can_have_reserves": true,
+	  "quantity_type": "scalar_quantity",
+	  "canonical_unit": "unspecified_simulation_quantity",
+	  "unit_scale": null,
+	  "flow_unit": "unspecified_simulation_quantity",
+	  "price_unit": "currency_per_canonical_unit",
+	  "stockpile_semantics": "quantity_balance",
+	  "reserve_semantics": "resource_reserve_quantity",
+	  "allowed_roles": [
+		"production_input",
+		"energy_input",
+		"stockpile",
+		"reserve",
+        "trade"
+	  ],
+	  "provenance": {
+		"status": "internal_catalog_definition",
+		"source_reference": "",
+		"confidence": "structural_definition_confidence"
+	  },
+	  "definition_version": 1
 	},
 	"iron": {
 	  "name": "Iron Ore",
 	  "semantic_class": "industrial_raw_material",
 	  "unit": "unspecified_simulation_quantity",
 	  "unit_status": "unresolved",
-	  "roles": ["production_input", "production", "stockpile", "reserve", "trade"],
+	  "roles": [
+		"production_input",
+		"production",
+		"stockpile",
+		"reserve",
+        "trade"
+	  ],
 	  "can_be_produced": true,
 	  "can_be_consumed": true,
 	  "can_be_stockpiled": true,
-	  "can_have_reserves": true
+	  "can_have_reserves": true,
+	  "quantity_type": "scalar_quantity",
+	  "canonical_unit": "unspecified_simulation_quantity",
+	  "unit_scale": null,
+	  "flow_unit": "unspecified_simulation_quantity",
+	  "price_unit": "currency_per_canonical_unit",
+	  "stockpile_semantics": "quantity_balance",
+	  "reserve_semantics": "resource_reserve_quantity",
+	  "allowed_roles": [
+		"production_input",
+		"production",
+		"stockpile",
+		"reserve",
+        "trade"
+	  ],
+	  "provenance": {
+		"status": "internal_catalog_definition",
+		"source_reference": "",
+		"confidence": "structural_definition_confidence"
+	  },
+	  "definition_version": 1
 	},
 	"oil": {
 	  "name": "Crude Oil",
 	  "semantic_class": "energy_raw_material",
 	  "unit": "unspecified_simulation_quantity",
 	  "unit_status": "unresolved",
-	  "roles": ["production_input", "energy_input", "stockpile", "reserve", "trade"],
+	  "roles": [
+		"production_input",
+		"energy_input",
+		"stockpile",
+		"reserve",
+        "trade"
+	  ],
 	  "can_be_produced": true,
 	  "can_be_consumed": true,
 	  "can_be_stockpiled": true,
-	  "can_have_reserves": true
+	  "can_have_reserves": true,
+	  "quantity_type": "scalar_quantity",
+	  "canonical_unit": "unspecified_simulation_quantity",
+	  "unit_scale": null,
+	  "flow_unit": "unspecified_simulation_quantity",
+	  "price_unit": "currency_per_canonical_unit",
+	  "stockpile_semantics": "quantity_balance",
+	  "reserve_semantics": "resource_reserve_quantity",
+	  "allowed_roles": [
+		"production_input",
+		"energy_input",
+		"stockpile",
+		"reserve",
+        "trade"
+	  ],
+	  "provenance": {
+		"status": "internal_catalog_definition",
+		"source_reference": "",
+		"confidence": "structural_definition_confidence"
+	  },
+	  "definition_version": 1
 	},
 	"steel": {
 	  "name": "Steel",
 	  "semantic_class": "manufactured_material",
 	  "unit": "unspecified_simulation_quantity",
 	  "unit_status": "unresolved",
-	  "roles": ["production_output", "production_input", "stockpile", "trade"],
+	  "roles": [
+		"production_output",
+		"production_input",
+		"stockpile",
+        "trade"
+	  ],
 	  "can_be_produced": true,
 	  "can_be_consumed": true,
 	  "can_be_stockpiled": true,
-	  "can_have_reserves": false
+	  "can_have_reserves": false,
+	  "quantity_type": "scalar_quantity",
+	  "canonical_unit": "unspecified_simulation_quantity",
+	  "unit_scale": null,
+	  "flow_unit": "unspecified_simulation_quantity",
+	  "price_unit": "currency_per_canonical_unit",
+	  "stockpile_semantics": "quantity_balance",
+	  "reserve_semantics": "not_applicable",
+	  "allowed_roles": [
+		"production_output",
+		"production_input",
+		"stockpile",
+        "trade"
+	  ],
+	  "provenance": {
+		"status": "internal_catalog_definition",
+		"source_reference": "",
+		"confidence": "structural_definition_confidence"
+	  },
+	  "definition_version": 1
 	},
 	"machinery": {
 	  "name": "Machinery",
 	  "semantic_class": "manufactured_capital_good",
 	  "unit": "unspecified_simulation_quantity",
 	  "unit_status": "unresolved",
-	  "roles": ["production_output", "production_input", "maintenance_input", "stockpile", "trade"],
+	  "roles": [
+		"production_output",
+		"production_input",
+		"maintenance_input",
+		"stockpile",
+        "trade"
+	  ],
 	  "can_be_produced": true,
 	  "can_be_consumed": true,
 	  "can_be_stockpiled": true,
-	  "can_have_reserves": false
+	  "can_have_reserves": false,
+	  "quantity_type": "scalar_quantity",
+	  "canonical_unit": "unspecified_simulation_quantity",
+	  "unit_scale": null,
+	  "flow_unit": "unspecified_simulation_quantity",
+	  "price_unit": "currency_per_canonical_unit",
+	  "stockpile_semantics": "quantity_balance",
+	  "reserve_semantics": "not_applicable",
+	  "allowed_roles": [
+		"production_output",
+		"production_input",
+		"maintenance_input",
+		"stockpile",
+        "trade"
+	  ],
+	  "provenance": {
+		"status": "internal_catalog_definition",
+		"source_reference": "",
+		"confidence": "structural_definition_confidence"
+	  },
+	  "definition_version": 1
+	},
+	"natural_gas": {
+	  "name": "Natural Gas",
+	  "semantic_class": "energy_raw_material",
+	  "unit": "unspecified_simulation_quantity",
+	  "unit_status": "unresolved",
+	  "roles": [
+		"production_input",
+		"energy_input",
+		"stockpile",
+		"reserve",
+        "trade"
+	  ],
+	  "can_be_produced": true,
+	  "can_be_consumed": true,
+	  "can_be_stockpiled": true,
+	  "can_have_reserves": true,
+	  "quantity_type": "scalar_quantity",
+	  "canonical_unit": "unspecified_simulation_quantity",
+	  "unit_scale": null,
+	  "flow_unit": "unspecified_simulation_quantity",
+	  "price_unit": "currency_per_canonical_unit",
+	  "stockpile_semantics": "quantity_balance",
+	  "reserve_semantics": "resource_reserve_quantity",
+	  "allowed_roles": [
+		"production_input",
+		"energy_input",
+		"stockpile",
+		"reserve",
+        "trade"
+	  ],
+	  "provenance": {
+		"status": "internal_catalog_definition",
+		"source_reference": "",
+		"confidence": "structural_definition_confidence"
+	  },
+	  "definition_version": 1
+	},
+	"fertilizer": {
+	  "name": "Fertilizer",
+	  "semantic_class": "manufactured_intermediate",
+	  "unit": "unspecified_simulation_quantity",
+	  "unit_status": "unresolved",
+	  "roles": [
+		"production_output",
+		"production_input",
+		"stockpile",
+        "trade"
+	  ],
+	  "can_be_produced": true,
+	  "can_be_consumed": true,
+	  "can_be_stockpiled": true,
+	  "can_have_reserves": false,
+	  "quantity_type": "scalar_quantity",
+	  "canonical_unit": "unspecified_simulation_quantity",
+	  "unit_scale": null,
+	  "flow_unit": "unspecified_simulation_quantity",
+	  "price_unit": "currency_per_canonical_unit",
+	  "stockpile_semantics": "quantity_balance",
+	  "reserve_semantics": "not_applicable",
+	  "allowed_roles": [
+		"production_output",
+		"production_input",
+		"stockpile",
+        "trade"
+	  ],
+	  "provenance": {
+		"status": "internal_catalog_definition",
+		"source_reference": "",
+		"confidence": "structural_definition_confidence"
+	  },
+	  "definition_version": 1
+	},
+	"cement": {
+	  "name": "Cement",
+	  "semantic_class": "manufactured_material",
+	  "unit": "unspecified_simulation_quantity",
+	  "unit_status": "unresolved",
+	  "roles": [
+		"production_output",
+		"production_input",
+		"stockpile",
+        "trade"
+	  ],
+	  "can_be_produced": true,
+	  "can_be_consumed": true,
+	  "can_be_stockpiled": true,
+	  "can_have_reserves": false,
+	  "quantity_type": "scalar_quantity",
+	  "canonical_unit": "unspecified_simulation_quantity",
+	  "unit_scale": null,
+	  "flow_unit": "unspecified_simulation_quantity",
+	  "price_unit": "currency_per_canonical_unit",
+	  "stockpile_semantics": "quantity_balance",
+	  "reserve_semantics": "not_applicable",
+	  "allowed_roles": [
+		"production_output",
+		"production_input",
+		"stockpile",
+        "trade"
+	  ],
+	  "provenance": {
+		"status": "internal_catalog_definition",
+		"source_reference": "",
+		"confidence": "structural_definition_confidence"
+	  },
+	  "definition_version": 1
+	},
+	"chemicals": {
+	  "name": "Chemicals",
+	  "semantic_class": "manufactured_intermediate",
+	  "unit": "unspecified_simulation_quantity",
+	  "unit_status": "unresolved",
+	  "roles": [
+		"production_output",
+		"production_input",
+		"stockpile",
+        "trade"
+	  ],
+	  "can_be_produced": true,
+	  "can_be_consumed": true,
+	  "can_be_stockpiled": true,
+	  "can_have_reserves": false,
+	  "quantity_type": "scalar_quantity",
+	  "canonical_unit": "unspecified_simulation_quantity",
+	  "unit_scale": null,
+	  "flow_unit": "unspecified_simulation_quantity",
+	  "price_unit": "currency_per_canonical_unit",
+	  "stockpile_semantics": "quantity_balance",
+	  "reserve_semantics": "not_applicable",
+	  "allowed_roles": [
+		"production_output",
+		"production_input",
+		"stockpile",
+        "trade"
+	  ],
+	  "provenance": {
+		"status": "internal_catalog_definition",
+		"source_reference": "",
+		"confidence": "structural_definition_confidence"
+	  },
+	  "definition_version": 1
+	},
+	"electric_power": {
+	  "name": "Electric Power",
+	  "semantic_class": "processed_energy",
+	  "unit": "unspecified_simulation_quantity",
+	  "unit_status": "unresolved",
+	  "roles": [
+		"production_output",
+		"production_input",
+		"energy_input",
+        "trade"
+	  ],
+	  "can_be_produced": true,
+	  "can_be_consumed": true,
+	  "can_be_stockpiled": false,
+	  "can_have_reserves": false,
+	  "quantity_type": "scalar_quantity",
+	  "canonical_unit": "unspecified_simulation_quantity",
+	  "unit_scale": null,
+	  "flow_unit": "unspecified_simulation_quantity",
+	  "price_unit": "currency_per_canonical_unit",
+	  "stockpile_semantics": "non_stockpilable_flow",
+	  "reserve_semantics": "not_applicable",
+	  "allowed_roles": [
+		"production_output",
+		"production_input",
+		"energy_input",
+        "trade"
+	  ],
+	  "provenance": {
+		"status": "internal_catalog_definition",
+		"source_reference": "",
+		"confidence": "structural_definition_confidence"
+	  },
+	  "definition_version": 1
 	}
+  },
+  "semantic_contract": {
+	"quantity_type": "scalar_quantity",
+	"canonical_unit": "explicit_resource_unit",
+	"unit_scale": "unresolved_until_authoritatively_sourced",
+	"flow_unit": "same_as_canonical_unit_unless_explicitly_defined",
+	"price_unit": "currency_per_canonical_unit",
+	"stockpile_semantics": "quantity_balance",
+	"reserve_semantics": "resource_reserve_quantity_when_applicable",
+	"role_semantics": "roles_define_allowed_domain_usage",
+	"provenance_semantics": "definition_metadata_not_runtime_state",
+	"confidence_semantics": "confidence_describes_definition_resolution_not_live_quantity_accuracy",
+	"version_semantics": "definition_version_tracks_resource_contract_revision"
   }
 }

@@ -627,11 +627,11 @@
 	  "introduced_reference": "phase_3_1",
 	  "baseline_reference": "phase_3_1",
 	  "previous_version": null,
-	  "effective_date": "2026-10-07",
+	  "effective_date": "2026-10-08",
 	  "lifecycle_status": "active",
 	  "change_authority": "World Simulator data architecture",
 	  "compatibility": "same_schema_or_explicit_migration_required",
-	  "notes": "Controlled project artifact introduced in phase_3_1; version identity is assigned by Phase 3.7."
+	  "notes": "Controlled project artifact introduced in phase_3_1; Phase 4.1A added semantic metadata, and Phase 4.1B adds Level 1 resource definitions without changing the schema contract or reinterpreting existing quantities. No historical version transition is asserted by the current Phase 3.7 versioning contract."
 	},
 	{
 	  "path": "data/versioning_registry.json",

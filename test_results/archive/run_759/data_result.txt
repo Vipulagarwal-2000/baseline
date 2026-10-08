@@ -1,0 +1,27 @@
+WORLD SIMULATOR RUNNER SUMMARY
+================================
+Runner: Data Test Runner
+Runner ID: data
+Status: FAIL
+================================
+
+Tests Run: 17
+Tests Passed: 14
+Tests Failed: 3
+Tests Errored: 0
+Diagnostics: 3
+Duration (ms): 335
+
+FAILURE DIAGNOSTICS
+--------------------------------
+1. FAIL | TEST_FAILED | Data Test Runner | Step 3.2 Canonical ID Registry Schema | res://scripts/tests/canonical_id_registry_test.gd
+   Message: Canonical ID registry schema validation returned FAIL.
+   Action: Inspect canonical domain declarations and canonical ID registry structure.
+2. FAIL | TEST_FAILED | Data Test Runner | Step 3.7 Versioning Registry | res://scripts/tests/versioning_registry_test.gd
+   Message: Versioning registry validation returned FAIL.
+   Action: Inspect version metadata, record counts, and controlled-version declarations.
+3. FAIL | TEST_FAILED | Data Test Runner | Step 3.7 Versioning Referential Integrity | res://scripts/tests/versioning_referential_integrity_test.gd
+   Message: Versioning referential integrity validation returned FAIL.
+   Action: Inspect versioning records against the data inventory.
+
+RESULT: FAIL

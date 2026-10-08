@@ -1,0 +1,26 @@
+WORLD SIMULATOR DIAGNOSTIC SUMMARY
+=====================================
+Test Run: 768
+OVERALL: FAIL
+=====================================
+
+VALIDATION SCOPE: full_suite
+RUNNER MIGRATION COMPLETE: YES
+
+RUNNER STATUS
+-------------------------------------
+Physical Economy Test Runner: FAIL
+
+FAILURE DIAGNOSTICS
+-------------------------------------
+1. FAIL | TEST_FAILED
+Runner: Physical Economy Test Runner
+Test: Production Process Catalog ↔ Runtime Integration
+Source: res://scripts/tests/ProductionProcessCatalogRuntimeIntegrationTest.gd
+Diagnostic: Production Process Catalog ↔ Runtime Integration validation returned FAIL.
+Action: Inspect ProductionProcessCatalogRuntimeIntegrationTest.gd and ProductionProcessCatalog / ProductionProcessSystem ownership.
+
+FAILED RUNNERS: 1
+FAILED TESTS / ERRORS: 1
+
+DIAGNOSTIC: ACTIVE VALIDATION FAILED

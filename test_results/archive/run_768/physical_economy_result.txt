@@ -1,0 +1,21 @@
+WORLD SIMULATOR RUNNER SUMMARY
+================================
+Runner: Physical Economy Test Runner
+Runner ID: physical_economy
+Status: FAIL
+================================
+
+Tests Run: 45
+Tests Passed: 44
+Tests Failed: 1
+Tests Errored: 0
+Diagnostics: 1
+Duration (ms): 174
+
+FAILURE DIAGNOSTICS
+--------------------------------
+1. FAIL | TEST_FAILED | Physical Economy Test Runner | Production Process Catalog ↔ Runtime Integration | res://scripts/tests/ProductionProcessCatalogRuntimeIntegrationTest.gd
+   Message: Production Process Catalog ↔ Runtime Integration validation returned FAIL.
+   Action: Inspect ProductionProcessCatalogRuntimeIntegrationTest.gd and ProductionProcessCatalog / ProductionProcessSystem ownership.
+
+RESULT: FAIL

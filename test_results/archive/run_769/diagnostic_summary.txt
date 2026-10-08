@@ -1,0 +1,26 @@
+WORLD SIMULATOR DIAGNOSTIC SUMMARY
+=====================================
+Test Run: 769
+OVERALL: FAIL
+=====================================
+
+VALIDATION SCOPE: full_suite
+RUNNER MIGRATION COMPLETE: YES
+
+RUNNER STATUS
+-------------------------------------
+Physical Economy Test Runner: FAIL
+
+FAILURE DIAGNOSTICS
+-------------------------------------
+1. FAIL | TEST_FAILED
+Runner: Physical Economy Test Runner
+Test: Production Process Catalog ↔ Runtime Integration
+Source: res://scripts/tests/ProductionProcessCatalogRuntimeIntegrationTest.gd
+Diagnostic: Production Process Catalog ↔ Runtime Integration validation returned FAIL. production_stage type invalid for advanced_steel_production actual_type=3 | available_from type invalid for advanced_steel_production actual_type=3 | production_stage type invalid for coal_mining actual_type=3 | available_from type invalid for coal_mining actual_type=3 | production_stage type invalid for iron_ore_mining actual_type=3 | available_from type invalid for iron_ore_mining actual_type=3 | production_stage type invalid for machinery_basic actual_type=3 | available_from type invalid for machinery_basic actual_type=3 | production_stage type invalid for steel_basic actual_type=3 | available_from type invalid for steel_basic actual_type=3
+Action: Inspect ProductionProcessCatalogRuntimeIntegrationTest.gd and the reported source/runtime catalog mismatch before changing any production data.
+
+FAILED RUNNERS: 1
+FAILED TESTS / ERRORS: 1
+
+DIAGNOSTIC: ACTIVE VALIDATION FAILED
