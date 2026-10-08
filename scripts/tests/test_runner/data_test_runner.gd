@@ -10,12 +10,15 @@ extends RefCounted
 #
 # The result now carries structured source-aware diagnostics so the master
 # diagnostic summary can point directly to the failing test source.
-# Phase 4.4A adds the technology catalog foundation checks to this same
-# data/governance runner because they validate definition data and control
-# metadata rather than mutable runtime state.
+#
+# Phase 4.4A adds the dedicated technology catalog foundation.
 # Phase 4.4C adds technology/runtime parity and causal-content validation
 # without moving runtime technology authority out of TechnologyManager /
 # TechnologyLibrary.
+#
+# Phase 4.5A adds the research-program catalog foundation only.
+# It deliberately does not activate research-program canonical IDs or
+# change ResearchSystem / ResearchComponent / ResearchProject authority.
 # ============================================================
 
 
@@ -40,7 +43,7 @@ static func run() -> TestRunResult:
 	)
 
 	TestLogger.write_line(
-		"Phase 3 data/governance validation + Phase 4.4A technology catalog foundation + Phase 4.4C causal/content validation"
+		"Phase 3 data/governance validation + Phase 4.4 technology catalog validation + Phase 4.5A research-program foundation"
 	)
 
 	# ============================================================
@@ -65,7 +68,7 @@ static func run() -> TestRunResult:
 		"Step 3.1 Resource Catalog Referential Integrity",
 		ResourceCatalogReferentialIntegrityTest.run(),
 		"res://scripts/tests/resource_catalog_referential_integrity_test.gd",
-		"Resource catalog referential integrity validation returned FAIL.",
+		"Resource catalog referential integrity returned FAIL.",
 		"Inspect resource references in country and production data against the canonical resource catalog."
 	)
 
@@ -238,7 +241,7 @@ static func run() -> TestRunResult:
 		"Step 3.7 Versioning Referential Integrity",
 		VersioningReferentialIntegrityTest.run(),
 		"res://scripts/tests/versioning_referential_integrity_test.gd",
-		"Versioning referential integrity validation returned FAIL.",
+		"Versioning referential integrity returned FAIL.",
 		"Inspect versioning records against the data inventory."
 	)
 
@@ -320,14 +323,40 @@ static func run() -> TestRunResult:
 		"Inspect prerequisite ordering, effect compatibility, production-process technology references, and reference-only boundaries."
 	)
 
+	# ============================================================
+	# PHASE 4.5A — RESEARCH PROGRAM CATALOG FOUNDATION
+	# ============================================================
+
+	TestLogger.section(
+		"[DATA] RESEARCH PROGRAM CATALOG FOUNDATION — PHASE 4.5A"
+	)
+
+	_record(
+		result,
+		"Phase 4.5A Research Program Catalog Schema",
+		ResearchProgramCatalogSchemaTest.run(),
+		"res://scripts/tests/research_program_catalog_schema_test.gd",
+		"Research program catalog schema validation returned FAIL.",
+		"Inspect the research-program catalog contract and loader."
+	)
+
+	_record(
+		result,
+		"Phase 4.5A Research Program Catalog Semantic Validation",
+		ResearchProgramCatalogSemanticTest.run(),
+		"res://scripts/tests/research_program_catalog_semantic_test.gd",
+		"Research program catalog semantic validation returned FAIL.",
+		"Inspect the intentional foundation boundary and research-program identity activation policy."
+	)
+
 	result.set_metadata(
 		"scope",
-		"Phase 3 data/governance + Phase 4.4A technology catalog foundation + Phase 4.4C technology/runtime parity and causal content validation"
+		"Phase 3 data/governance + Phase 4.4 technology catalog validation + Phase 4.5A research-program foundation"
 	)
 
 	result.set_metadata(
 		"tests_expected",
-		21
+		23
 	)
 
 	result.set_metadata(
@@ -345,9 +374,6 @@ static func run() -> TestRunResult:
 		"read_only"
 	)
 
-	# Detailed execution output remains in the active TestLogger stream.
-	# The structured runner result intentionally stores only compact test
-	# counts and structured failure diagnostics so result files stay small.
 	result.set_metadata(
 		"detail_source",
 		"legacy TestLogger report"

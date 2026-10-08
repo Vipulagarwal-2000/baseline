@@ -1,0 +1,24 @@
+WORLD SIMULATOR RUNNER SUMMARY
+================================
+Runner: Data Test Runner
+Runner ID: data
+Status: FAIL
+================================
+
+Tests Run: 23
+Tests Passed: 21
+Tests Failed: 2
+Tests Errored: 0
+Diagnostics: 2
+Duration (ms): 141
+
+FAILURE DIAGNOSTICS
+--------------------------------
+1. FAIL | TEST_FAILED | Data Test Runner | Step 3.7 Versioning Registry | res://scripts/tests/versioning_registry_test.gd
+   Message: Versioning registry validation returned FAIL.
+   Action: Inspect version metadata, record counts, and controlled-version declarations.
+2. FAIL | TEST_FAILED | Data Test Runner | Step 3.7 Versioning Referential Integrity | res://scripts/tests/versioning_referential_integrity_test.gd
+   Message: Versioning referential integrity returned FAIL.
+   Action: Inspect versioning records against the data inventory.
+
+RESULT: FAIL

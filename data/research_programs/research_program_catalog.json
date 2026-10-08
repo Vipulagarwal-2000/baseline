@@ -1,0 +1,16 @@
+{
+	"version": 1,
+	"catalog_id": "world_simulator_research_program_catalog",
+	"semantic_contract": {
+		"identity_semantics": "canonical_research_program_id",
+		"target_semantics": "declarative_research_target_reference",
+		"eligibility_semantics": "program_entry_requirements_declared_by_catalog",
+		"progress_semantics": "runtime_research_progress_owned_by_research_component_and_research_system",
+		"execution_semantics": "research_execution_remains_runtime_owned",
+		"completion_semantics": "runtime_research_project_completion",
+		"activation_semantics": "catalog_foundation_only_until_research_program_content_is_defined",
+		"provenance_semantics": "definition_metadata_not_runtime_state",
+		"definition_version_semantics": "catalog_definition_revision"
+	},
+	"programs": {}
+}

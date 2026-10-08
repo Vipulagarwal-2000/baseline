@@ -1,0 +1,237 @@
+{
+	"diagnostics": [
+		{
+			"action": "Inspect versioning records against the data inventory.",
+			"code": "TEST_FAILED",
+			"message": "Versioning referential integrity returned FAIL.",
+			"metadata": {},
+			"runner_id": "data",
+			"runner_name": "Data Test Runner",
+			"severity": "FAIL",
+			"source_file": "res://scripts/tests/versioning_referential_integrity_test.gd",
+			"test_name": "Step 3.7 Versioning Referential Integrity"
+		}
+	],
+	"display_name": "World Simulator Active Test Suite",
+	"duration_msec": 4761,
+	"failed_runner_count": 1,
+	"finished_at_msec": 10981,
+	"metadata": {
+		"diagnostic_authority": "structured_result_for_all_migrated_runners; legacy_domain_checks remain explicitly tracked",
+		"legacy_domain_checks": [
+			"IndustryProcessInfrastructurePressureTest"
+		],
+		"legacy_report_path": "res://test_results/test_run_785.txt",
+		"migrated_runner_count": 7,
+		"migrated_runners": [
+			"data",
+			"interaction",
+			"physical_economy",
+			"domain",
+			"feedback",
+			"campaign",
+			"causal"
+		],
+		"migration_complete": true,
+		"pending_runners": [],
+		"validation_scope": "full_suite"
+	},
+	"passed": false,
+	"run_id": 785,
+	"runner_count": 7,
+	"runner_results": [
+		{
+			"diagnostics": [
+				{
+					"action": "Inspect versioning records against the data inventory.",
+					"code": "TEST_FAILED",
+					"message": "Versioning referential integrity returned FAIL.",
+					"metadata": {},
+					"runner_id": "data",
+					"runner_name": "Data Test Runner",
+					"severity": "FAIL",
+					"source_file": "res://scripts/tests/versioning_referential_integrity_test.gd",
+					"test_name": "Step 3.7 Versioning Referential Integrity"
+				}
+			],
+			"display_name": "Data Test Runner",
+			"duration_msec": 140,
+			"finished_at_msec": 6360,
+			"metadata": {
+				"compact_result": true,
+				"detail_source": "legacy TestLogger report",
+				"mutation_policy": "read_only",
+				"requires_simulation": false,
+				"requires_world": false,
+				"scope": "Phase 3 data/governance + Phase 4.4 technology catalog validation + Phase 4.5A research-program foundation",
+				"tests_expected": 23
+			},
+			"passed": false,
+			"runner_id": "data",
+			"started_at_msec": 6220,
+			"status": "FAIL",
+			"tests_errored": 0,
+			"tests_failed": 1,
+			"tests_passed": 22,
+			"tests_run": 23
+		},
+		{
+			"diagnostics": [],
+			"display_name": "Interaction Test Runner",
+			"duration_msec": 47,
+			"finished_at_msec": 6409,
+			"metadata": {
+				"compact_result": true,
+				"detail_source": "legacy TestLogger report",
+				"mutation_policy": "controlled_fixture_restore",
+				"requires_simulation": true,
+				"requires_world": true,
+				"scope": "Step 15 interaction + Step 16 concurrent actions",
+				"tests_expected": 22
+			},
+			"passed": true,
+			"runner_id": "interaction",
+			"started_at_msec": 6362,
+			"status": "PASS",
+			"tests_errored": 0,
+			"tests_failed": 0,
+			"tests_passed": 22,
+			"tests_run": 22
+		},
+		{
+			"diagnostics": [],
+			"display_name": "Physical Economy Test Runner",
+			"duration_msec": 244,
+			"finished_at_msec": 6655,
+			"metadata": {
+				"compact_result": true,
+				"detail_source": "legacy TestLogger report",
+				"mutation_policy": "controlled_fixture_restore",
+				"requires_simulation": true,
+				"requires_world": true,
+				"scope": "infrastructure + integrated physical economy + resources + production + trade + economy",
+				"tests_expected": 46
+			},
+			"passed": true,
+			"runner_id": "physical_economy",
+			"started_at_msec": 6411,
+			"status": "PASS",
+			"tests_errored": 0,
+			"tests_failed": 0,
+			"tests_passed": 46,
+			"tests_run": 46
+		},
+		{
+			"diagnostics": [],
+			"display_name": "Domain Test Runner",
+			"duration_msec": 434,
+			"finished_at_msec": 7093,
+			"metadata": {
+				"compact_result": true,
+				"detail_source": "legacy TestLogger report",
+				"legacy_domain_checks": [
+					"IndustryProcessInfrastructurePressureTest"
+				],
+				"mutation_policy": "controlled_fixture_restore",
+				"requires_simulation": true,
+				"requires_world": true,
+				"scope": "remaining domain validation",
+				"tests_expected": 94
+			},
+			"passed": true,
+			"runner_id": "domain",
+			"started_at_msec": 6659,
+			"status": "PASS",
+			"tests_errored": 0,
+			"tests_failed": 0,
+			"tests_passed": 94,
+			"tests_run": 94
+		},
+		{
+			"diagnostics": [],
+			"display_name": "Feedback Test Runner",
+			"duration_msec": 381,
+			"finished_at_msec": 7484,
+			"metadata": {
+				"compact_result": true,
+				"detail_source": "legacy TestLogger report",
+				"mutation_policy": "controlled_fixture_restore",
+				"requires_simulation": true,
+				"requires_world": true,
+				"scope": "Step 17.1–17.8 dynamic feedback",
+				"tests_expected": 8
+			},
+			"passed": true,
+			"runner_id": "feedback",
+			"started_at_msec": 7103,
+			"status": "PASS",
+			"tests_errored": 0,
+			"tests_failed": 0,
+			"tests_passed": 8,
+			"tests_run": 8
+		},
+		{
+			"diagnostics": [],
+			"display_name": "Campaign Test Runner",
+			"duration_msec": 2575,
+			"finished_at_msec": 10060,
+			"metadata": {
+				"campaign_months": 60,
+				"compact_result": true,
+				"detail_source": "legacy TestLogger report",
+				"mutation_policy": "dedicated_campaign_context",
+				"requires_dedicated_campaign_context": true,
+				"requires_simulation": true,
+				"requires_world": true,
+				"scope": "Step 18.2–18.5 campaign execution + acceptance",
+				"single_campaign_execution": true,
+				"tests_expected": 4
+			},
+			"passed": true,
+			"runner_id": "campaign",
+			"started_at_msec": 7485,
+			"status": "PASS",
+			"tests_errored": 0,
+			"tests_failed": 0,
+			"tests_passed": 4,
+			"tests_run": 4
+		},
+		{
+			"diagnostics": [],
+			"display_name": "Causal Test Runner",
+			"duration_msec": 920,
+			"finished_at_msec": 10980,
+			"metadata": {
+				"compact_result": true,
+				"detail_source": "legacy TestLogger report",
+				"dynamic_sources": [
+					"Step19_5WarMilitaryBurdenCausalValidationTest.gd",
+					"Step19_6TradeDisruptionCausalValidationTest.gd",
+					"Step19_7RecoveryCausalValidationTest.gd",
+					"Step19_8DivergenceCausalValidationTest.gd",
+					"Step19_9EventDrivenScenarioValidationTest.gd",
+					"Step19_CausalArchitectureCoverageAuditTest.gd"
+				],
+				"execution_order_preserved": true,
+				"mutation_policy": "controlled_fixture_restore_or_isolated_scenario",
+				"requires_simulation": true,
+				"requires_world": true,
+				"scope": "Step 19.1–19.A causal validation",
+				"tests_expected": 10
+			},
+			"passed": true,
+			"runner_id": "causal",
+			"started_at_msec": 10060,
+			"status": "PASS",
+			"tests_errored": 0,
+			"tests_failed": 0,
+			"tests_passed": 10,
+			"tests_run": 10
+		}
+	],
+	"started_at_msec": 6220,
+	"status": "FAIL",
+	"suite_id": "world_simulator_active_suite",
+	"total_tests_failed": 1,
+	"total_tests_run": 207
+}

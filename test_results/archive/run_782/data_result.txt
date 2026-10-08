@@ -1,0 +1,21 @@
+WORLD SIMULATOR RUNNER SUMMARY
+================================
+Runner: Data Test Runner
+Runner ID: data
+Status: FAIL
+================================
+
+Tests Run: 23
+Tests Passed: 22
+Tests Failed: 1
+Tests Errored: 0
+Diagnostics: 1
+Duration (ms): 142
+
+FAILURE DIAGNOSTICS
+--------------------------------
+1. FAIL | TEST_FAILED | Data Test Runner | Phase 3.1 Data Inventory | res://scripts/tests/data_inventory_test.gd
+   Message: Complete data inventory validation returned FAIL.
+   Action: Inspect the declared inventory and repository data file set.
+
+RESULT: FAIL

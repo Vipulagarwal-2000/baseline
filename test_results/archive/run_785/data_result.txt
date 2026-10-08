@@ -1,0 +1,21 @@
+WORLD SIMULATOR RUNNER SUMMARY
+================================
+Runner: Data Test Runner
+Runner ID: data
+Status: FAIL
+================================
+
+Tests Run: 23
+Tests Passed: 22
+Tests Failed: 1
+Tests Errored: 0
+Diagnostics: 1
+Duration (ms): 140
+
+FAILURE DIAGNOSTICS
+--------------------------------
+1. FAIL | TEST_FAILED | Data Test Runner | Step 3.7 Versioning Referential Integrity | res://scripts/tests/versioning_referential_integrity_test.gd
+   Message: Versioning referential integrity returned FAIL.
+   Action: Inspect versioning records against the data inventory.
+
+RESULT: FAIL
