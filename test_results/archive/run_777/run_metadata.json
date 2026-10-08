@@ -57,15 +57,15 @@
 		}
 	],
 	"display_name": "World Simulator Active Test Suite",
-	"duration_msec": 4307,
+	"duration_msec": 4546,
 	"failed_runner_count": 1,
-	"finished_at_msec": 10735,
+	"finished_at_msec": 10706,
 	"metadata": {
 		"diagnostic_authority": "structured_result_for_all_migrated_runners; legacy_domain_checks remain explicitly tracked",
 		"legacy_domain_checks": [
 			"IndustryProcessInfrastructurePressureTest"
 		],
-		"legacy_report_path": "res://test_results/test_run_778.txt",
+		"legacy_report_path": "res://test_results/test_run_777.txt",
 		"migrated_runner_count": 7,
 		"migrated_runners": [
 			"data",
@@ -81,7 +81,7 @@
 		"validation_scope": "full_suite"
 	},
 	"passed": false,
-	"run_id": 778,
+	"run_id": 777,
 	"runner_count": 7,
 	"runner_results": [
 		{
@@ -143,8 +143,8 @@
 				}
 			],
 			"display_name": "Data Test Runner",
-			"duration_msec": 132,
-			"finished_at_msec": 6560,
+			"duration_msec": 124,
+			"finished_at_msec": 6284,
 			"metadata": {
 				"compact_result": true,
 				"detail_source": "legacy TestLogger report",
@@ -156,7 +156,7 @@
 			},
 			"passed": false,
 			"runner_id": "data",
-			"started_at_msec": 6428,
+			"started_at_msec": 6160,
 			"status": "FAIL",
 			"tests_errored": 0,
 			"tests_failed": 5,
@@ -166,8 +166,8 @@
 		{
 			"diagnostics": [],
 			"display_name": "Interaction Test Runner",
-			"duration_msec": 44,
-			"finished_at_msec": 6606,
+			"duration_msec": 48,
+			"finished_at_msec": 6334,
 			"metadata": {
 				"compact_result": true,
 				"detail_source": "legacy TestLogger report",
@@ -179,7 +179,7 @@
 			},
 			"passed": true,
 			"runner_id": "interaction",
-			"started_at_msec": 6562,
+			"started_at_msec": 6286,
 			"status": "PASS",
 			"tests_errored": 0,
 			"tests_failed": 0,
@@ -189,8 +189,8 @@
 		{
 			"diagnostics": [],
 			"display_name": "Physical Economy Test Runner",
-			"duration_msec": 239,
-			"finished_at_msec": 6847,
+			"duration_msec": 228,
+			"finished_at_msec": 6563,
 			"metadata": {
 				"compact_result": true,
 				"detail_source": "legacy TestLogger report",
@@ -202,7 +202,7 @@
 			},
 			"passed": true,
 			"runner_id": "physical_economy",
-			"started_at_msec": 6608,
+			"started_at_msec": 6335,
 			"status": "PASS",
 			"tests_errored": 0,
 			"tests_failed": 0,
@@ -212,8 +212,8 @@
 		{
 			"diagnostics": [],
 			"display_name": "Domain Test Runner",
-			"duration_msec": 417,
-			"finished_at_msec": 7267,
+			"duration_msec": 403,
+			"finished_at_msec": 6969,
 			"metadata": {
 				"compact_result": true,
 				"detail_source": "legacy TestLogger report",
@@ -228,7 +228,7 @@
 			},
 			"passed": true,
 			"runner_id": "domain",
-			"started_at_msec": 6850,
+			"started_at_msec": 6566,
 			"status": "PASS",
 			"tests_errored": 0,
 			"tests_failed": 0,
@@ -238,8 +238,8 @@
 		{
 			"diagnostics": [],
 			"display_name": "Feedback Test Runner",
-			"duration_msec": 341,
-			"finished_at_msec": 7619,
+			"duration_msec": 375,
+			"finished_at_msec": 7353,
 			"metadata": {
 				"compact_result": true,
 				"detail_source": "legacy TestLogger report",
@@ -251,7 +251,7 @@
 			},
 			"passed": true,
 			"runner_id": "feedback",
-			"started_at_msec": 7278,
+			"started_at_msec": 6978,
 			"status": "PASS",
 			"tests_errored": 0,
 			"tests_failed": 0,
@@ -261,8 +261,8 @@
 		{
 			"diagnostics": [],
 			"display_name": "Campaign Test Runner",
-			"duration_msec": 2348,
-			"finished_at_msec": 9968,
+			"duration_msec": 2566,
+			"finished_at_msec": 9920,
 			"metadata": {
 				"campaign_months": 60,
 				"compact_result": true,
@@ -277,7 +277,7 @@
 			},
 			"passed": true,
 			"runner_id": "campaign",
-			"started_at_msec": 7620,
+			"started_at_msec": 7354,
 			"status": "PASS",
 			"tests_errored": 0,
 			"tests_failed": 0,
@@ -287,8 +287,8 @@
 		{
 			"diagnostics": [],
 			"display_name": "Causal Test Runner",
-			"duration_msec": 765,
-			"finished_at_msec": 10734,
+			"duration_msec": 785,
+			"finished_at_msec": 10706,
 			"metadata": {
 				"compact_result": true,
 				"detail_source": "legacy TestLogger report",
@@ -309,7 +309,7 @@
 			},
 			"passed": true,
 			"runner_id": "causal",
-			"started_at_msec": 9969,
+			"started_at_msec": 9921,
 			"status": "PASS",
 			"tests_errored": 0,
 			"tests_failed": 0,
@@ -317,7 +317,7 @@
 			"tests_run": 10
 		}
 	],
-	"started_at_msec": 6428,
+	"started_at_msec": 6160,
 	"status": "FAIL",
 	"suite_id": "world_simulator_active_suite",
 	"total_tests_failed": 5,

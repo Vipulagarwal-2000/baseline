@@ -10,7 +10,7 @@ Tests Passed: 14
 Tests Failed: 5
 Tests Errored: 0
 Diagnostics: 5
-Duration (ms): 132
+Duration (ms): 124
 
 FAILURE DIAGNOSTICS
 --------------------------------

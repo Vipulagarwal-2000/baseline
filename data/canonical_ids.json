@@ -1,1543 +1,1543 @@
 {
-  "version": 1,
-  "registry_id": "world_simulator_canonical_ids",
-  "id_policy": {
-	"general_format": "lower_snake_case_ascii",
-	"general_pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$",
-	"currency_format": "ISO_4217_alpha3_uppercase",
-	"currency_pattern": "^[A-Z]{3}$",
-	"stability": "IDs are stable simulation references. Display names, labels, and source descriptions must not be used as identifiers.",
-	"domain_scope": "Identity is domain-scoped; a reference must resolve against the registry domain expected by its field.",
-	"historical_ids": "Historical or abolished entities remain valid IDs when they are explicitly modeled in baseline data; status belongs to the definition, not to the identifier itself."
-  },
-  "domains": {
-	"country": {
-	  "status": "active",
-	  "id_pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$",
-	  "entries": {
-		"china": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/countries/china.json"
-		  ]
+	"version": 1,
+	"registry_id": "world_simulator_canonical_ids",
+	"id_policy": {
+		"general_format": "lower_snake_case_ascii",
+		"general_pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$",
+		"currency_format": "ISO_4217_alpha3_uppercase",
+		"currency_pattern": "^[A-Z]{3}$",
+		"stability": "IDs are stable simulation references. Display names, labels, and source descriptions must not be used as identifiers.",
+		"domain_scope": "Identity is domain-scoped; a reference must resolve against the registry domain expected by its field.",
+		"historical_ids": "Historical or abolished entities remain valid IDs when they are explicitly modeled in baseline data; status belongs to the definition, not to the identifier itself."
+	},
+	"domains": {
+		"country": {
+			"status": "active",
+			"id_pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$",
+			"entries": {
+				"china": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/countries/china.json"
+					]
+				},
+				"india": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/countries/india.json"
+					]
+				},
+				"usa": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/countries/usa.json"
+					]
+				}
+			}
 		},
-		"india": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/countries/india.json"
-		  ]
+		"region": {
+			"status": "active",
+			"id_pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$",
+			"entries": {
+				"china_anshan_municipality": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_beijing_municipality": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_benxi_municipality": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_central_south": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_chahar": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_chongqing_municipality": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_chuanbei": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_chuandong": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_chuannan": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_chuanxi": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_east_china": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_fujian": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_fushun_municipality": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_gansu": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_guangdong": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_guangxi": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_guangzhou_municipality": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_guizhou": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_hebei": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_heilongjiang": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_henan": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_hubei": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_hunan": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_inner_mongolia": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_jiangxi": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_jilin": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_liaodong": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_liaoxi": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_luda_municipality": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_nanjing_municipality": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_ningxia": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_north_china": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_northeast": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_northwest": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_pingyuan": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_qamdo_area": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_qinghai": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_rehe": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_shaanxi": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_shandong": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_shanghai_municipality": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_shanxi": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_shenyang_municipality": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_songjiang": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_southwest": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_subei": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_suiyuan": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_sunan": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_taiwan_province": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_tianjin_municipality": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_tibet_area": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_wanbei": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_wannan": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_wuhan_municipality": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_xian_municipality": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_xikang": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_xinjiang": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_yunnan": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"china_zhejiang": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/china_regions.json"
+					]
+				},
+				"india_ajmer": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/india_regions.json"
+					]
+				},
+				"india_andaman_nicobar": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/india_regions.json"
+					]
+				},
+				"india_assam": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/india_regions.json"
+					]
+				},
+				"india_bhopal": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/india_regions.json"
+					]
+				},
+				"india_bihar": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/india_regions.json"
+					]
+				},
+				"india_bilaspur": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/india_regions.json"
+					]
+				},
+				"india_bombay": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/india_regions.json"
+					]
+				},
+				"india_central": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/india_regions.json"
+					]
+				},
+				"india_coorg": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/india_regions.json"
+					]
+				},
+				"india_delhi": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/india_regions.json"
+					]
+				},
+				"india_east": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/india_regions.json"
+					]
+				},
+				"india_himachal": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/india_regions.json"
+					]
+				},
+				"india_hyderabad": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/india_regions.json"
+					]
+				},
+				"india_jammu_kashmir": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/india_regions.json"
+					]
+				},
+				"india_kutch": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/india_regions.json"
+					]
+				},
+				"india_madhya_bharat": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/india_regions.json"
+					]
+				},
+				"india_madhya_pradesh": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/india_regions.json"
+					]
+				},
+				"india_madras": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/india_regions.json"
+					]
+				},
+				"india_manipur": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/india_regions.json"
+					]
+				},
+				"india_mysore": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/india_regions.json"
+					]
+				},
+				"india_north": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/india_regions.json"
+					]
+				},
+				"india_northeast": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/india_regions.json"
+					]
+				},
+				"india_orissa": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/india_regions.json"
+					]
+				},
+				"india_pepsu": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/india_regions.json"
+					]
+				},
+				"india_punjab": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/india_regions.json"
+					]
+				},
+				"india_rajasthan": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/india_regions.json"
+					]
+				},
+				"india_saurashtra": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/india_regions.json"
+					]
+				},
+				"india_south": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/india_regions.json"
+					]
+				},
+				"india_travancore_cochin": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/india_regions.json"
+					]
+				},
+				"india_tripura": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/india_regions.json"
+					]
+				},
+				"india_uttar_pradesh": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/india_regions.json"
+					]
+				},
+				"india_vindhya_pradesh": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/india_regions.json"
+					]
+				},
+				"india_west": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/india_regions.json"
+					]
+				},
+				"india_west_bengal": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/india_regions.json"
+					]
+				},
+				"usa_alabama": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_alaska_territory": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_arizona": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_arkansas": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_california": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_colorado": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_connecticut": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_delaware": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_district_of_columbia": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_florida": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_georgia": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_hawaii_territory": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_idaho": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_illinois": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_indiana": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_iowa": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_kansas": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_kentucky": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_louisiana": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_maine": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_maryland": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_massachusetts": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_michigan": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_minnesota": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_mississippi": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_missouri": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_montana": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_nebraska": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_nevada": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_new_hampshire": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_new_jersey": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_new_mexico": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_new_york": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_north_carolina": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_north_central": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_north_dakota": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_northeast": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_ohio": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_oklahoma": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_oregon": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_pennsylvania": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_rhode_island": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_south": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_south_carolina": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_south_dakota": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_tennessee": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_texas": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_utah": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_vermont": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_virginia": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_washington": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_west": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_west_virginia": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_wisconsin": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				},
+				"usa_wyoming": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/usa_regions.json"
+					]
+				}
+			}
 		},
-		"usa": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/countries/usa.json"
-		  ]
+		"resource": {
+			"status": "active",
+			"id_pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$",
+			"entries": {
+				"coal": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/resources/resource_catalog.json",
+						"res://data/countries/china.json",
+						"res://data/countries/india.json",
+						"res://data/countries/usa.json"
+					]
+				},
+				"food": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/resources/resource_catalog.json",
+						"res://data/countries/china.json",
+						"res://data/countries/india.json",
+						"res://data/countries/usa.json"
+					]
+				},
+				"iron": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/resources/resource_catalog.json",
+						"res://data/countries/china.json",
+						"res://data/countries/india.json",
+						"res://data/countries/usa.json"
+					]
+				},
+				"machinery": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/resources/resource_catalog.json",
+						"res://data/countries/china.json",
+						"res://data/countries/india.json",
+						"res://data/countries/usa.json"
+					]
+				},
+				"oil": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/resources/resource_catalog.json",
+						"res://data/countries/china.json",
+						"res://data/countries/india.json",
+						"res://data/countries/usa.json"
+					]
+				},
+				"steel": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/resources/resource_catalog.json",
+						"res://data/countries/china.json",
+						"res://data/countries/india.json",
+						"res://data/countries/usa.json"
+					]
+				}
+			}
+		},
+		"process": {
+			"status": "active",
+			"id_pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$",
+			"entries": {
+				"advanced_steel_production": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/production_processes/production_processes.json"
+					]
+				},
+				"aircraft_manufacturing": {
+					"status": "canonical_observed_reference",
+					"source_paths": [
+						"res://data/countries/china.json",
+						"res://data/countries/india.json",
+						"res://data/countries/usa.json",
+						"res://data/regions/industry/china_industry.json",
+						"res://data/regions/industry/india_industry.json",
+						"res://data/regions/industry/usa_industry.json"
+					]
+				},
+				"automobile_manufacturing": {
+					"status": "canonical_observed_reference",
+					"source_paths": [
+						"res://data/countries/china.json",
+						"res://data/countries/india.json",
+						"res://data/countries/usa.json",
+						"res://data/regions/industry/china_industry.json",
+						"res://data/regions/industry/india_industry.json",
+						"res://data/regions/industry/usa_industry.json"
+					]
+				},
+				"basic_machinery": {
+					"status": "canonical_observed_reference",
+					"source_paths": [
+						"res://data/countries/china.json",
+						"res://data/countries/india.json",
+						"res://data/countries/usa.json",
+						"res://data/regions/industry/china_industry.json",
+						"res://data/regions/industry/india_industry.json",
+						"res://data/regions/industry/usa_industry.json"
+					]
+				},
+				"cement_production": {
+					"status": "canonical_observed_reference",
+					"source_paths": [
+						"res://data/countries/china.json",
+						"res://data/countries/india.json",
+						"res://data/countries/usa.json",
+						"res://data/regions/industry/china_industry.json",
+						"res://data/regions/industry/india_industry.json",
+						"res://data/regions/industry/usa_industry.json"
+					]
+				},
+				"chemical_production": {
+					"status": "canonical_observed_reference",
+					"source_paths": [
+						"res://data/countries/china.json",
+						"res://data/countries/india.json",
+						"res://data/countries/usa.json",
+						"res://data/regions/industry/china_industry.json",
+						"res://data/regions/industry/india_industry.json",
+						"res://data/regions/industry/usa_industry.json"
+					]
+				},
+				"coal_mining": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/production_processes/production_processes.json"
+					]
+				},
+				"cotton_textile": {
+					"status": "canonical_observed_reference",
+					"source_paths": [
+						"res://data/countries/china.json",
+						"res://data/countries/india.json",
+						"res://data/countries/usa.json",
+						"res://data/regions/industry/china_industry.json",
+						"res://data/regions/industry/india_industry.json",
+						"res://data/regions/industry/usa_industry.json"
+					]
+				},
+				"crude_oil_extraction": {
+					"status": "canonical_observed_reference",
+					"source_paths": [
+						"res://data/countries/china.json",
+						"res://data/countries/india.json",
+						"res://data/countries/usa.json",
+						"res://data/regions/industry/china_industry.json",
+						"res://data/regions/industry/india_industry.json",
+						"res://data/regions/industry/usa_industry.json"
+					]
+				},
+				"electric_power_generation": {
+					"status": "canonical_observed_reference",
+					"source_paths": [
+						"res://data/countries/china.json",
+						"res://data/countries/india.json",
+						"res://data/countries/usa.json",
+						"res://data/regions/industry/china_industry.json",
+						"res://data/regions/industry/india_industry.json",
+						"res://data/regions/industry/usa_industry.json"
+					]
+				},
+				"fertilizer_production": {
+					"status": "canonical_observed_reference",
+					"source_paths": [
+						"res://data/countries/china.json",
+						"res://data/countries/india.json",
+						"res://data/countries/usa.json",
+						"res://data/regions/industry/china_industry.json",
+						"res://data/regions/industry/india_industry.json",
+						"res://data/regions/industry/usa_industry.json"
+					]
+				},
+				"food_agriculture": {
+					"status": "canonical_observed_reference",
+					"source_paths": [
+						"res://data/countries/china.json",
+						"res://data/countries/india.json",
+						"res://data/countries/usa.json",
+						"res://data/regions/industry/china_industry.json",
+						"res://data/regions/industry/india_industry.json",
+						"res://data/regions/industry/usa_industry.json"
+					]
+				},
+				"glass_production": {
+					"status": "canonical_observed_reference",
+					"source_paths": [
+						"res://data/countries/china.json",
+						"res://data/countries/india.json",
+						"res://data/countries/usa.json",
+						"res://data/regions/industry/china_industry.json",
+						"res://data/regions/industry/india_industry.json",
+						"res://data/regions/industry/usa_industry.json"
+					]
+				},
+				"iron_ore_mining": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/production_processes/production_processes.json"
+					]
+				},
+				"jute_textile": {
+					"status": "canonical_observed_reference",
+					"source_paths": [
+						"res://data/countries/china.json",
+						"res://data/countries/india.json",
+						"res://data/countries/usa.json",
+						"res://data/regions/industry/china_industry.json",
+						"res://data/regions/industry/india_industry.json",
+						"res://data/regions/industry/usa_industry.json"
+					]
+				},
+				"locomotive_manufacturing": {
+					"status": "canonical_observed_reference",
+					"source_paths": [
+						"res://data/countries/china.json",
+						"res://data/countries/india.json",
+						"res://data/countries/usa.json",
+						"res://data/regions/industry/china_industry.json",
+						"res://data/regions/industry/india_industry.json",
+						"res://data/regions/industry/usa_industry.json"
+					]
+				},
+				"machine_tools": {
+					"status": "canonical_observed_reference",
+					"source_paths": [
+						"res://data/countries/china.json",
+						"res://data/countries/india.json",
+						"res://data/countries/usa.json",
+						"res://data/regions/industry/china_industry.json",
+						"res://data/regions/industry/india_industry.json",
+						"res://data/regions/industry/usa_industry.json"
+					]
+				},
+				"machinery_basic": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/production_processes/production_processes.json"
+					]
+				},
+				"machinery_manufacturing": {
+					"status": "canonical_observed_reference",
+					"source_paths": [
+						"res://data/countries/china.json",
+						"res://data/countries/india.json",
+						"res://data/countries/usa.json",
+						"res://data/regions/industry/china_industry.json",
+						"res://data/regions/industry/india_industry.json",
+						"res://data/regions/industry/usa_industry.json"
+					]
+				},
+				"natural_gas_extraction": {
+					"status": "canonical_observed_reference",
+					"source_paths": [
+						"res://data/countries/china.json",
+						"res://data/countries/india.json",
+						"res://data/countries/usa.json",
+						"res://data/regions/industry/china_industry.json",
+						"res://data/regions/industry/india_industry.json",
+						"res://data/regions/industry/usa_industry.json"
+					]
+				},
+				"oil_extraction": {
+					"status": "canonical_observed_reference",
+					"source_paths": [
+						"res://data/countries/china.json",
+						"res://data/countries/india.json",
+						"res://data/countries/usa.json",
+						"res://data/regions/industry/china_industry.json",
+						"res://data/regions/industry/india_industry.json",
+						"res://data/regions/industry/usa_industry.json"
+					]
+				},
+				"paper_production": {
+					"status": "canonical_observed_reference",
+					"source_paths": [
+						"res://data/countries/china.json",
+						"res://data/countries/india.json",
+						"res://data/countries/usa.json",
+						"res://data/regions/industry/china_industry.json",
+						"res://data/regions/industry/india_industry.json",
+						"res://data/regions/industry/usa_industry.json"
+					]
+				},
+				"petroleum_refining": {
+					"status": "canonical_observed_reference",
+					"source_paths": [
+						"res://data/countries/china.json",
+						"res://data/countries/india.json",
+						"res://data/countries/usa.json",
+						"res://data/regions/industry/china_industry.json",
+						"res://data/regions/industry/india_industry.json",
+						"res://data/regions/industry/usa_industry.json"
+					]
+				},
+				"rubber_goods": {
+					"status": "canonical_observed_reference",
+					"source_paths": [
+						"res://data/countries/china.json",
+						"res://data/countries/india.json",
+						"res://data/countries/usa.json",
+						"res://data/regions/industry/china_industry.json",
+						"res://data/regions/industry/india_industry.json",
+						"res://data/regions/industry/usa_industry.json"
+					]
+				},
+				"steel_basic": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/production_processes/production_processes.json"
+					]
+				},
+				"sugar_processing": {
+					"status": "canonical_observed_reference",
+					"source_paths": [
+						"res://data/countries/china.json",
+						"res://data/countries/india.json",
+						"res://data/countries/usa.json",
+						"res://data/regions/industry/china_industry.json",
+						"res://data/regions/industry/india_industry.json",
+						"res://data/regions/industry/usa_industry.json"
+					]
+				}
+			}
+		},
+		"technology": {
+			"status": "active",
+			"id_pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$",
+			"entries": {
+				"advanced_steelmaking": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/production_processes/production_processes.json"
+					]
+				},
+				"electricity": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/countries/china.json",
+						"res://data/countries/india.json",
+						"res://data/countries/usa.json"
+					]
+				},
+				"industrial_machinery": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/countries/china.json",
+						"res://data/countries/india.json",
+						"res://data/countries/usa.json"
+					]
+				},
+				"nuclear_physics": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/countries/china.json",
+						"res://data/countries/india.json",
+						"res://data/countries/usa.json"
+					]
+				},
+				"radio": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/countries/china.json",
+						"res://data/countries/india.json",
+						"res://data/countries/usa.json"
+					]
+				},
+				"telecommunications": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/countries/china.json",
+						"res://data/countries/india.json",
+						"res://data/countries/usa.json"
+					]
+				},
+				"computers": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"data/technologies/technology_catalog.json"
+					]
+				},
+				"internet": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"data/technologies/technology_catalog.json"
+					]
+				},
+				"nuclear_power": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"data/technologies/technology_catalog.json"
+					]
+				},
+				"satellites": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"data/technologies/technology_catalog.json"
+					]
+				},
+				"semiconductors": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"data/technologies/technology_catalog.json"
+					]
+				}
+			}
+		},
+		"research_program": {
+			"status": "reserved_unmodeled",
+			"id_pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$",
+			"entries": {}
+		},
+		"policy": {
+			"status": "reserved_unmodeled",
+			"id_pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$",
+			"entries": {}
+		},
+		"action": {
+			"status": "reserved_unmodeled",
+			"id_pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$",
+			"entries": {}
+		},
+		"event": {
+			"status": "active",
+			"id_pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$",
+			"entries": {
+				"test_resource_event": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/events/events.json"
+					]
+				},
+				"test_stability_event": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/events/events.json"
+					]
+				}
+			}
+		},
+		"trade": {
+			"status": "reserved_unmodeled",
+			"id_pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$",
+			"entries": {}
+		},
+		"scenario": {
+			"status": "reserved_unmodeled",
+			"id_pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$",
+			"entries": {}
+		},
+		"external_actor": {
+			"status": "reserved_unmodeled",
+			"id_pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$",
+			"entries": {}
+		},
+		"currency": {
+			"status": "active",
+			"id_pattern": "^[A-Z]{3}$",
+			"entries": {
+				"CNY": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/currency_exchange_rates.json",
+						"res://data/countries/china.json",
+						"res://data/countries/india.json",
+						"res://data/countries/usa.json"
+					]
+				},
+				"INR": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/currency_exchange_rates.json",
+						"res://data/countries/china.json",
+						"res://data/countries/india.json",
+						"res://data/countries/usa.json"
+					]
+				},
+				"USD": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/currency_exchange_rates.json",
+						"res://data/countries/china.json",
+						"res://data/countries/india.json",
+						"res://data/countries/usa.json"
+					]
+				}
+			}
+		},
+		"route": {
+			"status": "active",
+			"id_pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$",
+			"entries": {
+				"china_route_01": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/transport/china_transport.json"
+					]
+				},
+				"china_route_02": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/transport/china_transport.json"
+					]
+				},
+				"china_route_03": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/transport/china_transport.json"
+					]
+				},
+				"china_route_04": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/transport/china_transport.json"
+					]
+				},
+				"china_route_05": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/transport/china_transport.json"
+					]
+				},
+				"india_route_01": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/transport/india_transport.json"
+					]
+				},
+				"india_route_02": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/transport/india_transport.json"
+					]
+				},
+				"india_route_03": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/transport/india_transport.json"
+					]
+				},
+				"india_route_04": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/transport/india_transport.json"
+					]
+				},
+				"india_route_05": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/transport/india_transport.json"
+					]
+				},
+				"usa_route_01": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/transport/usa_transport.json"
+					]
+				},
+				"usa_route_02": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/transport/usa_transport.json"
+					]
+				},
+				"usa_route_03": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/regions/transport/usa_transport.json"
+					]
+				}
+			}
+		},
+		"capability": {
+			"status": "active",
+			"id_pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$",
+			"entries": {
+				"advanced_metallurgy": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/production_processes/production_processes.json"
+					]
+				}
+			}
+		},
+		"infrastructure": {
+			"status": "active",
+			"id_pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$",
+			"entries": {
+				"modern_steelworks": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/production_processes/production_processes.json"
+					]
+				}
+			}
+		},
+		"equipment": {
+			"status": "active",
+			"id_pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$",
+			"entries": {
+				"advanced_steel_equipment": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/production_processes/production_processes.json"
+					]
+				}
+			}
 		}
-	  }
-	},
-	"region": {
-	  "status": "active",
-	  "id_pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$",
-	  "entries": {
-		"china_anshan_municipality": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_beijing_municipality": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_benxi_municipality": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_central_south": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_chahar": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_chongqing_municipality": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_chuanbei": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_chuandong": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_chuannan": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_chuanxi": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_east_china": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_fujian": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_fushun_municipality": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_gansu": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_guangdong": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_guangxi": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_guangzhou_municipality": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_guizhou": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_hebei": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_heilongjiang": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_henan": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_hubei": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_hunan": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_inner_mongolia": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_jiangxi": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_jilin": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_liaodong": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_liaoxi": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_luda_municipality": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_nanjing_municipality": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_ningxia": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_north_china": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_northeast": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_northwest": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_pingyuan": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_qamdo_area": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_qinghai": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_rehe": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_shaanxi": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_shandong": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_shanghai_municipality": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_shanxi": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_shenyang_municipality": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_songjiang": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_southwest": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_subei": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_suiyuan": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_sunan": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_taiwan_province": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_tianjin_municipality": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_tibet_area": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_wanbei": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_wannan": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_wuhan_municipality": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_xian_municipality": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_xikang": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_xinjiang": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_yunnan": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"china_zhejiang": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/china_regions.json"
-		  ]
-		},
-		"india_ajmer": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/india_regions.json"
-		  ]
-		},
-		"india_andaman_nicobar": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/india_regions.json"
-		  ]
-		},
-		"india_assam": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/india_regions.json"
-		  ]
-		},
-		"india_bhopal": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/india_regions.json"
-		  ]
-		},
-		"india_bihar": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/india_regions.json"
-		  ]
-		},
-		"india_bilaspur": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/india_regions.json"
-		  ]
-		},
-		"india_bombay": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/india_regions.json"
-		  ]
-		},
-		"india_central": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/india_regions.json"
-		  ]
-		},
-		"india_coorg": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/india_regions.json"
-		  ]
-		},
-		"india_delhi": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/india_regions.json"
-		  ]
-		},
-		"india_east": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/india_regions.json"
-		  ]
-		},
-		"india_himachal": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/india_regions.json"
-		  ]
-		},
-		"india_hyderabad": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/india_regions.json"
-		  ]
-		},
-		"india_jammu_kashmir": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/india_regions.json"
-		  ]
-		},
-		"india_kutch": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/india_regions.json"
-		  ]
-		},
-		"india_madhya_bharat": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/india_regions.json"
-		  ]
-		},
-		"india_madhya_pradesh": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/india_regions.json"
-		  ]
-		},
-		"india_madras": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/india_regions.json"
-		  ]
-		},
-		"india_manipur": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/india_regions.json"
-		  ]
-		},
-		"india_mysore": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/india_regions.json"
-		  ]
-		},
-		"india_north": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/india_regions.json"
-		  ]
-		},
-		"india_northeast": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/india_regions.json"
-		  ]
-		},
-		"india_orissa": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/india_regions.json"
-		  ]
-		},
-		"india_pepsu": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/india_regions.json"
-		  ]
-		},
-		"india_punjab": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/india_regions.json"
-		  ]
-		},
-		"india_rajasthan": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/india_regions.json"
-		  ]
-		},
-		"india_saurashtra": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/india_regions.json"
-		  ]
-		},
-		"india_south": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/india_regions.json"
-		  ]
-		},
-		"india_travancore_cochin": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/india_regions.json"
-		  ]
-		},
-		"india_tripura": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/india_regions.json"
-		  ]
-		},
-		"india_uttar_pradesh": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/india_regions.json"
-		  ]
-		},
-		"india_vindhya_pradesh": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/india_regions.json"
-		  ]
-		},
-		"india_west": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/india_regions.json"
-		  ]
-		},
-		"india_west_bengal": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/india_regions.json"
-		  ]
-		},
-		"usa_alabama": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_alaska_territory": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_arizona": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_arkansas": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_california": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_colorado": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_connecticut": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_delaware": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_district_of_columbia": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_florida": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_georgia": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_hawaii_territory": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_idaho": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_illinois": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_indiana": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_iowa": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_kansas": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_kentucky": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_louisiana": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_maine": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_maryland": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_massachusetts": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_michigan": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_minnesota": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_mississippi": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_missouri": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_montana": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_nebraska": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_nevada": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_new_hampshire": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_new_jersey": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_new_mexico": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_new_york": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_north_carolina": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_north_central": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_north_dakota": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_northeast": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_ohio": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_oklahoma": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_oregon": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_pennsylvania": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_rhode_island": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_south": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_south_carolina": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_south_dakota": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_tennessee": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_texas": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_utah": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_vermont": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_virginia": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_washington": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_west": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_west_virginia": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_wisconsin": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		},
-		"usa_wyoming": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/usa_regions.json"
-		  ]
-		}
-	  }
-	},
-	"resource": {
-	  "status": "active",
-	  "id_pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$",
-	  "entries": {
-		"coal": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-			"res://data/resources/resource_catalog.json",
-			"res://data/countries/china.json",
-			"res://data/countries/india.json",
-            "res://data/countries/usa.json"
-		  ]
-		},
-		"food": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-			"res://data/resources/resource_catalog.json",
-			"res://data/countries/china.json",
-			"res://data/countries/india.json",
-            "res://data/countries/usa.json"
-		  ]
-		},
-		"iron": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-			"res://data/resources/resource_catalog.json",
-			"res://data/countries/china.json",
-			"res://data/countries/india.json",
-            "res://data/countries/usa.json"
-		  ]
-		},
-		"machinery": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-			"res://data/resources/resource_catalog.json",
-			"res://data/countries/china.json",
-			"res://data/countries/india.json",
-            "res://data/countries/usa.json"
-		  ]
-		},
-		"oil": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-			"res://data/resources/resource_catalog.json",
-			"res://data/countries/china.json",
-			"res://data/countries/india.json",
-            "res://data/countries/usa.json"
-		  ]
-		},
-		"steel": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-			"res://data/resources/resource_catalog.json",
-			"res://data/countries/china.json",
-			"res://data/countries/india.json",
-            "res://data/countries/usa.json"
-		  ]
-		},
-		"natural_gas": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/resources/resource_catalog.json"
-		  ]
-		},
-		"fertilizer": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/resources/resource_catalog.json"
-		  ]
-		},
-		"cement": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/resources/resource_catalog.json"
-		  ]
-		},
-		"chemicals": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/resources/resource_catalog.json"
-		  ]
-		},
-		"electric_power": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/resources/resource_catalog.json"
-		  ]
-		}
-	  }
-	},
-	"process": {
-	  "status": "active",
-	  "id_pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$",
-	  "entries": {
-		"advanced_steel_production": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/production_processes/production_processes.json"
-		  ]
-		},
-		"aircraft_manufacturing": {
-		  "status": "canonical_observed_reference",
-		  "source_paths": [
-			"res://data/countries/china.json",
-			"res://data/countries/india.json",
-			"res://data/countries/usa.json",
-			"res://data/regions/industry/china_industry.json",
-			"res://data/regions/industry/india_industry.json",
-            "res://data/regions/industry/usa_industry.json"
-		  ]
-		},
-		"automobile_manufacturing": {
-		  "status": "canonical_observed_reference",
-		  "source_paths": [
-			"res://data/countries/china.json",
-			"res://data/countries/india.json",
-			"res://data/countries/usa.json",
-			"res://data/regions/industry/china_industry.json",
-			"res://data/regions/industry/india_industry.json",
-            "res://data/regions/industry/usa_industry.json"
-		  ]
-		},
-		"basic_machinery": {
-		  "status": "canonical_observed_reference",
-		  "source_paths": [
-			"res://data/countries/china.json",
-			"res://data/countries/india.json",
-			"res://data/countries/usa.json",
-			"res://data/regions/industry/china_industry.json",
-			"res://data/regions/industry/india_industry.json",
-            "res://data/regions/industry/usa_industry.json"
-		  ]
-		},
-		"cement_production": {
-		  "status": "canonical_observed_reference",
-		  "source_paths": [
-			"res://data/countries/china.json",
-			"res://data/countries/india.json",
-			"res://data/countries/usa.json",
-			"res://data/regions/industry/china_industry.json",
-			"res://data/regions/industry/india_industry.json",
-            "res://data/regions/industry/usa_industry.json"
-		  ]
-		},
-		"chemical_production": {
-		  "status": "canonical_observed_reference",
-		  "source_paths": [
-			"res://data/countries/china.json",
-			"res://data/countries/india.json",
-			"res://data/countries/usa.json",
-			"res://data/regions/industry/china_industry.json",
-			"res://data/regions/industry/india_industry.json",
-            "res://data/regions/industry/usa_industry.json"
-		  ]
-		},
-		"coal_mining": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/production_processes/production_processes.json"
-		  ]
-		},
-		"cotton_textile": {
-		  "status": "canonical_observed_reference",
-		  "source_paths": [
-			"res://data/countries/china.json",
-			"res://data/countries/india.json",
-			"res://data/countries/usa.json",
-			"res://data/regions/industry/china_industry.json",
-			"res://data/regions/industry/india_industry.json",
-            "res://data/regions/industry/usa_industry.json"
-		  ]
-		},
-		"crude_oil_extraction": {
-		  "status": "canonical_observed_reference",
-		  "source_paths": [
-			"res://data/countries/china.json",
-			"res://data/countries/india.json",
-			"res://data/countries/usa.json",
-			"res://data/regions/industry/china_industry.json",
-			"res://data/regions/industry/india_industry.json",
-            "res://data/regions/industry/usa_industry.json"
-		  ]
-		},
-		"electric_power_generation": {
-		  "status": "canonical_observed_reference",
-		  "source_paths": [
-			"res://data/countries/china.json",
-			"res://data/countries/india.json",
-			"res://data/countries/usa.json",
-			"res://data/regions/industry/china_industry.json",
-			"res://data/regions/industry/india_industry.json",
-            "res://data/regions/industry/usa_industry.json"
-		  ]
-		},
-		"fertilizer_production": {
-		  "status": "canonical_observed_reference",
-		  "source_paths": [
-			"res://data/countries/china.json",
-			"res://data/countries/india.json",
-			"res://data/countries/usa.json",
-			"res://data/regions/industry/china_industry.json",
-			"res://data/regions/industry/india_industry.json",
-            "res://data/regions/industry/usa_industry.json"
-		  ]
-		},
-		"food_agriculture": {
-		  "status": "canonical_observed_reference",
-		  "source_paths": [
-			"res://data/countries/china.json",
-			"res://data/countries/india.json",
-			"res://data/countries/usa.json",
-			"res://data/regions/industry/china_industry.json",
-			"res://data/regions/industry/india_industry.json",
-            "res://data/regions/industry/usa_industry.json"
-		  ]
-		},
-		"glass_production": {
-		  "status": "canonical_observed_reference",
-		  "source_paths": [
-			"res://data/countries/china.json",
-			"res://data/countries/india.json",
-			"res://data/countries/usa.json",
-			"res://data/regions/industry/china_industry.json",
-			"res://data/regions/industry/india_industry.json",
-            "res://data/regions/industry/usa_industry.json"
-		  ]
-		},
-		"iron_ore_mining": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/production_processes/production_processes.json"
-		  ]
-		},
-		"jute_textile": {
-		  "status": "canonical_observed_reference",
-		  "source_paths": [
-			"res://data/countries/china.json",
-			"res://data/countries/india.json",
-			"res://data/countries/usa.json",
-			"res://data/regions/industry/china_industry.json",
-			"res://data/regions/industry/india_industry.json",
-            "res://data/regions/industry/usa_industry.json"
-		  ]
-		},
-		"locomotive_manufacturing": {
-		  "status": "canonical_observed_reference",
-		  "source_paths": [
-			"res://data/countries/china.json",
-			"res://data/countries/india.json",
-			"res://data/countries/usa.json",
-			"res://data/regions/industry/china_industry.json",
-			"res://data/regions/industry/india_industry.json",
-            "res://data/regions/industry/usa_industry.json"
-		  ]
-		},
-		"machine_tools": {
-		  "status": "canonical_observed_reference",
-		  "source_paths": [
-			"res://data/countries/china.json",
-			"res://data/countries/india.json",
-			"res://data/countries/usa.json",
-			"res://data/regions/industry/china_industry.json",
-			"res://data/regions/industry/india_industry.json",
-            "res://data/regions/industry/usa_industry.json"
-		  ]
-		},
-		"machinery_basic": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/production_processes/production_processes.json"
-		  ]
-		},
-		"machinery_manufacturing": {
-		  "status": "canonical_observed_reference",
-		  "source_paths": [
-			"res://data/countries/china.json",
-			"res://data/countries/india.json",
-			"res://data/countries/usa.json",
-			"res://data/regions/industry/china_industry.json",
-			"res://data/regions/industry/india_industry.json",
-            "res://data/regions/industry/usa_industry.json"
-		  ]
-		},
-		"natural_gas_extraction": {
-		  "status": "canonical_observed_reference",
-		  "source_paths": [
-			"res://data/countries/china.json",
-			"res://data/countries/india.json",
-			"res://data/countries/usa.json",
-			"res://data/regions/industry/china_industry.json",
-			"res://data/regions/industry/india_industry.json",
-            "res://data/regions/industry/usa_industry.json"
-		  ]
-		},
-		"oil_extraction": {
-		  "status": "canonical_observed_reference",
-		  "source_paths": [
-			"res://data/countries/china.json",
-			"res://data/countries/india.json",
-			"res://data/countries/usa.json",
-			"res://data/regions/industry/china_industry.json",
-			"res://data/regions/industry/india_industry.json",
-            "res://data/regions/industry/usa_industry.json"
-		  ]
-		},
-		"paper_production": {
-		  "status": "canonical_observed_reference",
-		  "source_paths": [
-			"res://data/countries/china.json",
-			"res://data/countries/india.json",
-			"res://data/countries/usa.json",
-			"res://data/regions/industry/china_industry.json",
-			"res://data/regions/industry/india_industry.json",
-            "res://data/regions/industry/usa_industry.json"
-		  ]
-		},
-		"petroleum_refining": {
-		  "status": "canonical_observed_reference",
-		  "source_paths": [
-			"res://data/countries/china.json",
-			"res://data/countries/india.json",
-			"res://data/countries/usa.json",
-			"res://data/regions/industry/china_industry.json",
-			"res://data/regions/industry/india_industry.json",
-            "res://data/regions/industry/usa_industry.json"
-		  ]
-		},
-		"rubber_goods": {
-		  "status": "canonical_observed_reference",
-		  "source_paths": [
-			"res://data/countries/china.json",
-			"res://data/countries/india.json",
-			"res://data/countries/usa.json",
-			"res://data/regions/industry/china_industry.json",
-			"res://data/regions/industry/india_industry.json",
-            "res://data/regions/industry/usa_industry.json"
-		  ]
-		},
-		"steel_basic": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/production_processes/production_processes.json"
-		  ]
-		},
-		"sugar_processing": {
-		  "status": "canonical_observed_reference",
-		  "source_paths": [
-			"res://data/countries/china.json",
-			"res://data/countries/india.json",
-			"res://data/countries/usa.json",
-			"res://data/regions/industry/china_industry.json",
-			"res://data/regions/industry/india_industry.json",
-            "res://data/regions/industry/usa_industry.json"
-		  ]
-		}
-	  }
-	},
-	"technology": {
-	  "status": "active",
-	  "id_pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$",
-	  "entries": {
-		"advanced_steelmaking": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/production_processes/production_processes.json"
-		  ]
-		},
-		"electricity": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-			"res://data/countries/china.json",
-			"res://data/countries/india.json",
-            "res://data/countries/usa.json"
-		  ]
-		},
-		"industrial_machinery": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-			"res://data/countries/china.json",
-			"res://data/countries/india.json",
-            "res://data/countries/usa.json"
-		  ]
-		},
-		"nuclear_physics": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-			"res://data/countries/china.json",
-			"res://data/countries/india.json",
-            "res://data/countries/usa.json"
-		  ]
-		},
-		"radio": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-			"res://data/countries/china.json",
-			"res://data/countries/india.json",
-            "res://data/countries/usa.json"
-		  ]
-		},
-		"telecommunications": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-			"res://data/countries/china.json",
-			"res://data/countries/india.json",
-            "res://data/countries/usa.json"
-		  ]
-		}
-	  }
-	},
-	"research_program": {
-	  "status": "reserved_unmodeled",
-	  "id_pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$",
-	  "entries": {}
-	},
-	"policy": {
-	  "status": "reserved_unmodeled",
-	  "id_pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$",
-	  "entries": {}
-	},
-	"action": {
-	  "status": "reserved_unmodeled",
-	  "id_pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$",
-	  "entries": {}
-	},
-	"event": {
-	  "status": "active",
-	  "id_pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$",
-	  "entries": {
-		"test_resource_event": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/events/events.json"
-		  ]
-		},
-		"test_stability_event": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/events/events.json"
-		  ]
-		}
-	  }
-	},
-	"trade": {
-	  "status": "reserved_unmodeled",
-	  "id_pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$",
-	  "entries": {}
-	},
-	"scenario": {
-	  "status": "reserved_unmodeled",
-	  "id_pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$",
-	  "entries": {}
-	},
-	"external_actor": {
-	  "status": "reserved_unmodeled",
-	  "id_pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$",
-	  "entries": {}
-	},
-	"currency": {
-	  "status": "active",
-	  "id_pattern": "^[A-Z]{3}$",
-	  "entries": {
-		"CNY": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-			"res://data/currency_exchange_rates.json",
-			"res://data/countries/china.json",
-			"res://data/countries/india.json",
-            "res://data/countries/usa.json"
-		  ]
-		},
-		"INR": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-			"res://data/currency_exchange_rates.json",
-			"res://data/countries/china.json",
-			"res://data/countries/india.json",
-            "res://data/countries/usa.json"
-		  ]
-		},
-		"USD": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-			"res://data/currency_exchange_rates.json",
-			"res://data/countries/china.json",
-			"res://data/countries/india.json",
-            "res://data/countries/usa.json"
-		  ]
-		}
-	  }
-	},
-	"route": {
-	  "status": "active",
-	  "id_pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$",
-	  "entries": {
-		"china_route_01": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/transport/china_transport.json"
-		  ]
-		},
-		"china_route_02": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/transport/china_transport.json"
-		  ]
-		},
-		"china_route_03": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/transport/china_transport.json"
-		  ]
-		},
-		"china_route_04": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/transport/china_transport.json"
-		  ]
-		},
-		"china_route_05": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/transport/china_transport.json"
-		  ]
-		},
-		"india_route_01": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/transport/india_transport.json"
-		  ]
-		},
-		"india_route_02": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/transport/india_transport.json"
-		  ]
-		},
-		"india_route_03": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/transport/india_transport.json"
-		  ]
-		},
-		"india_route_04": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/transport/india_transport.json"
-		  ]
-		},
-		"india_route_05": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/transport/india_transport.json"
-		  ]
-		},
-		"usa_route_01": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/transport/usa_transport.json"
-		  ]
-		},
-		"usa_route_02": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/transport/usa_transport.json"
-		  ]
-		},
-		"usa_route_03": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/regions/transport/usa_transport.json"
-		  ]
-		}
-	  }
-	},
-	"capability": {
-	  "status": "active",
-	  "id_pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$",
-	  "entries": {
-		"advanced_metallurgy": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/production_processes/production_processes.json"
-		  ]
-		}
-	  }
-	},
-	"infrastructure": {
-	  "status": "active",
-	  "id_pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$",
-	  "entries": {
-		"modern_steelworks": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/production_processes/production_processes.json"
-		  ]
-		}
-	  }
-	},
-	"equipment": {
-	  "status": "active",
-	  "id_pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$",
-	  "entries": {
-		"advanced_steel_equipment": {
-		  "status": "canonical_existing",
-		  "source_paths": [
-            "res://data/production_processes/production_processes.json"
-		  ]
-		}
-	  }
 	}
-  }
 }

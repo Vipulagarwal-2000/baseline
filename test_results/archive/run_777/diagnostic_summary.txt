@@ -1,6 +1,6 @@
 WORLD SIMULATOR DIAGNOSTIC SUMMARY
 =====================================
-Test Run: 778
+Test Run: 777
 OVERALL: FAIL
 =====================================
 

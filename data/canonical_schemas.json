@@ -1,891 +1,897 @@
 {
-  "version": 1,
-  "schema_registry_id": "world_simulator_canonical_schemas",
-  "description": "Canonical domain schema contracts for Phase 3.4. This registry defines identity, shape, field semantics, and source/runtime boundaries without moving authoritative mutable state into JSON.",
-  "policy": {
-	"stable_schema_identity": true,
-	"identity_field_is_explicit": true,
-	"runtime_state_is_not_definition_authority": true,
-	"reserved_domains_may_define_identity_only": true,
-	"field_semantic_type_is_required": true,
-	"source_paths_are_descriptive_not_runtime_state": true
-  },
-  "domains": {
-	"country": {
-	  "schema_status": "defined",
-	  "canonical_domain": "country",
-	  "identity_field": "id",
-	  "shape": "object",
-	  "required_fields": [
-		"id",
-		"name",
-		"country_code",
-        "entity_type"
-	  ],
-	  "fields": {
-		"id": {
-		  "type": "string",
-		  "semantic_type": "canonical_identifier",
-		  "required": true
+	"version": 1,
+	"schema_registry_id": "world_simulator_canonical_schemas",
+	"description": "Canonical domain schema contracts for Phase 3.4. This registry defines identity, shape, field semantics, and source/runtime boundaries without moving authoritative mutable state into JSON.",
+	"policy": {
+		"stable_schema_identity": true,
+		"identity_field_is_explicit": true,
+		"runtime_state_is_not_definition_authority": true,
+		"reserved_domains_may_define_identity_only": true,
+		"field_semantic_type_is_required": true,
+		"source_paths_are_descriptive_not_runtime_state": true
+	},
+	"domains": {
+		"country": {
+			"schema_status": "defined",
+			"canonical_domain": "country",
+			"identity_field": "id",
+			"shape": "object",
+			"required_fields": [
+				"id",
+				"name",
+				"country_code",
+				"entity_type"
+			],
+			"fields": {
+				"id": {
+					"type": "string",
+					"semantic_type": "canonical_identifier",
+					"required": true
+				},
+				"name": {
+					"type": "string",
+					"semantic_type": "display_name",
+					"required": true
+				},
+				"country_code": {
+					"type": "string",
+					"semantic_type": "country_code",
+					"required": true
+				},
+				"entity_type": {
+					"type": "string",
+					"semantic_type": "entity_type",
+					"required": true
+				},
+				"population": {
+					"type": "object",
+					"semantic_type": "domain_baseline_section",
+					"required": false
+				},
+				"economy": {
+					"type": "object",
+					"semantic_type": "domain_baseline_section",
+					"required": false
+				},
+				"government": {
+					"type": "object",
+					"semantic_type": "domain_baseline_section",
+					"required": false
+				},
+				"research": {
+					"type": "object",
+					"semantic_type": "domain_baseline_section",
+					"required": false
+				},
+				"resources": {
+					"type": "object",
+					"semantic_type": "domain_baseline_section",
+					"required": false
+				},
+				"relationships": {
+					"type": "object",
+					"semantic_type": "relationship_state_seed",
+					"required": false
+				},
+				"geography": {
+					"type": "object",
+					"semantic_type": "geographic_baseline_section",
+					"required": false
+				},
+				"military": {
+					"type": "object",
+					"semantic_type": "domain_baseline_section",
+					"required": false
+				},
+				"industry": {
+					"type": "object",
+					"semantic_type": "domain_baseline_section",
+					"required": false
+				},
+				"infrastructure": {
+					"type": "object",
+					"semantic_type": "domain_baseline_section",
+					"required": false
+				}
+			},
+			"source_kind": "json_baseline",
+			"source_paths": [
+				"res://data/countries/china.json",
+				"res://data/countries/india.json",
+				"res://data/countries/usa.json"
+			],
+			"notes": "Country JSON is a baseline initializer; mutable runtime state remains WorldState/components."
 		},
-		"name": {
-		  "type": "string",
-		  "semantic_type": "display_name",
-		  "required": true
+		"region": {
+			"schema_status": "defined",
+			"canonical_domain": "region",
+			"identity_field": "id",
+			"shape": "object_collection",
+			"required_fields": [
+				"country_id",
+				"regions"
+			],
+			"fields": {
+				"schema_version": {
+					"type": "integer",
+					"semantic_type": "schema_version",
+					"required": true
+				},
+				"country_id": {
+					"type": "string",
+					"semantic_type": "country_reference",
+					"required": true
+				},
+				"country_name": {
+					"type": "string",
+					"semantic_type": "display_name",
+					"required": true
+				},
+				"historical_profile": {
+					"type": "string",
+					"semantic_type": "provenance_profile",
+					"required": true
+				},
+				"historical_period": {
+					"type": "object",
+					"semantic_type": "time_window",
+					"required": true
+				},
+				"region_model": {
+					"type": "string",
+					"semantic_type": "model_identifier",
+					"required": true
+				},
+				"description": {
+					"type": "string",
+					"semantic_type": "description",
+					"required": true
+				},
+				"source_basis": {
+					"type": "array",
+					"semantic_type": "provenance_reference_list",
+					"required": true,
+					"item_type": "string"
+				},
+				"regions": {
+					"type": "array",
+					"semantic_type": "region_definition_collection",
+					"required": true,
+					"item_type": "object"
+				},
+				"regions[].id": {
+					"type": "string",
+					"semantic_type": "canonical_identifier",
+					"required": true
+				},
+				"regions[].name": {
+					"type": "string",
+					"semantic_type": "display_name",
+					"required": true
+				},
+				"regions[].metadata": {
+					"type": "object",
+					"semantic_type": "definition_metadata",
+					"required": true
+				},
+				"regions[].provinces": {
+					"type": "array",
+					"semantic_type": "child_region_definition_collection",
+					"required": false,
+					"item_type": "object"
+				},
+				"regions[].provinces[].id": {
+					"type": "string",
+					"semantic_type": "canonical_identifier",
+					"required": true
+				},
+				"regions[].provinces[].name": {
+					"type": "string",
+					"semantic_type": "display_name",
+					"required": true
+				},
+				"regions[].provinces[].metadata": {
+					"type": "object",
+					"semantic_type": "definition_metadata",
+					"required": true
+				}
+			},
+			"source_kind": "json_baseline",
+			"source_paths": [
+				"res://data/regions/china_regions.json",
+				"res://data/regions/india_regions.json",
+				"res://data/regions/usa_regions.json"
+			],
+			"notes": "Parent regions and province/state identities are definitions; mutable regional state remains runtime-owned."
 		},
-		"country_code": {
-		  "type": "string",
-		  "semantic_type": "country_code",
-		  "required": true
+		"resource": {
+			"schema_status": "defined",
+			"canonical_domain": "resource",
+			"identity_field": "id",
+			"shape": "definition_map",
+			"required_fields": [
+				"name",
+				"semantic_class",
+				"unit",
+				"unit_status",
+				"roles",
+				"can_be_produced",
+				"can_be_consumed",
+				"can_be_stockpiled",
+				"can_have_reserves"
+			],
+			"fields": {
+				"id": {
+					"type": "string",
+					"semantic_type": "canonical_identifier",
+					"required": true
+				},
+				"name": {
+					"type": "string",
+					"semantic_type": "display_name",
+					"required": true
+				},
+				"semantic_class": {
+					"type": "string",
+					"semantic_type": "resource_semantic_class",
+					"required": true
+				},
+				"unit": {
+					"type": "string",
+					"semantic_type": "semantic_unit",
+					"required": true
+				},
+				"unit_status": {
+					"type": "string",
+					"semantic_type": "semantic_resolution_status",
+					"required": true
+				},
+				"roles": {
+					"type": "array",
+					"semantic_type": "resource_role_set",
+					"required": true,
+					"item_type": "string"
+				},
+				"can_be_produced": {
+					"type": "boolean",
+					"semantic_type": "capability_flag",
+					"required": true
+				},
+				"can_be_consumed": {
+					"type": "boolean",
+					"semantic_type": "capability_flag",
+					"required": true
+				},
+				"can_be_stockpiled": {
+					"type": "boolean",
+					"semantic_type": "capability_flag",
+					"required": true
+				},
+				"can_have_reserves": {
+					"type": "boolean",
+					"semantic_type": "capability_flag",
+					"required": true
+				}
+			},
+			"source_kind": "json_catalog",
+			"source_paths": [
+				"res://data/resources/resource_catalog.json"
+			],
+			"notes": "Resource quantities are runtime state. The catalog owns semantics, not live stockpile values."
 		},
-		"entity_type": {
-		  "type": "string",
-		  "semantic_type": "entity_type",
-		  "required": true
+		"process": {
+			"schema_status": "defined",
+			"canonical_domain": "process",
+			"identity_field": "id",
+			"shape": "definition_map",
+			"required_fields": [
+				"name",
+				"category",
+				"production_stage",
+				"available_from",
+				"inputs",
+				"outputs",
+				"efficiency",
+				"duration",
+				"reliability",
+				"displacement"
+			],
+			"fields": {
+				"id": {
+					"type": "string",
+					"semantic_type": "canonical_identifier",
+					"required": true
+				},
+				"name": {
+					"type": "string",
+					"semantic_type": "display_name",
+					"required": true
+				},
+				"category": {
+					"type": "string",
+					"semantic_type": "process_category",
+					"required": true
+				},
+				"production_stage": {
+					"type": "integer",
+					"semantic_type": "process_stage",
+					"required": true
+				},
+				"available_from": {
+					"type": "integer",
+					"semantic_type": "start_year",
+					"required": true
+				},
+				"available_until": {
+					"type": "integer",
+					"semantic_type": "end_year",
+					"required": false,
+					"allow_null": true
+				},
+				"technology_requirements": {
+					"type": "object",
+					"semantic_type": "technology_requirement_map",
+					"required": true
+				},
+				"capability_requirements": {
+					"type": "object",
+					"semantic_type": "capability_requirement_map",
+					"required": true
+				},
+				"infrastructure_requirements": {
+					"type": "object",
+					"semantic_type": "infrastructure_requirement_map",
+					"required": true
+				},
+				"infrastructure_usage": {
+					"type": "object",
+					"semantic_type": "infrastructure_usage_map",
+					"required": true
+				},
+				"inputs": {
+					"type": "object",
+					"semantic_type": "resource_flow_map",
+					"required": true
+				},
+				"outputs": {
+					"type": "object",
+					"semantic_type": "resource_flow_map",
+					"required": true
+				},
+				"byproducts": {
+					"type": "object",
+					"semantic_type": "resource_flow_map",
+					"required": true
+				},
+				"labor_requirement": {
+					"type": "number",
+					"semantic_type": "factor_or_quantity",
+					"required": true
+				},
+				"labor_skill_requirement": {
+					"type": "object",
+					"semantic_type": "skill_requirement_map",
+					"required": true
+				},
+				"capital_requirement": {
+					"type": "number",
+					"semantic_type": "capital_requirement",
+					"required": true
+				},
+				"equipment_requirement": {
+					"type": "object",
+					"semantic_type": "equipment_requirement_map",
+					"required": true
+				},
+				"energy_requirement": {
+					"type": "object",
+					"semantic_type": "resource_flow_map",
+					"required": true
+				},
+				"land_requirement": {
+					"type": "number",
+					"semantic_type": "land_requirement",
+					"required": true
+				},
+				"maintenance_requirement": {
+					"type": "object",
+					"semantic_type": "resource_flow_map",
+					"required": true
+				},
+				"operating_cost": {
+					"type": "number",
+					"semantic_type": "cost_value",
+					"required": true
+				},
+				"transition_cost": {
+					"type": "number",
+					"semantic_type": "cost_value",
+					"required": true
+				},
+				"efficiency": {
+					"type": "number",
+					"semantic_type": "efficiency_factor",
+					"required": true
+				},
+				"duration": {
+					"type": "number",
+					"semantic_type": "duration_months",
+					"required": true
+				},
+				"reliability": {
+					"type": "number",
+					"semantic_type": "reliability_factor",
+					"required": true
+				},
+				"seasonality": {
+					"type": "object",
+					"semantic_type": "seasonality_map",
+					"required": true
+				},
+				"waste": {
+					"type": "object",
+					"semantic_type": "resource_flow_map",
+					"required": true
+				},
+				"displacement": {
+					"type": "object",
+					"semantic_type": "process_reference_map",
+					"required": true
+				},
+				"obsolescence": {
+					"type": "number",
+					"semantic_type": "obsolescence_factor",
+					"required": true
+				},
+				"power_requirement": {
+					"type": "number",
+					"semantic_type": "power_requirement",
+					"required": true
+				}
+			},
+			"source_kind": "json_catalog",
+			"source_paths": [
+				"res://data/production_processes/production_processes.json"
+			],
+			"notes": "Process displacement references resolve to process IDs; resource-bearing maps resolve to resource IDs."
 		},
-		"population": {
-		  "type": "object",
-		  "semantic_type": "domain_baseline_section",
-		  "required": false
+		"technology": {
+			"schema_status": "defined",
+			"canonical_domain": "technology",
+			"identity_field": "id",
+			"shape": "object",
+			"required_fields": [
+				"id",
+				"name",
+				"description",
+				"research_cost",
+				"research_duration_months",
+				"prerequisites",
+				"required_technology_level",
+				"capabilities",
+				"effects",
+				"historical_start_year",
+				"historical_end_year",
+				"enabled",
+				"provenance",
+				"definition_version"
+			],
+			"fields": {
+				"id": {
+					"type": "string",
+					"semantic_type": "canonical_identifier",
+					"required": true
+				},
+				"name": {
+					"type": "string",
+					"semantic_type": "display_name",
+					"required": true
+				},
+				"description": {
+					"type": "string",
+					"semantic_type": "description",
+					"required": true
+				},
+				"research_cost": {
+					"type": "number",
+					"semantic_type": "research_cost",
+					"required": true
+				},
+				"research_duration_months": {
+					"type": "integer",
+					"semantic_type": "duration_months",
+					"required": true
+				},
+				"prerequisites": {
+					"type": "array",
+					"semantic_type": "technology_reference_list",
+					"required": true,
+					"item_type": "string"
+				},
+				"required_technology_level": {
+					"type": "number",
+					"semantic_type": "technology_level_threshold",
+					"required": true
+				},
+				"capabilities": {
+					"type": "array",
+					"semantic_type": "capability_reference_list",
+					"required": true,
+					"item_type": "string"
+				},
+				"effects": {
+					"type": "object",
+					"semantic_type": "effect_definition_map",
+					"required": true
+				},
+				"historical_start_year": {
+					"type": "integer",
+					"semantic_type": "start_year",
+					"required": true
+				},
+				"historical_end_year": {
+					"type": "integer",
+					"semantic_type": "end_year",
+					"required": true
+				},
+				"enabled": {
+					"type": "boolean",
+					"semantic_type": "availability_flag",
+					"required": true
+				},
+				"provenance": {
+					"type": "object",
+					"semantic_type": "definition_metadata",
+					"required": true
+				},
+				"definition_version": {
+					"type": "integer",
+					"semantic_type": "definition_version",
+					"required": true
+				}
+			},
+			"source_kind": "json_catalog",
+			"source_paths": [
+				"res://data/technologies/technology_catalog.json",
+				"res://scripts/core/technology_catalog.gd"
+			],
+			"notes": "Phase 4.4A introduces the dedicated technology definition catalog. The catalog migrates the existing DefaultTechnologies runtime definitions without inventing new technology content. TechnologyManager / TechnologyLibrary remain runtime compatibility authorities until the later runtime integration pass. advanced_steelmaking remains a reference-only canonical technology identity owned by the production-process catalog until a full technology definition is introduced."
 		},
-		"economy": {
-		  "type": "object",
-		  "semantic_type": "domain_baseline_section",
-		  "required": false
+		"research_program": {
+			"schema_status": "reserved_identity_contract",
+			"canonical_domain": "research_program",
+			"identity_field": "id",
+			"shape": "object",
+			"required_fields": [
+				"id"
+			],
+			"fields": {
+				"id": {
+					"type": "string",
+					"semantic_type": "canonical_identifier",
+					"required": true
+				}
+			},
+			"source_kind": "reserved_identity_reference",
+			"source_paths": [],
+			"notes": "The canonical ID domain is reserved_unmodeled. Phase 3.4 defines identity only; dedicated research content/schema belongs to Phase 4."
 		},
-		"government": {
-		  "type": "object",
-		  "semantic_type": "domain_baseline_section",
-		  "required": false
+		"policy": {
+			"schema_status": "reserved_identity_contract",
+			"canonical_domain": "policy",
+			"identity_field": "id",
+			"shape": "object",
+			"required_fields": [
+				"id"
+			],
+			"fields": {
+				"id": {
+					"type": "string",
+					"semantic_type": "canonical_identifier",
+					"required": true
+				}
+			},
+			"source_kind": "reserved_identity_reference",
+			"source_paths": [],
+			"notes": "The canonical ID domain is reserved_unmodeled. Runtime policy mechanics exist, but no dedicated content catalog is being invented in Phase 3.4."
 		},
-		"research": {
-		  "type": "object",
-		  "semantic_type": "domain_baseline_section",
-		  "required": false
+		"action": {
+			"schema_status": "reserved_identity_contract",
+			"canonical_domain": "action",
+			"identity_field": "id",
+			"shape": "object",
+			"required_fields": [
+				"id"
+			],
+			"fields": {
+				"id": {
+					"type": "string",
+					"semantic_type": "canonical_identifier",
+					"required": true
+				}
+			},
+			"source_kind": "reserved_identity_reference",
+			"source_paths": [],
+			"notes": "The canonical ID domain is reserved_unmodeled. The existing executable action contract remains runtime-owned; this schema defines no separate action catalog."
 		},
-		"resources": {
-		  "type": "object",
-		  "semantic_type": "domain_baseline_section",
-		  "required": false
+		"event": {
+			"schema_status": "defined",
+			"canonical_domain": "event",
+			"identity_field": "id",
+			"shape": "object",
+			"required_fields": [
+				"id",
+				"name",
+				"description",
+				"category",
+				"scope",
+				"metadata"
+			],
+			"fields": {
+				"id": {
+					"type": "string",
+					"semantic_type": "canonical_identifier",
+					"required": true
+				},
+				"name": {
+					"type": "string",
+					"semantic_type": "display_name",
+					"required": true
+				},
+				"description": {
+					"type": "string",
+					"semantic_type": "description",
+					"required": true
+				},
+				"category": {
+					"type": "string",
+					"semantic_type": "event_category",
+					"required": true
+				},
+				"scope": {
+					"type": "string",
+					"semantic_type": "event_scope",
+					"required": true
+				},
+				"metadata": {
+					"type": "object",
+					"semantic_type": "definition_metadata",
+					"required": true
+				}
+			},
+			"source_kind": "json_catalog",
+			"source_paths": [
+				"res://data/events/events.json",
+				"res://scripts/core/event_definition.gd",
+				"res://scripts/core/event_definition_loader.gd"
+			],
+			"notes": "Current event catalog is synthetic/test content; schema is applicable to future historical/scenario event content."
 		},
-		"relationships": {
-		  "type": "object",
-		  "semantic_type": "relationship_state_seed",
-		  "required": false
+		"trade": {
+			"schema_status": "reserved_identity_contract",
+			"canonical_domain": "trade",
+			"identity_field": "id",
+			"shape": "object",
+			"required_fields": [
+				"id"
+			],
+			"fields": {
+				"id": {
+					"type": "string",
+					"semantic_type": "canonical_identifier",
+					"required": true
+				}
+			},
+			"source_kind": "reserved_identity_reference",
+			"source_paths": [],
+			"notes": "The canonical ID domain is reserved_unmodeled. Existing trade runtime contracts remain authoritative; no dedicated trade content catalog is invented here."
 		},
-		"geography": {
-		  "type": "object",
-		  "semantic_type": "geographic_baseline_section",
-		  "required": false
+		"currency": {
+			"schema_status": "defined",
+			"canonical_domain": "currency",
+			"identity_field": "currency_id",
+			"shape": "variant_union",
+			"required_fields": [],
+			"fields": {},
+			"source_kind": "json_config_and_runtime_definition",
+			"source_paths": [
+				"res://data/currency_exchange_rates.json",
+				"res://scripts/systems/currency_identity_system.gd"
+			],
+			"notes": "Exchange-rate configuration is definition data; treasury balances remain runtime state.",
+			"variants": {
+				"exchange_configuration": {
+					"identity_field": "base_currency",
+					"required_fields": [
+						"base_currency",
+						"rate_basis",
+						"rates_to_base"
+					],
+					"fields": {
+						"base_currency": {
+							"type": "string",
+							"semantic_type": "currency_reference",
+							"required": true
+						},
+						"rate_basis": {
+							"type": "string",
+							"semantic_type": "exchange_rate_basis",
+							"required": true
+						},
+						"rates_to_base": {
+							"type": "object",
+							"semantic_type": "currency_rate_map",
+							"required": true
+						}
+					}
+				}
+			}
 		},
-		"military": {
-		  "type": "object",
-		  "semantic_type": "domain_baseline_section",
-		  "required": false
-		},
-		"industry": {
-		  "type": "object",
-		  "semantic_type": "domain_baseline_section",
-		  "required": false
+		"capability": {
+			"schema_status": "reference_contract",
+			"canonical_domain": "capability",
+			"identity_field": "id",
+			"shape": "reference_scalar",
+			"required_fields": [
+				"id"
+			],
+			"fields": {
+				"id": {
+					"type": "string",
+					"semantic_type": "capability_reference",
+					"required": true
+				}
+			},
+			"source_kind": "process_catalog_reference",
+			"source_paths": [
+				"res://data/production_processes/production_processes.json"
+			],
+			"notes": "Reference identity used by production-process requirement maps; not a separate mutable entity authority."
 		},
 		"infrastructure": {
-		  "type": "object",
-		  "semantic_type": "domain_baseline_section",
-		  "required": false
-		}
-	  },
-	  "source_kind": "json_baseline",
-	  "source_paths": [
-		"res://data/countries/china.json",
-		"res://data/countries/india.json",
-        "res://data/countries/usa.json"
-	  ],
-	  "notes": "Country JSON is a baseline initializer; mutable runtime state remains WorldState/components."
-	},
-	"region": {
-	  "schema_status": "defined",
-	  "canonical_domain": "region",
-	  "identity_field": "id",
-	  "shape": "object_collection",
-	  "required_fields": [
-		"country_id",
-        "regions"
-	  ],
-	  "fields": {
-		"schema_version": {
-		  "type": "integer",
-		  "semantic_type": "schema_version",
-		  "required": true
-		},
-		"country_id": {
-		  "type": "string",
-		  "semantic_type": "country_reference",
-		  "required": true
-		},
-		"country_name": {
-		  "type": "string",
-		  "semantic_type": "display_name",
-		  "required": true
-		},
-		"historical_profile": {
-		  "type": "string",
-		  "semantic_type": "provenance_profile",
-		  "required": true
-		},
-		"historical_period": {
-		  "type": "object",
-		  "semantic_type": "time_window",
-		  "required": true
-		},
-		"region_model": {
-		  "type": "string",
-		  "semantic_type": "model_identifier",
-		  "required": true
-		},
-		"description": {
-		  "type": "string",
-		  "semantic_type": "description",
-		  "required": true
-		},
-		"source_basis": {
-		  "type": "array",
-		  "semantic_type": "provenance_reference_list",
-		  "required": true,
-		  "item_type": "string"
-		},
-		"regions": {
-		  "type": "array",
-		  "semantic_type": "region_definition_collection",
-		  "required": true,
-		  "item_type": "object"
-		},
-		"regions[].id": {
-		  "type": "string",
-		  "semantic_type": "canonical_identifier",
-		  "required": true
-		},
-		"regions[].name": {
-		  "type": "string",
-		  "semantic_type": "display_name",
-		  "required": true
-		},
-		"regions[].metadata": {
-		  "type": "object",
-		  "semantic_type": "definition_metadata",
-		  "required": true
-		},
-		"regions[].provinces": {
-		  "type": "array",
-		  "semantic_type": "child_region_definition_collection",
-		  "required": false,
-		  "item_type": "object"
-		},
-		"regions[].provinces[].id": {
-		  "type": "string",
-		  "semantic_type": "canonical_identifier",
-		  "required": true
-		},
-		"regions[].provinces[].name": {
-		  "type": "string",
-		  "semantic_type": "display_name",
-		  "required": true
-		},
-		"regions[].provinces[].metadata": {
-		  "type": "object",
-		  "semantic_type": "definition_metadata",
-		  "required": true
-		}
-	  },
-	  "source_kind": "json_baseline",
-	  "source_paths": [
-		"res://data/regions/china_regions.json",
-		"res://data/regions/india_regions.json",
-        "res://data/regions/usa_regions.json"
-	  ],
-	  "notes": "Parent regions and province/state identities are definitions; mutable regional state remains runtime-owned."
-	},
-	"resource": {
-	  "schema_status": "defined",
-	  "canonical_domain": "resource",
-	  "identity_field": "id",
-	  "shape": "definition_map",
-	  "required_fields": [
-		"name",
-		"semantic_class",
-		"unit",
-		"unit_status",
-		"roles",
-		"can_be_produced",
-		"can_be_consumed",
-		"can_be_stockpiled",
-        "can_have_reserves"
-	  ],
-	  "fields": {
-		"id": {
-		  "type": "string",
-		  "semantic_type": "canonical_identifier",
-		  "required": true
-		},
-		"name": {
-		  "type": "string",
-		  "semantic_type": "display_name",
-		  "required": true
-		},
-		"semantic_class": {
-		  "type": "string",
-		  "semantic_type": "resource_semantic_class",
-		  "required": true
-		},
-		"unit": {
-		  "type": "string",
-		  "semantic_type": "semantic_unit",
-		  "required": true
-		},
-		"unit_status": {
-		  "type": "string",
-		  "semantic_type": "semantic_resolution_status",
-		  "required": true
-		},
-		"roles": {
-		  "type": "array",
-		  "semantic_type": "resource_role_set",
-		  "required": true,
-		  "item_type": "string"
-		},
-		"can_be_produced": {
-		  "type": "boolean",
-		  "semantic_type": "capability_flag",
-		  "required": true
-		},
-		"can_be_consumed": {
-		  "type": "boolean",
-		  "semantic_type": "capability_flag",
-		  "required": true
-		},
-		"can_be_stockpiled": {
-		  "type": "boolean",
-		  "semantic_type": "capability_flag",
-		  "required": true
-		},
-		"can_have_reserves": {
-		  "type": "boolean",
-		  "semantic_type": "capability_flag",
-		  "required": true
-		}
-	  },
-	  "source_kind": "json_catalog",
-	  "source_paths": [
-        "res://data/resources/resource_catalog.json"
-	  ],
-	  "notes": "Resource quantities are runtime state. The catalog owns semantics, not live stockpile values."
-	},
-	"process": {
-	  "schema_status": "defined",
-	  "canonical_domain": "process",
-	  "identity_field": "id",
-	  "shape": "definition_map",
-	  "required_fields": [
-		"name",
-		"category",
-		"production_stage",
-		"available_from",
-		"inputs",
-		"outputs",
-		"efficiency",
-		"duration",
-		"reliability",
-        "displacement"
-	  ],
-	  "fields": {
-		"id": {
-		  "type": "string",
-		  "semantic_type": "canonical_identifier",
-		  "required": true
-		},
-		"name": {
-		  "type": "string",
-		  "semantic_type": "display_name",
-		  "required": true
-		},
-		"category": {
-		  "type": "string",
-		  "semantic_type": "process_category",
-		  "required": true
-		},
-		"production_stage": {
-		  "type": "integer",
-		  "semantic_type": "process_stage",
-		  "required": true
-		},
-		"available_from": {
-		  "type": "integer",
-		  "semantic_type": "start_year",
-		  "required": true
-		},
-		"available_until": {
-		  "type": "integer",
-		  "semantic_type": "end_year",
-		  "required": false,
-		  "allow_null": true
-		},
-		"technology_requirements": {
-		  "type": "object",
-		  "semantic_type": "technology_requirement_map",
-		  "required": true
-		},
-		"capability_requirements": {
-		  "type": "object",
-		  "semantic_type": "capability_requirement_map",
-		  "required": true
-		},
-		"infrastructure_requirements": {
-		  "type": "object",
-		  "semantic_type": "infrastructure_requirement_map",
-		  "required": true
-		},
-		"infrastructure_usage": {
-		  "type": "object",
-		  "semantic_type": "infrastructure_usage_map",
-		  "required": true
-		},
-		"inputs": {
-		  "type": "object",
-		  "semantic_type": "resource_flow_map",
-		  "required": true
-		},
-		"outputs": {
-		  "type": "object",
-		  "semantic_type": "resource_flow_map",
-		  "required": true
-		},
-		"byproducts": {
-		  "type": "object",
-		  "semantic_type": "resource_flow_map",
-		  "required": true
-		},
-		"labor_requirement": {
-		  "type": "number",
-		  "semantic_type": "factor_or_quantity",
-		  "required": true
-		},
-		"labor_skill_requirement": {
-		  "type": "object",
-		  "semantic_type": "skill_requirement_map",
-		  "required": true
-		},
-		"capital_requirement": {
-		  "type": "number",
-		  "semantic_type": "capital_requirement",
-		  "required": true
-		},
-		"equipment_requirement": {
-		  "type": "object",
-		  "semantic_type": "equipment_requirement_map",
-		  "required": true
-		},
-		"energy_requirement": {
-		  "type": "object",
-		  "semantic_type": "resource_flow_map",
-		  "required": true
-		},
-		"land_requirement": {
-		  "type": "number",
-		  "semantic_type": "land_requirement",
-		  "required": true
-		},
-		"maintenance_requirement": {
-		  "type": "object",
-		  "semantic_type": "resource_flow_map",
-		  "required": true
-		},
-		"operating_cost": {
-		  "type": "number",
-		  "semantic_type": "cost_value",
-		  "required": true
-		},
-		"transition_cost": {
-		  "type": "number",
-		  "semantic_type": "cost_value",
-		  "required": true
-		},
-		"efficiency": {
-		  "type": "number",
-		  "semantic_type": "efficiency_factor",
-		  "required": true
-		},
-		"duration": {
-		  "type": "number",
-		  "semantic_type": "duration_months",
-		  "required": true
-		},
-		"reliability": {
-		  "type": "number",
-		  "semantic_type": "reliability_factor",
-		  "required": true
-		},
-		"seasonality": {
-		  "type": "object",
-		  "semantic_type": "seasonality_map",
-		  "required": true
-		},
-		"waste": {
-		  "type": "object",
-		  "semantic_type": "resource_flow_map",
-		  "required": true
-		},
-		"displacement": {
-		  "type": "object",
-		  "semantic_type": "process_reference_map",
-		  "required": true
-		},
-		"obsolescence": {
-		  "type": "number",
-		  "semantic_type": "obsolescence_factor",
-		  "required": true
-		},
-		"power_requirement": {
-		  "type": "number",
-		  "semantic_type": "power_requirement",
-		  "required": true
-		}
-	  },
-	  "source_kind": "json_catalog",
-	  "source_paths": [
-        "res://data/production_processes/production_processes.json"
-	  ],
-	  "notes": "Process displacement references resolve to process IDs; resource-bearing maps resolve to resource IDs."
-	},
-	"technology": {
-	  "schema_status": "runtime_contract",
-	  "canonical_domain": "technology",
-	  "identity_field": "id",
-	  "shape": "object",
-	  "required_fields": [
-		"id",
-		"name",
-		"description",
-		"research_cost",
-		"research_duration_months",
-		"prerequisites",
-		"required_technology_level",
-		"capabilities",
-		"effects",
-		"historical_start_year",
-		"historical_end_year",
-        "enabled"
-	  ],
-	  "fields": {
-		"id": {
-		  "type": "string",
-		  "semantic_type": "canonical_identifier",
-		  "required": true
-		},
-		"name": {
-		  "type": "string",
-		  "semantic_type": "display_name",
-		  "required": true
-		},
-		"description": {
-		  "type": "string",
-		  "semantic_type": "description",
-		  "required": true
-		},
-		"research_cost": {
-		  "type": "number",
-		  "semantic_type": "research_cost",
-		  "required": true
-		},
-		"research_duration_months": {
-		  "type": "integer",
-		  "semantic_type": "duration_months",
-		  "required": true
-		},
-		"prerequisites": {
-		  "type": "array",
-		  "semantic_type": "technology_reference_list",
-		  "required": true,
-		  "item_type": "string"
-		},
-		"required_technology_level": {
-		  "type": "number",
-		  "semantic_type": "technology_level_threshold",
-		  "required": true
-		},
-		"capabilities": {
-		  "type": "array",
-		  "semantic_type": "capability_reference_list",
-		  "required": true,
-		  "item_type": "string"
-		},
-		"effects": {
-		  "type": "object",
-		  "semantic_type": "effect_definition_map",
-		  "required": true
-		},
-		"historical_start_year": {
-		  "type": "integer",
-		  "semantic_type": "start_year",
-		  "required": true
-		},
-		"historical_end_year": {
-		  "type": "integer",
-		  "semantic_type": "end_year",
-		  "required": true
-		},
-		"enabled": {
-		  "type": "boolean",
-		  "semantic_type": "availability_flag",
-		  "required": true
-		}
-	  },
-	  "source_kind": "runtime_definition",
-	  "source_paths": [
-		"res://scripts/core/technology_data.gd",
-        "res://scripts/core/technology_library.gd"
-	  ],
-	  "notes": "Current canonical schema mirrors the active TechnologyData runtime definition. Dedicated JSON technology catalog remains future Phase 4 content."
-	},
-	"research_program": {
-	  "schema_status": "reserved_identity_contract",
-	  "canonical_domain": "research_program",
-	  "identity_field": "id",
-	  "shape": "object",
-	  "required_fields": [
-        "id"
-	  ],
-	  "fields": {
-		"id": {
-		  "type": "string",
-		  "semantic_type": "canonical_identifier",
-		  "required": true
-		}
-	  },
-	  "source_kind": "reserved_identity_reference",
-	  "source_paths": [],
-	  "notes": "The canonical ID domain is reserved_unmodeled. Phase 3.4 defines identity only; dedicated research content/schema belongs to Phase 4."
-	},
-	"policy": {
-	  "schema_status": "reserved_identity_contract",
-	  "canonical_domain": "policy",
-	  "identity_field": "id",
-	  "shape": "object",
-	  "required_fields": [
-        "id"
-	  ],
-	  "fields": {
-		"id": {
-		  "type": "string",
-		  "semantic_type": "canonical_identifier",
-		  "required": true
-		}
-	  },
-	  "source_kind": "reserved_identity_reference",
-	  "source_paths": [],
-	  "notes": "The canonical ID domain is reserved_unmodeled. Runtime policy mechanics exist, but no dedicated content catalog is being invented in Phase 3.4."
-	},
-	"action": {
-	  "schema_status": "reserved_identity_contract",
-	  "canonical_domain": "action",
-	  "identity_field": "id",
-	  "shape": "object",
-	  "required_fields": [
-        "id"
-	  ],
-	  "fields": {
-		"id": {
-		  "type": "string",
-		  "semantic_type": "canonical_identifier",
-		  "required": true
-		}
-	  },
-	  "source_kind": "reserved_identity_reference",
-	  "source_paths": [],
-	  "notes": "The canonical ID domain is reserved_unmodeled. The existing executable action contract remains runtime-owned; this schema defines no separate action catalog."
-	},
-	"event": {
-	  "schema_status": "defined",
-	  "canonical_domain": "event",
-	  "identity_field": "id",
-	  "shape": "object",
-	  "required_fields": [
-		"id",
-		"name",
-		"description",
-		"category",
-		"scope",
-        "metadata"
-	  ],
-	  "fields": {
-		"id": {
-		  "type": "string",
-		  "semantic_type": "canonical_identifier",
-		  "required": true
-		},
-		"name": {
-		  "type": "string",
-		  "semantic_type": "display_name",
-		  "required": true
-		},
-		"description": {
-		  "type": "string",
-		  "semantic_type": "description",
-		  "required": true
-		},
-		"category": {
-		  "type": "string",
-		  "semantic_type": "event_category",
-		  "required": true
-		},
-		"scope": {
-		  "type": "string",
-		  "semantic_type": "event_scope",
-		  "required": true
-		},
-		"metadata": {
-		  "type": "object",
-		  "semantic_type": "definition_metadata",
-		  "required": true
-		}
-	  },
-	  "source_kind": "json_catalog",
-	  "source_paths": [
-		"res://data/events/events.json",
-		"res://scripts/core/event_definition.gd",
-        "res://scripts/core/event_definition_loader.gd"
-	  ],
-	  "notes": "Current event catalog is synthetic/test content; schema is applicable to future historical/scenario event content."
-	},
-	"trade": {
-	  "schema_status": "reserved_identity_contract",
-	  "canonical_domain": "trade",
-	  "identity_field": "id",
-	  "shape": "object",
-	  "required_fields": [
-        "id"
-	  ],
-	  "fields": {
-		"id": {
-		  "type": "string",
-		  "semantic_type": "canonical_identifier",
-		  "required": true
-		}
-	  },
-	  "source_kind": "reserved_identity_reference",
-	  "source_paths": [],
-	  "notes": "The canonical ID domain is reserved_unmodeled. Existing trade runtime contracts remain authoritative; no dedicated trade content catalog is invented here."
-	},
-	"currency": {
-	  "schema_status": "defined",
-	  "canonical_domain": "currency",
-	  "identity_field": "currency_id",
-	  "shape": "variant_union",
-	  "required_fields": [],
-	  "fields": {},
-	  "source_kind": "json_config_and_runtime_definition",
-	  "source_paths": [
-		"res://data/currency_exchange_rates.json",
-        "res://scripts/systems/currency_identity_system.gd"
-	  ],
-	  "notes": "Exchange-rate configuration is definition data; treasury balances remain runtime state.",
-	  "variants": {
-		"exchange_configuration": {
-		  "identity_field": "base_currency",
-		  "required_fields": [
-			"base_currency",
-			"rate_basis",
-            "rates_to_base"
-		  ],
-		  "fields": {
-			"base_currency": {
-			  "type": "string",
-			  "semantic_type": "currency_reference",
-			  "required": true
+			"schema_status": "reference_contract",
+			"canonical_domain": "infrastructure",
+			"identity_field": "id",
+			"shape": "reference_scalar",
+			"required_fields": [
+				"id"
+			],
+			"fields": {
+				"id": {
+					"type": "string",
+					"semantic_type": "infrastructure_reference",
+					"required": true
+				}
 			},
-			"rate_basis": {
-			  "type": "string",
-			  "semantic_type": "exchange_rate_basis",
-			  "required": true
+			"source_kind": "process_catalog_reference",
+			"source_paths": [
+				"res://data/production_processes/production_processes.json"
+			],
+			"notes": "Reference identity used by production-process requirement maps; not a separate mutable entity authority."
+		},
+		"equipment": {
+			"schema_status": "reference_contract",
+			"canonical_domain": "equipment",
+			"identity_field": "id",
+			"shape": "reference_scalar",
+			"required_fields": [
+				"id"
+			],
+			"fields": {
+				"id": {
+					"type": "string",
+					"semantic_type": "equipment_reference",
+					"required": true
+				}
 			},
-			"rates_to_base": {
-			  "type": "object",
-			  "semantic_type": "currency_rate_map",
-			  "required": true
+			"source_kind": "process_catalog_reference",
+			"source_paths": [
+				"res://data/production_processes/production_processes.json"
+			],
+			"notes": "Reference identity used by production-process requirement maps; not a separate mutable entity authority."
+		},
+		"route": {
+			"schema_status": "defined",
+			"canonical_domain": "route",
+			"identity_field": "route_id",
+			"shape": "object",
+			"required_fields": [
+				"route_id",
+				"from_region_id",
+				"to_region_id",
+				"base_capacity",
+				"transport_cost",
+				"condition",
+				"blocked",
+				"route_type"
+			],
+			"fields": {
+				"route_id": {
+					"type": "string",
+					"semantic_type": "canonical_identifier",
+					"required": true
+				},
+				"from_region_id": {
+					"type": "string",
+					"semantic_type": "region_reference",
+					"required": true
+				},
+				"to_region_id": {
+					"type": "string",
+					"semantic_type": "region_reference",
+					"required": true
+				},
+				"base_capacity": {
+					"type": "number",
+					"semantic_type": "installed_capacity",
+					"required": true
+				},
+				"transport_cost": {
+					"type": "number",
+					"semantic_type": "relative_transport_cost",
+					"required": true
+				},
+				"condition": {
+					"type": "number",
+					"semantic_type": "normalized_condition",
+					"required": true
+				},
+				"blocked": {
+					"type": "boolean",
+					"semantic_type": "route_block_flag",
+					"required": true
+				},
+				"route_type": {
+					"type": "string",
+					"semantic_type": "route_type",
+					"required": true
+				}
 			},
-			"semantic_contract": {
-			  "type": "object",
-			  "semantic_type": "currency_semantic_contract",
-			  "required": true
-			}
-		  },
-		  "notes": "Exchange-rate configuration is definition data; semantic_contract defines quote direction, conversion formula, valuation scope, and authority boundaries; treasury balances remain runtime state."
-		}
-	  }
-	},
-	"capability": {
-	  "schema_status": "reference_contract",
-	  "canonical_domain": "capability",
-	  "identity_field": "id",
-	  "shape": "reference_scalar",
-	  "required_fields": [
-        "id"
-	  ],
-	  "fields": {
-		"id": {
-		  "type": "string",
-		  "semantic_type": "capability_reference",
-		  "required": true
-		}
-	  },
-	  "source_kind": "process_catalog_reference",
-	  "source_paths": [
-        "res://data/production_processes/production_processes.json"
-	  ],
-	  "notes": "Reference identity used by production-process requirement maps; not a separate mutable entity authority."
-	},
-	"infrastructure": {
-	  "schema_status": "reference_contract",
-	  "canonical_domain": "infrastructure",
-	  "identity_field": "id",
-	  "shape": "reference_scalar",
-	  "required_fields": [
-        "id"
-	  ],
-	  "fields": {
-		"id": {
-		  "type": "string",
-		  "semantic_type": "infrastructure_reference",
-		  "required": true
-		}
-	  },
-	  "source_kind": "process_catalog_reference",
-	  "source_paths": [
-        "res://data/production_processes/production_processes.json"
-	  ],
-	  "notes": "Reference identity used by production-process requirement maps; not a separate mutable entity authority."
-	},
-	"equipment": {
-	  "schema_status": "reference_contract",
-	  "canonical_domain": "equipment",
-	  "identity_field": "id",
-	  "shape": "reference_scalar",
-	  "required_fields": [
-        "id"
-	  ],
-	  "fields": {
-		"id": {
-		  "type": "string",
-		  "semantic_type": "equipment_reference",
-		  "required": true
-		}
-	  },
-	  "source_kind": "process_catalog_reference",
-	  "source_paths": [
-        "res://data/production_processes/production_processes.json"
-	  ],
-	  "notes": "Reference identity used by production-process requirement maps; not a separate mutable entity authority."
-	},
-	"route": {
-	  "schema_status": "defined",
-	  "canonical_domain": "route",
-	  "identity_field": "route_id",
-	  "shape": "object",
-	  "required_fields": [
-		"route_id",
-		"from_region_id",
-		"to_region_id",
-		"base_capacity",
-		"transport_cost",
-		"condition",
-		"blocked",
-        "route_type"
-	  ],
-	  "fields": {
-		"route_id": {
-		  "type": "string",
-		  "semantic_type": "canonical_identifier",
-		  "required": true
+			"source_kind": "regional_transport_json",
+			"source_paths": [
+				"res://data/regions/transport/china_transport.json",
+				"res://data/regions/transport/india_transport.json",
+				"res://data/regions/transport/usa_transport.json"
+			],
+			"notes": "Route is a transport-network identity and is distinct from trade agreement/transaction identity."
 		},
-		"from_region_id": {
-		  "type": "string",
-		  "semantic_type": "region_reference",
-		  "required": true
+		"external_actor": {
+			"schema_status": "reserved_identity_contract",
+			"canonical_domain": "external_actor",
+			"identity_field": "actor_id",
+			"shape": "object",
+			"required_fields": [
+				"actor_id"
+			],
+			"fields": {
+				"actor_id": {
+					"type": "string",
+					"semantic_type": "canonical_identifier",
+					"required": true
+				}
+			},
+			"source_kind": "reserved_runtime_reference",
+			"source_paths": [],
+			"notes": "Dedicated external-actor content is not yet established. Only identity-reference semantics are defined."
 		},
-		"to_region_id": {
-		  "type": "string",
-		  "semantic_type": "region_reference",
-		  "required": true
-		},
-		"base_capacity": {
-		  "type": "number",
-		  "semantic_type": "installed_capacity",
-		  "required": true
-		},
-		"transport_cost": {
-		  "type": "number",
-		  "semantic_type": "relative_transport_cost",
-		  "required": true
-		},
-		"condition": {
-		  "type": "number",
-		  "semantic_type": "normalized_condition",
-		  "required": true
-		},
-		"blocked": {
-		  "type": "boolean",
-		  "semantic_type": "route_block_flag",
-		  "required": true
-		},
-		"route_type": {
-		  "type": "string",
-		  "semantic_type": "route_type",
-		  "required": true
+		"scenario": {
+			"schema_status": "reserved_identity_contract",
+			"canonical_domain": "scenario",
+			"identity_field": "scenario_id",
+			"shape": "object",
+			"required_fields": [
+				"scenario_id"
+			],
+			"fields": {
+				"scenario_id": {
+					"type": "string",
+					"semantic_type": "canonical_identifier",
+					"required": true
+				}
+			},
+			"source_kind": "reserved_scenario_reference",
+			"source_paths": [],
+			"notes": "Test fixtures and causal validation scenarios are not promoted to a permanent content catalog by this schema."
 		}
-	  },
-	  "source_kind": "regional_transport_json",
-	  "source_paths": [
-		"res://data/regions/transport/china_transport.json",
-		"res://data/regions/transport/india_transport.json",
-        "res://data/regions/transport/usa_transport.json"
-	  ],
-	  "notes": "Route is a transport-network identity and is distinct from trade agreement/transaction identity."
-	},
-	"external_actor": {
-	  "schema_status": "reserved_identity_contract",
-	  "canonical_domain": "external_actor",
-	  "identity_field": "actor_id",
-	  "shape": "object",
-	  "required_fields": [
-        "actor_id"
-	  ],
-	  "fields": {
-		"actor_id": {
-		  "type": "string",
-		  "semantic_type": "canonical_identifier",
-		  "required": true
-		}
-	  },
-	  "source_kind": "reserved_runtime_reference",
-	  "source_paths": [],
-	  "notes": "Dedicated external-actor content is not yet established. Only identity-reference semantics are defined."
-	},
-	"scenario": {
-	  "schema_status": "reserved_identity_contract",
-	  "canonical_domain": "scenario",
-	  "identity_field": "scenario_id",
-	  "shape": "object",
-	  "required_fields": [
-        "scenario_id"
-	  ],
-	  "fields": {
-		"scenario_id": {
-		  "type": "string",
-		  "semantic_type": "canonical_identifier",
-		  "required": true
-		}
-	  },
-	  "source_kind": "reserved_scenario_reference",
-	  "source_paths": [],
-	  "notes": "Test fixtures and causal validation scenarios are not promoted to a permanent content catalog by this schema."
 	}
-  }
 }

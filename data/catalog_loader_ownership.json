@@ -1,285 +1,295 @@
 {
-  "version": 1,
-  "registry_id": "world_simulator_catalog_loader_ownership",
-  "description": "Declarative ownership contracts for domain definition catalogs and loader pathways. Phase 3.8 makes one authoritative catalog/loader ownership decision per canonical domain without introducing a generic DataManager or moving runtime state into definition data.",
-  "policy": {
-	"every_canonical_domain_requires_exactly_one_record": true,
-	"catalog_loader_ownership_is_control_plane_metadata": true,
-	"domain_and_schema_status_must_agree": true,
-	"domain_and_ownership_status_must_agree": true,
-	"reserved_domains_must_remain_identity_only": true,
-	"source_paths_must_agree_with_canonical_schema": true,
-	"loader_contract_must_be_explicit": true,
-	"generic_data_manager_is_forbidden": true,
-	"duplicate_loader_contracts_are_allowed_when_ownership_is_explicit": true,
-	"runtime_state_is_not_loaded_from_definition_catalogs": true
-  },
-  "allowed_ownership_modes": [
-	"catalog",
-	"runtime_definition",
-	"reference",
-    "reserved_identity_only"
-  ],
-  "allowed_loader_modes": [
-	"explicit_existing_loader",
-	"explicit_runtime_definition",
-	"catalog_owned_reference_resolution",
-	"contract_named_not_dedicated_file",
-    "reserved_identity_only"
-  ],
-  "allowed_authority_statuses": [
-	"active",
-	"partial",
-    "reserved_unmodeled"
-  ],
-  "coverage": {
-	"canonical_domain_count": 17,
-	"ownership_record_count": 17,
-	"status": "complete_for_current_canonical_domains"
-  },
-  "records": [
-	{
-	  "domain": "action",
-	  "schema_status": "reserved_identity_contract",
-	  "ownership_status": "partial",
-	  "ownership_mode": "reserved_identity_only",
-	  "definition_authority": "Canonical action identity only; executable SimAction remains runtime-owned by the existing action contract.",
-	  "loader_contract": "action_identity_reference_only",
-	  "loader_mode": "reserved_identity_only",
-	  "loader_path": "",
-	  "source_paths": [],
-	  "runtime_authority": "ActionManager / executable action contract",
-	  "notes": "No dedicated action catalog is introduced in Phase 3.8."
+	"version": 1,
+	"registry_id": "world_simulator_catalog_loader_ownership",
+	"description": "Declarative ownership contracts for domain definition catalogs and loader pathways. Phase 3.8 makes one authoritative catalog/loader ownership decision per canonical domain without introducing a generic DataManager or moving runtime state into definition data.",
+	"policy": {
+		"every_canonical_domain_requires_exactly_one_record": true,
+		"catalog_loader_ownership_is_control_plane_metadata": true,
+		"domain_and_schema_status_must_agree": true,
+		"domain_and_ownership_status_must_agree": true,
+		"reserved_domains_must_remain_identity_only": true,
+		"source_paths_must_agree_with_canonical_schema": true,
+		"loader_contract_must_be_explicit": true,
+		"generic_data_manager_is_forbidden": true,
+		"duplicate_loader_contracts_are_allowed_when_ownership_is_explicit": true,
+		"runtime_state_is_not_loaded_from_definition_catalogs": true
 	},
-	{
-	  "domain": "capability",
-	  "schema_status": "reference_contract",
-	  "ownership_status": "active",
-	  "ownership_mode": "reference",
-	  "definition_authority": "Production-process catalog reference identity.",
-	  "loader_contract": "process_catalog_reference_resolver",
-	  "loader_mode": "catalog_owned_reference_resolution",
-	  "loader_path": "",
-	  "source_paths": ["res://data/production_processes/production_processes.json"],
-	  "runtime_authority": "ProductionProcessSystem / process requirement resolution",
-	  "notes": "Capability is not a separate mutable entity authority; identities are resolved from process definitions."
+	"allowed_ownership_modes": [
+		"catalog",
+		"runtime_definition",
+		"reference",
+		"reserved_identity_only"
+	],
+	"allowed_loader_modes": [
+		"explicit_existing_loader",
+		"explicit_runtime_definition",
+		"catalog_owned_reference_resolution",
+		"contract_named_not_dedicated_file",
+		"reserved_identity_only"
+	],
+	"allowed_authority_statuses": [
+		"active",
+		"partial",
+		"reserved_unmodeled"
+	],
+	"coverage": {
+		"canonical_domain_count": 17,
+		"ownership_record_count": 17,
+		"status": "complete_for_current_canonical_domains"
 	},
-	{
-	  "domain": "country",
-	  "schema_status": "defined",
-	  "ownership_status": "active",
-	  "ownership_mode": "catalog",
-	  "definition_authority": "Country baseline JSON files.",
-	  "loader_contract": "world_loader_country_baseline",
-	  "loader_mode": "explicit_existing_loader",
-	  "loader_path": "res://scripts/core/world_loader.gd",
-	  "source_paths": [
-		"res://data/countries/china.json",
-		"res://data/countries/india.json",
-        "res://data/countries/usa.json"
-	  ],
-	  "runtime_authority": "WorldState / Country components",
-	  "notes": "WorldLoader initializes country runtime components from baseline definitions; mutable state is not owned by JSON."
-	},
-	{
-	  "domain": "currency",
-	  "schema_status": "defined",
-	  "ownership_status": "active",
-	  "ownership_mode": "runtime_definition",
-	  "definition_authority": "Exchange-rate JSON configuration plus currency identity runtime definition.",
-	  "loader_contract": "currency_identity_runtime_loader",
-	  "loader_mode": "explicit_runtime_definition",
-	  "loader_path": "res://scripts/systems/currency_identity_system.gd",
-	  "source_paths": [
-		"res://data/currency_exchange_rates.json",
-        "res://scripts/systems/currency_identity_system.gd"
-	  ],
-	  "runtime_authority": "CurrencyIdentitySystem / EconomySystem",
-	  "notes": "Treasury balances remain runtime state; this contract covers currency definition and exchange configuration."
-	},
-	{
-	  "domain": "equipment",
-	  "schema_status": "reference_contract",
-	  "ownership_status": "active",
-	  "ownership_mode": "reference",
-	  "definition_authority": "Production-process catalog reference identity.",
-	  "loader_contract": "process_catalog_reference_resolver",
-	  "loader_mode": "catalog_owned_reference_resolution",
-	  "loader_path": "",
-	  "source_paths": ["res://data/production_processes/production_processes.json"],
-	  "runtime_authority": "ProductionProcessSystem / equipment requirement resolution",
-	  "notes": "Equipment is a process-catalog reference domain rather than a separate content authority in Phase 3.8."
-	},
-	{
-	  "domain": "event",
-	  "schema_status": "defined",
-	  "ownership_status": "active",
-	  "ownership_mode": "catalog",
-	  "definition_authority": "Event catalog and event definition runtime classes.",
-	  "loader_contract": "event_definition_loader",
-	  "loader_mode": "explicit_existing_loader",
-	  "loader_path": "res://scripts/core/event_definition_loader.gd",
-	  "source_paths": [
-		"res://data/events/events.json",
-		"res://scripts/core/event_definition.gd",
-        "res://scripts/core/event_definition_loader.gd"
-	  ],
-	  "runtime_authority": "EventSimulationIntegrationSystem / EventExecutor",
-	  "notes": "Event definitions are declarative; event execution and history remain runtime-owned."
-	},
-	{
-	  "domain": "external_actor",
-	  "schema_status": "reserved_identity_contract",
-	  "ownership_status": "partial",
-	  "ownership_mode": "reserved_identity_only",
-	  "definition_authority": "Identity-reference semantics only.",
-	  "loader_contract": "external_actor_identity_reference_only",
-	  "loader_mode": "reserved_identity_only",
-	  "loader_path": "",
-	  "source_paths": [],
-	  "runtime_authority": "Existing external-actor references where used",
-	  "notes": "Dedicated external-actor content is deferred to a later content phase."
-	},
-	{
-	  "domain": "infrastructure",
-	  "schema_status": "reference_contract",
-	  "ownership_status": "active",
-	  "ownership_mode": "reference",
-	  "definition_authority": "Production-process catalog reference identity.",
-	  "loader_contract": "process_catalog_reference_resolver",
-	  "loader_mode": "catalog_owned_reference_resolution",
-	  "loader_path": "",
-	  "source_paths": ["res://data/production_processes/production_processes.json"],
-	  "runtime_authority": "InfrastructureSystem / InfrastructureComponent",
-	  "notes": "Infrastructure requirement identities originate from the process catalog; mutable infrastructure state remains runtime-owned."
-	},
-	{
-	  "domain": "policy",
-	  "schema_status": "reserved_identity_contract",
-	  "ownership_status": "partial",
-	  "ownership_mode": "reserved_identity_only",
-	  "definition_authority": "Canonical policy identity only.",
-	  "loader_contract": "policy_identity_reference_only",
-	  "loader_mode": "reserved_identity_only",
-	  "loader_path": "",
-	  "source_paths": [],
-	  "runtime_authority": "Existing policy runtime mechanics where present",
-	  "notes": "No dedicated policy catalog is introduced in Phase 3.8; content belongs to Phase 4."
-	},
-	{
-	  "domain": "process",
-	  "schema_status": "defined",
-	  "ownership_status": "active",
-	  "ownership_mode": "catalog",
-	  "definition_authority": "Production-process JSON catalog.",
-	  "loader_contract": "production_process_catalog_loader",
-	  "loader_mode": "contract_named_not_dedicated_file",
-	  "loader_path": "",
-	  "source_paths": ["res://data/production_processes/production_processes.json"],
-	  "runtime_authority": "ProductionProcessSystem",
-	  "notes": "The process catalog is authoritative for process definitions; runtime adoption/capacity/output remain system-owned."
-	},
-	{
-	  "domain": "region",
-	  "schema_status": "defined",
-	  "ownership_status": "active",
-	  "ownership_mode": "catalog",
-	  "definition_authority": "Regional baseline JSON catalogs.",
-	  "loader_contract": "regional_baseline_loader_contract",
-	  "loader_mode": "contract_named_not_dedicated_file",
-	  "loader_path": "",
-	  "source_paths": [
-		"res://data/regions/china_regions.json",
-		"res://data/regions/india_regions.json",
-        "res://data/regions/usa_regions.json"
-	  ],
-	  "runtime_authority": "WorldState / regional domain systems",
-	  "notes": "The phase defines a single regional loading contract without inventing a generic DataManager."
-	},
-	{
-	  "domain": "research_program",
-	  "schema_status": "reserved_identity_contract",
-	  "ownership_status": "reserved_unmodeled",
-	  "ownership_mode": "reserved_identity_only",
-	  "definition_authority": "Canonical research-program identity only.",
-	  "loader_contract": "research_program_identity_reference_only",
-	  "loader_mode": "reserved_identity_only",
-	  "loader_path": "",
-	  "source_paths": [],
-	  "runtime_authority": "None; reserved for Phase 4",
-	  "notes": "No research-program catalog is invented in Phase 3.8."
-	},
-	{
-	  "domain": "resource",
-	  "schema_status": "defined",
-	  "ownership_status": "active",
-	  "ownership_mode": "catalog",
-	  "definition_authority": "Canonical resource catalog.",
-	  "loader_contract": "resource_catalog_loader",
-	  "loader_mode": "explicit_existing_loader",
-	  "loader_path": "res://scripts/core/resource_catalog.gd",
-	  "source_paths": ["res://data/resources/resource_catalog.json"],
-	  "runtime_authority": "ResourceSystem / ResourceComponent",
-	  "notes": "ResourceCatalog owns resource semantics and IDs; stockpiles, reserves, flows, and shortages remain runtime state."
-	},
-	{
-	  "domain": "route",
-	  "schema_status": "defined",
-	  "ownership_status": "active",
-	  "ownership_mode": "catalog",
-	  "definition_authority": "Regional transport JSON data.",
-	  "loader_contract": "regional_transport_loader_contract",
-	  "loader_mode": "contract_named_not_dedicated_file",
-	  "loader_path": "",
-	  "source_paths": [
-		"res://data/regions/transport/china_transport.json",
-		"res://data/regions/transport/india_transport.json",
-        "res://data/regions/transport/usa_transport.json"
-	  ],
-	  "runtime_authority": "Transport/trade route runtime domain",
-	  "notes": "Route identity is separate from trade transaction/agreement identity; this phase establishes ownership without creating a new generic loader."
-	},
-	{
-	  "domain": "scenario",
-	  "schema_status": "reserved_identity_contract",
-	  "ownership_status": "reserved_unmodeled",
-	  "ownership_mode": "reserved_identity_only",
-	  "definition_authority": "Scenario identity only; test fixtures are not promoted to permanent content.",
-	  "loader_contract": "scenario_identity_reference_only",
-	  "loader_mode": "reserved_identity_only",
-	  "loader_path": "",
-	  "source_paths": [],
-	  "runtime_authority": "Scenario/test fixtures only",
-	  "notes": "Scenario content is deferred to later campaign/scenario phases."
-	},
-	{
-	  "domain": "technology",
-	  "schema_status": "runtime_contract",
-	  "ownership_status": "partial",
-	  "ownership_mode": "runtime_definition",
-	  "definition_authority": "TechnologyData / TechnologyLibrary runtime definitions.",
-	  "loader_contract": "technology_library_runtime_loader",
-	  "loader_mode": "explicit_runtime_definition",
-	  "loader_path": "res://scripts/core/technology_library.gd",
-	  "source_paths": [
-		"res://scripts/core/technology_data.gd",
-        "res://scripts/core/technology_library.gd"
-	  ],
-	  "runtime_authority": "TechnologyManager / TechnologyLibrary",
-	  "notes": "Technology content remains runtime-definition based in Phase 3; a dedicated JSON technology catalog belongs to Phase 4."
-	},
-	{
-	  "domain": "trade",
-	  "schema_status": "reserved_identity_contract",
-	  "ownership_status": "partial",
-	  "ownership_mode": "reserved_identity_only",
-	  "definition_authority": "Trade identity semantics only; existing trade runtime contracts remain authoritative.",
-	  "loader_contract": "trade_identity_runtime_contract",
-	  "loader_mode": "reserved_identity_only",
-	  "loader_path": "",
-	  "source_paths": [],
-	  "runtime_authority": "TradeSystem / trade domain runtime contracts",
-	  "notes": "No dedicated trade content catalog is introduced in Phase 3.8."
-	}
-  ]
+	"records": [
+		{
+			"domain": "action",
+			"schema_status": "reserved_identity_contract",
+			"ownership_status": "partial",
+			"ownership_mode": "reserved_identity_only",
+			"definition_authority": "Canonical action identity only; executable SimAction remains runtime-owned by the existing action contract.",
+			"loader_contract": "action_identity_reference_only",
+			"loader_mode": "reserved_identity_only",
+			"loader_path": "",
+			"source_paths": [],
+			"runtime_authority": "ActionManager / executable action contract",
+			"notes": "No dedicated action catalog is introduced in Phase 3.8."
+		},
+		{
+			"domain": "capability",
+			"schema_status": "reference_contract",
+			"ownership_status": "active",
+			"ownership_mode": "reference",
+			"definition_authority": "Production-process catalog reference identity.",
+			"loader_contract": "process_catalog_reference_resolver",
+			"loader_mode": "catalog_owned_reference_resolution",
+			"loader_path": "",
+			"source_paths": [
+				"res://data/production_processes/production_processes.json"
+			],
+			"runtime_authority": "ProductionProcessSystem / process requirement resolution",
+			"notes": "Capability is not a separate mutable entity authority; identities are resolved from process definitions."
+		},
+		{
+			"domain": "country",
+			"schema_status": "defined",
+			"ownership_status": "active",
+			"ownership_mode": "catalog",
+			"definition_authority": "Country baseline JSON files.",
+			"loader_contract": "world_loader_country_baseline",
+			"loader_mode": "explicit_existing_loader",
+			"loader_path": "res://scripts/core/world_loader.gd",
+			"source_paths": [
+				"res://data/countries/china.json",
+				"res://data/countries/india.json",
+				"res://data/countries/usa.json"
+			],
+			"runtime_authority": "WorldState / Country components",
+			"notes": "WorldLoader initializes country runtime components from baseline definitions; mutable state is not owned by JSON."
+		},
+		{
+			"domain": "currency",
+			"schema_status": "defined",
+			"ownership_status": "active",
+			"ownership_mode": "runtime_definition",
+			"definition_authority": "Exchange-rate JSON configuration plus currency identity runtime definition.",
+			"loader_contract": "currency_identity_runtime_loader",
+			"loader_mode": "explicit_runtime_definition",
+			"loader_path": "res://scripts/systems/currency_identity_system.gd",
+			"source_paths": [
+				"res://data/currency_exchange_rates.json",
+				"res://scripts/systems/currency_identity_system.gd"
+			],
+			"runtime_authority": "CurrencyIdentitySystem / EconomySystem",
+			"notes": "Treasury balances remain runtime state; this contract covers currency definition and exchange configuration."
+		},
+		{
+			"domain": "equipment",
+			"schema_status": "reference_contract",
+			"ownership_status": "active",
+			"ownership_mode": "reference",
+			"definition_authority": "Production-process catalog reference identity.",
+			"loader_contract": "process_catalog_reference_resolver",
+			"loader_mode": "catalog_owned_reference_resolution",
+			"loader_path": "",
+			"source_paths": [
+				"res://data/production_processes/production_processes.json"
+			],
+			"runtime_authority": "ProductionProcessSystem / equipment requirement resolution",
+			"notes": "Equipment is a process-catalog reference domain rather than a separate content authority in Phase 3.8."
+		},
+		{
+			"domain": "event",
+			"schema_status": "defined",
+			"ownership_status": "active",
+			"ownership_mode": "catalog",
+			"definition_authority": "Event catalog and event definition runtime classes.",
+			"loader_contract": "event_definition_loader",
+			"loader_mode": "explicit_existing_loader",
+			"loader_path": "res://scripts/core/event_definition_loader.gd",
+			"source_paths": [
+				"res://data/events/events.json",
+				"res://scripts/core/event_definition.gd",
+				"res://scripts/core/event_definition_loader.gd"
+			],
+			"runtime_authority": "EventSimulationIntegrationSystem / EventExecutor",
+			"notes": "Event definitions are declarative; event execution and history remain runtime-owned."
+		},
+		{
+			"domain": "external_actor",
+			"schema_status": "reserved_identity_contract",
+			"ownership_status": "partial",
+			"ownership_mode": "reserved_identity_only",
+			"definition_authority": "Identity-reference semantics only.",
+			"loader_contract": "external_actor_identity_reference_only",
+			"loader_mode": "reserved_identity_only",
+			"loader_path": "",
+			"source_paths": [],
+			"runtime_authority": "Existing external-actor references where used",
+			"notes": "Dedicated external-actor content is deferred to a later content phase."
+		},
+		{
+			"domain": "infrastructure",
+			"schema_status": "reference_contract",
+			"ownership_status": "active",
+			"ownership_mode": "reference",
+			"definition_authority": "Production-process catalog reference identity.",
+			"loader_contract": "process_catalog_reference_resolver",
+			"loader_mode": "catalog_owned_reference_resolution",
+			"loader_path": "",
+			"source_paths": [
+				"res://data/production_processes/production_processes.json"
+			],
+			"runtime_authority": "InfrastructureSystem / InfrastructureComponent",
+			"notes": "Infrastructure requirement identities originate from the process catalog; mutable infrastructure state remains runtime-owned."
+		},
+		{
+			"domain": "policy",
+			"schema_status": "reserved_identity_contract",
+			"ownership_status": "partial",
+			"ownership_mode": "reserved_identity_only",
+			"definition_authority": "Canonical policy identity only.",
+			"loader_contract": "policy_identity_reference_only",
+			"loader_mode": "reserved_identity_only",
+			"loader_path": "",
+			"source_paths": [],
+			"runtime_authority": "Existing policy runtime mechanics where present",
+			"notes": "No dedicated policy catalog is introduced in Phase 3.8; content belongs to Phase 4."
+		},
+		{
+			"domain": "process",
+			"schema_status": "defined",
+			"ownership_status": "active",
+			"ownership_mode": "catalog",
+			"definition_authority": "Production-process JSON catalog.",
+			"loader_contract": "production_process_catalog_loader",
+			"loader_mode": "contract_named_not_dedicated_file",
+			"loader_path": "",
+			"source_paths": [
+				"res://data/production_processes/production_processes.json"
+			],
+			"runtime_authority": "ProductionProcessSystem",
+			"notes": "The process catalog is authoritative for process definitions; runtime adoption/capacity/output remain system-owned."
+		},
+		{
+			"domain": "region",
+			"schema_status": "defined",
+			"ownership_status": "active",
+			"ownership_mode": "catalog",
+			"definition_authority": "Regional baseline JSON catalogs.",
+			"loader_contract": "regional_baseline_loader_contract",
+			"loader_mode": "contract_named_not_dedicated_file",
+			"loader_path": "",
+			"source_paths": [
+				"res://data/regions/china_regions.json",
+				"res://data/regions/india_regions.json",
+				"res://data/regions/usa_regions.json"
+			],
+			"runtime_authority": "WorldState / regional domain systems",
+			"notes": "The phase defines a single regional loading contract without inventing a generic DataManager."
+		},
+		{
+			"domain": "research_program",
+			"schema_status": "reserved_identity_contract",
+			"ownership_status": "reserved_unmodeled",
+			"ownership_mode": "reserved_identity_only",
+			"definition_authority": "Canonical research-program identity only.",
+			"loader_contract": "research_program_identity_reference_only",
+			"loader_mode": "reserved_identity_only",
+			"loader_path": "",
+			"source_paths": [],
+			"runtime_authority": "None; reserved for Phase 4",
+			"notes": "No research-program catalog is invented in Phase 3.8."
+		},
+		{
+			"domain": "resource",
+			"schema_status": "defined",
+			"ownership_status": "active",
+			"ownership_mode": "catalog",
+			"definition_authority": "Canonical resource catalog.",
+			"loader_contract": "resource_catalog_loader",
+			"loader_mode": "explicit_existing_loader",
+			"loader_path": "res://scripts/core/resource_catalog.gd",
+			"source_paths": [
+				"res://data/resources/resource_catalog.json"
+			],
+			"runtime_authority": "ResourceSystem / ResourceComponent",
+			"notes": "ResourceCatalog owns resource semantics and IDs; stockpiles, reserves, flows, and shortages remain runtime state."
+		},
+		{
+			"domain": "route",
+			"schema_status": "defined",
+			"ownership_status": "active",
+			"ownership_mode": "catalog",
+			"definition_authority": "Regional transport JSON data.",
+			"loader_contract": "regional_transport_loader_contract",
+			"loader_mode": "contract_named_not_dedicated_file",
+			"loader_path": "",
+			"source_paths": [
+				"res://data/regions/transport/china_transport.json",
+				"res://data/regions/transport/india_transport.json",
+				"res://data/regions/transport/usa_transport.json"
+			],
+			"runtime_authority": "Transport/trade route runtime domain",
+			"notes": "Route identity is separate from trade transaction/agreement identity; this phase establishes ownership without creating a new generic loader."
+		},
+		{
+			"domain": "scenario",
+			"schema_status": "reserved_identity_contract",
+			"ownership_status": "reserved_unmodeled",
+			"ownership_mode": "reserved_identity_only",
+			"definition_authority": "Scenario identity only; test fixtures are not promoted to permanent content.",
+			"loader_contract": "scenario_identity_reference_only",
+			"loader_mode": "reserved_identity_only",
+			"loader_path": "",
+			"source_paths": [],
+			"runtime_authority": "Scenario/test fixtures only",
+			"notes": "Scenario content is deferred to later campaign/scenario phases."
+		},
+		{
+			"domain": "technology",
+			"schema_status": "defined",
+			"ownership_status": "partial",
+			"ownership_mode": "catalog",
+			"definition_authority": "Dedicated technology JSON catalog.",
+			"loader_contract": "technology_catalog_loader",
+			"loader_mode": "explicit_existing_loader",
+			"loader_path": "res://scripts/core/technology_catalog.gd",
+			"source_paths": [
+				"res://data/technologies/technology_catalog.json",
+				"res://scripts/core/technology_catalog.gd"
+			],
+			"runtime_authority": "TechnologyManager / TechnologyLibrary",
+			"notes": "Phase 4.4A establishes the technology catalog and its dedicated loader. Ownership remains partial until the runtime TechnologyManager is bound to the catalog in the later runtime integration pass."
+		},
+		{
+			"domain": "trade",
+			"schema_status": "reserved_identity_contract",
+			"ownership_status": "partial",
+			"ownership_mode": "reserved_identity_only",
+			"definition_authority": "Trade identity semantics only; existing trade runtime contracts remain authoritative.",
+			"loader_contract": "trade_identity_runtime_contract",
+			"loader_mode": "reserved_identity_only",
+			"loader_path": "",
+			"source_paths": [],
+			"runtime_authority": "TradeSystem / trade domain runtime contracts",
+			"notes": "No dedicated trade content catalog is introduced in Phase 3.8."
+		}
+	]
 }

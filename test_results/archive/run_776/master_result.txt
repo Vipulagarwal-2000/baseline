@@ -1,6 +1,6 @@
 WORLD SIMULATOR TEST REPORT
 ================================
-Test Run: 778
+Test Run: 776
 Overall: FAIL
 Validation Scope: full_suite
 Runner Migration Complete: YES
@@ -11,7 +11,7 @@ Runner Count: 7
 Failed Runners: 1
 Total Tests: 203
 Total Failures/Errors: 5
-Duration (ms): 4307
+Duration (ms): 4898
 
 RUNNER RESULTS
 --------------------------------

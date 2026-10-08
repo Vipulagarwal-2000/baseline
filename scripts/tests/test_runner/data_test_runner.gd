@@ -16,13 +16,13 @@ extends RefCounted
 # ============================================================
 
 
-const RUNNER_ID := "data"
-const DISPLAY_NAME := "Data Test Runner"
+const RUNNER_ID: String = "data"
+const DISPLAY_NAME: String = "Data Test Runner"
 
 
 static func run() -> TestRunResult:
 
-	var result := TestRunResult.new(
+	var result: TestRunResult = TestRunResult.new(
 		RUNNER_ID,
 		DISPLAY_NAME
 	)

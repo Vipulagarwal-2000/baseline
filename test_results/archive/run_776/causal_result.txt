@@ -10,7 +10,7 @@ Tests Passed: 10
 Tests Failed: 0
 Tests Errored: 0
 Diagnostics: 0
-Duration (ms): 765
+Duration (ms): 1225
 
 RESULT: PASS
 No failure diagnostics recorded.
