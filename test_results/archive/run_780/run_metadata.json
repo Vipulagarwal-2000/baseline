@@ -1,15 +1,15 @@
 {
 	"diagnostics": [],
 	"display_name": "World Simulator Active Test Suite",
-	"duration_msec": 4852,
+	"duration_msec": 4434,
 	"failed_runner_count": 0,
-	"finished_at_msec": 16793,
+	"finished_at_msec": 15032,
 	"metadata": {
 		"diagnostic_authority": "structured_result_for_all_migrated_runners; legacy_domain_checks remain explicitly tracked",
 		"legacy_domain_checks": [
 			"IndustryProcessInfrastructurePressureTest"
 		],
-		"legacy_report_path": "res://test_results/test_run_781.txt",
+		"legacy_report_path": "res://test_results/test_run_780.txt",
 		"migrated_runner_count": 7,
 		"migrated_runners": [
 			"data",
@@ -25,37 +25,37 @@
 		"validation_scope": "full_suite"
 	},
 	"passed": true,
-	"run_id": 781,
+	"run_id": 780,
 	"runner_count": 7,
 	"runner_results": [
 		{
 			"diagnostics": [],
 			"display_name": "Data Test Runner",
-			"duration_msec": 282,
-			"finished_at_msec": 12223,
+			"duration_msec": 134,
+			"finished_at_msec": 10732,
 			"metadata": {
 				"compact_result": true,
 				"detail_source": "legacy TestLogger report",
 				"mutation_policy": "read_only",
 				"requires_simulation": false,
 				"requires_world": false,
-				"scope": "Phase 3 data/governance + Phase 4.4A technology catalog foundation + Phase 4.4C technology/runtime parity and causal content validation",
-				"tests_expected": 21
+				"scope": "Phase 3 data/governance + Phase 4.4A technology catalog foundation + Phase 4.4B structural semantic expansion",
+				"tests_expected": 19
 			},
 			"passed": true,
 			"runner_id": "data",
-			"started_at_msec": 11941,
+			"started_at_msec": 10598,
 			"status": "PASS",
 			"tests_errored": 0,
 			"tests_failed": 0,
-			"tests_passed": 21,
-			"tests_run": 21
+			"tests_passed": 19,
+			"tests_run": 19
 		},
 		{
 			"diagnostics": [],
 			"display_name": "Interaction Test Runner",
-			"duration_msec": 45,
-			"finished_at_msec": 12270,
+			"duration_msec": 41,
+			"finished_at_msec": 10775,
 			"metadata": {
 				"compact_result": true,
 				"detail_source": "legacy TestLogger report",
@@ -67,7 +67,7 @@
 			},
 			"passed": true,
 			"runner_id": "interaction",
-			"started_at_msec": 12225,
+			"started_at_msec": 10734,
 			"status": "PASS",
 			"tests_errored": 0,
 			"tests_failed": 0,
@@ -77,8 +77,8 @@
 		{
 			"diagnostics": [],
 			"display_name": "Physical Economy Test Runner",
-			"duration_msec": 244,
-			"finished_at_msec": 12515,
+			"duration_msec": 232,
+			"finished_at_msec": 11009,
 			"metadata": {
 				"compact_result": true,
 				"detail_source": "legacy TestLogger report",
@@ -90,7 +90,7 @@
 			},
 			"passed": true,
 			"runner_id": "physical_economy",
-			"started_at_msec": 12271,
+			"started_at_msec": 10777,
 			"status": "PASS",
 			"tests_errored": 0,
 			"tests_failed": 0,
@@ -100,8 +100,8 @@
 		{
 			"diagnostics": [],
 			"display_name": "Domain Test Runner",
-			"duration_msec": 468,
-			"finished_at_msec": 12986,
+			"duration_msec": 434,
+			"finished_at_msec": 11446,
 			"metadata": {
 				"compact_result": true,
 				"detail_source": "legacy TestLogger report",
@@ -116,7 +116,7 @@
 			},
 			"passed": true,
 			"runner_id": "domain",
-			"started_at_msec": 12518,
+			"started_at_msec": 11012,
 			"status": "PASS",
 			"tests_errored": 0,
 			"tests_failed": 0,
@@ -126,8 +126,8 @@
 		{
 			"diagnostics": [],
 			"display_name": "Feedback Test Runner",
-			"duration_msec": 376,
-			"finished_at_msec": 13372,
+			"duration_msec": 381,
+			"finished_at_msec": 11838,
 			"metadata": {
 				"compact_result": true,
 				"detail_source": "legacy TestLogger report",
@@ -139,7 +139,7 @@
 			},
 			"passed": true,
 			"runner_id": "feedback",
-			"started_at_msec": 12996,
+			"started_at_msec": 11457,
 			"status": "PASS",
 			"tests_errored": 0,
 			"tests_failed": 0,
@@ -149,8 +149,8 @@
 		{
 			"diagnostics": [],
 			"display_name": "Campaign Test Runner",
-			"duration_msec": 2420,
-			"finished_at_msec": 15866,
+			"duration_msec": 2394,
+			"finished_at_msec": 14233,
 			"metadata": {
 				"campaign_months": 60,
 				"compact_result": true,
@@ -165,7 +165,7 @@
 			},
 			"passed": true,
 			"runner_id": "campaign",
-			"started_at_msec": 13446,
+			"started_at_msec": 11839,
 			"status": "PASS",
 			"tests_errored": 0,
 			"tests_failed": 0,
@@ -175,8 +175,8 @@
 		{
 			"diagnostics": [],
 			"display_name": "Causal Test Runner",
-			"duration_msec": 925,
-			"finished_at_msec": 16792,
+			"duration_msec": 796,
+			"finished_at_msec": 15031,
 			"metadata": {
 				"compact_result": true,
 				"detail_source": "legacy TestLogger report",
@@ -197,7 +197,7 @@
 			},
 			"passed": true,
 			"runner_id": "causal",
-			"started_at_msec": 15867,
+			"started_at_msec": 14235,
 			"status": "PASS",
 			"tests_errored": 0,
 			"tests_failed": 0,
@@ -205,9 +205,9 @@
 			"tests_run": 10
 		}
 	],
-	"started_at_msec": 11941,
+	"started_at_msec": 10598,
 	"status": "PASS",
 	"suite_id": "world_simulator_active_suite",
 	"total_tests_failed": 0,
-	"total_tests_run": 205
+	"total_tests_run": 203
 }

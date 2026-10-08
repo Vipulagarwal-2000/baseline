@@ -136,7 +136,20 @@ static func run() -> bool:
 				passed = false
 
 		var duration: Variant = definition.get("research_duration_months", null)
-		if typeof(duration) != TYPE_INT or int(duration) <= 0:
+		var duration_valid: bool = false
+		if typeof(duration) == TYPE_INT:
+			duration_valid = int(duration) > 0
+		elif typeof(duration) == TYPE_FLOAT:
+			var duration_float: float = float(duration)
+			duration_valid = (
+				duration_float > 0.0
+				and is_equal_approx(
+					duration_float,
+					round(duration_float)
+				)
+			)
+
+		if not duration_valid:
 			TestLogger.write_line(
 				"Technology research duration is a positive integer: "
 				+ str(technology_id)

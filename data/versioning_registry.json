@@ -676,7 +676,7 @@
 			"revision_state": "controlled",
 			"schema_version": 1,
 			"introduced_reference": "phase_4_4a",
-			"baseline_reference": "phase_4_4a",
+			"baseline_reference": "pre_phase_4_4_runtime_definition",
 			"previous_version": null,
 			"effective_date": "2026-10-08",
 			"lifecycle_status": "active",

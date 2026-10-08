@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "catalog_id": "world_simulator_technology_catalog",
   "semantic_contract": {
 	"identity_semantics": "canonical_technology_id",
@@ -14,7 +14,11 @@
 	"enabled_semantics": "definition_availability_flag",
 	"effect_values_are_unitless": true,
 	"provenance_semantics": "definition_metadata_not_runtime_state",
-	"definition_version_semantics": "catalog_definition_revision"
+	"definition_version_semantics": "catalog_definition_revision",
+	"structural_semantics_status": "phase_4_4b_explicit_content_profile",
+	"structural_semantics_policy": "new structural fields must preserve existing runtime effect values and explicitly mark unsupported runtime concepts instead of inventing numeric claims",
+	"structural_semantics_runtime_boundary": "structural profiles are definition data only; TechnologyManager and TechnologyEffectSystem remain unchanged until the runtime integration phase",
+	"effect_partition_semantics": "legacy effect identifiers must map exactly once into the declared structural effect categories"
   },
   "technologies": {
 	"electricity": {
@@ -35,12 +39,45 @@
 	  "historical_start_year": 1880,
 	  "historical_end_year": 0,
 	  "enabled": true,
+	  "structural_semantics": {
+		"domain": "energy",
+		"research_capacity_requirements": {
+		  "status": "not_defined_in_current_runtime_contract",
+		  "requirements": {}
+		},
+		"institution_requirements": {
+		  "status": "not_defined_in_current_runtime_contract",
+		  "requirements": {}
+		},
+		"research_effects": {},
+		"production_effects": {},
+		"resource_effects": {},
+		"infrastructure_effects": {},
+		"military_effects": {
+		  "military_industrial_support": 2.0
+		},
+		"economic_effects": {},
+		"adoption_requirements": {
+		  "status": "global_runtime_model",
+		  "requirements": {}
+		},
+		"transition": {
+		  "status": "not_modeled",
+		  "cost": null,
+		  "duration_months": null
+		},
+		"affected_processes": [],
+		"replaced_processes": [],
+		"obsolescence": {
+		  "status": "not_modeled"
+		}
+	  },
 	  "provenance": {
 		"status": "runtime_definition_migration",
 		"source_reference": "res://scripts/core/default_technologies.gd",
 		"confidence": "structural_definition_confidence"
 	  },
-	  "definition_version": 1
+	  "definition_version": 2
 	},
 	"radio": {
 	  "id": "radio",
@@ -60,12 +97,45 @@
 	  "historical_start_year": 1900,
 	  "historical_end_year": 0,
 	  "enabled": true,
+	  "structural_semantics": {
+		"domain": "communications",
+		"research_capacity_requirements": {
+		  "status": "not_defined_in_current_runtime_contract",
+		  "requirements": {}
+		},
+		"institution_requirements": {
+		  "status": "not_defined_in_current_runtime_contract",
+		  "requirements": {}
+		},
+		"research_effects": {},
+		"production_effects": {},
+		"resource_effects": {},
+		"infrastructure_effects": {},
+		"military_effects": {
+		  "military_command_capacity": 4.0
+		},
+		"economic_effects": {},
+		"adoption_requirements": {
+		  "status": "global_runtime_model",
+		  "requirements": {}
+		},
+		"transition": {
+		  "status": "not_modeled",
+		  "cost": null,
+		  "duration_months": null
+		},
+		"affected_processes": [],
+		"replaced_processes": [],
+		"obsolescence": {
+		  "status": "not_modeled"
+		}
+	  },
 	  "provenance": {
 		"status": "runtime_definition_migration",
 		"source_reference": "res://scripts/core/default_technologies.gd",
 		"confidence": "structural_definition_confidence"
 	  },
-	  "definition_version": 1
+	  "definition_version": 2
 	},
 	"industrial_machinery": {
 	  "id": "industrial_machinery",
@@ -87,12 +157,48 @@
 	  "historical_start_year": 1850,
 	  "historical_end_year": 0,
 	  "enabled": true,
+	  "structural_semantics": {
+		"domain": "manufacturing",
+		"research_capacity_requirements": {
+		  "status": "not_defined_in_current_runtime_contract",
+		  "requirements": {}
+		},
+		"institution_requirements": {
+		  "status": "not_defined_in_current_runtime_contract",
+		  "requirements": {}
+		},
+		"research_effects": {},
+		"production_effects": {
+		  "industrial_production_efficiency": 1.1
+		},
+		"resource_effects": {},
+		"infrastructure_effects": {},
+		"military_effects": {
+		  "military_industrial_support": 6.0,
+		  "military_logistics_support": 3.0
+		},
+		"economic_effects": {},
+		"adoption_requirements": {
+		  "status": "global_runtime_model",
+		  "requirements": {}
+		},
+		"transition": {
+		  "status": "not_modeled",
+		  "cost": null,
+		  "duration_months": null
+		},
+		"affected_processes": [],
+		"replaced_processes": [],
+		"obsolescence": {
+		  "status": "not_modeled"
+		}
+	  },
 	  "provenance": {
 		"status": "runtime_definition_migration",
 		"source_reference": "res://scripts/core/default_technologies.gd",
 		"confidence": "structural_definition_confidence"
 	  },
-	  "definition_version": 1
+	  "definition_version": 2
 	},
 	"telecommunications": {
 	  "id": "telecommunications",
@@ -115,12 +221,46 @@
 	  "historical_start_year": 1920,
 	  "historical_end_year": 0,
 	  "enabled": true,
+	  "structural_semantics": {
+		"domain": "communications",
+		"research_capacity_requirements": {
+		  "status": "not_defined_in_current_runtime_contract",
+		  "requirements": {}
+		},
+		"institution_requirements": {
+		  "status": "not_defined_in_current_runtime_contract",
+		  "requirements": {}
+		},
+		"research_effects": {},
+		"production_effects": {},
+		"resource_effects": {},
+		"infrastructure_effects": {},
+		"military_effects": {
+		  "military_command_capacity": 6.0,
+		  "military_logistics_support": 3.0
+		},
+		"economic_effects": {},
+		"adoption_requirements": {
+		  "status": "global_runtime_model",
+		  "requirements": {}
+		},
+		"transition": {
+		  "status": "not_modeled",
+		  "cost": null,
+		  "duration_months": null
+		},
+		"affected_processes": [],
+		"replaced_processes": [],
+		"obsolescence": {
+		  "status": "not_modeled"
+		}
+	  },
 	  "provenance": {
 		"status": "runtime_definition_migration",
 		"source_reference": "res://scripts/core/default_technologies.gd",
 		"confidence": "structural_definition_confidence"
 	  },
-	  "definition_version": 1
+	  "definition_version": 2
 	},
 	"nuclear_physics": {
 	  "id": "nuclear_physics",
@@ -144,12 +284,48 @@
 	  "historical_start_year": 1930,
 	  "historical_end_year": 0,
 	  "enabled": true,
+	  "structural_semantics": {
+		"domain": "nuclear_science",
+		"research_capacity_requirements": {
+		  "status": "not_defined_in_current_runtime_contract",
+		  "requirements": {}
+		},
+		"institution_requirements": {
+		  "status": "not_defined_in_current_runtime_contract",
+		  "requirements": {}
+		},
+		"research_effects": {
+		  "nuclear_research_capacity": 10.0,
+		  "advanced_scientific_capacity": 5.0
+		},
+		"production_effects": {},
+		"resource_effects": {},
+		"infrastructure_effects": {},
+		"military_effects": {
+		  "military_technology_support": 5.0
+		},
+		"economic_effects": {},
+		"adoption_requirements": {
+		  "status": "global_runtime_model",
+		  "requirements": {}
+		},
+		"transition": {
+		  "status": "not_modeled",
+		  "cost": null,
+		  "duration_months": null
+		},
+		"affected_processes": [],
+		"replaced_processes": [],
+		"obsolescence": {
+		  "status": "not_modeled"
+		}
+	  },
 	  "provenance": {
 		"status": "runtime_definition_migration",
 		"source_reference": "res://scripts/core/default_technologies.gd",
 		"confidence": "structural_definition_confidence"
 	  },
-	  "definition_version": 1
+	  "definition_version": 2
 	},
 	"computers": {
 	  "id": "computers",
@@ -173,12 +349,46 @@
 	  "historical_start_year": 1940,
 	  "historical_end_year": 0,
 	  "enabled": true,
+	  "structural_semantics": {
+		"domain": "computing",
+		"research_capacity_requirements": {
+		  "status": "not_defined_in_current_runtime_contract",
+		  "requirements": {}
+		},
+		"institution_requirements": {
+		  "status": "not_defined_in_current_runtime_contract",
+		  "requirements": {}
+		},
+		"research_effects": {},
+		"production_effects": {},
+		"resource_effects": {},
+		"infrastructure_effects": {},
+		"military_effects": {
+		  "military_command_capacity": 3.0,
+		  "military_technology_support": 4.0
+		},
+		"economic_effects": {},
+		"adoption_requirements": {
+		  "status": "global_runtime_model",
+		  "requirements": {}
+		},
+		"transition": {
+		  "status": "not_modeled",
+		  "cost": null,
+		  "duration_months": null
+		},
+		"affected_processes": [],
+		"replaced_processes": [],
+		"obsolescence": {
+		  "status": "not_modeled"
+		}
+	  },
 	  "provenance": {
 		"status": "runtime_definition_migration",
 		"source_reference": "res://scripts/core/default_technologies.gd",
 		"confidence": "structural_definition_confidence"
 	  },
-	  "definition_version": 1
+	  "definition_version": 2
 	},
 	"semiconductors": {
 	  "id": "semiconductors",
@@ -201,12 +411,46 @@
 	  "historical_start_year": 1950,
 	  "historical_end_year": 0,
 	  "enabled": true,
+	  "structural_semantics": {
+		"domain": "electronics",
+		"research_capacity_requirements": {
+		  "status": "not_defined_in_current_runtime_contract",
+		  "requirements": {}
+		},
+		"institution_requirements": {
+		  "status": "not_defined_in_current_runtime_contract",
+		  "requirements": {}
+		},
+		"research_effects": {},
+		"production_effects": {},
+		"resource_effects": {},
+		"infrastructure_effects": {},
+		"military_effects": {
+		  "military_command_capacity": 5.0,
+		  "military_technology_support": 6.0
+		},
+		"economic_effects": {},
+		"adoption_requirements": {
+		  "status": "global_runtime_model",
+		  "requirements": {}
+		},
+		"transition": {
+		  "status": "not_modeled",
+		  "cost": null,
+		  "duration_months": null
+		},
+		"affected_processes": [],
+		"replaced_processes": [],
+		"obsolescence": {
+		  "status": "not_modeled"
+		}
+	  },
 	  "provenance": {
 		"status": "runtime_definition_migration",
 		"source_reference": "res://scripts/core/default_technologies.gd",
 		"confidence": "structural_definition_confidence"
 	  },
-	  "definition_version": 1
+	  "definition_version": 2
 	},
 	"nuclear_power": {
 	  "id": "nuclear_power",
@@ -226,12 +470,43 @@
 	  "historical_start_year": 1950,
 	  "historical_end_year": 0,
 	  "enabled": true,
+	  "structural_semantics": {
+		"domain": "nuclear_energy",
+		"research_capacity_requirements": {
+		  "status": "not_defined_in_current_runtime_contract",
+		  "requirements": {}
+		},
+		"institution_requirements": {
+		  "status": "not_defined_in_current_runtime_contract",
+		  "requirements": {}
+		},
+		"research_effects": {},
+		"production_effects": {},
+		"resource_effects": {},
+		"infrastructure_effects": {},
+		"military_effects": {},
+		"economic_effects": {},
+		"adoption_requirements": {
+		  "status": "global_runtime_model",
+		  "requirements": {}
+		},
+		"transition": {
+		  "status": "not_modeled",
+		  "cost": null,
+		  "duration_months": null
+		},
+		"affected_processes": [],
+		"replaced_processes": [],
+		"obsolescence": {
+		  "status": "not_modeled"
+		}
+	  },
 	  "provenance": {
 		"status": "runtime_definition_migration",
 		"source_reference": "res://scripts/core/default_technologies.gd",
 		"confidence": "structural_definition_confidence"
 	  },
-	  "definition_version": 1
+	  "definition_version": 2
 	},
 	"satellites": {
 	  "id": "satellites",
@@ -252,12 +527,43 @@
 	  "historical_start_year": 1957,
 	  "historical_end_year": 0,
 	  "enabled": true,
+	  "structural_semantics": {
+		"domain": "space",
+		"research_capacity_requirements": {
+		  "status": "not_defined_in_current_runtime_contract",
+		  "requirements": {}
+		},
+		"institution_requirements": {
+		  "status": "not_defined_in_current_runtime_contract",
+		  "requirements": {}
+		},
+		"research_effects": {},
+		"production_effects": {},
+		"resource_effects": {},
+		"infrastructure_effects": {},
+		"military_effects": {},
+		"economic_effects": {},
+		"adoption_requirements": {
+		  "status": "global_runtime_model",
+		  "requirements": {}
+		},
+		"transition": {
+		  "status": "not_modeled",
+		  "cost": null,
+		  "duration_months": null
+		},
+		"affected_processes": [],
+		"replaced_processes": [],
+		"obsolescence": {
+		  "status": "not_modeled"
+		}
+	  },
 	  "provenance": {
 		"status": "runtime_definition_migration",
 		"source_reference": "res://scripts/core/default_technologies.gd",
 		"confidence": "structural_definition_confidence"
 	  },
-	  "definition_version": 1
+	  "definition_version": 2
 	},
 	"internet": {
 	  "id": "internet",
@@ -279,12 +585,43 @@
 	  "historical_start_year": 1969,
 	  "historical_end_year": 0,
 	  "enabled": true,
+	  "structural_semantics": {
+		"domain": "digital_networking",
+		"research_capacity_requirements": {
+		  "status": "not_defined_in_current_runtime_contract",
+		  "requirements": {}
+		},
+		"institution_requirements": {
+		  "status": "not_defined_in_current_runtime_contract",
+		  "requirements": {}
+		},
+		"research_effects": {},
+		"production_effects": {},
+		"resource_effects": {},
+		"infrastructure_effects": {},
+		"military_effects": {},
+		"economic_effects": {},
+		"adoption_requirements": {
+		  "status": "global_runtime_model",
+		  "requirements": {}
+		},
+		"transition": {
+		  "status": "not_modeled",
+		  "cost": null,
+		  "duration_months": null
+		},
+		"affected_processes": [],
+		"replaced_processes": [],
+		"obsolescence": {
+		  "status": "not_modeled"
+		}
+	  },
 	  "provenance": {
 		"status": "runtime_definition_migration",
 		"source_reference": "res://scripts/core/default_technologies.gd",
 		"confidence": "structural_definition_confidence"
 	  },
-	  "definition_version": 1
+	  "definition_version": 2
 	}
   }
 }

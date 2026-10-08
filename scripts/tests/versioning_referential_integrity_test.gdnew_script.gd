@@ -48,7 +48,7 @@ static func run() -> bool:
 	passed = passed and records_ok
 
 	var coverage_ok := (
-		registry.get_record_count() == 37
+		registry.get_record_count() == 38
 		and missing_inventory.is_empty()
 		and extra_paths.is_empty()
 	)

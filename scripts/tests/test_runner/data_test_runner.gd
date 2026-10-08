@@ -13,6 +13,9 @@ extends RefCounted
 # Phase 4.4A adds the technology catalog foundation checks to this same
 # data/governance runner because they validate definition data and control
 # metadata rather than mutable runtime state.
+# Phase 4.4C adds technology/runtime parity and causal-content validation
+# without moving runtime technology authority out of TechnologyManager /
+# TechnologyLibrary.
 # ============================================================
 
 
@@ -37,7 +40,7 @@ static func run() -> TestRunResult:
 	)
 
 	TestLogger.write_line(
-		"Phase 3 data/governance validation + Phase 4.4A technology catalog foundation"
+		"Phase 3 data/governance validation + Phase 4.4A technology catalog foundation + Phase 4.4C causal/content validation"
 	)
 
 	# ============================================================
@@ -291,14 +294,40 @@ static func run() -> TestRunResult:
 		"Inspect technology IDs, prerequisite references, capability lists, historical windows, and definition metadata."
 	)
 
+	# ============================================================
+	# PHASE 4.4C — TECHNOLOGY CAUSAL / CONTENT VALIDATION
+	# ============================================================
+
+	TestLogger.section(
+		"[DATA] TECHNOLOGY CAUSAL / CONTENT VALIDATION — PHASE 4.4C"
+	)
+
+	_record(
+		result,
+		"Phase 4.4C Technology Catalog Runtime Parity",
+		TechnologyCatalogRuntimeParityTest.run(),
+		"res://scripts/tests/technology_catalog_runtime_parity_test.gd",
+		"Technology catalog/runtime parity validation returned FAIL.",
+		"Inspect the dedicated technology catalog against DefaultTechnologies runtime definitions."
+	)
+
+	_record(
+		result,
+		"Phase 4.4C Technology Causal Content Validation",
+		TechnologyCausalContentValidationTest.run(),
+		"res://scripts/tests/technology_causal_content_validation_test.gd",
+		"Technology causal/content validation returned FAIL.",
+		"Inspect prerequisite ordering, effect compatibility, production-process technology references, and reference-only boundaries."
+	)
+
 	result.set_metadata(
 		"scope",
-		"Phase 3 data/governance + Phase 4.4A technology catalog foundation"
+		"Phase 3 data/governance + Phase 4.4A technology catalog foundation + Phase 4.4C technology/runtime parity and causal content validation"
 	)
 
 	result.set_metadata(
 		"tests_expected",
-		19
+		21
 	)
 
 	result.set_metadata(

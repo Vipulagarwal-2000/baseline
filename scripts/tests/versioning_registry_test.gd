@@ -67,7 +67,7 @@ static func run() -> bool:
 	passed = passed and source_paths_ok
 
 	var record_count := registry.get_record_count()
-	var count_ok := record_count == 37
+	var count_ok := record_count == 38
 	TestLogger.write_line(
 		"Versioning registry contains records: "
 		+ ("PASS" if count_ok else "FAIL")
@@ -94,7 +94,7 @@ static func run() -> bool:
 	)
 	passed = passed and baseline_state_ok
 
-	var controlled_state_ok := controlled_count == 7
+	var controlled_state_ok := controlled_count == 8
 	TestLogger.write_line(
 		"Controlled version state count: "
 		+ ("PASS" if controlled_state_ok else "FAIL")

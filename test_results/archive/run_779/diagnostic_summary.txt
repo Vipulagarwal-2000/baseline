@@ -1,6 +1,6 @@
 WORLD SIMULATOR DIAGNOSTIC SUMMARY
 =====================================
-Test Run: 781
+Test Run: 779
 OVERALL: PASS
 =====================================
 

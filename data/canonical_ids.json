@@ -933,6 +933,20 @@
 			"status": "active",
 			"id_pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$",
 			"entries": {
+				"cement": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/resources/resource_catalog.json",
+						"res://data/production_processes/production_processes.json"
+					]
+				},
+				"chemicals": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/resources/resource_catalog.json",
+						"res://data/production_processes/production_processes.json"
+					]
+				},
 				"coal": {
 					"status": "canonical_existing",
 					"source_paths": [
@@ -940,6 +954,19 @@
 						"res://data/countries/china.json",
 						"res://data/countries/india.json",
 						"res://data/countries/usa.json"
+					]
+				},
+				"electric_power": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/resources/resource_catalog.json"
+					]
+				},
+				"fertilizer": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/resources/resource_catalog.json",
+						"res://data/production_processes/production_processes.json"
 					]
 				},
 				"food": {
@@ -967,6 +994,13 @@
 						"res://data/countries/china.json",
 						"res://data/countries/india.json",
 						"res://data/countries/usa.json"
+					]
+				},
+				"natural_gas": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/resources/resource_catalog.json",
+						"res://data/production_processes/production_processes.json"
 					]
 				},
 				"oil": {

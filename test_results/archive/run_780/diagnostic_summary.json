@@ -4,7 +4,7 @@
 	"message": "All active validation passed.",
 	"migration_complete": true,
 	"passed": true,
-	"run_id": 781,
+	"run_id": 780,
 	"runner_summaries": [
 		{
 			"display_name": "Data Test Runner",
@@ -12,7 +12,7 @@
 			"status": "PASS",
 			"tests_errored": 0,
 			"tests_failed": 0,
-			"tests_run": 21
+			"tests_run": 19
 		},
 		{
 			"display_name": "Interaction Test Runner",
@@ -65,6 +65,6 @@
 	],
 	"status": "PASS",
 	"total_tests_failed": 0,
-	"total_tests_run": 205,
+	"total_tests_run": 203,
 	"validation_scope": "full_suite"
 }
