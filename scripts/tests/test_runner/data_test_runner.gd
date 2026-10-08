@@ -10,6 +10,9 @@ extends RefCounted
 #
 # The result now carries structured source-aware diagnostics so the master
 # diagnostic summary can point directly to the failing test source.
+# Phase 4.4A adds the technology catalog foundation checks to this same
+# data/governance runner because they validate definition data and control
+# metadata rather than mutable runtime state.
 # ============================================================
 
 
@@ -34,7 +37,7 @@ static func run() -> TestRunResult:
 	)
 
 	TestLogger.write_line(
-		"Phase 3 data/governance validation"
+		"Phase 3 data/governance validation + Phase 4.4A technology catalog foundation"
 	)
 
 	# ============================================================
@@ -262,14 +265,40 @@ static func run() -> TestRunResult:
 		"Inspect ownership mappings against canonical domains and schemas."
 	)
 
+	# ============================================================
+	# PHASE 4.4A — TECHNOLOGY CATALOG FOUNDATION
+	# ============================================================
+
+	TestLogger.section(
+		"[DATA] TECHNOLOGY CATALOG FOUNDATION — PHASE 4.4A"
+	)
+
+	_record(
+		result,
+		"Phase 4.4A Technology Catalog Schema",
+		TechnologyCatalogSchemaTest.run(),
+		"res://scripts/tests/technology_catalog_schema_test.gd",
+		"Technology catalog schema validation returned FAIL.",
+		"Inspect the technology catalog contract, definitions, and schema test."
+	)
+
+	_record(
+		result,
+		"Phase 4.4A Technology Catalog Semantic Validation",
+		TechnologyCatalogSemanticTest.run(),
+		"res://scripts/tests/technology_catalog_semantic_test.gd",
+		"Technology catalog semantic validation returned FAIL.",
+		"Inspect technology IDs, prerequisite references, capability lists, historical windows, and definition metadata."
+	)
+
 	result.set_metadata(
 		"scope",
-		"Phase 3 data/governance"
+		"Phase 3 data/governance + Phase 4.4A technology catalog foundation"
 	)
 
 	result.set_metadata(
 		"tests_expected",
-		17
+		19
 	)
 
 	result.set_metadata(

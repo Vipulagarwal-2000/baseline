@@ -1,16 +1,16 @@
 WORLD SIMULATOR RUNNER SUMMARY
 ================================
-Runner: Causal Test Runner
-Runner ID: causal
+Runner: Physical Economy Test Runner
+Runner ID: physical_economy
 Status: PASS
 ================================
 
-Tests Run: 10
-Tests Passed: 10
+Tests Run: 46
+Tests Passed: 46
 Tests Failed: 0
 Tests Errored: 0
 Diagnostics: 0
-Duration (ms): 787
+Duration (ms): 207
 
 RESULT: PASS
 No failure diagnostics recorded.

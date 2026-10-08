@@ -1,49 +1,15 @@
 {
-	"diagnostics": [
-		{
-			"action": "Inspect the declared inventory and repository data file set.",
-			"code": "TEST_FAILED",
-			"message": "Complete data inventory validation returned FAIL.",
-			"metadata": {},
-			"runner_id": "data",
-			"runner_name": "Data Test Runner",
-			"severity": "FAIL",
-			"source_file": "res://scripts/tests/data_inventory_test.gd",
-			"test_name": "Phase 3.1 Data Inventory"
-		},
-		{
-			"action": "Inspect the technology catalog contract, definitions, and schema test.",
-			"code": "TEST_FAILED",
-			"message": "Technology catalog schema validation returned FAIL.",
-			"metadata": {},
-			"runner_id": "data",
-			"runner_name": "Data Test Runner",
-			"severity": "FAIL",
-			"source_file": "res://scripts/tests/technology_catalog_schema_test.gd",
-			"test_name": "Phase 4.4A Technology Catalog Schema"
-		},
-		{
-			"action": "Inspect technology IDs, prerequisite references, capability lists, historical windows, and definition metadata.",
-			"code": "TEST_FAILED",
-			"message": "Technology catalog semantic validation returned FAIL.",
-			"metadata": {},
-			"runner_id": "data",
-			"runner_name": "Data Test Runner",
-			"severity": "FAIL",
-			"source_file": "res://scripts/tests/technology_catalog_semantic_test.gd",
-			"test_name": "Phase 4.4A Technology Catalog Semantic Validation"
-		}
-	],
+	"diagnostics": [],
 	"display_name": "World Simulator Active Test Suite",
-	"duration_msec": 4258,
-	"failed_runner_count": 1,
-	"finished_at_msec": 12429,
+	"duration_msec": 4009,
+	"failed_runner_count": 0,
+	"finished_at_msec": 11236,
 	"metadata": {
 		"diagnostic_authority": "structured_result_for_all_migrated_runners; legacy_domain_checks remain explicitly tracked",
 		"legacy_domain_checks": [
 			"IndustryProcessInfrastructurePressureTest"
 		],
-		"legacy_report_path": "res://test_results/test_run_775.txt",
+		"legacy_report_path": "res://test_results/test_run_774.txt",
 		"migrated_runner_count": 7,
 		"migrated_runners": [
 			"data",
@@ -58,72 +24,38 @@
 		"pending_runners": [],
 		"validation_scope": "full_suite"
 	},
-	"passed": false,
-	"run_id": 775,
+	"passed": true,
+	"run_id": 774,
 	"runner_count": 7,
 	"runner_results": [
 		{
-			"diagnostics": [
-				{
-					"action": "Inspect the declared inventory and repository data file set.",
-					"code": "TEST_FAILED",
-					"message": "Complete data inventory validation returned FAIL.",
-					"metadata": {},
-					"runner_id": "data",
-					"runner_name": "Data Test Runner",
-					"severity": "FAIL",
-					"source_file": "res://scripts/tests/data_inventory_test.gd",
-					"test_name": "Phase 3.1 Data Inventory"
-				},
-				{
-					"action": "Inspect the technology catalog contract, definitions, and schema test.",
-					"code": "TEST_FAILED",
-					"message": "Technology catalog schema validation returned FAIL.",
-					"metadata": {},
-					"runner_id": "data",
-					"runner_name": "Data Test Runner",
-					"severity": "FAIL",
-					"source_file": "res://scripts/tests/technology_catalog_schema_test.gd",
-					"test_name": "Phase 4.4A Technology Catalog Schema"
-				},
-				{
-					"action": "Inspect technology IDs, prerequisite references, capability lists, historical windows, and definition metadata.",
-					"code": "TEST_FAILED",
-					"message": "Technology catalog semantic validation returned FAIL.",
-					"metadata": {},
-					"runner_id": "data",
-					"runner_name": "Data Test Runner",
-					"severity": "FAIL",
-					"source_file": "res://scripts/tests/technology_catalog_semantic_test.gd",
-					"test_name": "Phase 4.4A Technology Catalog Semantic Validation"
-				}
-			],
+			"diagnostics": [],
 			"display_name": "Data Test Runner",
-			"duration_msec": 136,
-			"finished_at_msec": 8307,
+			"duration_msec": 120,
+			"finished_at_msec": 7347,
 			"metadata": {
 				"compact_result": true,
 				"detail_source": "legacy TestLogger report",
 				"mutation_policy": "read_only",
 				"requires_simulation": false,
 				"requires_world": false,
-				"scope": "Phase 3 data/governance + Phase 4.4A technology catalog foundation",
-				"tests_expected": 19
+				"scope": "Phase 3 data/governance",
+				"tests_expected": 17
 			},
-			"passed": false,
+			"passed": true,
 			"runner_id": "data",
-			"started_at_msec": 8171,
-			"status": "FAIL",
+			"started_at_msec": 7227,
+			"status": "PASS",
 			"tests_errored": 0,
-			"tests_failed": 3,
-			"tests_passed": 16,
-			"tests_run": 19
+			"tests_failed": 0,
+			"tests_passed": 17,
+			"tests_run": 17
 		},
 		{
 			"diagnostics": [],
 			"display_name": "Interaction Test Runner",
-			"duration_msec": 41,
-			"finished_at_msec": 8350,
+			"duration_msec": 39,
+			"finished_at_msec": 7388,
 			"metadata": {
 				"compact_result": true,
 				"detail_source": "legacy TestLogger report",
@@ -135,7 +67,7 @@
 			},
 			"passed": true,
 			"runner_id": "interaction",
-			"started_at_msec": 8309,
+			"started_at_msec": 7349,
 			"status": "PASS",
 			"tests_errored": 0,
 			"tests_failed": 0,
@@ -145,8 +77,8 @@
 		{
 			"diagnostics": [],
 			"display_name": "Physical Economy Test Runner",
-			"duration_msec": 221,
-			"finished_at_msec": 8573,
+			"duration_msec": 207,
+			"finished_at_msec": 7597,
 			"metadata": {
 				"compact_result": true,
 				"detail_source": "legacy TestLogger report",
@@ -158,7 +90,7 @@
 			},
 			"passed": true,
 			"runner_id": "physical_economy",
-			"started_at_msec": 8352,
+			"started_at_msec": 7390,
 			"status": "PASS",
 			"tests_errored": 0,
 			"tests_failed": 0,
@@ -168,8 +100,8 @@
 		{
 			"diagnostics": [],
 			"display_name": "Domain Test Runner",
-			"duration_msec": 407,
-			"finished_at_msec": 8982,
+			"duration_msec": 338,
+			"finished_at_msec": 7938,
 			"metadata": {
 				"compact_result": true,
 				"detail_source": "legacy TestLogger report",
@@ -184,7 +116,7 @@
 			},
 			"passed": true,
 			"runner_id": "domain",
-			"started_at_msec": 8575,
+			"started_at_msec": 7600,
 			"status": "PASS",
 			"tests_errored": 0,
 			"tests_failed": 0,
@@ -194,8 +126,8 @@
 		{
 			"diagnostics": [],
 			"display_name": "Feedback Test Runner",
-			"duration_msec": 329,
-			"finished_at_msec": 9321,
+			"duration_msec": 302,
+			"finished_at_msec": 8250,
 			"metadata": {
 				"compact_result": true,
 				"detail_source": "legacy TestLogger report",
@@ -207,7 +139,7 @@
 			},
 			"passed": true,
 			"runner_id": "feedback",
-			"started_at_msec": 8992,
+			"started_at_msec": 7948,
 			"status": "PASS",
 			"tests_errored": 0,
 			"tests_failed": 0,
@@ -217,8 +149,8 @@
 		{
 			"diagnostics": [],
 			"display_name": "Campaign Test Runner",
-			"duration_msec": 2318,
-			"finished_at_msec": 11641,
+			"duration_msec": 2260,
+			"finished_at_msec": 10512,
 			"metadata": {
 				"campaign_months": 60,
 				"compact_result": true,
@@ -233,7 +165,7 @@
 			},
 			"passed": true,
 			"runner_id": "campaign",
-			"started_at_msec": 9323,
+			"started_at_msec": 8252,
 			"status": "PASS",
 			"tests_errored": 0,
 			"tests_failed": 0,
@@ -243,8 +175,8 @@
 		{
 			"diagnostics": [],
 			"display_name": "Causal Test Runner",
-			"duration_msec": 787,
-			"finished_at_msec": 12428,
+			"duration_msec": 722,
+			"finished_at_msec": 11235,
 			"metadata": {
 				"compact_result": true,
 				"detail_source": "legacy TestLogger report",
@@ -265,7 +197,7 @@
 			},
 			"passed": true,
 			"runner_id": "causal",
-			"started_at_msec": 11641,
+			"started_at_msec": 10513,
 			"status": "PASS",
 			"tests_errored": 0,
 			"tests_failed": 0,
@@ -273,9 +205,9 @@
 			"tests_run": 10
 		}
 	],
-	"started_at_msec": 8171,
-	"status": "FAIL",
+	"started_at_msec": 7227,
+	"status": "PASS",
 	"suite_id": "world_simulator_active_suite",
-	"total_tests_failed": 3,
-	"total_tests_run": 203
+	"total_tests_failed": 0,
+	"total_tests_run": 201
 }

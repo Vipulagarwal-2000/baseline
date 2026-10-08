@@ -15,14 +15,12 @@ extends RefCounted
 # Included:
 #   Infrastructure                         4
 #   Integrated physical economy            7
-#   Resource system                        1
-#   Resource semantic readiness            1
-#   Currency valuation semantics           1
-#   Production / industry / catalogs     14
+#   Resource / currency                   4
+#   Production / industry / catalogs     16
 #   Trade                                  9
 #   Economy                                6
 #   -----------------------------------------
-#   Total                                 43
+#   Total                                 46
 #
 # Not included here:
 #   industry-process transition/adoption tests whose legacy master runner
@@ -38,7 +36,7 @@ extends RefCounted
 
 const RUNNER_ID := "physical_economy"
 const DISPLAY_NAME := "Physical Economy Test Runner"
-const EXPECTED_TEST_COUNT := 45
+const EXPECTED_TEST_COUNT := 46
 
 
 static func run(
@@ -57,11 +55,11 @@ static func run(
 	)
 
 	TestLogger.section(
-        "PHYSICAL ECONOMY TEST RUNNER"
+		"PHYSICAL ECONOMY TEST RUNNER"
 	)
 
 	TestLogger.write_line(
-        "Infrastructure, physical economy, resources, production, trade, and economy validation"
+		"Infrastructure, physical economy, resources, production, trade, and economy validation"
 	)
 
 	TestLogger.section(
@@ -74,7 +72,7 @@ static func run(
 		InfrastructureSystemTest.run(world, simulation),
 		"res://scripts/tests/InfrastructureSystemTest.gd",
 		"Infrastructure System validation returned FAIL.",
-        "Inspect InfrastructureSystemTest.gd and the authoritative domain path exercised by the test."
+		"Inspect InfrastructureSystemTest.gd and the authoritative domain path exercised by the test."
 	)
 
 	_record(
@@ -83,7 +81,7 @@ static func run(
 		InfrastructureInvestmentSystemTest.run(world, simulation),
 		"res://scripts/tests/InfrastructureInvestmentSystemTest.gd",
 		"Infrastructure Investment System validation returned FAIL.",
-        "Inspect InfrastructureInvestmentSystemTest.gd and the authoritative domain path exercised by the test."
+		"Inspect InfrastructureInvestmentSystemTest.gd and the authoritative domain path exercised by the test."
 	)
 
 	_record(
@@ -92,7 +90,7 @@ static func run(
 		InfrastructureMaintenanceSystemTest.run(world, simulation),
 		"res://scripts/tests/InfrastructureMaintenanceSystemTest.gd",
 		"Infrastructure Maintenance System validation returned FAIL.",
-        "Inspect InfrastructureMaintenanceSystemTest.gd and the authoritative domain path exercised by the test."
+		"Inspect InfrastructureMaintenanceSystemTest.gd and the authoritative domain path exercised by the test."
 	)
 
 	_record(
@@ -101,7 +99,7 @@ static func run(
 		InfrastructureConstructionSystemTest.run(world, simulation),
 		"res://scripts/tests/InfrastructureConstructionSystemTest.gd",
 		"Infrastructure Construction System validation returned FAIL.",
-        "Inspect InfrastructureConstructionSystemTest.gd and the authoritative domain path exercised by the test."
+		"Inspect InfrastructureConstructionSystemTest.gd and the authoritative domain path exercised by the test."
 	)
 
 	TestLogger.section(
@@ -114,7 +112,7 @@ static func run(
 		IntegratedPhysicalEconomyProductionResourceDemandTest.run(world, simulation),
 		"res://scripts/tests/IntegratedPhysicalEconomyProductionResourceDemandTest.gd",
 		"Integrated Physical Economy — Production → Resource Demand validation returned FAIL.",
-        "Inspect IntegratedPhysicalEconomyProductionResourceDemandTest.gd and the authoritative domain path exercised by the test."
+		"Inspect IntegratedPhysicalEconomyProductionResourceDemandTest.gd and the authoritative domain path exercised by the test."
 	)
 
 	_record(
@@ -123,7 +121,7 @@ static func run(
 		IntegratedPhysicalEconomyResourceShortageConstraintTest.run(world, simulation),
 		"res://scripts/tests/IntegratedPhysicalEconomyResourceShortageConstraintTest.gd",
 		"Integrated Physical Economy — Resource Shortage → Production Constraint validation returned FAIL.",
-        "Inspect IntegratedPhysicalEconomyResourceShortageConstraintTest.gd and the authoritative domain path exercised by the test."
+		"Inspect IntegratedPhysicalEconomyResourceShortageConstraintTest.gd and the authoritative domain path exercised by the test."
 	)
 
 	_record(
@@ -132,7 +130,7 @@ static func run(
 		IntegratedPhysicalEconomyProductionEconomicOutputTest.run(world, simulation),
 		"res://scripts/tests/IntegratedPhysicalEconomyProductionEconomicOutputTest.gd",
 		"Integrated Physical Economy — Production → Economic Output validation returned FAIL.",
-        "Inspect IntegratedPhysicalEconomyProductionEconomicOutputTest.gd and the authoritative domain path exercised by the test."
+		"Inspect IntegratedPhysicalEconomyProductionEconomicOutputTest.gd and the authoritative domain path exercised by the test."
 	)
 
 	_record(
@@ -141,7 +139,7 @@ static func run(
 		IntegratedPhysicalEconomyInfrastructurePhysicalOutputTest.run(world, simulation),
 		"res://scripts/tests/IntegratedPhysicalEconomyInfrastructurePhysicalOutputTest.gd",
 		"Integrated Physical Economy — Infrastructure → Physical Output validation returned FAIL.",
-        "Inspect IntegratedPhysicalEconomyInfrastructurePhysicalOutputTest.gd and the authoritative domain path exercised by the test."
+		"Inspect IntegratedPhysicalEconomyInfrastructurePhysicalOutputTest.gd and the authoritative domain path exercised by the test."
 	)
 
 	_record(
@@ -150,7 +148,7 @@ static func run(
 		IntegratedPhysicalEconomyLaborCapitalEnergyPersistenceTest.run(world, simulation),
 		"res://scripts/tests/IntegratedPhysicalEconomyLaborCapitalEnergyPersistenceTest.gd",
 		"Integrated Physical Economy — Labor / Capital / Energy Persistence validation returned FAIL.",
-        "Inspect IntegratedPhysicalEconomyLaborCapitalEnergyPersistenceTest.gd and the authoritative domain path exercised by the test."
+		"Inspect IntegratedPhysicalEconomyLaborCapitalEnergyPersistenceTest.gd and the authoritative domain path exercised by the test."
 	)
 
 	_record(
@@ -159,7 +157,7 @@ static func run(
 		IntegratedPhysicalEconomyTechnologyResourceMixTest.run(world, simulation),
 		"res://scripts/tests/IntegratedPhysicalEconomyTechnologyResourceMixTest.gd",
 		"Integrated Physical Economy — Technology Transition → Resource Mix validation returned FAIL.",
-        "Inspect IntegratedPhysicalEconomyTechnologyResourceMixTest.gd and the authoritative domain path exercised by the test."
+		"Inspect IntegratedPhysicalEconomyTechnologyResourceMixTest.gd and the authoritative domain path exercised by the test."
 	)
 
 	_record(
@@ -168,7 +166,7 @@ static func run(
 		IntegratedPhysicalEconomyMultiMonthInteractionTest.run(world, simulation),
 		"res://scripts/tests/IntegratedPhysicalEconomyMultiMonthInteractionTest.gd",
 		"Integrated Physical Economy — Multi-Month Interaction validation returned FAIL.",
-        "Inspect IntegratedPhysicalEconomyMultiMonthInteractionTest.gd and the authoritative domain path exercised by the test."
+		"Inspect IntegratedPhysicalEconomyMultiMonthInteractionTest.gd and the authoritative domain path exercised by the test."
 	)
 
 	TestLogger.section(
@@ -199,7 +197,7 @@ static func run(
 		ResourceSystemTest.run(world, simulation),
 		"res://scripts/tests/ResourceSystemTest.gd",
 		"Resource System validation returned FAIL.",
-        "Inspect ResourceSystemTest.gd and the authoritative domain path exercised by the test."
+		"Inspect ResourceSystemTest.gd and the authoritative domain path exercised by the test."
 	)
 
 	_record(
@@ -208,7 +206,7 @@ static func run(
 		ResourceCatalogProductionSemanticsTest.run(),
 		"res://scripts/tests/ResourceCatalogProductionSemanticsTest.gd",
 		"Resource ↔ Production semantic readiness validation returned FAIL.",
-        "Inspect ResourceCatalogProductionSemanticsTest.gd for unresolved resource references, incompatible roles/capabilities, or unsupported flow connections."
+		"Inspect ResourceCatalogProductionSemanticsTest.gd for unresolved resource references, incompatible roles/capabilities, or unsupported flow connections."
 	)
 
 	TestLogger.section(
@@ -221,7 +219,7 @@ static func run(
 		ProductionProcessComponentTest.run(),
 		"res://scripts/tests/ProductionProcessComponentTest.gd",
 		"Production Process Component validation returned FAIL.",
-        "Inspect ProductionProcessComponentTest.gd and the authoritative domain path exercised by the test."
+		"Inspect ProductionProcessComponentTest.gd and the authoritative domain path exercised by the test."
 	)
 
 	_record(
@@ -230,7 +228,7 @@ static func run(
 		IndustryComponentTest.run(),
 		"res://scripts/tests/IndustryComponentTest.gd",
 		"Industry Component validation returned FAIL.",
-        "Inspect IndustryComponentTest.gd and the authoritative domain path exercised by the test."
+		"Inspect IndustryComponentTest.gd and the authoritative domain path exercised by the test."
 	)
 
 	_record(
@@ -239,7 +237,7 @@ static func run(
 		IndustryLoaderTest.run(world),
 		"res://scripts/tests/IndustryLoaderTest.gd",
 		"Industry Loader validation returned FAIL.",
-        "Inspect IndustryLoaderTest.gd and the authoritative domain path exercised by the test."
+		"Inspect IndustryLoaderTest.gd and the authoritative domain path exercised by the test."
 	)
 
 	_record(
@@ -248,7 +246,7 @@ static func run(
 		ProductionProcessSystemTest.run(world, simulation),
 		"res://scripts/tests/ProductionProcessSystemTest.gd",
 		"Production Process System validation returned FAIL.",
-        "Inspect ProductionProcessSystemTest.gd and the authoritative domain path exercised by the test."
+		"Inspect ProductionProcessSystemTest.gd and the authoritative domain path exercised by the test."
 	)
 
 	_record(
@@ -257,7 +255,7 @@ static func run(
 		ProductionProcessCatalogTest.run(),
 		"res://scripts/tests/ProductionProcessCatalogTest.gd",
 		"Production Process Catalog validation returned FAIL.",
-        "Inspect ProductionProcessCatalogTest.gd and the authoritative domain path exercised by the test."
+		"Inspect ProductionProcessCatalogTest.gd and the authoritative domain path exercised by the test."
 	)
 
 	_record(
@@ -266,7 +264,7 @@ static func run(
 		ProductionProcessCatalogSchemaTest.run(),
 		"res://scripts/tests/ProductionProcessCatalogSchemaTest.gd",
 		"Production Process Catalog Schema validation returned FAIL.",
-        "Inspect ProductionProcessCatalogSchemaTest.gd and the authoritative domain path exercised by the test."
+		"Inspect ProductionProcessCatalogSchemaTest.gd and the authoritative domain path exercised by the test."
 	)
 
 	_record(
@@ -275,7 +273,7 @@ static func run(
 		ProductionProcessCatalogSemanticTest.run(),
 		"res://scripts/tests/ProductionProcessCatalogSemanticTest.gd",
 		"Production Process Catalog Semantic validation returned FAIL.",
-        "Inspect ProductionProcessCatalogSemanticTest.gd and the authoritative domain path exercised by the test."
+		"Inspect ProductionProcessCatalogSemanticTest.gd and the authoritative domain path exercised by the test."
 	)
 
 	_record(
@@ -284,7 +282,7 @@ static func run(
 		ProductionProcessCatalogEfficiencyTest.run(),
 		"res://scripts/tests/ProductionProcessCatalogEfficiencyTest.gd",
 		"Production Process Catalog Efficiency validation returned FAIL.",
-        "Inspect ProductionProcessCatalogEfficiencyTest.gd and the authoritative domain path exercised by the test."
+		"Inspect ProductionProcessCatalogEfficiencyTest.gd and the authoritative domain path exercised by the test."
 	)
 
 	_record(
@@ -293,7 +291,7 @@ static func run(
 		ProductionProcessChainCatalogTest.run(world, simulation),
 		"res://scripts/tests/ProductionProcessChainCatalogTest.gd",
 		"Production Process Chain Catalog validation returned FAIL.",
-        "Inspect ProductionProcessChainCatalogTest.gd and the authoritative domain path exercised by the test."
+		"Inspect ProductionProcessChainCatalogTest.gd and the authoritative domain path exercised by the test."
 	)
 
 	_record(
@@ -302,7 +300,7 @@ static func run(
 		ProductionProcessChainExecutionTest.run(world, simulation),
 		"res://scripts/tests/ProductionProcessChainExecutionTest.gd",
 		"Production Process Chain Execution validation returned FAIL.",
-        "Inspect ProductionProcessChainExecutionTest.gd and the authoritative domain path exercised by the test."
+		"Inspect ProductionProcessChainExecutionTest.gd and the authoritative domain path exercised by the test."
 	)
 
 	_record(
@@ -311,7 +309,16 @@ static func run(
 		ProductionProcessExtractionBoundaryTest.run(world, simulation),
 		"res://scripts/tests/ProductionProcessExtractionBoundaryTest.gd",
 		"Production Process Extraction Boundary validation returned FAIL.",
-        "Inspect ProductionProcessExtractionBoundaryTest.gd and the authoritative domain path exercised by the test."
+		"Inspect ProductionProcessExtractionBoundaryTest.gd and the authoritative domain path exercised by the test."
+	)
+
+	_record(
+		result,
+		"Production Process Level 2 — Causal Validation",
+		ProductionProcessLevel2CausalValidationTest.run(world, simulation),
+		"res://scripts/tests/ProductionProcessLevel2CausalValidationTest.gd",
+		"Production Process Level 2 causal validation returned FAIL.",
+		"Inspect ProductionProcessLevel2CausalValidationTest.gd for resource-to-process causality, expanded-process execution, extraction ownership, or partial-input constraints."
 	)
 
 	_record(
@@ -320,7 +327,7 @@ static func run(
 		ProductionProcessRequirementEvaluatorTest.run(),
 		"res://scripts/tests/ProductionProcessRequirementEvaluatorTest.gd",
 		"Production Process Requirement Evaluator validation returned FAIL.",
-        "Inspect ProductionProcessRequirementEvaluatorTest.gd and the authoritative domain path exercised by the test."
+		"Inspect ProductionProcessRequirementEvaluatorTest.gd and the authoritative domain path exercised by the test."
 	)
 
 	_record(
@@ -329,7 +336,7 @@ static func run(
 		ProductionProcessRequirementIntegrationTest.run(world, simulation),
 		"res://scripts/tests/ProductionProcessRequirementIntegrationTest.gd",
 		"Production Process Requirement Integration validation returned FAIL.",
-        "Inspect ProductionProcessRequirementIntegrationTest.gd and the authoritative domain path exercised by the test."
+		"Inspect ProductionProcessRequirementIntegrationTest.gd and the authoritative domain path exercised by the test."
 	)
 
 	_record(
@@ -338,7 +345,7 @@ static func run(
 		ProductionProcessMaintenanceIntegrationTest.run(world, simulation),
 		"res://scripts/tests/ProductionProcessMaintenanceIntegrationTest.gd",
 		"Production Process Maintenance Integration validation returned FAIL.",
-        "Inspect ProductionProcessMaintenanceIntegrationTest.gd and the authoritative domain path exercised by the test."
+		"Inspect ProductionProcessMaintenanceIntegrationTest.gd and the authoritative domain path exercised by the test."
 	)
 
 	var production_catalog_runtime_integration_passed: bool = (
@@ -363,7 +370,7 @@ static func run(
 			if not production_catalog_runtime_integration_passed
 			else "Production Process Catalog ↔ Runtime Integration validation returned FAIL."
 		),
-        "Inspect ProductionProcessCatalogRuntimeIntegrationTest.gd and the reported source/runtime catalog mismatch before changing any production data."
+		"Inspect ProductionProcessCatalogRuntimeIntegrationTest.gd and the reported source/runtime catalog mismatch before changing any production data."
 	)
 
 	TestLogger.section(
@@ -376,7 +383,7 @@ static func run(
 		TradeAgreementTest.run(world, simulation),
 		"res://scripts/tests/TradeAgreementTest.gd",
 		"Trade Agreement validation returned FAIL.",
-        "Inspect TradeAgreementTest.gd and the authoritative domain path exercised by the test."
+		"Inspect TradeAgreementTest.gd and the authoritative domain path exercised by the test."
 	)
 
 	_record(
@@ -385,7 +392,7 @@ static func run(
 		TradeRouteTest.run(world, simulation),
 		"res://scripts/tests/TradeRouteTest.gd",
 		"Trade Route validation returned FAIL.",
-        "Inspect TradeRouteTest.gd and the authoritative domain path exercised by the test."
+		"Inspect TradeRouteTest.gd and the authoritative domain path exercised by the test."
 	)
 
 	_record(
@@ -394,7 +401,7 @@ static func run(
 		TradeTransactionTest.run(world, simulation),
 		"res://scripts/tests/TradeTransactionTest.gd",
 		"Trade Transaction validation returned FAIL.",
-        "Inspect TradeTransactionTest.gd and the authoritative domain path exercised by the test."
+		"Inspect TradeTransactionTest.gd and the authoritative domain path exercised by the test."
 	)
 
 	_record(
@@ -403,7 +410,7 @@ static func run(
 		TradeQuantityAvailabilityTest.run(world, simulation),
 		"res://scripts/tests/TradeQuantityAvailabilityTest.gd",
 		"Trade Quantity / Availability validation returned FAIL.",
-        "Inspect TradeQuantityAvailabilityTest.gd and the authoritative domain path exercised by the test."
+		"Inspect TradeQuantityAvailabilityTest.gd and the authoritative domain path exercised by the test."
 	)
 
 	_record(
@@ -412,7 +419,7 @@ static func run(
 		TradeTransportPortConstraintsTest.run(world, simulation),
 		"res://scripts/tests/TradeTransportPortConstraintsTest.gd",
 		"Trade Transport / Port Constraints validation returned FAIL.",
-        "Inspect TradeTransportPortConstraintsTest.gd and the authoritative domain path exercised by the test."
+		"Inspect TradeTransportPortConstraintsTest.gd and the authoritative domain path exercised by the test."
 	)
 
 	_record(
@@ -421,7 +428,7 @@ static func run(
 		TradeContractDurationTest.run(world, simulation),
 		"res://scripts/tests/TradeContractDurationTest.gd",
 		"Trade Contract Duration validation returned FAIL.",
-        "Inspect TradeContractDurationTest.gd and the authoritative domain path exercised by the test."
+		"Inspect TradeContractDurationTest.gd and the authoritative domain path exercised by the test."
 	)
 
 	_record(
@@ -430,7 +437,7 @@ static func run(
 		TradeDisruptionCancellationTest.run(world, simulation),
 		"res://scripts/tests/TradeDisruptionCancellationTest.gd",
 		"Trade Disruption / Cancellation validation returned FAIL.",
-        "Inspect TradeDisruptionCancellationTest.gd and the authoritative domain path exercised by the test."
+		"Inspect TradeDisruptionCancellationTest.gd and the authoritative domain path exercised by the test."
 	)
 
 	_record(
@@ -439,7 +446,7 @@ static func run(
 		TradeResourceEconomicConsequencesTest.run(world, simulation),
 		"res://scripts/tests/TradeResourceEconomicConsequencesTest.gd",
 		"Trade Resource / Economic Consequences validation returned FAIL.",
-        "Inspect TradeResourceEconomicConsequencesTest.gd and the authoritative domain path exercised by the test."
+		"Inspect TradeResourceEconomicConsequencesTest.gd and the authoritative domain path exercised by the test."
 	)
 
 	_record(
@@ -448,7 +455,7 @@ static func run(
 		TradeDiplomaticConsequencesTest.run(world, simulation),
 		"res://scripts/tests/TradeDiplomaticConsequencesTest.gd",
 		"Trade Diplomatic Consequences validation returned FAIL.",
-        "Inspect TradeDiplomaticConsequencesTest.gd and the authoritative domain path exercised by the test."
+		"Inspect TradeDiplomaticConsequencesTest.gd and the authoritative domain path exercised by the test."
 	)
 
 	TestLogger.section(
@@ -461,7 +468,7 @@ static func run(
 		EconomySystemTest.new().run_test(world),
 		"res://scripts/tests/EconomySystemTest.gd",
 		"Economy System validation returned FAIL.",
-        "Inspect EconomySystemTest.gd and the authoritative domain path exercised by the test."
+		"Inspect EconomySystemTest.gd and the authoritative domain path exercised by the test."
 	)
 
 	_record(
@@ -470,7 +477,7 @@ static func run(
 		EconomyShortagePressureTest.run(world, simulation),
 		"res://scripts/tests/EconomyShortagePressureTest.gd",
 		"Economy Integration — Shortage → Economic Pressure validation returned FAIL.",
-        "Inspect EconomyShortagePressureTest.gd and the authoritative domain path exercised by the test."
+		"Inspect EconomyShortagePressureTest.gd and the authoritative domain path exercised by the test."
 	)
 
 	_record(
@@ -479,7 +486,7 @@ static func run(
 		EconomyInvestmentProductiveCapacityTest.run(world, simulation),
 		"res://scripts/tests/EconomyInvestmentProductiveCapacityTest.gd",
 		"Economy Integration — Investment → Productive Capacity validation returned FAIL.",
-        "Inspect EconomyInvestmentProductiveCapacityTest.gd and the authoritative domain path exercised by the test."
+		"Inspect EconomyInvestmentProductiveCapacityTest.gd and the authoritative domain path exercised by the test."
 	)
 
 	_record(
@@ -488,7 +495,7 @@ static func run(
 		EconomyEconomicConditionsGovernmentFinancesTest.run(world, simulation),
 		"res://scripts/tests/EconomyEconomicConditionsGovernmentFinancesTest.gd",
 		"Economy Integration — Economic Conditions → Government Finances validation returned FAIL.",
-        "Inspect EconomyEconomicConditionsGovernmentFinancesTest.gd and the authoritative domain path exercised by the test."
+		"Inspect EconomyEconomicConditionsGovernmentFinancesTest.gd and the authoritative domain path exercised by the test."
 	)
 
 	_record(
@@ -497,7 +504,7 @@ static func run(
 		EconomyGovernmentFinancesInvestmentCapacityTest.run(world, simulation),
 		"res://scripts/tests/EconomyGovernmentFinancesInvestmentCapacityTest.gd",
 		"Economy Integration — Government Finances → Investment Capacity validation returned FAIL.",
-        "Inspect EconomyGovernmentFinancesInvestmentCapacityTest.gd and the authoritative domain path exercised by the test."
+		"Inspect EconomyGovernmentFinancesInvestmentCapacityTest.gd and the authoritative domain path exercised by the test."
 	)
 
 	_record(
@@ -506,12 +513,12 @@ static func run(
 		EconomyMultiMonthStabilityTest.run(world, simulation),
 		"res://scripts/tests/EconomyMultiMonthStabilityTest.gd",
 		"Economy Integration — Multi-Month Stability validation returned FAIL.",
-        "Inspect EconomyMultiMonthStabilityTest.gd and the authoritative domain path exercised by the test."
+		"Inspect EconomyMultiMonthStabilityTest.gd and the authoritative domain path exercised by the test."
 	)
 
 	result.set_metadata(
 		"scope",
-        "infrastructure + integrated physical economy + resources + production + trade + economy"
+		"infrastructure + integrated physical economy + resources + production + trade + economy"
 	)
 
 	result.set_metadata(
@@ -531,12 +538,12 @@ static func run(
 
 	result.set_metadata(
 		"mutation_policy",
-        "controlled_fixture_restore"
+		"controlled_fixture_restore"
 	)
 
 	result.set_metadata(
 		"detail_source",
-        "legacy TestLogger report"
+		"legacy TestLogger report"
 	)
 
 	result.set_metadata(
@@ -579,7 +586,7 @@ static func _record(
 		test_name
 		+ ": "
 		+ (
-            "PASS"
+			"PASS"
 			if passed
 			else "FAIL"
 		)

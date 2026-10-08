@@ -1,0 +1,290 @@
+{
+  "version": 1,
+  "catalog_id": "world_simulator_technology_catalog",
+  "semantic_contract": {
+	"identity_semantics": "canonical_technology_id",
+	"research_cost_semantics": "simulation_research_cost_scalar",
+	"research_duration_semantics": "whole_months",
+	"prerequisite_semantics": "technology_ids_required_as_completed",
+	"technology_level_semantics": "minimum_runtime_technology_level_threshold",
+	"capability_semantics": "technology_capability_identifiers_granted_on_completion",
+	"effect_semantics": "declarative_effect_map_consumed_by_current_technology_effect_system",
+	"historical_start_semantics": "earliest_allowed_simulation_year",
+	"historical_end_semantics": "latest_allowed_simulation_year_or_zero_for_unbounded",
+	"enabled_semantics": "definition_availability_flag",
+	"effect_values_are_unitless": true,
+	"provenance_semantics": "definition_metadata_not_runtime_state",
+	"definition_version_semantics": "catalog_definition_revision"
+  },
+  "technologies": {
+	"electricity": {
+	  "id": "electricity",
+	  "name": "Electricity",
+	  "description": "Generation and practical use of electrical power.",
+	  "research_cost": 100.0,
+	  "research_duration_months": 24,
+	  "prerequisites": [],
+	  "required_technology_level": 10.0,
+	  "capabilities": [
+		"electrical_power",
+        "electrical_grid"
+	  ],
+	  "effects": {
+		"military_industrial_support": 2.0
+	  },
+	  "historical_start_year": 1880,
+	  "historical_end_year": 0,
+	  "enabled": true,
+	  "provenance": {
+		"status": "runtime_definition_migration",
+		"source_reference": "res://scripts/core/default_technologies.gd",
+		"confidence": "structural_definition_confidence"
+	  },
+	  "definition_version": 1
+	},
+	"radio": {
+	  "id": "radio",
+	  "name": "Radio",
+	  "description": "Wireless communication and mass broadcasting.",
+	  "research_cost": 80.0,
+	  "research_duration_months": 18,
+	  "prerequisites": [],
+	  "required_technology_level": 15.0,
+	  "capabilities": [
+		"wireless_communication",
+        "mass_broadcasting"
+	  ],
+	  "effects": {
+		"military_command_capacity": 4.0
+	  },
+	  "historical_start_year": 1900,
+	  "historical_end_year": 0,
+	  "enabled": true,
+	  "provenance": {
+		"status": "runtime_definition_migration",
+		"source_reference": "res://scripts/core/default_technologies.gd",
+		"confidence": "structural_definition_confidence"
+	  },
+	  "definition_version": 1
+	},
+	"industrial_machinery": {
+	  "id": "industrial_machinery",
+	  "name": "Industrial Machinery",
+	  "description": "Advanced machinery for industrial production.",
+	  "research_cost": 120.0,
+	  "research_duration_months": 30,
+	  "prerequisites": [],
+	  "required_technology_level": 12.0,
+	  "capabilities": [
+		"industrial_production",
+        "manufacturing_efficiency"
+	  ],
+	  "effects": {
+		"industrial_production_efficiency": 1.1,
+		"military_industrial_support": 6.0,
+		"military_logistics_support": 3.0
+	  },
+	  "historical_start_year": 1850,
+	  "historical_end_year": 0,
+	  "enabled": true,
+	  "provenance": {
+		"status": "runtime_definition_migration",
+		"source_reference": "res://scripts/core/default_technologies.gd",
+		"confidence": "structural_definition_confidence"
+	  },
+	  "definition_version": 1
+	},
+	"telecommunications": {
+	  "id": "telecommunications",
+	  "name": "Telecommunications",
+	  "description": "Long-distance communication infrastructure.",
+	  "research_cost": 150.0,
+	  "research_duration_months": 30,
+	  "prerequisites": [
+        "electricity"
+	  ],
+	  "required_technology_level": 20.0,
+	  "capabilities": [
+		"long_distance_communication",
+        "communications_network"
+	  ],
+	  "effects": {
+		"military_command_capacity": 6.0,
+		"military_logistics_support": 3.0
+	  },
+	  "historical_start_year": 1920,
+	  "historical_end_year": 0,
+	  "enabled": true,
+	  "provenance": {
+		"status": "runtime_definition_migration",
+		"source_reference": "res://scripts/core/default_technologies.gd",
+		"confidence": "structural_definition_confidence"
+	  },
+	  "definition_version": 1
+	},
+	"nuclear_physics": {
+	  "id": "nuclear_physics",
+	  "name": "Nuclear Physics",
+	  "description": "Scientific knowledge required for nuclear research.",
+	  "research_cost": 300.0,
+	  "research_duration_months": 48,
+	  "prerequisites": [
+        "electricity"
+	  ],
+	  "required_technology_level": 35.0,
+	  "capabilities": [
+		"nuclear_research",
+        "nuclear_engineering"
+	  ],
+	  "effects": {
+		"nuclear_research_capacity": 10.0,
+		"advanced_scientific_capacity": 5.0,
+		"military_technology_support": 5.0
+	  },
+	  "historical_start_year": 1930,
+	  "historical_end_year": 0,
+	  "enabled": true,
+	  "provenance": {
+		"status": "runtime_definition_migration",
+		"source_reference": "res://scripts/core/default_technologies.gd",
+		"confidence": "structural_definition_confidence"
+	  },
+	  "definition_version": 1
+	},
+	"computers": {
+	  "id": "computers",
+	  "name": "Computers",
+	  "description": "Electronic computing and early automation.",
+	  "research_cost": 350.0,
+	  "research_duration_months": 48,
+	  "prerequisites": [
+		"electricity",
+        "industrial_machinery"
+	  ],
+	  "required_technology_level": 40.0,
+	  "capabilities": [
+		"electronic_computing",
+        "automation"
+	  ],
+	  "effects": {
+		"military_command_capacity": 3.0,
+		"military_technology_support": 4.0
+	  },
+	  "historical_start_year": 1940,
+	  "historical_end_year": 0,
+	  "enabled": true,
+	  "provenance": {
+		"status": "runtime_definition_migration",
+		"source_reference": "res://scripts/core/default_technologies.gd",
+		"confidence": "structural_definition_confidence"
+	  },
+	  "definition_version": 1
+	},
+	"semiconductors": {
+	  "id": "semiconductors",
+	  "name": "Semiconductors",
+	  "description": "Advanced electronic components and microelectronics.",
+	  "research_cost": 500.0,
+	  "research_duration_months": 60,
+	  "prerequisites": [
+        "computers"
+	  ],
+	  "required_technology_level": 50.0,
+	  "capabilities": [
+		"advanced_electronics",
+        "microelectronics"
+	  ],
+	  "effects": {
+		"military_command_capacity": 5.0,
+		"military_technology_support": 6.0
+	  },
+	  "historical_start_year": 1950,
+	  "historical_end_year": 0,
+	  "enabled": true,
+	  "provenance": {
+		"status": "runtime_definition_migration",
+		"source_reference": "res://scripts/core/default_technologies.gd",
+		"confidence": "structural_definition_confidence"
+	  },
+	  "definition_version": 1
+	},
+	"nuclear_power": {
+	  "id": "nuclear_power",
+	  "name": "Nuclear Power",
+	  "description": "Controlled nuclear energy for power generation.",
+	  "research_cost": 450.0,
+	  "research_duration_months": 60,
+	  "prerequisites": [
+        "nuclear_physics"
+	  ],
+	  "required_technology_level": 50.0,
+	  "capabilities": [
+		"nuclear_energy",
+        "advanced_power_generation"
+	  ],
+	  "effects": {},
+	  "historical_start_year": 1950,
+	  "historical_end_year": 0,
+	  "enabled": true,
+	  "provenance": {
+		"status": "runtime_definition_migration",
+		"source_reference": "res://scripts/core/default_technologies.gd",
+		"confidence": "structural_definition_confidence"
+	  },
+	  "definition_version": 1
+	},
+	"satellites": {
+	  "id": "satellites",
+	  "name": "Satellites",
+	  "description": "Orbital technology for communications and observation.",
+	  "research_cost": 600.0,
+	  "research_duration_months": 72,
+	  "prerequisites": [
+		"computers",
+        "telecommunications"
+	  ],
+	  "required_technology_level": 60.0,
+	  "capabilities": [
+		"satellite_communication",
+        "space_observation"
+	  ],
+	  "effects": {},
+	  "historical_start_year": 1957,
+	  "historical_end_year": 0,
+	  "enabled": true,
+	  "provenance": {
+		"status": "runtime_definition_migration",
+		"source_reference": "res://scripts/core/default_technologies.gd",
+		"confidence": "structural_definition_confidence"
+	  },
+	  "definition_version": 1
+	},
+	"internet": {
+	  "id": "internet",
+	  "name": "Internet",
+	  "description": "Global digital networking and information exchange.",
+	  "research_cost": 800.0,
+	  "research_duration_months": 84,
+	  "prerequisites": [
+		"computers",
+		"semiconductors",
+        "telecommunications"
+	  ],
+	  "required_technology_level": 70.0,
+	  "capabilities": [
+		"digital_networking",
+        "global_information_network"
+	  ],
+	  "effects": {},
+	  "historical_start_year": 1969,
+	  "historical_end_year": 0,
+	  "enabled": true,
+	  "provenance": {
+		"status": "runtime_definition_migration",
+		"source_reference": "res://scripts/core/default_technologies.gd",
+		"confidence": "structural_definition_confidence"
+	  },
+	  "definition_version": 1
+	}
+  }
+}
