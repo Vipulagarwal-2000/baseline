@@ -43,7 +43,7 @@ static func run() -> TestRunResult:
 	)
 
 	TestLogger.write_line(
-		"Phase 3 data/governance validation + Phase 4.4 technology catalog validation + Phase 4.5B research-program content / semantic validation + Phase 4.6A policy catalog foundation"
+		"Phase 3 data/governance validation + Phase 4.4 technology catalog validation + Phase 4.5B research-program content / semantic validation + Phase 4.6B policy catalog content / semantic validation"
 	)
 
 	# ============================================================
@@ -360,16 +360,16 @@ static func run() -> TestRunResult:
 
 	_record(
 		result,
-		"Phase 4.6A Policy Catalog Schema",
+		"Phase 4.6B Policy Catalog Schema",
 		PolicyCatalogSchemaTest.run(),
 		"res://scripts/tests/policy_catalog_schema_test.gd",
 		"Policy catalog schema validation returned FAIL.",
-		"Inspect the policy catalog envelope, semantic contract, and read-only loader."
+		"Inspect canonical policy identity coverage, the policy-entry schema, supported effect mapping, treasury costs, and spending-share bundle invariants."
 	)
 
 	_record(
 		result,
-		"Phase 4.6A Policy Catalog Semantic Validation",
+		"Phase 4.6B Policy Catalog Semantic Validation",
 		PolicyCatalogSemanticTest.run(),
 		"res://scripts/tests/policy_catalog_semantic_test.gd",
 		"Policy catalog semantic validation returned FAIL.",
@@ -378,7 +378,7 @@ static func run() -> TestRunResult:
 
 	result.set_metadata(
 		"scope",
-		"Phase 3 data/governance + Phase 4.4 technology catalog validation + Phase 4.5B research-program content / semantic validation + Phase 4.6A policy catalog foundation"
+		"Phase 3 data/governance + Phase 4.4 technology catalog validation + Phase 4.5B research-program content / semantic validation + Phase 4.6B policy catalog content / semantic validation"
 	)
 
 	result.set_metadata(

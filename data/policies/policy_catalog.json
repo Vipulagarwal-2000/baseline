@@ -1,18 +1,108 @@
 {
-	"version": 1,
-	"catalog_id": "world_simulator_policy_catalog",
-	"semantic_contract": {
-		"identity_semantics": "canonical_policy_id",
-		"definition_semantics": "declarative_policy_definition_not_runtime_state",
-		"runtime_mapping_semantics": "catalog_id_maps_to_GovernmentPolicyDefinition_policy_id_only_during_later_explicit_binding",
-		"target_semantics": "category_and_target_are_declarative_selectors; catalog_loading_does_not_mutate_target_state",
-		"cost_semantics": "cost_dictionary_is_definition_data; existing_policy_cost_system_remains_payment_authority",
-		"duration_semantics": "duration_months_is_declarative_definition_data; existing_policy_runtime_owns_lifecycle",
-		"effect_semantics": "effects_are_declarative; GovernmentPolicyEffectSystem_remains_effect_validation_and_application_authority",
-		"activation_semantics": "phase_4_6a_catalog_foundation_only; loading_never_activates_a_policy",
-		"runtime_state_semantics": "GovernmentComponent_and_existing_policy_systems_remain_mutable_runtime_authority",
-		"provenance_semantics": "definition_metadata_not_runtime_state",
-		"definition_version_semantics": "catalog_definition_revision"
+  "version": 2,
+  "catalog_id": "world_simulator_policy_catalog",
+  "semantic_contract": {
+	"identity_semantics": "canonical_policy_id",
+	"definition_semantics": "declarative_policy_definition_not_runtime_state",
+	"runtime_mapping_semantics": "catalog_id_maps_to_GovernmentPolicyDefinition_policy_id_only_during_later_explicit_binding",
+	"target_semantics": "category_and_target_form_the_existing_runtime_activation_group_key; they are not component-state paths",
+	"cost_semantics": "catalog costs are declarative; current cost-bearing runtime supports treasury only and remains payment authority",
+	"duration_semantics": "duration_months is declarative; the current runtime does not use this catalog to schedule expiration",
+	"effect_semantics": "effects use only keys supported by GovernmentPolicyEffectSystem and preserve its 0_to_1 range validation",
+	"activation_semantics": "phase_4_6b_catalog_content_only; loading_never_registers_or_activates_a_policy",
+	"runtime_state_semantics": "GovernmentComponent_and_existing_policy_systems_remain_mutable_runtime_authority",
+	"provenance_semantics": "definition_metadata_not_runtime_state; authored values are simulation calibration, not historical country observations",
+	"definition_version_semantics": "catalog_definition_revision",
+	"enabled_semantics": "catalog_availability_flag_not_runtime_activation",
+	"spending_allocation_bundle_semantics": "any policy changing government spending shares must include all four supported shares and sum to exactly 1.0 to preserve GovernmentSpendingAllocationSystem invariants",
+	"effect_ownership_semantics": "each supported effect key has one catalog policy owner; the spending bundle owns all four spending-share keys together",
+	"content_scope_semantics": "three bounded MVP policy definitions covering the existing six supported policy effects; runtime catalog binding is deferred"
+  },
+  "policies": {
+	"revenue_mobilization": {
+	  "id": "revenue_mobilization",
+	  "name": "Revenue Mobilization",
+	  "description": "A calibrated increase in the existing tax-revenue rate, representing a policy choice to strengthen recurring public revenue.",
+	  "category": "economic",
+	  "target": "tax_rate",
+	  "value": 0.15,
+	  "cost": {
+		"treasury": 25.0
+	  },
+	  "duration_months": 12,
+	  "effects": {
+		"economy.tax_revenue_rate": 0.15
+	  },
+	  "metadata": {
+		"implementation_capacity_enabled": true,
+		"design_status": "phase_4_6b_mvp_calibration"
+	  },
+	  "enabled": true,
+	  "provenance": {
+		"status": "simulation_calibration",
+		"source_reference": "res://scripts/core/GovernmentPolicyDefinition.gd; res://scripts/systems/government_policy_effect_system.gd; res://scripts/tests/government_policy_cost_system.gd",
+		"confidence": "designed_mvp_calibration",
+		"notes": "The 0.15 target, treasury cost, and duration are balancing values selected for the MVP catalog, not a historical tax rate or real fiscal cost."
+	  },
+	  "definition_version": 1
 	},
-	"policies": {}
+	"investment_stimulation": {
+	  "id": "investment_stimulation",
+	  "name": "Investment Stimulation",
+	  "description": "A calibrated increase in the existing investment-rate parameter intended to favor investment within the current economic model.",
+	  "category": "economic",
+	  "target": "investment_rate",
+	  "value": 0.2,
+	  "cost": {
+		"treasury": 30.0
+	  },
+	  "duration_months": 24,
+	  "effects": {
+		"economy.investment_rate": 0.2
+	  },
+	  "metadata": {
+		"implementation_capacity_enabled": true,
+		"design_status": "phase_4_6b_mvp_calibration"
+	  },
+	  "enabled": true,
+	  "provenance": {
+		"status": "simulation_calibration",
+		"source_reference": "res://scripts/core/GovernmentPolicyDefinition.gd; res://scripts/systems/government_policy_effect_system.gd; res://scripts/tests/government_policy_cost_system.gd",
+		"confidence": "designed_mvp_calibration",
+		"notes": "The 0.20 target, treasury cost, and duration are balancing values selected for the MVP catalog, not a historical investment rate or real fiscal cost."
+	  },
+	  "definition_version": 1
+	},
+	"infrastructure_priority": {
+	  "id": "infrastructure_priority",
+	  "name": "Infrastructure Priority",
+	  "description": "A bundled reallocation of government spending toward infrastructure while preserving the four-category allocation total.",
+	  "category": "fiscal",
+	  "target": "spending_allocation",
+	  "value": 0.35,
+	  "cost": {
+		"treasury": 20.0
+	  },
+	  "duration_months": 12,
+	  "effects": {
+		"government.spending.infrastructure_share": 0.35,
+		"government.spending.military_share": 0.2,
+		"government.spending.public_services_share": 0.3,
+		"government.spending.administration_share": 0.15
+	  },
+	  "metadata": {
+		"implementation_capacity_enabled": true,
+		"design_status": "phase_4_6b_mvp_calibration",
+		"effect_bundle": "all_four_spending_shares_atomic_policy_target"
+	  },
+	  "enabled": true,
+	  "provenance": {
+		"status": "simulation_calibration",
+		"source_reference": "res://scripts/core/GovernmentPolicyDefinition.gd; res://scripts/systems/government_policy_effect_system.gd; res://scripts/systems/government_spending_allocation_system.gd; res://scripts/tests/government_policy_cost_system.gd",
+		"confidence": "designed_mvp_calibration",
+		"notes": "The shares sum to 1.0: infrastructure 0.35, military 0.20, public services 0.30, administration 0.15. Values and treasury cost are simulation-balancing choices, not historical budget data."
+	  },
+	  "definition_version": 1
+	}
+  }
 }

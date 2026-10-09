@@ -1,304 +1,304 @@
 {
-	"version": 1,
-	"ownership_id": "world_simulator_domain_ownership",
-	"policy": {
-		"one_authoritative_owner_per_domain": true,
-		"definition_and_runtime_are_distinct": true,
-		"definition_source_may_be_script_until_catalog_exists": true,
-		"reserved_domains_must_not_invent_content": true,
-		"runtime_state_must_not_be_moved_into_definition_data_for_ui": true,
-		"ownership_status_values": [
-			"active",
-			"partial",
-			"reserved_unmodeled"
-		]
+  "version": 1,
+  "ownership_id": "world_simulator_domain_ownership",
+  "policy": {
+	"one_authoritative_owner_per_domain": true,
+	"definition_and_runtime_are_distinct": true,
+	"definition_source_may_be_script_until_catalog_exists": true,
+	"reserved_domains_must_not_invent_content": true,
+	"runtime_state_must_not_be_moved_into_definition_data_for_ui": true,
+	"ownership_status_values": [
+	  "active",
+	  "partial",
+      "reserved_unmodeled"
+	]
+  },
+  "domains": {
+	"country": {
+	  "status": "active",
+	  "definition_authority": "country JSON baseline + WorldLoader",
+	  "definition_paths": [
+		"res://data/countries/china.json",
+		"res://data/countries/india.json",
+        "res://data/countries/usa.json"
+	  ],
+	  "runtime_authority": "WorldState / country runtime state",
+	  "loader_authority": "scripts/core/world_loader.gd",
+	  "runtime_systems": [
+		"WorldState",
+        "SimulationEngine"
+	  ],
+	  "canonical_domain": "country",
+	  "provenance_class": "historical_baseline_plus_simulation_calibration",
+	  "notes": "Country JSON initializes baseline state. It is not itself the authoritative mutable runtime state."
 	},
-	"domains": {
-		"country": {
-			"status": "active",
-			"definition_authority": "country JSON baseline + WorldLoader",
-			"definition_paths": [
-				"res://data/countries/china.json",
-				"res://data/countries/india.json",
-				"res://data/countries/usa.json"
-			],
-			"runtime_authority": "WorldState / country runtime state",
-			"loader_authority": "scripts/core/world_loader.gd",
-			"runtime_systems": [
-				"WorldState",
-				"SimulationEngine"
-			],
-			"canonical_domain": "country",
-			"provenance_class": "historical_baseline_plus_simulation_calibration",
-			"notes": "Country JSON initializes baseline state. It is not itself the authoritative mutable runtime state."
-		},
-		"region": {
-			"status": "active",
-			"definition_authority": "regional geography JSON + regional loaders",
-			"definition_paths": [
-				"res://data/regions/china_regions.json",
-				"res://data/regions/india_regions.json",
-				"res://data/regions/usa_regions.json"
-			],
-			"runtime_authority": "regional runtime state within WorldState / regional components",
-			"loader_authority": "regional loading path owned by the world/data initialization layer",
-			"runtime_systems": [
-				"WorldState",
-				"RegionalResourceSystem"
-			],
-			"canonical_domain": "region",
-			"provenance_class": "historical_baseline_plus_simulation_calibration",
-			"notes": "Parent regions and province/state identifiers are data definitions; mutable regional state remains runtime-owned."
-		},
-		"resource": {
-			"status": "active",
-			"definition_authority": "ResourceCatalog + resource_catalog.json",
-			"definition_paths": [
-				"res://data/resources/resource_catalog.json"
-			],
-			"runtime_authority": "ResourceSystem / ResourceComponent",
-			"loader_authority": "scripts/core/resource_catalog.gd",
-			"runtime_systems": [
-				"ResourceSystem"
-			],
-			"canonical_domain": "resource",
-			"provenance_class": "simulation_semantic_contract",
-			"notes": "Canonical resource IDs and semantic definitions live in the resource catalog; quantities remain runtime state."
-		},
-		"process": {
-			"status": "active",
-			"definition_authority": "production_processes.json",
-			"definition_paths": [
-				"res://data/production_processes/production_processes.json"
-			],
-			"runtime_authority": "ProductionProcessSystem / Industry runtime",
-			"loader_authority": "production process definition loading path",
-			"runtime_systems": [
-				"ProductionProcessSystem"
-			],
-			"canonical_domain": "process",
-			"provenance_class": "simulation_calibration",
-			"notes": "Process IDs are distinct from resource IDs. Displacement references resolve against this domain."
-		},
-		"technology": {
-			"status": "partial",
-			"definition_authority": "Dedicated technology JSON catalog.",
-			"definition_paths": [
-				"res://data/technologies/technology_catalog.json",
-				"res://scripts/core/technology_catalog.gd"
-			],
-			"runtime_authority": "TechnologyManager + technology adoption/runtime components",
-			"loader_authority": "TechnologyCatalog / TechnologyManager",
-			"runtime_systems": [
-				"scripts/systems/research/technology_manager.gd",
-				"scripts/systems/research/technology_adoption_system.gd",
-				"scripts/systems/research/technology_effect_system.gd"
-			],
-			"canonical_domain": "technology",
-			"provenance_class": "internal_domain_catalog",
-			"notes": "Phase 4.4A establishes the dedicated technology definition catalog. Existing runtime technology classes remain compatibility/runtime structures; runtime catalog integration is deferred to the later integration pass."
-		},
-		"research_program": {
-			"status": "partial",
-			"definition_authority": "Dedicated research-program JSON catalog.",
-			"definition_paths": [
-				"res://data/research_programs/research_program_catalog.json",
-				"res://scripts/core/research_program_catalog.gd"
-			],
-			"runtime_authority": "ResearchSystem / ResearchComponent / ResearchProject remain execution and mutable-state authorities for single-technology research projects",
-			"loader_authority": "ResearchProgramCatalog (declarative definitions) / ResearchSystem (execution)",
-			"runtime_systems": [
-				"scripts/systems/research_system.gd"
-			],
-			"canonical_domain": "research_program",
-			"provenance_class": "internal_domain_catalog",
-			"notes": "Phase 4.5B defines six declarative tracks referencing the ten full technology definitions in the technology catalog. Program eligibility and prerequisite edges are planning metadata only. research_cost and research_duration_months are derived direct-target summaries, not executable program budgets or duration state. Per-technology historical availability, costs, durations, progress, completion, and effects remain owned by the existing technology/runtime contracts."
-		},
-		"policy": {
-			"status": "partial",
-			"definition_authority": "Empty policy catalog foundation plus existing GovernmentPolicyDefinition runtime model.",
-			"definition_paths": [
-				"res://data/policies/policy_catalog.json",
-				"res://scripts/core/policy_catalog.gd",
-				"res://scripts/core/GovernmentPolicyDefinition.gd"
-			],
-			"runtime_authority": "GovernmentComponent / GovernmentPolicyDefinition / existing policy activation, cost, and effect systems",
-			"loader_authority": "PolicyCatalog (declarative catalog lookup only) / existing government policy systems (runtime)",
-			"runtime_systems": [
-				"GovernmentPolicyCostSystem",
-				"government_policy_effect_system",
-				"GovernmentSystem"
-			],
-			"canonical_domain": "policy",
-			"provenance_class": "internal_domain_catalog",
-			"notes": "Phase 4.6A establishes an empty policy catalog and read-only loader. Canonical policy identities remain reserved and the loader does not define, register, activate, charge for, or apply policies. Existing runtime authorities remain unchanged; named policy content is deferred to Phase 4.6B."
-		},
-		"action": {
-			"status": "partial",
-			"definition_authority": "Action contract / ActionManager",
-			"definition_paths": [
-				"res://scripts/core/action.gd",
-				"res://scripts/core/action_manager.gd"
-			],
-			"runtime_authority": "ActionManager / ActionSystem",
-			"loader_authority": "decision-to-action conversion path",
-			"runtime_systems": [
-				"ActionManager",
-				"ActionSystem",
-				"DecisionSystem",
-				"AIDecisionSystem"
-			],
-			"canonical_domain": "action",
-			"provenance_class": "runtime_definition",
-			"notes": "The executable action contract is authoritative. No second UI-specific execution path may be introduced."
-		},
-		"event": {
-			"status": "active",
-			"definition_authority": "events.json + EventDefinitionLoader",
-			"definition_paths": [
-				"res://data/events/events.json",
-				"res://scripts/core/event_definition.gd",
-				"res://scripts/core/event_definition_loader.gd"
-			],
-			"runtime_authority": "event framework / EventSimulationIntegration",
-			"loader_authority": "scripts/core/event_definition_loader.gd",
-			"runtime_systems": [
-				"EventSimulationIntegration",
-				"event_synchronizer"
-			],
-			"canonical_domain": "event",
-			"provenance_class": "synthetic_test_content_plus_event_framework",
-			"notes": "The current event catalog contains synthetic/test events; historical gameplay content remains future content work."
-		},
-		"trade": {
-			"status": "partial",
-			"definition_authority": "TradeAgreement / TradeRoute / TradeTransaction domain contracts",
-			"definition_paths": [
-				"res://scripts/core/trade_agreement.gd",
-				"res://scripts/core/trade_route.gd",
-				"res://scripts/core/trade_transaction.gd"
-			],
-			"runtime_authority": "TradeSystem + trade state",
-			"loader_authority": "trade domain runtime construction path",
-			"runtime_systems": [
-				"scripts/core/trade_system.gd",
-				"trade_payment_system",
-				"trade_valuation_system",
-				"trade_route_restriction_system"
-			],
-			"canonical_domain": "trade",
-			"provenance_class": "runtime_definition",
-			"notes": "Trade execution/state exists, but no dedicated trade-content catalog is established."
-		},
-		"scenario": {
-			"status": "reserved_unmodeled",
-			"definition_authority": "reserved for scenario catalog",
-			"definition_paths": [],
-			"runtime_authority": "causal/event scenario fixtures and campaign harness when established",
-			"loader_authority": "not yet a dedicated scenario loader",
-			"runtime_systems": [
-				"SimulationEngine",
-				"EventSimulationIntegration"
-			],
-			"canonical_domain": "scenario",
-			"provenance_class": "unmodeled",
-			"notes": "Do not treat test scenarios or causal-validation fixtures as a permanent scenario content catalog."
-		},
-		"external_actor": {
-			"status": "partial",
-			"definition_authority": "external-event/runtime actor framework",
-			"definition_paths": [],
-			"runtime_authority": "external event / actor-related runtime components",
-			"loader_authority": "not yet a dedicated external-actor catalog loader",
-			"runtime_systems": [
-				"external_event_causality_system",
-				"external_event_relevance_filter_system",
-				"ExternalEventImpactComponent"
-			],
-			"canonical_domain": "external_actor",
-			"provenance_class": "runtime_definition",
-			"notes": "The identity domain is reserved in the canonical registry, but dedicated actor content is not yet available."
-		},
-		"currency": {
-			"status": "active",
-			"definition_authority": "currency_exchange_rates.json + currency identity definitions",
-			"definition_paths": [
-				"res://data/currency_exchange_rates.json",
-				"res://scripts/systems/currency_identity_system.gd"
-			],
-			"runtime_authority": "currency identity/conversion systems",
-			"loader_authority": "currency configuration path",
-			"runtime_systems": [
-				"CurrencyConversionSystem",
-				"currency_identity_system"
-			],
-			"canonical_domain": "currency",
-			"provenance_class": "simulation_calibration",
-			"notes": "Exchange-rate semantics are separate from treasury runtime state."
-		},
-		"route": {
-			"status": "active",
-			"definition_authority": "regional transport route definitions",
-			"definition_paths": [
-				"res://data/regions/transport/china_transport.json",
-				"res://data/regions/transport/india_transport.json",
-				"res://data/regions/transport/usa_transport.json"
-			],
-			"runtime_authority": "regional transport/infrastructure runtime",
-			"loader_authority": "regional transport data loading path",
-			"runtime_systems": [
-				"InfrastructureSystem",
-				"RegionalResourceSystem"
-			],
-			"canonical_domain": "route",
-			"provenance_class": "simulation_calibration",
-			"notes": "Route IDs are transport-network references and are distinct from trade agreement/transaction identity."
-		},
-		"capability": {
-			"status": "active",
-			"definition_authority": "production-process capability requirements",
-			"definition_paths": [
-				"res://data/production_processes/production_processes.json"
-			],
-			"runtime_authority": "live capability availability/resolution in production execution",
-			"loader_authority": "production-process loading path",
-			"runtime_systems": [
-				"ProductionProcessSystem"
-			],
-			"canonical_domain": "capability",
-			"provenance_class": "simulation_calibration",
-			"notes": "Capability IDs are requirement references, not independent mutable world entities."
-		},
-		"infrastructure": {
-			"status": "active",
-			"definition_authority": "production-process infrastructure requirement/usage definitions",
-			"definition_paths": [
-				"res://data/production_processes/production_processes.json"
-			],
-			"runtime_authority": "InfrastructureComponent / InfrastructureSystem",
-			"loader_authority": "production-process and infrastructure runtime paths",
-			"runtime_systems": [
-				"InfrastructureSystem",
-				"ProductionProcessSystem"
-			],
-			"canonical_domain": "infrastructure",
-			"provenance_class": "simulation_calibration",
-			"notes": "The current canonical infrastructure ID is a process requirement reference; it does not create a second infrastructure authority."
-		},
-		"equipment": {
-			"status": "active",
-			"definition_authority": "production-process equipment requirements",
-			"definition_paths": [
-				"res://data/production_processes/production_processes.json"
-			],
-			"runtime_authority": "production equipment/capacity requirement resolution",
-			"loader_authority": "production-process loading path",
-			"runtime_systems": [
-				"ProductionProcessSystem"
-			],
-			"canonical_domain": "equipment",
-			"provenance_class": "simulation_calibration",
-			"notes": "Equipment IDs are process requirement references, not a separate inventory authority."
-		}
+	"region": {
+	  "status": "active",
+	  "definition_authority": "regional geography JSON + regional loaders",
+	  "definition_paths": [
+		"res://data/regions/china_regions.json",
+		"res://data/regions/india_regions.json",
+        "res://data/regions/usa_regions.json"
+	  ],
+	  "runtime_authority": "regional runtime state within WorldState / regional components",
+	  "loader_authority": "regional loading path owned by the world/data initialization layer",
+	  "runtime_systems": [
+		"WorldState",
+        "RegionalResourceSystem"
+	  ],
+	  "canonical_domain": "region",
+	  "provenance_class": "historical_baseline_plus_simulation_calibration",
+	  "notes": "Parent regions and province/state identifiers are data definitions; mutable regional state remains runtime-owned."
+	},
+	"resource": {
+	  "status": "active",
+	  "definition_authority": "ResourceCatalog + resource_catalog.json",
+	  "definition_paths": [
+        "res://data/resources/resource_catalog.json"
+	  ],
+	  "runtime_authority": "ResourceSystem / ResourceComponent",
+	  "loader_authority": "scripts/core/resource_catalog.gd",
+	  "runtime_systems": [
+        "ResourceSystem"
+	  ],
+	  "canonical_domain": "resource",
+	  "provenance_class": "simulation_semantic_contract",
+	  "notes": "Canonical resource IDs and semantic definitions live in the resource catalog; quantities remain runtime state."
+	},
+	"process": {
+	  "status": "active",
+	  "definition_authority": "production_processes.json",
+	  "definition_paths": [
+        "res://data/production_processes/production_processes.json"
+	  ],
+	  "runtime_authority": "ProductionProcessSystem / Industry runtime",
+	  "loader_authority": "production process definition loading path",
+	  "runtime_systems": [
+        "ProductionProcessSystem"
+	  ],
+	  "canonical_domain": "process",
+	  "provenance_class": "simulation_calibration",
+	  "notes": "Process IDs are distinct from resource IDs. Displacement references resolve against this domain."
+	},
+	"technology": {
+	  "status": "partial",
+	  "definition_authority": "Dedicated technology JSON catalog.",
+	  "definition_paths": [
+		"res://data/technologies/technology_catalog.json",
+        "res://scripts/core/technology_catalog.gd"
+	  ],
+	  "runtime_authority": "TechnologyManager + technology adoption/runtime components",
+	  "loader_authority": "TechnologyCatalog / TechnologyManager",
+	  "runtime_systems": [
+		"scripts/systems/research/technology_manager.gd",
+		"scripts/systems/research/technology_adoption_system.gd",
+        "scripts/systems/research/technology_effect_system.gd"
+	  ],
+	  "canonical_domain": "technology",
+	  "provenance_class": "internal_domain_catalog",
+	  "notes": "Phase 4.4A establishes the dedicated technology definition catalog. Existing runtime technology classes remain compatibility/runtime structures; runtime catalog integration is deferred to the later integration pass."
+	},
+	"research_program": {
+	  "status": "partial",
+	  "definition_authority": "Dedicated research-program JSON catalog.",
+	  "definition_paths": [
+		"res://data/research_programs/research_program_catalog.json",
+        "res://scripts/core/research_program_catalog.gd"
+	  ],
+	  "runtime_authority": "ResearchSystem / ResearchComponent / ResearchProject remain execution and mutable-state authorities for single-technology research projects",
+	  "loader_authority": "ResearchProgramCatalog (declarative definitions) / ResearchSystem (execution)",
+	  "runtime_systems": [
+        "scripts/systems/research_system.gd"
+	  ],
+	  "canonical_domain": "research_program",
+	  "provenance_class": "internal_domain_catalog",
+	  "notes": "Phase 4.5B defines six declarative tracks referencing the ten full technology definitions in the technology catalog. Program eligibility and prerequisite edges are planning metadata only. research_cost and research_duration_months are derived direct-target summaries, not executable program budgets or duration state. Per-technology historical availability, costs, durations, progress, completion, and effects remain owned by the existing technology/runtime contracts."
+	},
+	"policy": {
+	  "status": "partial",
+	  "definition_authority": "Dedicated policy JSON catalog with declarative definitions; GovernmentPolicyDefinition remains the runtime-definition compatibility model.",
+	  "definition_paths": [
+		"res://data/policies/policy_catalog.json",
+		"res://scripts/core/policy_catalog.gd",
+        "res://scripts/core/GovernmentPolicyDefinition.gd"
+	  ],
+	  "runtime_authority": "GovernmentComponent / GovernmentPolicyDefinition / existing policy activation, cost, and effect systems",
+	  "loader_authority": "PolicyCatalog (read-only definition lookup); existing government policy systems (runtime operations)",
+	  "runtime_systems": [
+		"GovernmentPolicyCostSystem",
+		"government_policy_effect_system",
+        "GovernmentSystem"
+	  ],
+	  "canonical_domain": "policy",
+	  "provenance_class": "internal_domain_catalog_plus_simulation_calibration",
+	  "notes": "Phase 4.6B adds three declarative policy definitions that cover the six existing effect keys. Catalog lookup is read-only. Definitions are not copied into GovernmentComponent automatically; existing runtime authorities continue to own activation, costs, effects, mutable policy state, and any lifecycle behavior."
+	},
+	"action": {
+	  "status": "partial",
+	  "definition_authority": "Action contract / ActionManager",
+	  "definition_paths": [
+		"res://scripts/core/action.gd",
+        "res://scripts/core/action_manager.gd"
+	  ],
+	  "runtime_authority": "ActionManager / ActionSystem",
+	  "loader_authority": "decision-to-action conversion path",
+	  "runtime_systems": [
+		"ActionManager",
+		"ActionSystem",
+		"DecisionSystem",
+        "AIDecisionSystem"
+	  ],
+	  "canonical_domain": "action",
+	  "provenance_class": "runtime_definition",
+	  "notes": "The executable action contract is authoritative. No second UI-specific execution path may be introduced."
+	},
+	"event": {
+	  "status": "active",
+	  "definition_authority": "events.json + EventDefinitionLoader",
+	  "definition_paths": [
+		"res://data/events/events.json",
+		"res://scripts/core/event_definition.gd",
+        "res://scripts/core/event_definition_loader.gd"
+	  ],
+	  "runtime_authority": "event framework / EventSimulationIntegration",
+	  "loader_authority": "scripts/core/event_definition_loader.gd",
+	  "runtime_systems": [
+		"EventSimulationIntegration",
+        "event_synchronizer"
+	  ],
+	  "canonical_domain": "event",
+	  "provenance_class": "synthetic_test_content_plus_event_framework",
+	  "notes": "The current event catalog contains synthetic/test events; historical gameplay content remains future content work."
+	},
+	"trade": {
+	  "status": "partial",
+	  "definition_authority": "TradeAgreement / TradeRoute / TradeTransaction domain contracts",
+	  "definition_paths": [
+		"res://scripts/core/trade_agreement.gd",
+		"res://scripts/core/trade_route.gd",
+        "res://scripts/core/trade_transaction.gd"
+	  ],
+	  "runtime_authority": "TradeSystem + trade state",
+	  "loader_authority": "trade domain runtime construction path",
+	  "runtime_systems": [
+		"scripts/core/trade_system.gd",
+		"trade_payment_system",
+		"trade_valuation_system",
+        "trade_route_restriction_system"
+	  ],
+	  "canonical_domain": "trade",
+	  "provenance_class": "runtime_definition",
+	  "notes": "Trade execution/state exists, but no dedicated trade-content catalog is established."
+	},
+	"scenario": {
+	  "status": "reserved_unmodeled",
+	  "definition_authority": "reserved for scenario catalog",
+	  "definition_paths": [],
+	  "runtime_authority": "causal/event scenario fixtures and campaign harness when established",
+	  "loader_authority": "not yet a dedicated scenario loader",
+	  "runtime_systems": [
+		"SimulationEngine",
+        "EventSimulationIntegration"
+	  ],
+	  "canonical_domain": "scenario",
+	  "provenance_class": "unmodeled",
+	  "notes": "Do not treat test scenarios or causal-validation fixtures as a permanent scenario content catalog."
+	},
+	"external_actor": {
+	  "status": "partial",
+	  "definition_authority": "external-event/runtime actor framework",
+	  "definition_paths": [],
+	  "runtime_authority": "external event / actor-related runtime components",
+	  "loader_authority": "not yet a dedicated external-actor catalog loader",
+	  "runtime_systems": [
+		"external_event_causality_system",
+		"external_event_relevance_filter_system",
+        "ExternalEventImpactComponent"
+	  ],
+	  "canonical_domain": "external_actor",
+	  "provenance_class": "runtime_definition",
+	  "notes": "The identity domain is reserved in the canonical registry, but dedicated actor content is not yet available."
+	},
+	"currency": {
+	  "status": "active",
+	  "definition_authority": "currency_exchange_rates.json + currency identity definitions",
+	  "definition_paths": [
+		"res://data/currency_exchange_rates.json",
+        "res://scripts/systems/currency_identity_system.gd"
+	  ],
+	  "runtime_authority": "currency identity/conversion systems",
+	  "loader_authority": "currency configuration path",
+	  "runtime_systems": [
+		"CurrencyConversionSystem",
+        "currency_identity_system"
+	  ],
+	  "canonical_domain": "currency",
+	  "provenance_class": "simulation_calibration",
+	  "notes": "Exchange-rate semantics are separate from treasury runtime state."
+	},
+	"route": {
+	  "status": "active",
+	  "definition_authority": "regional transport route definitions",
+	  "definition_paths": [
+		"res://data/regions/transport/china_transport.json",
+		"res://data/regions/transport/india_transport.json",
+        "res://data/regions/transport/usa_transport.json"
+	  ],
+	  "runtime_authority": "regional transport/infrastructure runtime",
+	  "loader_authority": "regional transport data loading path",
+	  "runtime_systems": [
+		"InfrastructureSystem",
+        "RegionalResourceSystem"
+	  ],
+	  "canonical_domain": "route",
+	  "provenance_class": "simulation_calibration",
+	  "notes": "Route IDs are transport-network references and are distinct from trade agreement/transaction identity."
+	},
+	"capability": {
+	  "status": "active",
+	  "definition_authority": "production-process capability requirements",
+	  "definition_paths": [
+        "res://data/production_processes/production_processes.json"
+	  ],
+	  "runtime_authority": "live capability availability/resolution in production execution",
+	  "loader_authority": "production-process loading path",
+	  "runtime_systems": [
+        "ProductionProcessSystem"
+	  ],
+	  "canonical_domain": "capability",
+	  "provenance_class": "simulation_calibration",
+	  "notes": "Capability IDs are requirement references, not independent mutable world entities."
+	},
+	"infrastructure": {
+	  "status": "active",
+	  "definition_authority": "production-process infrastructure requirement/usage definitions",
+	  "definition_paths": [
+        "res://data/production_processes/production_processes.json"
+	  ],
+	  "runtime_authority": "InfrastructureComponent / InfrastructureSystem",
+	  "loader_authority": "production-process and infrastructure runtime paths",
+	  "runtime_systems": [
+		"InfrastructureSystem",
+        "ProductionProcessSystem"
+	  ],
+	  "canonical_domain": "infrastructure",
+	  "provenance_class": "simulation_calibration",
+	  "notes": "The current canonical infrastructure ID is a process requirement reference; it does not create a second infrastructure authority."
+	},
+	"equipment": {
+	  "status": "active",
+	  "definition_authority": "production-process equipment requirements",
+	  "definition_paths": [
+        "res://data/production_processes/production_processes.json"
+	  ],
+	  "runtime_authority": "production equipment/capacity requirement resolution",
+	  "loader_authority": "production-process loading path",
+	  "runtime_systems": [
+        "ProductionProcessSystem"
+	  ],
+	  "canonical_domain": "equipment",
+	  "provenance_class": "simulation_calibration",
+	  "notes": "Equipment IDs are process requirement references, not a separate inventory authority."
 	}
+  }
 }
