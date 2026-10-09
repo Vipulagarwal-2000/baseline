@@ -1,0 +1,18 @@
+{
+	"version": 1,
+	"catalog_id": "world_simulator_policy_catalog",
+	"semantic_contract": {
+		"identity_semantics": "canonical_policy_id",
+		"definition_semantics": "declarative_policy_definition_not_runtime_state",
+		"runtime_mapping_semantics": "catalog_id_maps_to_GovernmentPolicyDefinition_policy_id_only_during_later_explicit_binding",
+		"target_semantics": "category_and_target_are_declarative_selectors; catalog_loading_does_not_mutate_target_state",
+		"cost_semantics": "cost_dictionary_is_definition_data; existing_policy_cost_system_remains_payment_authority",
+		"duration_semantics": "duration_months_is_declarative_definition_data; existing_policy_runtime_owns_lifecycle",
+		"effect_semantics": "effects_are_declarative; GovernmentPolicyEffectSystem_remains_effect_validation_and_application_authority",
+		"activation_semantics": "phase_4_6a_catalog_foundation_only; loading_never_activates_a_policy",
+		"runtime_state_semantics": "GovernmentComponent_and_existing_policy_systems_remain_mutable_runtime_authority",
+		"provenance_semantics": "definition_metadata_not_runtime_state",
+		"definition_version_semantics": "catalog_definition_revision"
+	},
+	"policies": {}
+}
