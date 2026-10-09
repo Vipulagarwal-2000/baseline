@@ -116,19 +116,22 @@
 		},
 		"policy": {
 			"status": "partial",
-			"definition_authority": "GovernmentPolicyDefinition + policy runtime",
+			"definition_authority": "Empty policy catalog foundation plus existing GovernmentPolicyDefinition runtime model.",
 			"definition_paths": [
+				"res://data/policies/policy_catalog.json",
+				"res://scripts/core/policy_catalog.gd",
 				"res://scripts/core/GovernmentPolicyDefinition.gd"
 			],
-			"runtime_authority": "Government policy systems / GovernmentComponent",
-			"loader_authority": "runtime policy-definition path",
+			"runtime_authority": "GovernmentComponent / GovernmentPolicyDefinition / existing policy activation, cost, and effect systems",
+			"loader_authority": "PolicyCatalog (declarative catalog lookup only) / existing government policy systems (runtime)",
 			"runtime_systems": [
-				"GovernmentSystem",
-				"government_policy_effect_system"
+				"GovernmentPolicyCostSystem",
+				"government_policy_effect_system",
+				"GovernmentSystem"
 			],
 			"canonical_domain": "policy",
-			"provenance_class": "runtime_definition",
-			"notes": "Policy identity is contract-defined but there is no dedicated policy JSON catalog yet."
+			"provenance_class": "internal_domain_catalog",
+			"notes": "Phase 4.6A establishes an empty policy catalog and read-only loader. Canonical policy identities remain reserved and the loader does not define, register, activate, charge for, or apply policies. Existing runtime authorities remain unchanged; named policy content is deferred to Phase 4.6B."
 		},
 		"action": {
 			"status": "partial",

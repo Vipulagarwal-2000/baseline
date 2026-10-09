@@ -16,9 +16,9 @@ extends RefCounted
 # without moving runtime technology authority out of TechnologyManager /
 # TechnologyLibrary.
 #
-# Phase 4.5A adds the research-program catalog foundation only.
-# It deliberately does not activate research-program canonical IDs or
-# change ResearchSystem / ResearchComponent / ResearchProject authority.
+# Phase 4.5B adds research-program content and cross-catalog semantic validation.
+# It activates canonical IDs for declared program definitions but does not
+# change ResearchSystem / ResearchComponent / ResearchProject execution authority.
 # ============================================================
 
 
@@ -43,7 +43,7 @@ static func run() -> TestRunResult:
 	)
 
 	TestLogger.write_line(
-		"Phase 3 data/governance validation + Phase 4.4 technology catalog validation + Phase 4.5A research-program foundation"
+		"Phase 3 data/governance validation + Phase 4.4 technology catalog validation + Phase 4.5B research-program content / semantic validation + Phase 4.6A policy catalog foundation"
 	)
 
 	# ============================================================
@@ -324,39 +324,66 @@ static func run() -> TestRunResult:
 	)
 
 	# ============================================================
-	# PHASE 4.5A — RESEARCH PROGRAM CATALOG FOUNDATION
+	# PHASE 4.5B — RESEARCH PROGRAM CONTENT / SEMANTIC VALIDATION
 	# ============================================================
 
 	TestLogger.section(
-		"[DATA] RESEARCH PROGRAM CATALOG FOUNDATION — PHASE 4.5A"
+		"[DATA] RESEARCH PROGRAM CONTENT / SEMANTIC VALIDATION — PHASE 4.5B"
 	)
 
 	_record(
 		result,
-		"Phase 4.5A Research Program Catalog Schema",
+		"Phase 4.5B Research Program Catalog Schema",
 		ResearchProgramCatalogSchemaTest.run(),
 		"res://scripts/tests/research_program_catalog_schema_test.gd",
 		"Research program catalog schema validation returned FAIL.",
-		"Inspect the research-program catalog contract and loader."
+		"Inspect required program fields, eligibility declarations, provenance, and catalog semantic contract."
 	)
 
 	_record(
 		result,
-		"Phase 4.5A Research Program Catalog Semantic Validation",
+		"Phase 4.5B Research Program Catalog Semantic Validation",
 		ResearchProgramCatalogSemanticTest.run(),
 		"res://scripts/tests/research_program_catalog_semantic_test.gd",
 		"Research program catalog semantic validation returned FAIL.",
-		"Inspect the intentional foundation boundary and research-program identity activation policy."
+		"Inspect canonical program IDs, dependency ordering, technology coverage, prerequisite placement, and cost/duration summaries."
+	)
+
+
+	# ============================================================
+	# PHASE 4.6A — POLICY CATALOG FOUNDATION
+	# ============================================================
+
+	TestLogger.section(
+		"[DATA] POLICY CATALOG FOUNDATION — PHASE 4.6A"
+	)
+
+	_record(
+		result,
+		"Phase 4.6A Policy Catalog Schema",
+		PolicyCatalogSchemaTest.run(),
+		"res://scripts/tests/policy_catalog_schema_test.gd",
+		"Policy catalog schema validation returned FAIL.",
+		"Inspect the policy catalog envelope, semantic contract, and read-only loader."
+	)
+
+	_record(
+		result,
+		"Phase 4.6A Policy Catalog Semantic Validation",
+		PolicyCatalogSemanticTest.run(),
+		"res://scripts/tests/policy_catalog_semantic_test.gd",
+		"Policy catalog semantic validation returned FAIL.",
+		"Inspect the reserved policy identity boundary and confirm that catalog loading does not activate policies or alter runtime state."
 	)
 
 	result.set_metadata(
 		"scope",
-		"Phase 3 data/governance + Phase 4.4 technology catalog validation + Phase 4.5A research-program foundation"
+		"Phase 3 data/governance + Phase 4.4 technology catalog validation + Phase 4.5B research-program content / semantic validation + Phase 4.6A policy catalog foundation"
 	)
 
 	result.set_metadata(
 		"tests_expected",
-		23
+		25
 	)
 
 	result.set_metadata(

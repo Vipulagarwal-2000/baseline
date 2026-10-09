@@ -17,7 +17,7 @@
 	},
 	"coverage": {
 		"status": "baseline_inventory",
-		"entry_count": 39,
+		"entry_count": 40,
 		"expected_family_count": 26,
 		"note": "This inventory records what exists in the data directory. Canonical domain IDs are defined by res://data/canonical_ids.json; domain ownership, canonical schemas, referential integrity, provenance, versioning, catalog/loader ownership, and later Phase 3 gates remain architecture gates."
 	},
@@ -102,6 +102,15 @@
 			"scope": "global",
 			"source_role": "catalog",
 			"status": "existing_baseline"
+		},
+		{
+			"path": "data/policies/policy_catalog.json",
+			"format": "json",
+			"asset_type": "policy_catalog",
+			"domain": "policy",
+			"scope": "global",
+			"source_role": "canonical_semantic_catalog",
+			"status": "phase_4_6a_catalog_foundation"
 		},
 		{
 			"path": "data/production_processes/production_processes.json",
@@ -422,8 +431,8 @@
 		},
 		{
 			"family": "policy_dedicated_data_asset",
-			"status": "not_located_in_data_directory",
-			"location": "res://data"
+			"status": "present",
+			"location": "res://data/policies/policy_catalog.json"
 		},
 		{
 			"family": "production_process_catalog",

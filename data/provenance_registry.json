@@ -30,8 +30,8 @@
 		"generated_registry"
 	],
 	"coverage": {
-		"inventory_path_count": 39,
-		"provenance_record_count": 39,
+		"inventory_path_count": 40,
+		"provenance_record_count": 40,
 		"status": "complete_for_current_inventory"
 	},
 	"records": [
@@ -169,6 +169,21 @@
 			"attribution": "Not recorded",
 			"license": "Not recorded for external sources; project-local ownership applies.",
 			"notes": "This record explicitly marks the source as unattributed. It does not assert historical provenance or invent an external source."
+		},
+		{
+			"path": "data/policies/policy_catalog.json",
+			"domain": "policy",
+			"asset_type": "policy_catalog",
+			"provenance_status": "verified_internal",
+			"origin_type": "internal_domain_catalog",
+			"origin_description": "Phase 4.6A policy catalog foundation based on the existing GovernmentPolicyDefinition and government policy runtime contracts.",
+			"source_reference": "res://scripts/core/GovernmentPolicyDefinition.gd",
+			"source_version": "phase_4_6a",
+			"as_of_date": "2026-10-09",
+			"transformation": "Introduces an empty declarative catalog envelope and read-only lookup loader. No policy definitions, canonical policy IDs, activation requests, cost transactions, policy effects, or runtime policy state are added.",
+			"attribution": "World Simulator project",
+			"license": "Project-local internal artifact.",
+			"notes": "Foundation only. Existing GovernmentPolicyDefinition / GovernmentComponent / government policy systems remain runtime authorities. The empty map intentionally defers named policy content to Phase 4.6B."
 		},
 		{
 			"path": "data/production_processes/production_processes.json",

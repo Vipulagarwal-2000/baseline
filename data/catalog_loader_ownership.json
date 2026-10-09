@@ -164,13 +164,16 @@
 			"schema_status": "reserved_identity_contract",
 			"ownership_status": "partial",
 			"ownership_mode": "reserved_identity_only",
-			"definition_authority": "Canonical policy identity only.",
-			"loader_contract": "policy_identity_reference_only",
-			"loader_mode": "reserved_identity_only",
-			"loader_path": "",
-			"source_paths": [],
-			"runtime_authority": "Existing policy runtime mechanics where present",
-			"notes": "No dedicated policy catalog is introduced in Phase 3.8; content belongs to Phase 4."
+			"definition_authority": "Policy catalog foundation only; no named canonical policy definitions are introduced in Phase 4.6A.",
+			"loader_contract": "policy_catalog_foundation_loader",
+			"loader_mode": "explicit_existing_loader",
+			"loader_path": "res://scripts/core/policy_catalog.gd",
+			"source_paths": [
+				"res://data/policies/policy_catalog.json",
+				"res://scripts/core/policy_catalog.gd"
+			],
+			"runtime_authority": "GovernmentPolicyDefinition / GovernmentComponent / existing policy activation, cost, and effect systems",
+			"notes": "Phase 4.6A introduces an empty declarative catalog and read-only loader. Policy identity remains reserved and no catalog definition is registered into GovernmentComponent; content belongs to Phase 4.6B."
 		},
 		{
 			"domain": "process",

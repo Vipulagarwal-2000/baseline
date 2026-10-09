@@ -686,9 +686,12 @@
 					"required": true
 				}
 			},
-			"source_kind": "reserved_identity_reference",
-			"source_paths": [],
-			"notes": "The canonical ID domain is reserved_unmodeled. Runtime policy mechanics exist, but no dedicated content catalog is being invented in Phase 3.4."
+			"source_kind": "json_catalog_foundation",
+			"source_paths": [
+				"res://data/policies/policy_catalog.json",
+				"res://scripts/core/policy_catalog.gd"
+			],
+			"notes": "Phase 4.6A establishes the policy catalog envelope and read-only loader only. The catalog intentionally contains no named definitions; the canonical policy domain remains reserved_unmodeled and the policy definition schema remains identity-only until Phase 4.6B content. Existing GovernmentPolicyDefinition and policy runtime systems remain authoritative for runtime behavior."
 		},
 		"action": {
 			"schema_status": "reserved_identity_contract",
