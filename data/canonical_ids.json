@@ -1373,9 +1373,46 @@
 			}
 		},
 		"research_program": {
-			"status": "reserved_unmodeled",
+			"status": "active",
 			"id_pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$",
-			"entries": {}
+			"entries": {
+				"electrification_program": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/research_programs/research_program_catalog.json"
+					]
+				},
+				"industrial_modernization_program": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/research_programs/research_program_catalog.json"
+					]
+				},
+				"communications_networks_program": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/research_programs/research_program_catalog.json"
+					]
+				},
+				"nuclear_science_and_energy_program": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/research_programs/research_program_catalog.json"
+					]
+				},
+				"computing_and_electronics_program": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/research_programs/research_program_catalog.json"
+					]
+				},
+				"space_and_digital_networks_program": {
+					"status": "canonical_existing",
+					"source_paths": [
+						"res://data/research_programs/research_program_catalog.json"
+					]
+				}
+			}
 		},
 		"policy": {
 			"status": "reserved_unmodeled",

@@ -99,17 +99,20 @@
 			"notes": "Phase 4.4A establishes the dedicated technology definition catalog. Existing runtime technology classes remain compatibility/runtime structures; runtime catalog integration is deferred to the later integration pass."
 		},
 		"research_program": {
-			"status": "reserved_unmodeled",
-			"definition_authority": "reserved for dedicated research catalog",
-			"definition_paths": [],
-			"runtime_authority": "ResearchSystem / ResearchProject runtime",
-			"loader_authority": "not yet a dedicated catalog loader",
+			"status": "partial",
+			"definition_authority": "Dedicated research-program JSON catalog.",
+			"definition_paths": [
+				"res://data/research_programs/research_program_catalog.json",
+				"res://scripts/core/research_program_catalog.gd"
+			],
+			"runtime_authority": "ResearchSystem / ResearchComponent / ResearchProject remain execution and mutable-state authorities for single-technology research projects",
+			"loader_authority": "ResearchProgramCatalog (declarative definitions) / ResearchSystem (execution)",
 			"runtime_systems": [
 				"scripts/systems/research_system.gd"
 			],
 			"canonical_domain": "research_program",
-			"provenance_class": "unmodeled",
-			"notes": "Research runtime exists, but no dedicated research-program content catalog is currently established."
+			"provenance_class": "internal_domain_catalog",
+			"notes": "Phase 4.5B defines six declarative tracks referencing the ten full technology definitions in the technology catalog. Program eligibility and prerequisite edges are planning metadata only. research_cost and research_duration_months are derived direct-target summaries, not executable program budgets or duration state. Per-technology historical availability, costs, durations, progress, completion, and effects remain owned by the existing technology/runtime contracts."
 		},
 		"policy": {
 			"status": "partial",

@@ -1,0 +1,33 @@
+WORLD SIMULATOR DIAGNOSTIC SUMMARY
+=====================================
+Test Run: 788
+OVERALL: FAIL
+=====================================
+
+VALIDATION SCOPE: full_suite
+RUNNER MIGRATION COMPLETE: YES
+
+RUNNER STATUS
+-------------------------------------
+Data Test Runner: FAIL
+
+FAILURE DIAGNOSTICS
+-------------------------------------
+1. FAIL | TEST_FAILED
+Runner: Data Test Runner
+Test: Step 3.7 Versioning Referential Integrity
+Source: res://scripts/tests/versioning_referential_integrity_test.gd
+Diagnostic: Versioning referential integrity returned FAIL.
+Action: Inspect versioning records against the data inventory.
+
+2. FAIL | TEST_FAILED
+Runner: Data Test Runner
+Test: Phase 4.5B Research Program Catalog Semantic Validation
+Source: res://scripts/tests/research_program_catalog_semantic_test.gd
+Diagnostic: Research program catalog semantic validation returned FAIL.
+Action: Inspect canonical program IDs, dependency ordering, technology coverage, prerequisite placement, and cost/duration summaries.
+
+FAILED RUNNERS: 1
+FAILED TESTS / ERRORS: 2
+
+DIAGNOSTIC: ACTIVE VALIDATION FAILED

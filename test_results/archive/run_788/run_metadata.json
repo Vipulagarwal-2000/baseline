@@ -1,15 +1,38 @@
 {
-	"diagnostics": [],
+	"diagnostics": [
+		{
+			"action": "Inspect versioning records against the data inventory.",
+			"code": "TEST_FAILED",
+			"message": "Versioning referential integrity returned FAIL.",
+			"metadata": {},
+			"runner_id": "data",
+			"runner_name": "Data Test Runner",
+			"severity": "FAIL",
+			"source_file": "res://scripts/tests/versioning_referential_integrity_test.gd",
+			"test_name": "Step 3.7 Versioning Referential Integrity"
+		},
+		{
+			"action": "Inspect canonical program IDs, dependency ordering, technology coverage, prerequisite placement, and cost/duration summaries.",
+			"code": "TEST_FAILED",
+			"message": "Research program catalog semantic validation returned FAIL.",
+			"metadata": {},
+			"runner_id": "data",
+			"runner_name": "Data Test Runner",
+			"severity": "FAIL",
+			"source_file": "res://scripts/tests/research_program_catalog_semantic_test.gd",
+			"test_name": "Phase 4.5B Research Program Catalog Semantic Validation"
+		}
+	],
 	"display_name": "World Simulator Active Test Suite",
-	"duration_msec": 4284,
-	"failed_runner_count": 0,
-	"finished_at_msec": 13519,
+	"duration_msec": 4597,
+	"failed_runner_count": 1,
+	"finished_at_msec": 18378,
 	"metadata": {
 		"diagnostic_authority": "structured_result_for_all_migrated_runners; legacy_domain_checks remain explicitly tracked",
 		"legacy_domain_checks": [
 			"IndustryProcessInfrastructurePressureTest"
 		],
-		"legacy_report_path": "res://test_results/test_run_789.txt",
+		"legacy_report_path": "res://test_results/test_run_788.txt",
 		"migrated_runner_count": 7,
 		"migrated_runners": [
 			"data",
@@ -24,38 +47,61 @@
 		"pending_runners": [],
 		"validation_scope": "full_suite"
 	},
-	"passed": true,
-	"run_id": 789,
+	"passed": false,
+	"run_id": 788,
 	"runner_count": 7,
 	"runner_results": [
 		{
-			"diagnostics": [],
+			"diagnostics": [
+				{
+					"action": "Inspect versioning records against the data inventory.",
+					"code": "TEST_FAILED",
+					"message": "Versioning referential integrity returned FAIL.",
+					"metadata": {},
+					"runner_id": "data",
+					"runner_name": "Data Test Runner",
+					"severity": "FAIL",
+					"source_file": "res://scripts/tests/versioning_referential_integrity_test.gd",
+					"test_name": "Step 3.7 Versioning Referential Integrity"
+				},
+				{
+					"action": "Inspect canonical program IDs, dependency ordering, technology coverage, prerequisite placement, and cost/duration summaries.",
+					"code": "TEST_FAILED",
+					"message": "Research program catalog semantic validation returned FAIL.",
+					"metadata": {},
+					"runner_id": "data",
+					"runner_name": "Data Test Runner",
+					"severity": "FAIL",
+					"source_file": "res://scripts/tests/research_program_catalog_semantic_test.gd",
+					"test_name": "Phase 4.5B Research Program Catalog Semantic Validation"
+				}
+			],
 			"display_name": "Data Test Runner",
-			"duration_msec": 187,
-			"finished_at_msec": 9422,
+			"duration_msec": 164,
+			"finished_at_msec": 13945,
 			"metadata": {
 				"compact_result": true,
 				"detail_source": "legacy TestLogger report",
 				"mutation_policy": "read_only",
 				"requires_simulation": false,
 				"requires_world": false,
-				"scope": "Phase 3 data/governance + Phase 4.4 technology catalog validation + Phase 4.5A research-program foundation",
+				"scope": "Phase 3 data/governance + Phase 4.4 technology catalog validation + Phase 4.5B research-program content / semantic validation",
 				"tests_expected": 23
 			},
-			"passed": true,
+			"passed": false,
 			"runner_id": "data",
-			"started_at_msec": 9235,
-			"status": "PASS",
+			"started_at_msec": 13781,
+			"status": "FAIL",
 			"tests_errored": 0,
-			"tests_failed": 0,
-			"tests_passed": 23,
+			"tests_failed": 2,
+			"tests_passed": 21,
 			"tests_run": 23
 		},
 		{
 			"diagnostics": [],
 			"display_name": "Interaction Test Runner",
-			"duration_msec": 38,
-			"finished_at_msec": 9462,
+			"duration_msec": 50,
+			"finished_at_msec": 13996,
 			"metadata": {
 				"compact_result": true,
 				"detail_source": "legacy TestLogger report",
@@ -67,7 +113,7 @@
 			},
 			"passed": true,
 			"runner_id": "interaction",
-			"started_at_msec": 9424,
+			"started_at_msec": 13946,
 			"status": "PASS",
 			"tests_errored": 0,
 			"tests_failed": 0,
@@ -77,8 +123,8 @@
 		{
 			"diagnostics": [],
 			"display_name": "Physical Economy Test Runner",
-			"duration_msec": 204,
-			"finished_at_msec": 9668,
+			"duration_msec": 237,
+			"finished_at_msec": 14234,
 			"metadata": {
 				"compact_result": true,
 				"detail_source": "legacy TestLogger report",
@@ -90,7 +136,7 @@
 			},
 			"passed": true,
 			"runner_id": "physical_economy",
-			"started_at_msec": 9464,
+			"started_at_msec": 13997,
 			"status": "PASS",
 			"tests_errored": 0,
 			"tests_failed": 0,
@@ -100,8 +146,8 @@
 		{
 			"diagnostics": [],
 			"display_name": "Domain Test Runner",
-			"duration_msec": 382,
-			"finished_at_msec": 10055,
+			"duration_msec": 463,
+			"finished_at_msec": 14700,
 			"metadata": {
 				"compact_result": true,
 				"detail_source": "legacy TestLogger report",
@@ -116,7 +162,7 @@
 			},
 			"passed": true,
 			"runner_id": "domain",
-			"started_at_msec": 9673,
+			"started_at_msec": 14237,
 			"status": "PASS",
 			"tests_errored": 0,
 			"tests_failed": 0,
@@ -126,8 +172,8 @@
 		{
 			"diagnostics": [],
 			"display_name": "Feedback Test Runner",
-			"duration_msec": 342,
-			"finished_at_msec": 10406,
+			"duration_msec": 352,
+			"finished_at_msec": 15062,
 			"metadata": {
 				"compact_result": true,
 				"detail_source": "legacy TestLogger report",
@@ -139,7 +185,7 @@
 			},
 			"passed": true,
 			"runner_id": "feedback",
-			"started_at_msec": 10064,
+			"started_at_msec": 14710,
 			"status": "PASS",
 			"tests_errored": 0,
 			"tests_failed": 0,
@@ -149,8 +195,8 @@
 		{
 			"diagnostics": [],
 			"display_name": "Campaign Test Runner",
-			"duration_msec": 2315,
-			"finished_at_msec": 12723,
+			"duration_msec": 2349,
+			"finished_at_msec": 17413,
 			"metadata": {
 				"campaign_months": 60,
 				"compact_result": true,
@@ -165,7 +211,7 @@
 			},
 			"passed": true,
 			"runner_id": "campaign",
-			"started_at_msec": 10408,
+			"started_at_msec": 15064,
 			"status": "PASS",
 			"tests_errored": 0,
 			"tests_failed": 0,
@@ -175,8 +221,8 @@
 		{
 			"diagnostics": [],
 			"display_name": "Causal Test Runner",
-			"duration_msec": 795,
-			"finished_at_msec": 13518,
+			"duration_msec": 964,
+			"finished_at_msec": 18378,
 			"metadata": {
 				"compact_result": true,
 				"detail_source": "legacy TestLogger report",
@@ -197,7 +243,7 @@
 			},
 			"passed": true,
 			"runner_id": "causal",
-			"started_at_msec": 12723,
+			"started_at_msec": 17414,
 			"status": "PASS",
 			"tests_errored": 0,
 			"tests_failed": 0,
@@ -205,9 +251,9 @@
 			"tests_run": 10
 		}
 	],
-	"started_at_msec": 9235,
-	"status": "PASS",
+	"started_at_msec": 13781,
+	"status": "FAIL",
 	"suite_id": "world_simulator_active_suite",
-	"total_tests_failed": 0,
+	"total_tests_failed": 2,
 	"total_tests_run": 207
 }

@@ -1,17 +1,40 @@
 {
-	"diagnostics": [],
-	"failed_runner_count": 0,
-	"message": "All active validation passed.",
+	"diagnostics": [
+		{
+			"action": "Inspect versioning records against the data inventory.",
+			"code": "TEST_FAILED",
+			"message": "Versioning referential integrity returned FAIL.",
+			"metadata": {},
+			"runner_id": "data",
+			"runner_name": "Data Test Runner",
+			"severity": "FAIL",
+			"source_file": "res://scripts/tests/versioning_referential_integrity_test.gd",
+			"test_name": "Step 3.7 Versioning Referential Integrity"
+		},
+		{
+			"action": "Inspect canonical program IDs, dependency ordering, technology coverage, prerequisite placement, and cost/duration summaries.",
+			"code": "TEST_FAILED",
+			"message": "Research program catalog semantic validation returned FAIL.",
+			"metadata": {},
+			"runner_id": "data",
+			"runner_name": "Data Test Runner",
+			"severity": "FAIL",
+			"source_file": "res://scripts/tests/research_program_catalog_semantic_test.gd",
+			"test_name": "Phase 4.5B Research Program Catalog Semantic Validation"
+		}
+	],
+	"failed_runner_count": 1,
+	"message": "Validation failed in the current reported scope.",
 	"migration_complete": true,
-	"passed": true,
-	"run_id": 789,
+	"passed": false,
+	"run_id": 788,
 	"runner_summaries": [
 		{
 			"display_name": "Data Test Runner",
 			"runner_id": "data",
-			"status": "PASS",
+			"status": "FAIL",
 			"tests_errored": 0,
-			"tests_failed": 0,
+			"tests_failed": 2,
 			"tests_run": 23
 		},
 		{
@@ -63,8 +86,8 @@
 			"tests_run": 10
 		}
 	],
-	"status": "PASS",
-	"total_tests_failed": 0,
+	"status": "FAIL",
+	"total_tests_failed": 2,
 	"total_tests_run": 207,
 	"validation_scope": "full_suite"
 }

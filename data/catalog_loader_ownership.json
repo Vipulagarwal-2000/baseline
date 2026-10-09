@@ -206,16 +206,19 @@
 		},
 		{
 			"domain": "research_program",
-			"schema_status": "reserved_identity_contract",
-			"ownership_status": "reserved_unmodeled",
-			"ownership_mode": "reserved_identity_only",
-			"definition_authority": "Canonical research-program identity only.",
-			"loader_contract": "research_program_identity_reference_only",
-			"loader_mode": "reserved_identity_only",
-			"loader_path": "",
-			"source_paths": [],
-			"runtime_authority": "None; reserved for Phase 4",
-			"notes": "No research-program catalog is invented in Phase 3.8."
+			"schema_status": "defined",
+			"ownership_status": "partial",
+			"ownership_mode": "catalog",
+			"definition_authority": "Dedicated research-program JSON catalog.",
+			"loader_contract": "research_program_catalog_loader",
+			"loader_mode": "explicit_existing_loader",
+			"loader_path": "res://scripts/core/research_program_catalog.gd",
+			"source_paths": [
+				"res://data/research_programs/research_program_catalog.json",
+				"res://scripts/core/research_program_catalog.gd"
+			],
+			"runtime_authority": "ResearchSystem / ResearchComponent / ResearchProject for executable single-technology research",
+			"notes": "Phase 4.5B provides declarative research-track definitions only. Existing runtime remains authoritative for project creation, progress, single-technology completion, and mutable research state; no program execution manager is introduced."
 		},
 		{
 			"domain": "resource",

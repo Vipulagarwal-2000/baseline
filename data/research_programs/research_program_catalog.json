@@ -1,16 +1,225 @@
 {
-	"version": 1,
+	"version": 2,
 	"catalog_id": "world_simulator_research_program_catalog",
 	"semantic_contract": {
 		"identity_semantics": "canonical_research_program_id",
 		"target_semantics": "declarative_research_target_reference",
-		"eligibility_semantics": "program_entry_requirements_declared_by_catalog",
+		"eligibility_semantics": "program_entry_requirements_declared_by_catalog_and_checked_against_research_component_state_when_runtime_binding_exists",
 		"progress_semantics": "runtime_research_progress_owned_by_research_component_and_research_system",
-		"execution_semantics": "research_execution_remains_runtime_owned",
-		"completion_semantics": "runtime_research_project_completion",
-		"activation_semantics": "catalog_foundation_only_until_research_program_content_is_defined",
+		"execution_semantics": "declarative_program_catalog; individual_technology_project_execution_remains_runtime_owned",
+		"completion_semantics": "program_completion_not_tracked_by_current_runtime; technology_project_completion_remains_runtime_authority",
+		"activation_semantics": "program_definitions_available_for_lookup_only_until_runtime_program_binding",
 		"provenance_semantics": "definition_metadata_not_runtime_state",
-		"definition_version_semantics": "catalog_definition_revision"
+		"definition_version_semantics": "catalog_definition_revision",
+		"research_cost_semantics": "sum_of_direct_target_technology_research_costs_for_program_estimate_only",
+		"research_duration_semantics": "sum_of_direct_target_technology_months_as_sequential_plan_estimate_only",
+		"research_capacity_requirement_semantics": "minimum_research_component_research_capacity_scalar",
+		"research_funding_requirement_semantics": "minimum_research_component_research_funding_scalar",
+		"researcher_requirement_semantics": "minimum_research_component_researchers_scalar",
+		"institution_requirement_semantics": "minimum_research_component_research_institutions_scalar",
+		"prerequisite_semantics": "canonical_research_program_dependencies_for_planning_only",
+		"technology_output_semantics": "ordered_technology_id_list_resolved_against_technology_catalog",
+		"actor_eligibility_semantics": "country_actor_with_research_component_player_and_ai_allowed",
+		"aggregation_semantics": "research_cost_and_duration_sum_direct_target_technologies_only; prerequisite_program_costs_excluded",
+		"threshold_provenance_semantics": "capacity_funding_researcher_and_institution_requirements_are_simulation_balancing_values_not_historical_measurements",
+		"technology_gate_semantics": "technology_prerequisites_historical_windows_enabled_flag_and_technology_level_rules_remain_authoritative"
 	},
-	"programs": {}
+	"programs": {
+		"electrification_program": {
+			"id": "electrification_program",
+			"name": "Electrification",
+			"description": "Establish electrical-power technology as the base for later industrial, communications, nuclear, and computing tracks.",
+			"domain": "energy_infrastructure",
+			"prerequisites": [],
+			"research_cost": 100.0,
+			"research_duration_months": 24,
+			"research_capacity_requirement": 8.0,
+			"research_funding_requirement": 6.0,
+			"researcher_requirement": 4.0,
+			"institution_requirement": 2.0,
+			"technology_outputs": [
+				"electricity"
+			],
+			"authority_eligibility": {
+				"actor_scope": "country",
+				"required_component": "research",
+				"player_controlled": true,
+				"ai_controlled": true
+			},
+			"enabled": true,
+			"provenance": {
+				"status": "simulation_calibration",
+				"source_reference": "res://data/technologies/technology_catalog.json; res://scripts/components/research_component.gd; res://data/countries/china.json; res://data/countries/india.json; res://data/countries/usa.json",
+				"confidence": "designed_mvp_calibration",
+				"notes": "Cost and duration equal the direct electricity technology definition. Eligibility thresholds are simulation-balancing values, not historical measurements."
+			},
+			"definition_version": 1
+		},
+		"industrial_modernization_program": {
+			"id": "industrial_modernization_program",
+			"name": "Industrial Modernization",
+			"description": "Build the industrial-machinery technology base on top of the electrification foundation.",
+			"domain": "industrial_development",
+			"prerequisites": [
+				"electrification_program"
+			],
+			"research_cost": 120.0,
+			"research_duration_months": 30,
+			"research_capacity_requirement": 10.0,
+			"research_funding_requirement": 8.0,
+			"researcher_requirement": 5.0,
+			"institution_requirement": 3.0,
+			"technology_outputs": [
+				"industrial_machinery"
+			],
+			"authority_eligibility": {
+				"actor_scope": "country",
+				"required_component": "research",
+				"player_controlled": true,
+				"ai_controlled": true
+			},
+			"enabled": true,
+			"provenance": {
+				"status": "simulation_calibration",
+				"source_reference": "res://data/technologies/technology_catalog.json; res://scripts/components/research_component.gd; res://data/countries/china.json; res://data/countries/india.json; res://data/countries/usa.json",
+				"confidence": "designed_mvp_calibration",
+				"notes": "Cost and duration equal the direct industrial_machinery technology definition. Eligibility thresholds are simulation-balancing values, not historical measurements."
+			},
+			"definition_version": 1
+		},
+		"communications_networks_program": {
+			"id": "communications_networks_program",
+			"name": "Communications Networks",
+			"description": "Coordinate radio and long-distance telecommunications capability after the industrial and electrification foundations are available.",
+			"domain": "communications",
+			"prerequisites": [
+				"industrial_modernization_program"
+			],
+			"research_cost": 230.0,
+			"research_duration_months": 48,
+			"research_capacity_requirement": 15.0,
+			"research_funding_requirement": 10.0,
+			"researcher_requirement": 8.0,
+			"institution_requirement": 5.0,
+			"technology_outputs": [
+				"radio",
+				"telecommunications"
+			],
+			"authority_eligibility": {
+				"actor_scope": "country",
+				"required_component": "research",
+				"player_controlled": true,
+				"ai_controlled": true
+			},
+			"enabled": true,
+			"provenance": {
+				"status": "simulation_calibration",
+				"source_reference": "res://data/technologies/technology_catalog.json; res://scripts/components/research_component.gd; res://data/countries/china.json; res://data/countries/india.json; res://data/countries/usa.json",
+				"confidence": "designed_mvp_calibration",
+				"notes": "Cost and duration sum the direct radio and telecommunications technology definitions. Eligibility thresholds are simulation-balancing values, not historical measurements."
+			},
+			"definition_version": 1
+		},
+		"nuclear_science_and_energy_program": {
+			"id": "nuclear_science_and_energy_program",
+			"name": "Nuclear Science and Energy",
+			"description": "Group nuclear physics and nuclear power into a long-horizon scientific program built on the electrified industrial foundation.",
+			"domain": "nuclear_science",
+			"prerequisites": [
+				"industrial_modernization_program"
+			],
+			"research_cost": 750.0,
+			"research_duration_months": 108,
+			"research_capacity_requirement": 25.0,
+			"research_funding_requirement": 20.0,
+			"researcher_requirement": 15.0,
+			"institution_requirement": 8.0,
+			"technology_outputs": [
+				"nuclear_physics",
+				"nuclear_power"
+			],
+			"authority_eligibility": {
+				"actor_scope": "country",
+				"required_component": "research",
+				"player_controlled": true,
+				"ai_controlled": true
+			},
+			"enabled": true,
+			"provenance": {
+				"status": "simulation_calibration",
+				"source_reference": "res://data/technologies/technology_catalog.json; res://scripts/components/research_component.gd; res://data/countries/china.json; res://data/countries/india.json; res://data/countries/usa.json",
+				"confidence": "designed_mvp_calibration",
+				"notes": "Cost and duration sum the direct nuclear_physics and nuclear_power technology definitions. Eligibility thresholds are simulation-balancing values, not historical measurements."
+			},
+			"definition_version": 1
+		},
+		"computing_and_electronics_program": {
+			"id": "computing_and_electronics_program",
+			"name": "Computing and Electronics",
+			"description": "Connect electronic computing, semiconductors, and internet technology through explicit industrial and communications dependencies.",
+			"domain": "digital_technology",
+			"prerequisites": [
+				"industrial_modernization_program",
+				"communications_networks_program"
+			],
+			"research_cost": 1650.0,
+			"research_duration_months": 192,
+			"research_capacity_requirement": 30.0,
+			"research_funding_requirement": 25.0,
+			"researcher_requirement": 20.0,
+			"institution_requirement": 12.0,
+			"technology_outputs": [
+				"computers",
+				"semiconductors",
+				"internet"
+			],
+			"authority_eligibility": {
+				"actor_scope": "country",
+				"required_component": "research",
+				"player_controlled": true,
+				"ai_controlled": true
+			},
+			"enabled": true,
+			"provenance": {
+				"status": "simulation_calibration",
+				"source_reference": "res://data/technologies/technology_catalog.json; res://scripts/components/research_component.gd; res://data/countries/china.json; res://data/countries/india.json; res://data/countries/usa.json",
+				"confidence": "designed_mvp_calibration",
+				"notes": "Cost and duration sum the direct computers, semiconductors, and internet technology definitions. Eligibility thresholds are simulation-balancing values, not historical measurements."
+			},
+			"definition_version": 1
+		},
+		"space_and_digital_networks_program": {
+			"id": "space_and_digital_networks_program",
+			"name": "Space and Digital Networks",
+			"description": "Develop satellite technology after communications and computing foundations are represented in the program dependency graph.",
+			"domain": "space_and_digital_networks",
+			"prerequisites": [
+				"communications_networks_program",
+				"computing_and_electronics_program"
+			],
+			"research_cost": 600.0,
+			"research_duration_months": 72,
+			"research_capacity_requirement": 40.0,
+			"research_funding_requirement": 30.0,
+			"researcher_requirement": 22.0,
+			"institution_requirement": 15.0,
+			"technology_outputs": [
+				"satellites"
+			],
+			"authority_eligibility": {
+				"actor_scope": "country",
+				"required_component": "research",
+				"player_controlled": true,
+				"ai_controlled": true
+			},
+			"enabled": true,
+			"provenance": {
+				"status": "simulation_calibration",
+				"source_reference": "res://data/technologies/technology_catalog.json; res://scripts/components/research_component.gd; res://data/countries/china.json; res://data/countries/india.json; res://data/countries/usa.json",
+				"confidence": "designed_mvp_calibration",
+				"notes": "Cost and duration equal the direct satellites technology definition. Eligibility thresholds are simulation-balancing values, not historical measurements."
+			},
+			"definition_version": 1
+		}
+	}
 }

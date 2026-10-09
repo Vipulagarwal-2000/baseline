@@ -558,23 +558,118 @@
 			"notes": "Phase 4.4A introduces the dedicated technology definition catalog. The catalog migrates the existing DefaultTechnologies runtime definitions without inventing new technology content. TechnologyManager / TechnologyLibrary remain runtime compatibility authorities until the later runtime integration pass. advanced_steelmaking remains a reference-only canonical technology identity owned by the production-process catalog until a full technology definition is introduced."
 		},
 		"research_program": {
-			"schema_status": "reserved_identity_contract",
+			"schema_status": "defined",
 			"canonical_domain": "research_program",
 			"identity_field": "id",
 			"shape": "object",
 			"required_fields": [
-				"id"
+				"id",
+				"name",
+				"description",
+				"domain",
+				"prerequisites",
+				"research_cost",
+				"research_duration_months",
+				"research_capacity_requirement",
+				"research_funding_requirement",
+				"researcher_requirement",
+				"institution_requirement",
+				"technology_outputs",
+				"authority_eligibility",
+				"enabled",
+				"provenance",
+				"definition_version"
 			],
 			"fields": {
 				"id": {
 					"type": "string",
 					"semantic_type": "canonical_identifier",
 					"required": true
+				},
+				"name": {
+					"type": "string",
+					"semantic_type": "display_name",
+					"required": true
+				},
+				"description": {
+					"type": "string",
+					"semantic_type": "description",
+					"required": true
+				},
+				"domain": {
+					"type": "string",
+					"semantic_type": "program_domain_classification",
+					"required": true
+				},
+				"prerequisites": {
+					"type": "array",
+					"semantic_type": "research_program_reference_list",
+					"required": true,
+					"item_type": "string"
+				},
+				"research_cost": {
+					"type": "number",
+					"semantic_type": "derived_direct_target_research_cost_estimate",
+					"required": true
+				},
+				"research_duration_months": {
+					"type": "integer",
+					"semantic_type": "derived_sequential_direct_target_duration_estimate",
+					"required": true
+				},
+				"research_capacity_requirement": {
+					"type": "number",
+					"semantic_type": "simulation_balancing_threshold",
+					"required": true
+				},
+				"research_funding_requirement": {
+					"type": "number",
+					"semantic_type": "simulation_balancing_threshold",
+					"required": true
+				},
+				"researcher_requirement": {
+					"type": "number",
+					"semantic_type": "simulation_balancing_threshold",
+					"required": true
+				},
+				"institution_requirement": {
+					"type": "number",
+					"semantic_type": "simulation_balancing_threshold",
+					"required": true
+				},
+				"technology_outputs": {
+					"type": "array",
+					"semantic_type": "technology_reference_list",
+					"required": true,
+					"item_type": "string"
+				},
+				"authority_eligibility": {
+					"type": "object",
+					"semantic_type": "actor_eligibility_contract",
+					"required": true
+				},
+				"enabled": {
+					"type": "boolean",
+					"semantic_type": "availability_flag",
+					"required": true
+				},
+				"provenance": {
+					"type": "object",
+					"semantic_type": "definition_metadata",
+					"required": true
+				},
+				"definition_version": {
+					"type": "integer",
+					"semantic_type": "definition_version",
+					"required": true
 				}
 			},
-			"source_kind": "reserved_identity_reference",
-			"source_paths": [],
-			"notes": "The canonical ID domain is reserved_unmodeled. Phase 3.4 defines identity only; dedicated research content/schema belongs to Phase 4."
+			"source_kind": "json_catalog",
+			"source_paths": [
+				"res://data/research_programs/research_program_catalog.json",
+				"res://scripts/core/research_program_catalog.gd"
+			],
+			"notes": "Phase 4.5B declarative research tracks group existing canonical technology definitions. research_cost and research_duration_months are direct-target planning estimates only: cost sums target research costs and duration sums target months as a sequential estimate; prerequisite-program totals are excluded. ResearchSystem / ResearchComponent / ResearchProject retain authority for per-technology costs, historical gates, progress, completion, and effects. Program eligibility and prerequisites are metadata only until a later runtime-binding phase."
 		},
 		"policy": {
 			"schema_status": "reserved_identity_contract",
