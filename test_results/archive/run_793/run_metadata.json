@@ -1,0 +1,237 @@
+{
+	"diagnostics": [
+		{
+			"action": "Inspect res://scripts/tests/TradeRestrictionInteractionTest.gd and the authoritative domain path exercised by the test.",
+			"code": "TEST_FAILED",
+			"message": "Trade Restriction Interaction validation returned FAIL.",
+			"metadata": {},
+			"runner_id": "domain",
+			"runner_name": "Domain Test Runner",
+			"severity": "FAIL",
+			"source_file": "res://scripts/tests/TradeRestrictionInteractionTest.gd",
+			"test_name": "Trade Restriction Interaction"
+		}
+	],
+	"display_name": "World Simulator Active Test Suite",
+	"duration_msec": 7196,
+	"failed_runner_count": 1,
+	"finished_at_msec": 18484,
+	"metadata": {
+		"diagnostic_authority": "structured_result_for_all_migrated_runners; legacy_domain_checks remain explicitly tracked",
+		"legacy_domain_checks": [
+			"IndustryProcessInfrastructurePressureTest"
+		],
+		"legacy_report_path": "res://test_results/test_run_793.txt",
+		"migrated_runner_count": 7,
+		"migrated_runners": [
+			"data",
+			"interaction",
+			"physical_economy",
+			"domain",
+			"feedback",
+			"campaign",
+			"causal"
+		],
+		"migration_complete": true,
+		"pending_runners": [],
+		"validation_scope": "full_suite"
+	},
+	"passed": false,
+	"run_id": 793,
+	"runner_count": 7,
+	"runner_results": [
+		{
+			"diagnostics": [],
+			"display_name": "Data Test Runner",
+			"duration_msec": 200,
+			"finished_at_msec": 11488,
+			"metadata": {
+				"compact_result": true,
+				"detail_source": "legacy TestLogger report",
+				"mutation_policy": "read_only",
+				"requires_simulation": false,
+				"requires_world": false,
+				"scope": "Phase 3 data/governance + Phase 4.4 technology catalog validation + Phase 4.5B research-program content / semantic validation + Phase 4.6B policy catalog content / semantic validation",
+				"tests_expected": 25
+			},
+			"passed": true,
+			"runner_id": "data",
+			"started_at_msec": 11288,
+			"status": "PASS",
+			"tests_errored": 0,
+			"tests_failed": 0,
+			"tests_passed": 25,
+			"tests_run": 25
+		},
+		{
+			"diagnostics": [],
+			"display_name": "Interaction Test Runner",
+			"duration_msec": 56,
+			"finished_at_msec": 11548,
+			"metadata": {
+				"compact_result": true,
+				"detail_source": "legacy TestLogger report",
+				"mutation_policy": "controlled_fixture_restore",
+				"requires_simulation": true,
+				"requires_world": true,
+				"scope": "Step 15 interaction + Step 16 concurrent actions",
+				"tests_expected": 22
+			},
+			"passed": true,
+			"runner_id": "interaction",
+			"started_at_msec": 11492,
+			"status": "PASS",
+			"tests_errored": 0,
+			"tests_failed": 0,
+			"tests_passed": 22,
+			"tests_run": 22
+		},
+		{
+			"diagnostics": [],
+			"display_name": "Physical Economy Test Runner",
+			"duration_msec": 259,
+			"finished_at_msec": 11809,
+			"metadata": {
+				"compact_result": true,
+				"detail_source": "legacy TestLogger report",
+				"mutation_policy": "controlled_fixture_restore",
+				"requires_simulation": true,
+				"requires_world": true,
+				"scope": "infrastructure + integrated physical economy + resources + production + trade + economy",
+				"tests_expected": 46
+			},
+			"passed": true,
+			"runner_id": "physical_economy",
+			"started_at_msec": 11550,
+			"status": "PASS",
+			"tests_errored": 0,
+			"tests_failed": 0,
+			"tests_passed": 46,
+			"tests_run": 46
+		},
+		{
+			"diagnostics": [
+				{
+					"action": "Inspect res://scripts/tests/TradeRestrictionInteractionTest.gd and the authoritative domain path exercised by the test.",
+					"code": "TEST_FAILED",
+					"message": "Trade Restriction Interaction validation returned FAIL.",
+					"metadata": {},
+					"runner_id": "domain",
+					"runner_name": "Domain Test Runner",
+					"severity": "FAIL",
+					"source_file": "res://scripts/tests/TradeRestrictionInteractionTest.gd",
+					"test_name": "Trade Restriction Interaction"
+				}
+			],
+			"display_name": "Domain Test Runner",
+			"duration_msec": 1272,
+			"finished_at_msec": 13084,
+			"metadata": {
+				"compact_result": true,
+				"detail_source": "legacy TestLogger report",
+				"legacy_domain_checks": [
+					"IndustryProcessInfrastructurePressureTest"
+				],
+				"mutation_policy": "controlled_fixture_restore",
+				"requires_simulation": true,
+				"requires_world": true,
+				"scope": "remaining domain validation",
+				"tests_expected": 94
+			},
+			"passed": false,
+			"runner_id": "domain",
+			"started_at_msec": 11812,
+			"status": "FAIL",
+			"tests_errored": 0,
+			"tests_failed": 1,
+			"tests_passed": 93,
+			"tests_run": 94
+		},
+		{
+			"diagnostics": [],
+			"display_name": "Feedback Test Runner",
+			"duration_msec": 340,
+			"finished_at_msec": 13475,
+			"metadata": {
+				"compact_result": true,
+				"detail_source": "legacy TestLogger report",
+				"mutation_policy": "controlled_fixture_restore",
+				"requires_simulation": true,
+				"requires_world": true,
+				"scope": "Step 17.1–17.8 dynamic feedback",
+				"tests_expected": 8
+			},
+			"passed": true,
+			"runner_id": "feedback",
+			"started_at_msec": 13135,
+			"status": "PASS",
+			"tests_errored": 0,
+			"tests_failed": 0,
+			"tests_passed": 8,
+			"tests_run": 8
+		},
+		{
+			"diagnostics": [],
+			"display_name": "Campaign Test Runner",
+			"duration_msec": 3234,
+			"finished_at_msec": 16711,
+			"metadata": {
+				"campaign_months": 60,
+				"compact_result": true,
+				"detail_source": "legacy TestLogger report",
+				"mutation_policy": "dedicated_campaign_context",
+				"requires_dedicated_campaign_context": true,
+				"requires_simulation": true,
+				"requires_world": true,
+				"scope": "Step 18.2–18.5 campaign execution + acceptance",
+				"single_campaign_execution": true,
+				"tests_expected": 4
+			},
+			"passed": true,
+			"runner_id": "campaign",
+			"started_at_msec": 13477,
+			"status": "PASS",
+			"tests_errored": 0,
+			"tests_failed": 0,
+			"tests_passed": 4,
+			"tests_run": 4
+		},
+		{
+			"diagnostics": [],
+			"display_name": "Causal Test Runner",
+			"duration_msec": 1771,
+			"finished_at_msec": 18483,
+			"metadata": {
+				"compact_result": true,
+				"detail_source": "legacy TestLogger report",
+				"dynamic_sources": [
+					"Step19_5WarMilitaryBurdenCausalValidationTest.gd",
+					"Step19_6TradeDisruptionCausalValidationTest.gd",
+					"Step19_7RecoveryCausalValidationTest.gd",
+					"Step19_8DivergenceCausalValidationTest.gd",
+					"Step19_9EventDrivenScenarioValidationTest.gd",
+					"Step19_CausalArchitectureCoverageAuditTest.gd"
+				],
+				"execution_order_preserved": true,
+				"mutation_policy": "controlled_fixture_restore_or_isolated_scenario",
+				"requires_simulation": true,
+				"requires_world": true,
+				"scope": "Step 19.1–19.A causal validation",
+				"tests_expected": 10
+			},
+			"passed": true,
+			"runner_id": "causal",
+			"started_at_msec": 16712,
+			"status": "PASS",
+			"tests_errored": 0,
+			"tests_failed": 0,
+			"tests_passed": 10,
+			"tests_run": 10
+		}
+	],
+	"started_at_msec": 11288,
+	"status": "FAIL",
+	"suite_id": "world_simulator_active_suite",
+	"total_tests_failed": 1,
+	"total_tests_run": 209
+}

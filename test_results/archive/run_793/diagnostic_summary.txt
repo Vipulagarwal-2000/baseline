@@ -1,0 +1,26 @@
+WORLD SIMULATOR DIAGNOSTIC SUMMARY
+=====================================
+Test Run: 793
+OVERALL: FAIL
+=====================================
+
+VALIDATION SCOPE: full_suite
+RUNNER MIGRATION COMPLETE: YES
+
+RUNNER STATUS
+-------------------------------------
+Domain Test Runner: FAIL
+
+FAILURE DIAGNOSTICS
+-------------------------------------
+1. FAIL | TEST_FAILED
+Runner: Domain Test Runner
+Test: Trade Restriction Interaction
+Source: res://scripts/tests/TradeRestrictionInteractionTest.gd
+Diagnostic: Trade Restriction Interaction validation returned FAIL.
+Action: Inspect res://scripts/tests/TradeRestrictionInteractionTest.gd and the authoritative domain path exercised by the test.
+
+FAILED RUNNERS: 1
+FAILED TESTS / ERRORS: 1
+
+DIAGNOSTIC: ACTIVE VALIDATION FAILED

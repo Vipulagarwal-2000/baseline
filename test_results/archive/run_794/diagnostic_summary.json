@@ -1,0 +1,82 @@
+{
+	"diagnostics": [
+		{
+			"action": "Inspect res://scripts/tests/TradeRestrictionInteractionTest.gd and the authoritative domain path exercised by the test.",
+			"code": "TEST_FAILED",
+			"message": "Trade Restriction Interaction validation returned FAIL.",
+			"metadata": {},
+			"runner_id": "domain",
+			"runner_name": "Domain Test Runner",
+			"severity": "FAIL",
+			"source_file": "res://scripts/tests/TradeRestrictionInteractionTest.gd",
+			"test_name": "Trade Restriction Interaction"
+		}
+	],
+	"failed_runner_count": 1,
+	"message": "Validation failed in the current reported scope.",
+	"migration_complete": true,
+	"passed": false,
+	"run_id": 794,
+	"runner_summaries": [
+		{
+			"display_name": "Data Test Runner",
+			"runner_id": "data",
+			"status": "PASS",
+			"tests_errored": 0,
+			"tests_failed": 0,
+			"tests_run": 25
+		},
+		{
+			"display_name": "Interaction Test Runner",
+			"runner_id": "interaction",
+			"status": "PASS",
+			"tests_errored": 0,
+			"tests_failed": 0,
+			"tests_run": 22
+		},
+		{
+			"display_name": "Physical Economy Test Runner",
+			"runner_id": "physical_economy",
+			"status": "PASS",
+			"tests_errored": 0,
+			"tests_failed": 0,
+			"tests_run": 46
+		},
+		{
+			"display_name": "Domain Test Runner",
+			"runner_id": "domain",
+			"status": "FAIL",
+			"tests_errored": 0,
+			"tests_failed": 1,
+			"tests_run": 94
+		},
+		{
+			"display_name": "Feedback Test Runner",
+			"runner_id": "feedback",
+			"status": "PASS",
+			"tests_errored": 0,
+			"tests_failed": 0,
+			"tests_run": 8
+		},
+		{
+			"display_name": "Campaign Test Runner",
+			"runner_id": "campaign",
+			"status": "PASS",
+			"tests_errored": 0,
+			"tests_failed": 0,
+			"tests_run": 4
+		},
+		{
+			"display_name": "Causal Test Runner",
+			"runner_id": "causal",
+			"status": "PASS",
+			"tests_errored": 0,
+			"tests_failed": 0,
+			"tests_run": 10
+		}
+	],
+	"status": "FAIL",
+	"total_tests_failed": 1,
+	"total_tests_run": 209,
+	"validation_scope": "full_suite"
+}

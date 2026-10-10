@@ -1,0 +1,21 @@
+WORLD SIMULATOR RUNNER SUMMARY
+================================
+Runner: Domain Test Runner
+Runner ID: domain
+Status: FAIL
+================================
+
+Tests Run: 94
+Tests Passed: 93
+Tests Failed: 1
+Tests Errored: 0
+Diagnostics: 1
+Duration (ms): 1272
+
+FAILURE DIAGNOSTICS
+--------------------------------
+1. FAIL | TEST_FAILED | Domain Test Runner | Trade Restriction Interaction | res://scripts/tests/TradeRestrictionInteractionTest.gd
+   Message: Trade Restriction Interaction validation returned FAIL.
+   Action: Inspect res://scripts/tests/TradeRestrictionInteractionTest.gd and the authoritative domain path exercised by the test.
+
+RESULT: FAIL
